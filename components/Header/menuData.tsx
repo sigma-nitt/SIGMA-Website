@@ -58,6 +58,6 @@ const menuData: Menu[] = [
     newTab: false,
     path: "/blog",
   }
-];
+] as const;
 
 export default menuData;

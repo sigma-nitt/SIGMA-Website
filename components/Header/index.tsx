@@ -32,14 +32,13 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed left-0 top-0 z-99999 w-full py-7 ${
-        stickyMenu
+      className={`fixed left-0 top-0 z-99999 w-full py-7 ${stickyMenu
           ? "bg-white !py-4 shadow transition duration-100 dark:bg-black"
           : ""
-      }`}
+        }`}
     >
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
-        <div className="flex w-full items-center justify-between xl:w-1/4">
+        <div className="flex w-full items-start justify-between xl:w-1/4">
           <a href="/">
             <Image
               src="/images/sigma.png"
@@ -49,14 +48,28 @@ const Header = () => {
               className="w-full dark:hidden"
             />
           </a>
+
+
+          <nav className="lg:hidden">
+            {menuData.map((item) => {
+              return <div key={item.id}>
+                <Link href={item.path || "#"}
+                  className={
+                    pathUrl === item.path
+                      ? "text-primary hover:text-primary"
+                      : "hover:text-primary"
+                  }
+                >{item.title}</Link>
+              </div>
+            })}
+          </nav>
         </div>
 
         {/* Nav Menu Start   */}
         <div
-          className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
-            navigationOpen &&
+          className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${navigationOpen &&
             "navbar !visible mt-4 h-auto max-h-[400px] rounded-md bg-blue-500 text-white p-7.5 shadow-solid-5 dark:bg-blacksection xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
-          }`}
+            }`}
         >
           <nav>
             <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
