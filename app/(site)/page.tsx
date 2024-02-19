@@ -5,7 +5,7 @@ import WhoAreWe from "@/components/WhoAreWe";
 
 export const metadata: Metadata = {
   title: "SIGMA NITT",
-  description: "This is Home for Solid Pro",
+  description: "Sigma - The Official Business Club of NIT Trichy. Data Analytics, Case Studies, Business Analytics, Quantitative Finance, Forecasting, Predicting.",
   // other metadata
 }; 
 
