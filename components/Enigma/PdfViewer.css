@@ -1,0 +1,15 @@
+.pdf-container {
+  width: 100%; /* Adjust as needed */
+  height: auto; /* Adjust as needed */
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pdf-page {
+  width: 45%; /* Adjust as needed */
+  height: auto; /* Adjust as needed */
+  border: 1px solid black; /* Optional: Add border for visualization */
+  margin: 5px; /* Adjust as needed for spacing */
+}
