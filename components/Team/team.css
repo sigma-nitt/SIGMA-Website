@@ -1,0 +1,26 @@
+/* team.css */
+
+/* Add a default style for larger screens */
+body {
+    margin-top: 0; /* Reset default margin */
+  }
+  
+  /* Media query for small screens */
+  @media (max-width: 1067px) {
+    body {
+      margin-top: 120px; /* Set margin for small screens */
+    }
+  
+    /* Adjust other styles as needed for small screens */
+    .text-center {
+      padding: 20px; /* Example: Reduce padding for smaller screens */
+    }
+
+    /* Adjust font size for smaller screens */
+    .text-10xl {
+      font-size: 3rem; /* Adjust the font size as needed */
+    }
+  
+    /* Add more styles as needed */
+  }
+  

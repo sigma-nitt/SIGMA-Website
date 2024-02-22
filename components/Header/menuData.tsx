@@ -9,35 +9,41 @@ const menuData: Menu[] = [
   },
   {
     id: 2,
+    title: "About Us",
+    newTab: false,
+    path: "/aboutus",
+  },
+  {
+    id: 3,
     title: "Meet the team",
     newTab: false,
     path: "/team",
   },
   {
-    id: 2.1,
+    id: 3.1,
     title: "Events",
     newTab: false,
     path: "/events",
   },
   {
-    id: 2.3,
+    id: 3.3,
     title: "Podcasts",
     newTab: false,
     path: "/podcast",
   },
   {
-    id: 3,
+    id: 4,
     title: "Projects",
     newTab: false,
     submenu: [
       {
-        id: 31,
+        id: 4.1,
         title: "Case Studies",
         newTab: false,
         path: "/casestudies",
       },
       {
-        id: 34,
+        id: 4.2,
         title: "Data Analytics",
         newTab: false,
         path: "/blog",
@@ -46,14 +52,14 @@ const menuData: Menu[] = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: "Enigma",
     newTab: false,
     path: "/enigma",
   },
 
   {
-    id: 5,
+    id: 6,
     title: "Initiatives",
     newTab: false,
     path: "/blog",

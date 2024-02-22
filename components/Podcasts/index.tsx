@@ -75,7 +75,7 @@ const YouTubePodcasts: React.FC = () => {
   return (
     <div className="w-3/4 mx-auto mt-custom">
       {videos.map((video: Video, index: number) => (
-        <div key={index} className={`mt-${index === videos.length - 1 ? '5' : '20'} mb-${index === videos.length - 1 ? '10' : '5'} lg:flex items-center bg-gradient-to-r from-yellow-200 to-orange-500 rounded-lg p-4 shadow-md`}>
+        <div key={index} className={`mt-${index === videos.length - 1 ? '5' : '20'} mb-${index === videos.length - 1 ? '10' : '5'} lg:flex items-center bg-gradient-to-r from-blue-100 to-blue-300 rounded-lg p-4 shadow-md`}>
           <div className="w-full lg:w-1/2 lg:mr-8 mb-4 lg:mb-0">
             {/* For larger screens, text on left */}
             <h2 className="font-bold text-2xl text-center lg:text-center">{video.title}</h2>

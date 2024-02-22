@@ -32,7 +32,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="fixed left-0 top-0 z-99999 w-full py-7 bg-black shadow transition duration-100000 dark:bg-black animate__animated animate__fadeIn">
+    <header className="fixed left-0 top-0 z-99999 w-full py-7 bg-black shadow transition duration-100000 dark:bg-black animate__animated animate__fadeIn text-white text-lg">
       {/* className={`fixed left-0 top-0 z-99999 w-full py-7 ${stickyMenu
           ? "bg-black !py-4 shadow transition duration-100 dark:bg-black"
           : ""

@@ -6,7 +6,17 @@ export default {
     {
       name: 'heading',
       type: 'string',
-      title: 'Heading',
+      title: 'Project Title',
+    },
+    {
+      name: 'introductoryImage',
+      type: 'image',
+      title: 'Introductory Image',
+    },
+    {
+      name: 'introductoryText',
+      type: 'string',
+      title: 'Introductory Text',
     },
     {
       name: 'content',

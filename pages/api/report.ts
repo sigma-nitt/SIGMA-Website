@@ -92,6 +92,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const query = `*[_type == "report"] {
       heading,
+      introductoryImage,
+      introductoryText,
       content[] {
         ...,
         // Only include the fields that are relevant to your components

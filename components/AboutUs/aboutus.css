@@ -1,0 +1,20 @@
+/* aboutus.css */
+
+/* Add a default style for larger screens */
+body {
+  margin-top: 0; /* Reset default margin */
+}
+
+/* Media query for small screens */
+@media (max-width: 1067px) {
+  body {
+    margin-top: 120px; /* Set margin for small screens */
+  }
+
+  /* Adjust other styles as needed for small screens */
+  .p-8 {
+    padding: 20px; /* Example: Reduce padding for smaller screens */
+  }
+
+  /* Add more styles as needed */
+}

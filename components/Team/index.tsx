@@ -1,6 +1,7 @@
 // components/index.tsx
 "use client";
 import React, { useState, useEffect } from 'react';
+import './team.css';
 
 // Define TeamMember interface
 interface TeamMember {
@@ -52,26 +53,26 @@ const MeetOurTeamPage = () => {
 
   return (
     <div className="text-center">
-      <h1 className="mb-5 text-4xl font-semibold text-white xl:text-5xl decoration-sky-500">
-        <span className="block mb-2 decoration-sky-500 text-gray-800 dark:text-gray-200 shadow-text">TEAM MEMBERS</span>
+      <h1 className="mb-5 text-10xl font-semibold text-white xl:text-5xl decoration-sky-500">
+        <span className="block mb-2 decoration-sky-500 text-gray-800 dark:text-gray-200 shadow-text">CORE TEAM'23</span>
       </h1>
       <br></br>
       <br></br>
       <br></br>
       <div className="flex justify-around mb-8">
-        <button onClick={() => handleCategoryClick('core')} className={`py-2 px-4 rounded ${selectedCategory.toLowerCase() === 'core' ? 'bg-green-500 text-white' : 'bg-gray-300'}`}>Core</button>
-        <button onClick={() => handleCategoryClick('senior manager')} className={`py-2 px-4 rounded ${selectedCategory.toLowerCase() === 'senior manager' ? 'bg-green-500 text-white' : 'bg-gray-300'}`}>Senior Manager</button>
-        <button onClick={() => handleCategoryClick('manager')} className={`py-2 px-4 rounded ${selectedCategory.toLowerCase() === 'manager' ? 'bg-green-500 text-white' : 'bg-gray-300'}`}>Manager</button>
-        <button onClick={() => handleCategoryClick('deputy manager')} className={`py-2 px-4 rounded ${selectedCategory.toLowerCase() === 'deputy manager' ? 'bg-green-500 text-white' : 'bg-gray-300'}`}>Deputy Manager</button>
+        <button onClick={() => handleCategoryClick('core')} className={`py-2 px-4 font-bold rounded ${selectedCategory.toLowerCase() === 'core' ? 'bg-green-500 text-black' : 'bg-gray-300'}`}>Core</button>
+        <button onClick={() => handleCategoryClick('senior manager')} className={`py-2 px-4 font-bold rounded ${selectedCategory.toLowerCase() === 'senior manager' ? 'bg-green-500 text-black' : 'bg-gray-300'}`}>Senior Manager</button>
+        <button onClick={() => handleCategoryClick('manager')} className={`py-2 px-4 font-bold rounded ${selectedCategory.toLowerCase() === 'manager' ? 'bg-green-500 text-black' : 'bg-gray-300'}`}>Manager</button>
+        <button onClick={() => handleCategoryClick('deputy manager')} className={`py-2 px-4 font-bold rounded ${selectedCategory.toLowerCase() === 'deputy manager' ? 'bg-green-500 text-black' : 'bg-gray-300'}`}>Deputy Manager</button>
       </div>
       <div className="flex flex-wrap justify-center">
         {teamMembers
           .filter(member => member.category === selectedCategory)
           .map((member, index) => (
-            <div key={index} className="m-4 p-6 bg-white rounded-lg shadow-md w-64">
+            <div key={index} className="m-4 p-6 rounded-lg shadow-md w-64" style={{ background: 'linear-gradient(45deg, #cfd8dc, #90a4ae)' }}>
               <img src='/images/john.jpg' alt={member.name} className="w-32 h-32 rounded-full mx-auto mb-4" />
-              <div className="text-xl font-semibold">{member.name}</div>
-              <div className="text-gray-600">{member.position}</div>
+              <div className="text-2xl text-black font-bold">{member.name}</div>
+              <div className="text-black">{member.position}</div>
             </div>
           ))}
       </div>
