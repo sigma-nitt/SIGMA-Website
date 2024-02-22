@@ -1,0 +1,14 @@
+/* Small screens */
+@media screen and (max-width: 1024px) {
+    .mt-custom {
+      margin-top: 250px !important;
+    }
+  }
+  
+  /* Large screens */
+  @media screen and (min-width: 1024px) {
+    .mt-custom {
+      margin-top: 150px !important;
+    }
+  }
+  

@@ -1,0 +1,15 @@
+/* Small screens */
+@media screen and (max-width: 1024px) {
+  .mt-custom {
+    margin-top: 0 !important; /* Resetting margin-top */
+    padding-top: 100px; /* Adjust the padding-top value based on your navbar's height */
+  }
+}
+
+/* Large screens */
+@media screen and (min-width: 1024px) {
+  .mt-custom {
+    margin-top: 20px !important;
+    padding-top: 0; /* Resetting padding-top */
+  }
+}

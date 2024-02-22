@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import 'animate.css';
 
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
@@ -31,19 +32,19 @@ const Header = () => {
   }, []);
 
   return (
-    <header
-      className={`fixed left-0 top-0 z-99999 w-full py-7 ${stickyMenu
-          ? "bg-white !py-4 shadow transition duration-100 dark:bg-black"
+    <header className="fixed left-0 top-0 z-99999 w-full py-7 bg-black shadow transition duration-100000 dark:bg-black animate__animated animate__fadeIn">
+      {/* className={`fixed left-0 top-0 z-99999 w-full py-7 ${stickyMenu
+          ? "bg-black !py-4 shadow transition duration-100 dark:bg-black"
           : ""
         }`}
-    >
+    > */}
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
         <div className="flex w-full items-start justify-between xl:w-1/4">
           <a href="/">
             <Image
               src="/images/sigma.png"
               alt="logo"
-              width={80}
+              width={50}
               height={50}
               className="w-full dark:hidden"
             />
@@ -79,7 +80,8 @@ const Header = () => {
                     <>
                       <button
                         onClick={() => setDropdownToggler(!dropdownToggler)}
-                        className="flex cursor-pointer items-center justify-between gap-3 hover:text-primary"
+                        className="flex items-center justify-between gap-3 hover:text-primary focus:outline-none transition-transform transform"
+                        tw="hover:(scale-145) focus:(ring ring-primary ring-opacity-50)"
                       >
                         {menuItem.title}
                         <span>
