@@ -1,72 +1,84 @@
 /* ReportPage.css */
-.report-container {
-    text-align: center;
-    background-color: white;
-    padding: 8px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .report-heading {
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #2b6cb0;
-  }
-  
-  .report-image {
-    width: 100%;
-    height: auto;
-  }
-  
-  .report-intro-text {
-    font-size: 1rem;
-    color: #4a5568;
-    margin-top: 1rem;
-  }
-  
-  .expand-button,
-  .collapse-button {
-    background-color: #3490dc;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 1rem;
-  }
-  
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-  }
-  
-  .modal-content {
-    margin-top: 100px;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    z-index: 1010;
-    overflow-y: auto; /* Allow vertical scrolling */
-    max-height: 80vh; /* Set a maximum height */
-  }
-  
-  .content-item {
-    margin-bottom: 1rem;
-  }
 
-  .report-box {
-    margin-bottom: 20px; /* Adjust the value as needed */
-  }
+.report-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  padding: 40px;
+}
+
+.report-box {
+  flex: 0 0 calc(33.33% - 16px); /* Adjusted to make each box take up about 33.33% of the width with some spacing */
+  height: 500px;
+  margin-bottom: 20px;
+}
+
+.individual-report {
+  background-color: white;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  height: 100%; /* Ensure that the box takes up the full height of the parent */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.report-heading {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2b6cb0;
+}
+
+.report-image {
+  width: 100%;
+  height: auto;
+}
+
+.report-intro-text {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-top: 1rem;
+}
+
+.expand-button,
+.collapse-button {
+  background-color: #3490dc;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  margin-top: 100px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1010;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.content-item {
+  margin-bottom: 1rem;
+}

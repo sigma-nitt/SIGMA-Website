@@ -77,7 +77,53 @@
 
 
 
-// pages/api/report.ts
+// pages/api/report.ts // single
+// import { NextApiRequest, NextApiResponse } from 'next';
+// import { createClient } from '@sanity/client';
+
+// export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+//   try {
+//     const client = createClient({
+//       projectId: 'jnqvatdi',
+//       dataset: 'production',
+//       apiVersion: '2024-02-11',
+//       useCdn: false
+//     });
+
+//     const query = `*[_type == "report"] {
+//       heading,
+//       introductoryImage,
+//       introductoryText,
+//       content[] {
+//         ...,
+//         // Only include the fields that are relevant to your components
+//         _type,
+//         value,
+//         image,
+//         caption
+//       }
+//     }`;
+
+//     const reports = await client.fetch(query);
+
+//     // Assuming there's only one report, you can take the first element
+//     const report = reports[0];
+
+//     if (!report) {
+//       res.status(404).json({ error: 'Report not found' });
+//       return;
+//     }
+
+//     res.status(200).json(report);
+//   } catch (error) {
+//     console.error('Error fetching report from Sanity:', error);
+//     res.status(500).json({ error: 'Internal server error' });
+//   }
+// }
+
+
+
+//multiple report
 import { NextApiRequest, NextApiResponse } from 'next';
 import { createClient } from '@sanity/client';
 
@@ -106,18 +152,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const reports = await client.fetch(query);
 
-    // Assuming there's only one report, you can take the first element
-    const report = reports[0];
-
-    if (!report) {
+    if (!reports) {
       res.status(404).json({ error: 'Report not found' });
       return;
     }
 
-    res.status(200).json(report);
+    res.status(200).json(reports);
   } catch (error) {
     console.error('Error fetching report from Sanity:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
 }
-
