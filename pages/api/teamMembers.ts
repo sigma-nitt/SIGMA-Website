@@ -23,7 +23,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const query = `*[_type == "teamMember" && category == $selectedCategory] {
       name,
       position,
-      category
+      category,
+      image,
     }`;
     // Extract the selected category from the query parameters
     const params = { selectedCategory: categoryString };

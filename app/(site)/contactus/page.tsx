@@ -1,6 +1,6 @@
 // pages/report.tsx
 import React from "react";
-import ReportPage from "@/components/ReportCS";
+import ReportPage from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

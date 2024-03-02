@@ -27,6 +27,11 @@ interface TeamMemberSchema {
         title: 'Category',
         type: 'string',
       },
+      {
+        name: 'image',
+        title: 'Image',
+        type: 'image',
+      }
     ],
   };
   

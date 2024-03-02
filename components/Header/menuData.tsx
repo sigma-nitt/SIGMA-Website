@@ -46,7 +46,7 @@ const menuData: Menu[] = [
         id: 4.2,
         title: "Data Analytics",
         newTab: false,
-        path: "/casestudies",
+        path: "/datanalytics",
       },
     ],
   },
@@ -63,6 +63,24 @@ const menuData: Menu[] = [
     title: "Initiatives",
     newTab: false,
     path: "/blog",
+  },
+  {
+    id: 7,
+    title: "Resources",
+    newTab: false,
+    path: "/resources",
+  },
+  {
+    id: 8,
+    title: "Inductions",
+    newTab: false,
+    path: "/inductions",
+  },
+  {
+    id: 9,
+    title: "Contact Us",
+    newTab: false,
+    path: "/contactus",
   }
 ];
 

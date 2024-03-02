@@ -136,7 +136,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       useCdn: false
     });
 
-    const query = `*[_type == "report"] {
+    const query = `*[_type == "reportCS"] {
       heading,
       introductoryImage,
       introductoryText,

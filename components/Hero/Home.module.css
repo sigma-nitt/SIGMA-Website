@@ -1,0 +1,68 @@
+/* styles/Home.module.css */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.sigmaContainer {
+  display: flex;
+  align-items: center;
+}
+
+.sigmaSymbolContainer {
+  margin-right: 10px; /* Adjust the margin as needed */
+  display: flex;
+  flex-direction: column; /* Stack the symbol vertically */
+}
+
+.sigmaSymbol {
+  font-size: 18em; /* Adjust the font size dynamically */
+  flex-grow: 1; /* Allow the symbol to grow to fill available space */
+  color: white;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column; /* Stack the text vertically */
+  min-width: 200px; /* Set a minimum width for textContainer */
+}
+
+.sigmaText {
+  font-size: 5em; /* Adjust the font size as needed */
+  font-weight: bold; /* Make it bold */
+  text-align: center; /* Center-align the Sigma word */
+  color: white;
+}
+
+.businessClub {
+  font-size: 3em; /* Adjust the font size as needed */
+  font-weight: bold;
+  color: white;
+}
+
+/* Media query for small screens (up to 600px) */
+@media screen and (max-width: 600px) {
+  .sigmaContainer {
+    flex-direction: column; /* Stack the elements vertically on small screens */
+    align-items: center;
+  }
+
+  .sigmaSymbolContainer {
+    margin-bottom: 120px; /* Adjust the margin for smaller screens */
+  }
+
+  .sigmaSymbol {
+    font-size: 10em; /* Adjust the font size for smaller screens */
+  }
+
+  .sigmaText {
+    font-size: 3em; /* Adjust the font size for smaller screens */
+  }
+
+  .businessClub {
+    font-size: 2em; /* Adjust the font size for smaller screens */
+  }
+}

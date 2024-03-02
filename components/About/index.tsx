@@ -2,8 +2,13 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 const About = () => {
+  const { theme } = useTheme();
+
+  const isDarkTheme = theme === "dark";
+
   return (
     <>
       {/* <!-- ===== About Start ===== --> */}
@@ -26,7 +31,9 @@ const About = () => {
               whileInView="visible"
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_left relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
+              className={`animate_right relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2 ${
+                isDarkTheme ? "dark:border-strokedark dark:text-white" : "border-stroke text-black"
+              }`}
             >
               <Image
                 src="/images/about/about-light-01.png"
