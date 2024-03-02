@@ -172,7 +172,7 @@ const EventsPage: React.FC = () => {
           </div>
           <div className="w-full md:w-1/2 lg:w-1/2 p-4 md:p-8 lg:p-8 relative">
             <img
-              src={imageUrlFor(event.images[0]).url()}
+              src={imageUrlFor(event.images[1]).url()}
               alt={event.title}
               className="w-full h-auto md:h-full rounded-lg shadow-md"
             />
