@@ -16,7 +16,7 @@ const WhoWeAre: React.FC<WhoWeAreProps> = (props) => {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.8 }
     );
 
     // Assuming your CSS classes handle animation appropriately without using refs
@@ -33,6 +33,10 @@ const WhoWeAre: React.FC<WhoWeAreProps> = (props) => {
 
   return (
     <div className={styles.container}>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <div className={styles.gridContainer}>
         <div className={styles.gridItem}>
           <h1 className={styles.heading}>Who we are?</h1>
@@ -40,16 +44,16 @@ const WhoWeAre: React.FC<WhoWeAreProps> = (props) => {
         <div className={styles.gridLine} />
         <div className={styles.gridItem}>
           <p className={styles.paragraph}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor commodo ipsum, ac facilisis velit interdum vel.
+            Our club provides a platform where students can share a mutual interest in business and characteristic enthusiasm to succeed. We provide guidance replete with sufficient exposure and real-life projects.
           </p>
+          <br></br>
         </div>
       </div>
       <div className={styles.gridContainer}>
         <div className={styles.gridItem}>
+          <br></br>
           <p className={styles.paragraph}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor commodo ipsum, ac facilisis velit interdum vel. 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor commodo ipsum, ac facilisis velit interdum vel. 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor commodo ipsum, ac facilisis velit interdum vel.
+            SIGMA - The Business Club of NITT operates in four major fields, i.e., Projects, Data Analytics, Case Studies and Consulting, and Articles. We encourage our members to explore these domains as well as to participate and manage various events, including Guest Lectures, Workshops, and Competitions.
           </p>
         </div>
         <div className={styles.gridLine} />

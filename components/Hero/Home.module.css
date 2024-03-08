@@ -19,10 +19,15 @@
 }
 
 .sigmaSymbol {
-  font-size: 18em; /* Adjust the font size dynamically */
   flex-grow: 1; /* Allow the symbol to grow to fill available space */
-  color: white;
+  max-width: 100%; /* Ensure the image does not exceed its container width */
+  max-height: 100%; /* Ensure the image does not exceed its container height */
+  width: auto; /* Automatically adjust the width while maintaining aspect ratio */
+  height: 20em; /* Adjust the height to your desired size */
+  display: block; /* Remove any extra spacing around the image */
+  margin: 0 auto; /* Center the image horizontally */
 }
+
 
 .textContainer {
   display: flex;
@@ -31,14 +36,14 @@
 }
 
 .sigmaText {
-  font-size: 5em; /* Adjust the font size as needed */
+  font-size: 10em; /* Adjust the font size as needed */
   font-weight: bold; /* Make it bold */
   text-align: center; /* Center-align the Sigma word */
   color: white;
 }
 
 .businessClub {
-  font-size: 3em; /* Adjust the font size as needed */
+  font-size: 5em; /* Adjust the font size as needed */
   font-weight: bold;
   color: white;
 }

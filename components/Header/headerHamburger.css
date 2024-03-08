@@ -1,0 +1,5 @@
+@media (min-width: 1568px) {
+    .hamburger-button {
+      display: none;
+    }
+}

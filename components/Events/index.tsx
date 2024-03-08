@@ -151,7 +151,7 @@ const EventsPage: React.FC = () => {
   if (error) return <p>Error :(</p>;
 
   return (
-    <div className="container mx-auto py-8" style={{ maxWidth: '85%' }}>
+    <div className="container mx-auto py-8" style={{ maxWidth: '75%'}}>
       <h1 className="text-3xl font-bold mb-8">Events</h1>
       {events.map((event, index) => (
         <div key={index} className="flex flex-wrap bg-white rounded-lg shadow-md overflow-hidden mb-8">
@@ -164,7 +164,7 @@ const EventsPage: React.FC = () => {
             </p>
             <button
               onClick={() => handleExpandClick(index)}
-              className="mt-4 bg-blue-500 text-white py-2 px-4 rounded-full mx-auto"
+              className="mt-4 bg-blue-500 text-white py-2 px-4 rounded-full mx-auto flex items-center justify-center"
               style={{ width: '200px' }}
             >
               {selectedEvent === index ? 'Collapse' : 'View Image Gallery'}

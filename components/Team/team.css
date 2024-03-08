@@ -1,26 +1,79 @@
-/* team.css */
-
-/* Add a default style for larger screens */
 body {
-    margin-top: 0; /* Reset default margin */
-  }
-  
-  /* Media query for small screens */
-  @media (max-width: 1067px) {
-    body {
-      margin-top: 120px; /* Set margin for small screens */
-    }
-  
-    /* Adjust other styles as needed for small screens */
-    .text-center {
-      padding: 20px; /* Example: Reduce padding for smaller screens */
-    }
+  margin-top: 0;
+}
 
-    /* Adjust font size for smaller screens */
-    .text-10xl {
-      font-size: 3rem; /* Adjust the font size as needed */
-    }
-  
-    /* Add more styles as needed */
+@media (max-width: 1067px) {
+  body {
+    margin-top: 120px;
   }
-  
+
+  .text-center {
+    padding: 20px;
+  }
+
+  .text-10xl {
+    font-size: 3rem;
+  }
+}
+
+/* Add this new class for the flipping effect */
+.flipping-container {
+  perspective: 1000px;
+}
+
+/* Apply the flipping effect to each team member card */
+.flipping-card {
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  transform-origin: center; /* Set the transform origin to the center */
+  animation: cardEntranceLeft 0.5s ease-out;
+}
+
+/* Alternate animation for cards at odd indices */
+.flipping-card:nth-child(odd) {
+  animation: cardEntranceRight 0.5s ease-out;
+}
+
+/* Apply the flipping effect when the hover state is active */
+.flipping-card:hover {
+  transform: rotateY(180deg) scale(1.05); /* Rotate and scale on hover */
+}
+
+/* Animation for cards entering from the left */
+@keyframes cardEntranceLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation for cards entering from the right */
+@keyframes cardEntranceRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply the back face styling for each team member card */
+.flipping-card .back-face {
+  transform: rotateY(180deg);
+}
+
+.category-button {
+  transition: transform 0.3s ease-in-out;
+}
+
+.category-button:hover {
+  transform: translateY(-5px); /* Adjust the value based on your preference */
+}
+
+
