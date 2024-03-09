@@ -58,8 +58,10 @@ const MeetOurTeamPage = () => {
 
   return (
     <div className="text-center flipping-container">
-      <h1 className="mb-5 text-10xl font-semibold text-white xl:text-5xl decoration-sky-500">
-        <span className="block mb-2 decoration-sky-500 text-gray-800 dark:text-gray-200 shadow-text">CORE TEAM'23</span>
+      <h1 className="mb-5 text-5xl xl:text-5xl font-semibold text-white xl:text-5xl decoration-sky-500">
+        <span className="block mb-2 decoration-sky-500 text-gray-800 dark:text-gray-200 shadow-text">
+          OUR TEAM'23
+        </span>
       </h1>
       <br />
       <br />
@@ -103,4 +105,3 @@ const MeetOurTeamPage = () => {
 };
 
 export default MeetOurTeamPage;
-

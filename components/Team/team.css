@@ -16,30 +16,30 @@ body {
   }
 }
 
-/* Add this new class for the flipping effect */
+
 .flipping-container {
   perspective: 1000px;
 }
 
-/* Apply the flipping effect to each team member card */
+
 .flipping-card {
   transition: transform 0.5s;
   transform-style: preserve-3d;
-  transform-origin: center; /* Set the transform origin to the center */
+  transform-origin: center; 
   animation: cardEntranceLeft 0.5s ease-out;
 }
 
-/* Alternate animation for cards at odd indices */
+
 .flipping-card:nth-child(odd) {
   animation: cardEntranceRight 0.5s ease-out;
 }
 
-/* Apply the flipping effect when the hover state is active */
+
 .flipping-card:hover {
-  transform: rotateY(180deg) scale(1.05); /* Rotate and scale on hover */
+  transform: rotateY(180deg) scale(1.05); 
 }
 
-/* Animation for cards entering from the left */
+
 @keyframes cardEntranceLeft {
   0% {
     opacity: 0;
@@ -51,7 +51,7 @@ body {
   }
 }
 
-/* Animation for cards entering from the right */
+
 @keyframes cardEntranceRight {
   0% {
     opacity: 0;
@@ -63,7 +63,7 @@ body {
   }
 }
 
-/* Apply the back face styling for each team member card */
+
 .flipping-card .back-face {
   transform: rotateY(180deg);
 }
@@ -73,7 +73,6 @@ body {
 }
 
 .category-button:hover {
-  transform: translateY(-5px); /* Adjust the value based on your preference */
+  transform: translateY(-5px);
 }
-
 
