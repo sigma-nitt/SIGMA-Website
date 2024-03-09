@@ -7,12 +7,10 @@ const Home = () => {
     <div className={styles.container}>
       <div className={styles.sigmaContainer}>
         <div className={styles.sigmaSymbolContainer}>
-          {/* <div className={styles.sigmaSymbol}>&Sigma;</div> */}
           <img src="/images/sigma symbol.png" alt="Sigma Symbol" className={styles.sigmaSymbol} />
         </div>
         <div className={styles.textContainer}>
           <div className={styles.sigmaText}>SIGMA</div>
-          <br></br>
           <br></br>
           <br></br>
           <br></br>

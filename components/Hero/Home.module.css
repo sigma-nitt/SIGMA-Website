@@ -19,13 +19,35 @@
 }
 
 .sigmaSymbol {
-  flex-grow: 1; /* Allow the symbol to grow to fill available space */
-  max-width: 100%; /* Ensure the image does not exceed its container width */
-  max-height: 100%; /* Ensure the image does not exceed its container height */
-  width: auto; /* Automatically adjust the width while maintaining aspect ratio */
-  height: 20em; /* Adjust the height to your desired size */
-  display: block; /* Remove any extra spacing around the image */
-  margin: 0 auto; /* Center the image horizontally */
+  flex-grow: 1;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: 20em;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive styles for screens up to 600px wide */
+@media screen and (max-width: 600px) {
+  .sigmaSymbol {
+    height: 1em; /* Adjust the height for smaller screens */
+    margin-top: 55px;
+  }
+}
+
+/* Responsive styles for screens between 601px and 1200px wide */
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  .sigmaSymbol {
+    height: 18em; /* Adjust the height for medium-sized screens */
+  }
+}
+
+/* Responsive styles for screens larger than 1200px wide */
+@media screen and (min-width: 1201px) {
+  .sigmaSymbol {
+    height: 20em; /* Keep the original height for larger screens */
+  }
 }
 
 
