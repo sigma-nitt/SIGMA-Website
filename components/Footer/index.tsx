@@ -38,7 +38,7 @@ const Footer = () => {
                   <Image
                     width={60}
                     height={40}
-                    src="/images/igma symbol.png"
+                    src="/images/sigma symbol.png"
                     alt="Logo"
                     className="hidden dark:block"
                   />
