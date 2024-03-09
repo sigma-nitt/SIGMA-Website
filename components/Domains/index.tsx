@@ -19,14 +19,14 @@ const MyComponent: React.FC = () => {
 
     const leftCellStyle: React.CSSProperties = {
         width: '30%',
-        border: '2px solid white',
+        border: '3px solid white',
         padding: '8px',
         textAlign: 'left',
     };
 
     const rightCellStyle: React.CSSProperties = {
         width: '70%',
-        border: '1px solid white',
+        border: '3px solid white',
         padding: '8px',
         textAlign: 'left',
         position: 'relative', 

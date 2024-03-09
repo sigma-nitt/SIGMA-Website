@@ -45,6 +45,7 @@ const Footer = () => {
                 </a>
 
                 <p className="mb-10 mt-5">
+                  SIGMA<br></br>
                   NIT Trichy<br></br>
                   Tamil Nadu, India<br></br>
                 </p>
@@ -53,7 +54,7 @@ const Footer = () => {
                   contact
                 </p>
                 <a
-                  href="#"
+                  href="/contactus"
                   className="text-itemtitle font-medium text-black dark:text-white"
                 >
                   sigma.nitt@gmail.com
