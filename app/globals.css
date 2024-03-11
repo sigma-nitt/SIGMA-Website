@@ -21,7 +21,7 @@
 
 @layer base {
   body {
-    @apply relative z-1 font-inter text-regular font-normal text-waterloo dark:text-manatee bg-black bg-blue-50; /* Change bg-blue-500 to the shade of blue you desire */
+    @apply relative z-1 font-inter text-regular font-normal text-waterloo dark:text-manatee bg-black bg-blue-100; /* Change bg-blue-500 to the shade of blue you desire */
   }
 }
 

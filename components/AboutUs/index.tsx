@@ -1,34 +1,114 @@
-// pages/index.tsx
+// // pages/index.tsx
+// "use client"
+// import React from 'react';
+// import './aboutus.css';
+
+// const IndexPage: React.FC = () => {
+//   return (
+//     <div className="p-8">
+//       <h1 className="text-6xl font-bold mb-2 text-black dark:text-white">Our Mission</h1>
+//       <p className="mb-4 max-w-7/12 custom-width text-black dark:text-white">At SIGMA, we are committed to providing our members with a wide range of services and activities to help them develop their skills and interests in business, data analytics, and machine learning. Our mission is to empower our members with the knowledge and resources they need to succeed in their careers and make a positive impact in their communities.</p>
+
+//       <br></br>
+//       <br></br>
+//       <br></br>
+//       <br></br>
+//       <div className="flex">
+//         <div className="w-3/12 mr-4 text-black dark:text-white">
+//           {/* Left Content */}
+//           <div className="p-4 flex flex-col h-full border border-black dark:border-white text-center flex justify-center align-middle text-4xl">
+//             <p>Our Story</p>
+//           </div>
+//         </div>
+
+//         <div className="w-9/12 text-black dark:text-white">
+//           {/* Big Box (90%) */}
+//           <div className="p-8 border border-black dark:border-white">
+//             <p>SIGMA is a business club based in NIT Trichy, India. Our club was founded with the vision of providing learning resources for students from technical backgrounds who are interested in managerial and techno-managerial disciplines. Since then, we have grown to become a thriving community of students who are passionate about business, data analytics, and machine learning.
+//               At SIGMA, we offer a wide range of services and activities to our members, including publishing articles on medium, social media posts about business topics, case studies, and projects involving data analytics and machine learning. We also organize workshops, podcasts, events, and competitions for college students in NIT Trichy.
+//               Our club is run by a team of experienced leaders who are committed to providing our members with the best possible resources and opportunities. We believe that by working together, we can achieve great things and make a positive impact in our community.SIGMA is a business club based in NIT Trichy, India. Our club was founded with the vision of providing learning resources for students from technical backgrounds who are interested in managerial and techno-managerial disciplines. Since then, we have grown to become a thriving community of students who are passionate about business, data analytics, and machine learning.
+//               At SIGMA, we offer a wide range of services and activities to our members, including publishing articles on medium, social media posts about business topics, case studies, and projects involving data analytics and machine learning. We also organize workshops, podcasts, events, and competitions for college students in NIT Trichy.
+//               Our club is run by a team of experienced leaders who are committed to providing our members with the best possible resources and opportunities. We believe that by working together, we can achieve great things and make a positive impact in our community.</p>
+//           </div>
+//         </div>
+//       </div>
+//       <br></br>
+
+//       <div className="flex flex-grow text-black dark:text-white">
+//         <div className="w-7/12 mr-4">
+//             {/* Bottom Left Box (70%) */}
+//             <div className="p-4 border border-black dark:border-white h-full flex items-center">
+//             <p>At SIGMA, we are proud to have a team of experienced leaders who are dedicated to providing our members with the best possible resources and opportunities. Our team consists of students from a variety of backgrounds who are passionate about business, data analytics, and machine learning.
+//             Our leaders have a wealth of experience in their respective fields, and they are committed to helping our members develop their skills and interests. They work hard to organize events, workshops, and other activities that provide our members with valuable learning experiences.
+//             We are always looking for new members to join our team, so if you are interested in becoming a part of SIGMA, please don't hesitate to get in touch with us.</p>
+//             </div>
+//         </div>
+
+//         <div className="flex flex-col flex-grow"> {/* Adjusted class here */}
+//             {/* Bottom Right Box (30%) */}
+//             <div className="p-4 border border-black dark:border-white text-center flex-grow text-4xl">
+//                 <p style={{ lineHeight: "5.5em" }}>Experienced</p>
+//             </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default IndexPage;
+
+
+
 "use client"
 import React from 'react';
 import './aboutus.css';
 
+// Import the background image
+import backgroundImage from "/public/images/dowbload.jpg";
+
 const IndexPage: React.FC = () => {
   return (
-    <div className="p-8">
-      <h1 className="text-6xl font-bold mb-2 text-black dark:text-white">Our Mission</h1>
-      <p className="mb-4 max-w-7/12 custom-width text-black dark:text-white">At SIGMA, we are committed to providing our members with a wide range of services and activities to help them develop their skills and interests in business, data analytics, and machine learning. Our mission is to empower our members with the knowledge and resources they need to succeed in their careers and make a positive impact in their communities.</p>
+    <div className="p-8 relative">
+      {/* <h1 className="text-6xl font-bold mb-2 text-black dark:text-white">Our Mission</h1>
+      <p className="mb-4 max-w-7/12 custom-width text-black dark:text-white">At SIGMA, we are committed to providing our members with a wide range of services and activities to help them develop their skills and interests in business, data analytics, and machine learning. Our mission is to empower our members with the knowledge and resources they need to succeed in their careers and make a positive impact in their communities.</p> */}
 
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
       <div className="flex">
-        <div className="w-3/12 mr-4 text-black dark:text-white">
-          {/* Left Content */}
-          <div className="p-4 flex flex-col h-full border border-black dark:border-white text-center flex justify-center align-middle text-4xl">
-            <p>Our Story</p>
+        <div className="w-2/5 relative">
+          <div className="circle-image relative">
+            <img src="/images/our mission.jpg" alt="Description" className="w-68 h-48 elliptical-image" />
+            <div className="blurry-border"></div>
           </div>
         </div>
+        <div className="w-3/5 ml-auto">
+          <div className="black-box p-4 text-left">
+            <p className="text-white">
+              At SIGMA, we are committed to providing our members with a wide range of services and activities to help them develop their skills and interests in business, data analytics, and machine learning. Our mission is to empower our members with the knowledge and resources they need to succeed in their careers and make a positive impact in their communities.
+            </p>
+          </div>
+        </div>
+      </div>
 
-        <div className="w-9/12 text-black dark:text-white">
-          {/* Big Box (90%) */}
-          <div className="p-8 border border-black dark:border-white">
-            <p>SIGMA is a business club based in NIT Trichy, India. Our club was founded with the vision of providing learning resources for students from technical backgrounds who are interested in managerial and techno-managerial disciplines. Since then, we have grown to become a thriving community of students who are passionate about business, data analytics, and machine learning.
-              At SIGMA, we offer a wide range of services and activities to our members, including publishing articles on medium, social media posts about business topics, case studies, and projects involving data analytics and machine learning. We also organize workshops, podcasts, events, and competitions for college students in NIT Trichy.
-              Our club is run by a team of experienced leaders who are committed to providing our members with the best possible resources and opportunities. We believe that by working together, we can achieve great things and make a positive impact in our community.SIGMA is a business club based in NIT Trichy, India. Our club was founded with the vision of providing learning resources for students from technical backgrounds who are interested in managerial and techno-managerial disciplines. Since then, we have grown to become a thriving community of students who are passionate about business, data analytics, and machine learning.
-              At SIGMA, we offer a wide range of services and activities to our members, including publishing articles on medium, social media posts about business topics, case studies, and projects involving data analytics and machine learning. We also organize workshops, podcasts, events, and competitions for college students in NIT Trichy.
-              Our club is run by a team of experienced leaders who are committed to providing our members with the best possible resources and opportunities. We believe that by working together, we can achieve great things and make a positive impact in our community.</p>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <div className="flex justify-center">
+        <div className="w-9/12 mr-4 h-full text-black dark:text-white relative" style={{ height: '500px' }}>
+          <div className="p-6 flex flex-col h-full border border-black dark:border-white text-center flex justify-center items-center align-middle text-5xl relative">
+            <p>Our Story</p>
+            <div
+              className="absolute inset-0 bg-cover bg-center filter blur-sm opacity-50 transition-all duration-300 hover:opacity-100"
+              style={{ backgroundImage: `url(${backgroundImage})` }}
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="absolute inset-0 bg-black opacity-0 hover:opacity-70 transition-all duration-300">
+                <p className="our-story-text">
+                  SIGMA is a business club based in NIT Trichy, India. Our club was founded with the vision of providing learning resources for students from technical backgrounds who are interested in managerial and techno-managerial disciplines. Since then, we have grown to become a thriving community of students who are passionate about business, data analytics, and machine learning.
+                  At SIGMA, we offer a wide range of services and activities to our members, including publishing articles on medium, social media posts about business topics, case studies, and projects involving data analytics and machine learning. We also organize workshops, podcasts, events, and competitions for college students in NIT Trichy.
+                  Our club is run by a team of experienced leaders who are committed to providing our members with the best possible resources and opportunities. We believe that by working together, we can achieve great things and make a positive impact in our community.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -36,21 +116,47 @@ const IndexPage: React.FC = () => {
 
       <div className="flex flex-grow text-black dark:text-white">
         <div className="w-7/12 mr-4">
-            {/* Bottom Left Box (70%) */}
-            <div className="p-4 border border-black dark:border-white h-full flex items-center">
+          <div className="p-4 border border-black dark:border-white h-full flex items-center leadership-content">
             <p>At SIGMA, we are proud to have a team of experienced leaders who are dedicated to providing our members with the best possible resources and opportunities. Our team consists of students from a variety of backgrounds who are passionate about business, data analytics, and machine learning.
-            Our leaders have a wealth of experience in their respective fields, and they are committed to helping our members develop their skills and interests. They work hard to organize events, workshops, and other activities that provide our members with valuable learning experiences.
-            We are always looking for new members to join our team, so if you are interested in becoming a part of SIGMA, please don't hesitate to get in touch with us.</p>
-            </div>
+              Our leaders have a wealth of experience in their respective fields, and they are committed to helping our members develop their skills and interests. They work hard to organize events, workshops, and other activities that provide our members with valuable learning experiences.
+              We are always looking for new members to join our team, so if you are interested in becoming a part of SIGMA, please don't hesitate to get in touch with us.</p>
+          </div>
         </div>
 
-        <div className="flex flex-col flex-grow"> {/* Adjusted class here */}
-            {/* Bottom Right Box (30%) */}
-            <div className="p-4 border border-black dark:border-white text-center flex-grow text-4xl">
-                <p style={{ lineHeight: "5.5em" }}>Experienced</p>
-            </div>
+        <div className="flex flex-col flex-grow">
+          <div className="p-4 border border-black dark:border-white text-center flex-grow text-4xl experienced-leadership">
+            <p style={{ lineHeight: "5.5em" }}>Experienced Leadership</p>
+          </div>
         </div>
       </div>
+
+      {/* New content for Analytics and Case Studies */}
+      <div className="flex mt-8 items-stretch justify-center">
+        {/* Analytics Box */}
+        <div className="flex-none w-1/3 pr-4">
+          <div className="p-0 border border-black dark:border-white h-full flex flex-col items-center analytics-content">
+            <div className="bg-blue-500 text-white py-4 px-8 mb-4 w-full text-center">
+              <h1 className="font-bold">Analytics</h1>
+            </div>
+            <div className="bg-white p-4 rounded-lg flex-grow w-full text-center">
+              <p className="font-bold text-amber-600">At SIGMA, we are passionate about data analytics. We provide our members with opportunities to learn and apply analytics techniques in various domains. From predictive modeling to data visualization, we offer workshops, projects, and resources to help our members develop their analytics skills.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Case Studies Box */}
+        <div className="flex-none w-1/3 pl-4">
+          <div className="p-0 border border-black dark:border-white h-full flex flex-col items-center case-studies-content">
+            <div className="bg-blue-500 text-white py-4 px-8 mb-4 w-full text-center">
+              <h1 className="font-bold">Case Studies</h1>
+            </div>
+            <div className="bg-white p-4 rounded-lg flex-grow w-full text-center">
+              <p className="font-bold text-amber-600">Case studies are an integral part of our learning experience at SIGMA. We analyze real-world business scenarios and apply problem-solving skills to understand different strategies and their outcomes. Through case studies, our members gain practical insights into various industries and business environments.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 };

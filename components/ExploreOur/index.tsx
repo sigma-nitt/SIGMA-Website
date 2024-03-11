@@ -70,7 +70,7 @@ const App: React.FC = () => {
         <p style={{ fontSize: '26px' }}>Box 1 Content</p>
       </div>
       <div style={boxStyle}>
-        <a href="/podcasts" style={{ textDecoration: 'none' }}>
+        <a href="/podcast" style={{ textDecoration: 'none' }}>
           <h1 style={{ fontSize: '44px', marginBottom: '20px', fontWeight: 'bold', color: 'white', marginTop: '10px' }}>Podcasts</h1>
         </a>
         <p style={{ fontSize: '26px' }}>Box 1 Content</p>
