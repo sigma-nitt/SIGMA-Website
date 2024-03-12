@@ -97,15 +97,10 @@ const IndexPage: React.FC = () => {
           </div>
         </div>
       </div>
-
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <div className="flex justify-center">
+      <div className="p-8 flex justify-center bg-slate-400">
         <div className="w-9/12 mr-4 h-full text-black dark:text-white relative" style={{ height: '500px' }}>
-          <div className="p-6 flex flex-col h-full border border-black dark:border-white text-center flex justify-center items-center align-middle text-5xl relative">
-            <p style={{ fontSize: '2.5em', fontWeight: 'bold', color: '#ff0000' }}>Our Story</p>
+          <div className="p-6 flex flex-col h-full border-8 border-black dark:border-white text-center flex justify-center items-center align-middle text-5xl relative rounded-3xl">
+            <p style={{ fontSize: '2.5em', fontWeight: 'bold', color: '#ff0000' }}>OUR STORY</p>
             {/* <div
               className="absolute inset-0 bg-cover bg-center filter blur-sm opacity-50 transition-all duration-300 hover:opacity-100"
               style={{ backgroundImage: `url(${backgroundImage})` }}
@@ -115,7 +110,7 @@ const IndexPage: React.FC = () => {
               <img
                 src="/images/our story.jpg"
                 alt="Background Image"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-3xl"
                 style={{ filter: 'blur(0px)' }}
               />
             </div>
@@ -132,14 +127,7 @@ const IndexPage: React.FC = () => {
           </div>
         </div>
       </div>
-      <br></br>
-
-      <br></br>
-      <br></br>
-      <br></br>
-
-
-      <div className="flex flex-grow text-black dark:text-white">
+      <div className="p-8 flex flex-grow text-black dark:text-white bg-slate-400">
         <div className="w-8/12 mr-4">
           <div className="p-4 border border-black dark:border-white h-full flex items-center leadership-content rounded-3xl" style={{ fontFamily: 'tahoma' }}>
             <p>At SIGMA, we are proud to have a team of experienced leaders who are dedicated to providing our members with the best possible resources and opportunities. Our team consists of students from a variety of backgrounds who are passionate about business, data analytics, and machine learning.
@@ -154,18 +142,13 @@ const IndexPage: React.FC = () => {
           </div>
         </div>
       </div>
-
-      <br></br>
-      <br></br>
-      <br></br>
-
       {/* New content for Analytics and Case Studies */}
-      <div className="flex mt-8 items-stretch justify-center">
+      <div className="p-8 flex items-stretch justify-center bg-red-300">
         {/* Analytics Box */}
         <div className="flex-none w-1/3 pr-4">
           <div className="p-0 border border-black dark:border-white h-full flex flex-col items-center analytics-content">
-            <div className="bg-blue-500 text-white py-4 px-8 mb-4 w-full text-center" style={{ fontFamily: 'helvetica' }}>
-              <h1 className="font-bold">Analytics</h1>
+            <div className="bg-blue-500 text-white py-4 px-8 mb-4 w-full text-center" style={{ fontFamily: 'DIDOT' }}>
+              <h1 className="font-bold">ANALYTICS</h1>
             </div>
             <div className="bg-white p-4 rounded-lg flex-grow w-full text-center" style={{ fontFamily: 'tahoma' }}>
               <p className="font-bold text-amber-600">We, the Analytics domain at Sigma, specialize in transforming data into compelling narratives that unveil business truths. We engage in Hackathons and competitions to hone our skills, and showcvase our prowess in handling data. Collaborating within our club, we work on projects involving Machine Learning models and Analytics toold to unlock profound insights from datasets.</p>
@@ -186,8 +169,8 @@ const IndexPage: React.FC = () => {
         {/* Case Studies Box */}
         <div className="flex-none w-1/3 pl-4">
           <div className="p-0 border border-black dark:border-white h-full flex flex-col items-center case-studies-content">
-            <div className="bg-blue-500 text-white py-4 px-8 mb-4 w-full text-center" style={{ fontFamily: 'helvetica' }}>
-              <h1 className="font-bold">Case Studies</h1>
+            <div className="bg-blue-500 text-white py-4 px-8 mb-4 w-full text-center" style={{ fontFamily: 'DIDOT' }}>
+              <h1 className="font-bold">CASE STUDIES</h1>
             </div>
             <div className="bg-white p-4 rounded-lg flex-grow w-full text-center" style={{ fontFamily: 'tahoma' }}>
               <p className="font-bold text-amber-600">At Case Studies, we analyze real-world problems and understand the business notions behind those problems. We focus on different toics such as economics, finance, marketing, supply chain & business happenings in and around the world, and publish several Articles, Projects, & Infographics based on these. We also participate in various case study competitions & conduct regular fun interactions sessions to enahnce our knowledge and skill set.</p>
