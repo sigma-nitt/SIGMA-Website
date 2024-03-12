@@ -60,7 +60,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .our-story-text {
-    font-size: 15px; /* Adjust the font size as needed for smaller screens */
+    font-size: 8px; /* Adjust the font size as needed for smaller screens */
   }
 }
 

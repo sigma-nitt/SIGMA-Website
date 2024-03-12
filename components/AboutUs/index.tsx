@@ -139,7 +139,7 @@ const IndexPage: React.FC = () => {
               <h1 className="font-bold">Analytics</h1>
             </div>
             <div className="bg-white p-4 rounded-lg flex-grow w-full text-center">
-              <p className="font-bold text-amber-600">At SIGMA, we are passionate about data analytics. We provide our members with opportunities to learn and apply analytics techniques in various domains. From predictive modeling to data visualization, we offer workshops, projects, and resources to help our members develop their analytics skills.</p>
+              <p className="font-bold text-amber-600">We, the Analytics domain at Sigma, specialize in transforming data into compelling narratives that unveil business truths. We engage in Hackathons and competitions to hone our skills, and showcvase our prowess in handling data. Collaborating within our club, we work on projects involving Machine Learning models and Analytics toold to unlock profound insights from datasets.</p>
             </div>
           </div>
         </div>
@@ -151,7 +151,7 @@ const IndexPage: React.FC = () => {
               <h1 className="font-bold">Case Studies</h1>
             </div>
             <div className="bg-white p-4 rounded-lg flex-grow w-full text-center">
-              <p className="font-bold text-amber-600">Case studies are an integral part of our learning experience at SIGMA. We analyze real-world business scenarios and apply problem-solving skills to understand different strategies and their outcomes. Through case studies, our members gain practical insights into various industries and business environments.</p>
+              <p className="font-bold text-amber-600">At Case Studies, we analyze real-world problems and understand the business notions behind those problems. We focus on different toics such as economics, finance, marketing, supply chain & business happenings in and around the world, and publish several Articles, Projects, & Infographics based on these. We also participate in various case study competitions & conduct regular fun interactions sessions to enahnce our knowledge and skill set.</p>
             </div>
           </div>
         </div>
