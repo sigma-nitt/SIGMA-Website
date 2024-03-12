@@ -59,11 +59,11 @@ const YouTubePodcasts: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 5 }} // Adjust the duration here for initial fade-in
             whileHover={{ scale: 1.05, transition: { duration: 0.1 } }} // Adjust the duration here for hover
-            className={`mt-${index === videos.length - 1 ? '5' : '20'} mb-${index === videos.length - 1 ? '10' : '5'} lg:flex items-center bg-gradient-to-r from-blue-100 to-blue-300 rounded-lg p-4 shadow-md`}
+            className={`mt-${index === videos.length - 1 ? '5' : '20'} mb-${index === videos.length - 1 ? '10' : '5'} lg:flex items-center bg-gradient-to-r from-blue-200 to-blue-600 rounded-lg p-4 shadow-md`}
           >
             <div className="w-full lg:w-1/2 lg:mr-8 mb-4 lg:mb-0">
-              <h2 className="font-bold text-2xl text-center lg:text-center">{video.title}</h2>
-              <p className="text-center lg:text-center">{video.description}</p>
+              <h2 className="font-bold text-3xl text-center lg:text-center text-black mb-6" style={{ fontFamily: 'tahoma'}}>{video.title.toUpperCase()}</h2>
+              <p className="text-center lg:text-center text-black">{video.description}</p>
             </div>
             <div className="w-full lg:w-1/2 mt-4 lg:mt-0">
               <YouTube videoId={video.videoId} opts={{ width: '100%', height: 315 }} />
