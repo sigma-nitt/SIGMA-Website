@@ -31,19 +31,27 @@ const menuData: Menu[] = [
     newTab: false,
     path: "/podcast",
   },
+
   {
     id: 4,
+    title: "Enigma",
+    newTab: false,
+    path: "/enigma",
+  },
+  
+  {
+    id: 5,
     title: "Projects",
     newTab: false,
     submenu: [
       {
-        id: 4.1,
+        id: 5.1,
         title: "Case Studies",
         newTab: false,
         path: "/casestudies",
       },
       {
-        id: 4.2,
+        id: 5.2,
         title: "Data Analytics",
         newTab: false,
         path: "/datanalytics",
@@ -51,12 +59,6 @@ const menuData: Menu[] = [
     ],
   },
 
-  {
-    id: 5,
-    title: "Enigma",
-    newTab: false,
-    path: "/enigma",
-  },
 
   {
     id: 6,
