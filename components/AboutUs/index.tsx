@@ -143,10 +143,10 @@ const IndexPage: React.FC = () => {
         </div>
       </div>
       {/* New content for Analytics and Case Studies */}
-      <div className="p-8 flex items-stretch justify-center bg-red-300">
+      <div className="p-8 flex items-stretch justify-center bg-white">
         {/* Analytics Box */}
         <div className="flex-none w-1/3 pr-4">
-          <div className="p-0 border border-black dark:border-white h-full flex flex-col items-center analytics-content">
+          <div className="p-0 border-4 border-black dark:border-white h-full flex flex-col items-center analytics-content">
             <div className="bg-blue-500 text-white py-4 px-8 mb-4 w-full text-center" style={{ fontFamily: 'DIDOT' }}>
               <h1 className="font-bold">ANALYTICS</h1>
             </div>
@@ -168,7 +168,7 @@ const IndexPage: React.FC = () => {
 
         {/* Case Studies Box */}
         <div className="flex-none w-1/3 pl-4">
-          <div className="p-0 border border-black dark:border-white h-full flex flex-col items-center case-studies-content">
+          <div className="p-0 border-4 border-black dark:border-white h-full flex flex-col items-center case-studies-content">
             <div className="bg-blue-500 text-white py-4 px-8 mb-4 w-full text-center" style={{ fontFamily: 'DIDOT' }}>
               <h1 className="font-bold">CASE STUDIES</h1>
             </div>

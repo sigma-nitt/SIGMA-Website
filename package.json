@@ -52,6 +52,7 @@
     "react-pdf": "^7.7.0",
     "react-pdf-js": "^5.1.0",
     "react-scroll": "^1.9.0",
+    "react-spring": "^9.7.3",
     "react-youtube": "^10.1.0",
     "sanity": "^3.28.0",
     "solid-js": "^1.8.15",

@@ -77,9 +77,10 @@ const MyComponent: React.FC = () => {
     };
     
     const headingStyle: React.CSSProperties = {
-        fontSize: '20px', 
+        fontSize: '35px', 
         fontWeight: 'bold', 
-        margin: '0', 
+        // margin: '8px 0', 
+        lineHeight: '1',
     };
     
     const contentStyle: React.CSSProperties = {
@@ -89,11 +90,12 @@ const MyComponent: React.FC = () => {
     };
 
     const domainStyle: React.CSSProperties = {
-        fontSize: '50px',
+        fontSize: '60px',
         fontWeight: 'bold',
         marginBottom: '20px',
         textAlign: 'center',
         color: 'white',
+        fontFamily: 'optima',
     }
 
     const domainStyleText: React.CSSProperties = {
@@ -127,9 +129,9 @@ const MyComponent: React.FC = () => {
                 <tbody>
                     <tr>
                         <td style={leftCellStyle}>
-                            <h1 style={domainStyle}>Domains</h1>
+                            <h1 style={domainStyle}>DOMAINS</h1>
                             <br></br>
-                            <p style={domainStyleText}>We work on following domains</p>
+                            <p style={domainStyleText}></p>
                         </td>
                         <td style={rightCellStyle}>
                             <img src="/images/analytics logo.png" alt="Image Alt Text" style={imageStyleda} />
@@ -144,13 +146,15 @@ const MyComponent: React.FC = () => {
             </table>
 
             <div style={boxStyle1}>
+                <br></br>
                 <h2 style={headingStyle}>Analytics</h2>
-                <p style={contentStyle}>We do Data Analytics</p>
+                <p style={contentStyle}></p>
             </div>
 
             <div style={boxStyle2}>
+                <br></br>
                 <h2 style={headingStyle}>Case Studies</h2>
-                <p style={contentStyle}>We do case studies</p>
+                <p style={contentStyle}></p>
             </div>
         </div>
     );

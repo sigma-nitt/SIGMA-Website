@@ -59,23 +59,23 @@ const App: React.FC = () => {
       <div style={circleStyle}></div>
       <div style={boxStyle}>
         <a href="/events" style={{ textDecoration: 'none' }}>
-          <h1 style={{ fontSize: '44px', marginBottom: '20px', fontWeight: 'bold', color: 'white', marginTop: '10px' }}>Events</h1>
+          <h1 style={{ fontSize: '44px', marginBottom: '20px', fontWeight: 'normal', color: 'black', marginTop: '10px', fontFamily: 'impact' }}>EVENTS</h1>
         </a>
-        <p style={{ fontSize: '20px' }}>Sigma in collaboration with different teams in the campus, organised various events, to get freshers, government school chiildren, and other students in the campus, know about the club. Recently we conducted "Monopoly Mania", a fun
+        <p style={{ fontSize: '20px', fontFamily:'baskerville' }}>Sigma in collaboration with different teams in the campus, organised various events, to get freshers, government school chiildren, and other students in the campus, know about the club. Recently we conducted "Monopoly Mania", a fun
 gamified business awareness event for the students of various local Government
 schools. It had a footfall of over 100 students.</p>
       </div>
       <div style={boxStyle}>
         <a href="/enigma" style={{ textDecoration: 'none' }}>
-          <h1 style={{ fontSize: '44px', marginBottom: '20px', marginTop: '10px', fontWeight: 'bold', color: 'white' }}>Magazines</h1>
+          <h1 style={{ fontSize: '44px', marginBottom: '20px', marginTop: '10px', fontWeight: 'normal', color: 'black', fontFamily: 'impact' }}>MAGAZINES</h1>
         </a>
-        <p style={{ fontSize: '19px' }}>Sigma published its 2nd Edition of the Enigma Business Magazine. It is a rich tapestry of knowledge, insightful articles, business news, in-depth analyses, engaging games, and more. It was shared with the winners of the events we conducted as well as winners of questionnaire we had for distribution of hardcopy. We published 50 hardcopy and later also put it on social media.</p>
+        <p style={{ fontSize: '19px', fontFamily:'baskerville' }}>Sigma published its 2nd Edition of the Enigma Business Magazine. It is a rich tapestry of knowledge, insightful articles, business news, in-depth analyses, engaging games, and more. It was shared with the winners of the events we conducted as well as winners of questionnaire we had for distribution of hardcopy. We published 50 hardcopy and later also put it on social media.</p>
       </div>
       <div style={boxStyle}>
         <a href="/podcast" style={{ textDecoration: 'none' }}>
-          <h1 style={{ fontSize: '44px', marginBottom: '20px', fontWeight: 'bold', color: 'white', marginTop: '10px' }}>Podcasts</h1>
+          <h1 style={{ fontSize: '44px', marginBottom: '20px', fontWeight: 'normal', color: 'black', marginTop: '10px', fontFamily: 'impact' }}>PODCASTS</h1>
         </a>
-        <p style={{ fontSize: '19px' }}>Expanding our base to Video Content on social media, we started a weekly series to help the team and viewers understand the concept of
+        <p style={{ fontSize: '19px', fontFamily:'baskerville' }}>Expanding our base to Video Content on social media, we started a weekly series to help the team and viewers understand the concept of
 “market sizing” & “case study”. It is a common technique used in consulting & product management firms which is also asked in interviews. By teaching these
 concepts in videos we learn ourselves & all the audience that comes on our channel.</p>
       </div>
