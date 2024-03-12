@@ -72,21 +72,27 @@ import backgroundImage from "/images/our story.jpg";
 
 const IndexPage: React.FC = () => {
   return (
-    <div className="p-8 relative">
+    <div className="p-0 relative">
       {/* <h1 className="text-6xl font-bold mb-2 text-black dark:text-white">Our Mission</h1>
       <p className="mb-4 max-w-7/12 custom-width text-black dark:text-white">At SIGMA, we are committed to providing our members with a wide range of services and activities to help them develop their skills and interests in business, data analytics, and machine learning. Our mission is to empower our members with the knowledge and resources they need to succeed in their careers and make a positive impact in their communities.</p> */}
 
-      <div className="flex">
-        <div className="w-2/5 relative">
+      <div className="flex bg-white">
+        {/* <div className="w-2/5 relative">
           <div className="circle-image relative">
             <img src="/images/our mission.jpg" alt="Description" className="w-68 h-48 elliptical-image" />
             <div className="blurry-border"></div>
           </div>
+        </div> */}\
+        <div className="w-2/5 relative">
+          <div className="circle-image relative">
+            <h2 className="text-center text-8xl font-bold mt-12" style={{ fontFamily: 'impact' }}>OUR MISSION</h2>
+            <div className="blurry-border"></div>
+          </div>
         </div>
-        <div className="w-3/5 ml-auto">
+        <div className="p-2 w-3/5 ml-auto">
           <div className="black-box p-4 text-left" style={{ fontFamily: 'tahoma' }}>
             <p className="text-white">
-              At SIGMA, we are committed to providing our members with a wide range of services and activities to help them develop their skills and interests in business, data analytics, and machine learning. Our mission is to empower our members with the knowledge and resources they need to succeed in their careers and make a positive impact in their communities.
+              At SIGMA, we are committed to providing our members with a wide range of services and activities to help them develop their skills and interests in business, data analytics, and machine learning. Our mission is to empower our members with the knowledge and resources they need to succeed in their careers and make a positive impact in their communities. It is a platform for business enthusiasts to engage in discussions, debates, and project development, enhancing their business acumen. 
             </p>
           </div>
         </div>
