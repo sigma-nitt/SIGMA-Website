@@ -3,7 +3,7 @@ import Team from "@/components/Team";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SIGMA NITT",
+  title: "Our Team",
   description: "This is Home for Solid Pro",
   // other metadata
 };

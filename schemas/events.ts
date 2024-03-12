@@ -73,7 +73,7 @@ export default {
       options: {
         layout: 'grid',
       },
-      validation: Rule => Rule.max(4),
+      validation: Rule => Rule.max(10),
     },
   ],
 };

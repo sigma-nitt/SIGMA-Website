@@ -3,7 +3,7 @@ import Enigma from "@/components/AboutUs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SIGMA - Enigma",
+  title: "About SIGMA",
   description: "This is Support page for Solid Pro",
   // other metadata
 };

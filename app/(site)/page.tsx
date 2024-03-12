@@ -109,7 +109,7 @@ export default function Home() {
           </div>
 
           <div style={{ textAlign: 'center', margin: '10px', flex: 1 }}>
-            <h1 style={{ fontSize: '3em', marginBottom: '10px', fontWeight: 'bold', color: 'white'}}>40+<br /><br />Members</h1>
+            <h1 style={{ fontSize: '3em', marginBottom: '10px', fontWeight: 'bold', color: 'white'}}>30+<br /><br />Members</h1>
             <div style={{ borderTop: '12px solid white', width: '30%', margin: 'auto', marginTop: '60px', marginBottom: '10px', borderRadius: '20px' }}></div>
           </div>
         </div>

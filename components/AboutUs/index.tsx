@@ -59,12 +59,16 @@
 
 
 
+
+
+
+
 "use client"
 import React from 'react';
 import './aboutus.css';
 
 // Import the background image
-import backgroundImage from "/public/images/dowbload.jpg";
+import backgroundImage from "/images/our story.jpg";
 
 const IndexPage: React.FC = () => {
   return (
@@ -95,11 +99,21 @@ const IndexPage: React.FC = () => {
       <div className="flex justify-center">
         <div className="w-9/12 mr-4 h-full text-black dark:text-white relative" style={{ height: '500px' }}>
           <div className="p-6 flex flex-col h-full border border-black dark:border-white text-center flex justify-center items-center align-middle text-5xl relative">
-            <p>Our Story</p>
-            <div
+            <p style={{ fontSize: '2.5em', fontWeight: 'bold', color: '#ff0000' }}>Our Story</p>
+            {/* <div
               className="absolute inset-0 bg-cover bg-center filter blur-sm opacity-50 transition-all duration-300 hover:opacity-100"
               style={{ backgroundImage: `url(${backgroundImage})` }}
-            />
+            /> */}
+
+            <div className="absolute inset-0 filter blur-sm opacity-50 transition-all duration-300 hover:opacity-100">
+              <img
+                src="/images/our story.jpg"
+                alt="Background Image"
+                className="w-full h-full object-cover"
+                style={{ filter: 'blur(0px)' }}
+              />
+            </div>
+
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="absolute inset-0 bg-black opacity-0 hover:opacity-70 transition-all duration-300">
                 <p className="our-story-text">

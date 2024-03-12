@@ -42,10 +42,10 @@ const MyComponent: React.FC = () => {
 
     const imageStylecs: React.CSSProperties = {
         position: 'absolute',
-        top: '190px', 
-        right: '450px', 
-        width: '400px',
-        height: '400px', 
+        top: '280px', 
+        right: '520px', 
+        width: '260px',
+        height: '260px', 
     };
 
     const boxStyle1: React.CSSProperties = {
@@ -135,7 +135,7 @@ const MyComponent: React.FC = () => {
                             <img src="/images/analytics logo.png" alt="Image Alt Text" style={imageStyleda} />
                             <br></br>
                             <a href="/dataanalytics" style={linkStyle1}>View Projects</a>
-                            <img src="/images/analytics logo.png" alt="Image Alt Text" style={imageStylecs} />
+                            <img src="/images/casestudies logo.png" alt="Image Alt Text" style={imageStylecs} />
                             <br></br>
                             <a href="/casestudies" style={linkStyle2}>View Projects</a>
                         </td>

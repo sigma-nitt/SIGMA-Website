@@ -3,9 +3,8 @@ import YouTubePodcasts from "@/components/Podcasts";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SIGMA NITT",
+  title: "SIGMA - Podcasts",
   description: "This is Home for Solid Pro",
-  // other metadata
 };
 
 
