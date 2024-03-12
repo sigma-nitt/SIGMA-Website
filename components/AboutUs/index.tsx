@@ -84,7 +84,7 @@ const IndexPage: React.FC = () => {
           </div>
         </div>
         <div className="w-3/5 ml-auto">
-          <div className="black-box p-4 text-left">
+          <div className="black-box p-4 text-left" style={{ fontFamily: 'tahoma' }}>
             <p className="text-white">
               At SIGMA, we are committed to providing our members with a wide range of services and activities to help them develop their skills and interests in business, data analytics, and machine learning. Our mission is to empower our members with the knowledge and resources they need to succeed in their careers and make a positive impact in their communities.
             </p>
@@ -128,9 +128,14 @@ const IndexPage: React.FC = () => {
       </div>
       <br></br>
 
+      <br></br>
+      <br></br>
+      <br></br>
+
+
       <div className="flex flex-grow text-black dark:text-white">
-        <div className="w-7/12 mr-4">
-          <div className="p-4 border border-black dark:border-white h-full flex items-center leadership-content">
+        <div className="w-8/12 mr-4">
+          <div className="p-4 border border-black dark:border-white h-full flex items-center leadership-content rounded-3xl" style={{ fontFamily: 'tahoma' }}>
             <p>At SIGMA, we are proud to have a team of experienced leaders who are dedicated to providing our members with the best possible resources and opportunities. Our team consists of students from a variety of backgrounds who are passionate about business, data analytics, and machine learning.
               Our leaders have a wealth of experience in their respective fields, and they are committed to helping our members develop their skills and interests. They work hard to organize events, workshops, and other activities that provide our members with valuable learning experiences.
               We are always looking for new members to join our team, so if you are interested in becoming a part of SIGMA, please don't hesitate to get in touch with us.</p>
@@ -138,33 +143,47 @@ const IndexPage: React.FC = () => {
         </div>
 
         <div className="flex flex-col flex-grow">
-          <div className="p-4 border border-black dark:border-white text-center flex-grow text-4xl experienced-leadership">
+          <div className="p-4 border border-black dark:border-white text-center flex-grow text-4xl experienced-leadership rounded-3xl">
             <p style={{ lineHeight: "5.5em" }}>Experienced Leadership</p>
           </div>
         </div>
       </div>
+
+      <br></br>
+      <br></br>
+      <br></br>
 
       {/* New content for Analytics and Case Studies */}
       <div className="flex mt-8 items-stretch justify-center">
         {/* Analytics Box */}
         <div className="flex-none w-1/3 pr-4">
           <div className="p-0 border border-black dark:border-white h-full flex flex-col items-center analytics-content">
-            <div className="bg-blue-500 text-white py-4 px-8 mb-4 w-full text-center">
+            <div className="bg-blue-500 text-white py-4 px-8 mb-4 w-full text-center" style={{ fontFamily: 'helvetica' }}>
               <h1 className="font-bold">Analytics</h1>
             </div>
-            <div className="bg-white p-4 rounded-lg flex-grow w-full text-center">
+            <div className="bg-white p-4 rounded-lg flex-grow w-full text-center" style={{ fontFamily: 'tahoma' }}>
               <p className="font-bold text-amber-600">We, the Analytics domain at Sigma, specialize in transforming data into compelling narratives that unveil business truths. We engage in Hackathons and competitions to hone our skills, and showcvase our prowess in handling data. Collaborating within our club, we work on projects involving Machine Learning models and Analytics toold to unlock profound insights from datasets.</p>
             </div>
+          </div>
+        </div>
+
+        <div className="flex justify-center mt-8">
+          <div className="w-full text-center">
+            <br></br>
+            <br></br>
+            <h1 className="text-5xl font-bold mb-4 text-black dark:text-white" style={{ fontFamily: 'impact' }}>What</h1>
+            <h1 className="text-5xl font-bold mb-4 text-black dark:text-white" style={{ fontFamily: 'impact' }}>We</h1>
+            <h1 className="text-5xl font-bold mb-4 text-black dark:text-white" style={{ fontFamily: 'impact' }}>Do</h1>
           </div>
         </div>
 
         {/* Case Studies Box */}
         <div className="flex-none w-1/3 pl-4">
           <div className="p-0 border border-black dark:border-white h-full flex flex-col items-center case-studies-content">
-            <div className="bg-blue-500 text-white py-4 px-8 mb-4 w-full text-center">
+            <div className="bg-blue-500 text-white py-4 px-8 mb-4 w-full text-center" style={{ fontFamily: 'helvetica' }}>
               <h1 className="font-bold">Case Studies</h1>
             </div>
-            <div className="bg-white p-4 rounded-lg flex-grow w-full text-center">
+            <div className="bg-white p-4 rounded-lg flex-grow w-full text-center" style={{ fontFamily: 'tahoma' }}>
               <p className="font-bold text-amber-600">At Case Studies, we analyze real-world problems and understand the business notions behind those problems. We focus on different toics such as economics, finance, marketing, supply chain & business happenings in and around the world, and publish several Articles, Projects, & Infographics based on these. We also participate in various case study competitions & conduct regular fun interactions sessions to enahnce our knowledge and skill set.</p>
             </div>
           </div>
