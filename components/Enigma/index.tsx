@@ -245,20 +245,20 @@ const PDFViewer: React.FC = () => {
   return (
     <div style={{ maxWidth: '5000px', margin: '0 auto' }}>
       {pdfDocuments.map((pdf, index) => (
-        <div key={index} style={{ marginBottom: '20px', background: '#f9f9f9', padding: '20px', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', width: '80%', margin: '0 auto' }}>
+        <div key={index} style={{ marginBottom: '40px', background: '#f9f9f9', padding: '20px', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', width: '80%', margin: '0 auto' }}>
           <div style={{ display: 'flex' }}>
-            <div style={{ width: '70%', marginRight: '10%' }}>
+            <div style={{ width: '70%', marginRight: '2%' }}>
               <iframe
                 src={pdf.url}
-                style={{ width: '100%', height: '800px', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}
+                style={{ width: '100%', height: '600px', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}
                 frameBorder="0"
                 scrolling="auto"
               ></iframe>
             </div>
-            <div style={{ width: '30%' }}>
-              <h2 style={{ fontWeight: 'bold', fontSize: '24px', color: 'blue' }}>{pdf.title}</h2>
-              <p style={{ overflowWrap: 'break-word', wordWrap: 'break-word' }}>{pdf.description}</p>
-              <button onClick={() => openPdf(pdf.url)}>View PDF</button>
+            <div style={{ width: '30%', margin: 'auto', textAlign: 'center' }}>
+              <h2 style={{ fontWeight: 'bold', fontSize: '45px', color: 'blue', marginBottom: '20px', fontFamily: 'tahoma', marginTop: '40px' }}>{pdf.title}</h2>
+              <p style={{ overflowWrap: 'break-word', wordWrap: 'break-word', color:'black' }}>{pdf.description}</p>
+              <button style={{ backgroundColor: 'blue', color: 'white', padding: '8px', borderRadius: '20px', cursor: 'pointer', marginTop:'20px' }} onClick={() => openPdf(pdf.url)}>Enlarge View</button>
             </div>
           </div>
         </div>
@@ -266,10 +266,10 @@ const PDFViewer: React.FC = () => {
       {selectedPdf && (
         <div className="pdf-overlay">
           <div className="pdf-container">
-            <button onClick={closePdf} style={{ position: 'absolute', top: '300px', right: '10px', zIndex: 10000 }}>Collapse</button>
+            <button onClick={closePdf} style={{ backgroundColor: 'blue', color: 'white', borderRadius: '20px', padding: '8px', position: 'absolute', top: '230px', right: '30px', zIndex: 10000 }}>Collapse</button>
             <iframe
               src={selectedPdf}
-              style={{ width: '100%', height: 'calc(100% - 40px)', position: 'absolute', top: '150px', left: 0, zIndex: 9999 }}
+              style={{ width: '90%', height: 'calc(50% - 0px)', position: 'absolute', top: '150px', left: 20, zIndex: 9999 }}
               frameBorder="0"
               scrolling="auto"
             ></iframe>

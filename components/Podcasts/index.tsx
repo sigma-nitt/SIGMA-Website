@@ -44,25 +44,33 @@ const YouTubePodcasts: React.FC = () => {
   if (error) return <p>Error :(</p>;
 
   return (
-    <div className="w-3/4 mx-auto mt-custom">
-      {videos.map((video: Video, index: number) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 5 }} // Adjust the duration here for initial fade-in
-          whileHover={{ scale: 1.05, transition: { duration: 0.1 } }} // Adjust the duration here for hover
-          className={`mt-${index === videos.length - 1 ? '5' : '20'} mb-${index === videos.length - 1 ? '10' : '5'} lg:flex items-center bg-gradient-to-r from-blue-100 to-blue-300 rounded-lg p-4 shadow-md`}
-        >
-          <div className="w-full lg:w-1/2 lg:mr-8 mb-4 lg:mb-0">
-            <h2 className="font-bold text-2xl text-center lg:text-center">{video.title}</h2>
-            <p className="text-center lg:text-center">{video.description}</p>
-          </div>
-          <div className="w-full lg:w-1/2 mt-4 lg:mt-0">
-            <YouTube videoId={video.videoId} opts={{ width: '100%', height: 315 }} />
-          </div>
-        </motion.div>
-      ))}
+    <div>
+      <div className="bg-white p-4 mb-8 mt-40">
+        <h1 className="text-6xl text-center text-slate-500 " style={{ fontFamily: 'impact'}}>
+          WATCH OUR PODCASTS !
+        </h1>
+      </div>
+
+      <div className="w-3/4 mx-auto mt-5">
+        {videos.map((video: Video, index: number) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 5 }} // Adjust the duration here for initial fade-in
+            whileHover={{ scale: 1.05, transition: { duration: 0.1 } }} // Adjust the duration here for hover
+            className={`mt-${index === videos.length - 1 ? '5' : '20'} mb-${index === videos.length - 1 ? '10' : '5'} lg:flex items-center bg-gradient-to-r from-blue-100 to-blue-300 rounded-lg p-4 shadow-md`}
+          >
+            <div className="w-full lg:w-1/2 lg:mr-8 mb-4 lg:mb-0">
+              <h2 className="font-bold text-2xl text-center lg:text-center">{video.title}</h2>
+              <p className="text-center lg:text-center">{video.description}</p>
+            </div>
+            <div className="w-full lg:w-1/2 mt-4 lg:mt-0">
+              <YouTube videoId={video.videoId} opts={{ width: '100%', height: 315 }} />
+            </div>
+          </motion.div>
+        ))}
+      </div>
     </div>
   );
 };

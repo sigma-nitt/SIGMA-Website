@@ -58,14 +58,12 @@ const MeetOurTeamPage = () => {
 
   return (
     <div className="text-center flipping-container">
-      <h1 className="mb-5 text-5xl xl:text-5xl font-semibold text-white xl:text-5xl decoration-sky-500">
-        <span className="block mb-2 decoration-sky-500 text-gray-800 dark:text-gray-200 shadow-text" style={{ fontFamily: 'gill sans', fontSize: '6rem' }}>
-          OUR TEAM'23
-        </span>
-      </h1>
-      <br />
-      <br />
-      <br />
+      <div className="bg-white p-4 mb-8">
+        <h1 className="text-6xl text-center text-slate-500" style={{ fontFamily: 'impact'}}>
+          OUR TEAM' 23
+        </h1>
+      </div>
+      <br></br>
       <div className="flex justify-around mb-8">
         <button onClick={() => handleCategoryClick('core')} className={`py-2 px-4 font-bold rounded-full category-button ${selectedCategory.toLowerCase() === 'core' ? 'bg-green-500 text-black' : 'bg-gray-300'}`}>Core</button>
         <button onClick={() => handleCategoryClick('senior manager')} className={`py-2 px-4 font-bold rounded-full category-button ${selectedCategory.toLowerCase() === 'senior manager' ? 'bg-green-500 text-black' : 'bg-gray-300'}`}>Senior Manager</button>
