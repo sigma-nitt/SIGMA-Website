@@ -1,0 +1,16 @@
+@media (max-width: 768px) {
+    .members-projects {
+        flex-direction: column !important;
+        height: 70vh !important;
+    }
+
+    .white-line {
+        width: 60% !important;
+        margin-top: 40px !important;
+    }
+
+    .projects {
+        margin-top: 40px !important;
+    }
+  }
+  
