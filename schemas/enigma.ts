@@ -1,7 +1,7 @@
 // schemas/pdfDocument.js
 export default {
     name: 'pdfDocument',
-    title: 'PDF Document',
+    title: 'ENIGMA',
     type: 'document',
     fields: [
       {

@@ -54,7 +54,7 @@ const menuData: Menu[] = [
         id: 5.2,
         title: "Data Analytics",
         newTab: false,
-        path: "/datanalytics",
+        path: "/dataanalytics",
       },
     ],
   },

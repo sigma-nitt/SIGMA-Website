@@ -98,7 +98,7 @@ const ReportPage: React.FC = () => {
           <div key={index} className="report-box">
             <div className="individual-report">
               <h1 className="report-heading" style={{ marginTop: '15px' }}>
-                {data.heading}
+                {data.heading.toUpperCase()}
               </h1>
               <img
                 src={
@@ -110,9 +110,14 @@ const ReportPage: React.FC = () => {
                 className="report-image"
                 style={{ width: '70%', margin: '0 auto' }}
               />
-              <p className="report-intro-text">
+              {/* <p className="report-intro-text">
                 {data.introductoryText || 'Two lines about the project.'}
-              </p>
+              </p> */}
+              <div className="introductory-text-wrapper">
+                <p className="report-intro-text">
+                  {data.introductoryText || 'Two lines about the project.'}
+                </p>
+              </div>
               {expandedProjectIndex !== index ? (
                 <button onClick={() => handleExpand(index)} className="expand-button">
                   View full report
@@ -188,7 +193,7 @@ const ReportPage: React.FC = () => {
                                     src={imageUrlFor(contentItem.image).width(400).url()}
                                     alt={contentItem.caption}
                                     style={{
-                                      width: '80%',
+                                      width: '50%',
                                       height: 'auto',
                                       borderColor: contentItem.borderColor || '#333',
                                       borderWidth: contentItem.borderWidth + 'px' || '0px',

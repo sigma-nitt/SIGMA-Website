@@ -1,3 +1,4 @@
+//multiple report
 import { NextApiRequest, NextApiResponse } from 'next';
 import { createClient } from '@sanity/client';
 
@@ -12,8 +13,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const query = `*[_type == "reportDA"] {
       heading,
-      introductoryImage,
       introductoryText,
+      introductoryImage,
       content[] {
         ...,
         // Only include the fields that are relevant to your components

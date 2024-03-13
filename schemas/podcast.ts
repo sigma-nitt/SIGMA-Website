@@ -1,11 +1,11 @@
 export default {
     name: 'youtubeVideo',
-    title: 'YouTube Video',
+    title: 'Podcasts - YouTube Video',
     type: 'document',
     fields: [
       {
         name: 'videoId',
-        title: 'Video ID',
+        title: 'Video ID (ID between v= and &t)',
         type: 'string',
       },
       {

@@ -1,36 +1,6 @@
-// schemas/event.js
-
-// export default {
-//   name: 'event',
-//   title: 'Event',
-//   type: 'document',
-//   // type: 'image',
-//   fields: [
-//     {
-//       name: 'title',
-//       title: 'Title',
-//       type: 'string',
-//     },
-//     {
-//       name: 'description',
-//       title: 'Description',
-//       type: 'text',
-//     },
-//     {
-//       name: 'images',
-//       title: 'Images',
-//       type: 'array',
-//       of: [{ type: 'image' }],
-//       options: {
-//         layout: 'grid',
-//       },
-//       validation: Rule => Rule.max(4),
-//     },
-//   ],
-// };
 export default {
   name: 'event',
-  title: 'Event',
+  title: 'Events',
   type: 'document',
   fields: [
     {
