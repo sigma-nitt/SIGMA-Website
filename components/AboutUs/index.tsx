@@ -50,7 +50,7 @@ const IndexPage: React.FC = () => {
         </div>
       </div>
 
-      <div className="p-8 flex flex-grow text-black dark:text-white bg-slate-400">
+      {/* <div className="p-8 flex flex-grow text-black dark:text-white bg-slate-400">
         <div className="leadership-content-box w-8/12 mr-4">
           <div className="leadership-content p-4 border border-black dark:border-white h-full flex items-center rounded-3xl" style={{ fontFamily: 'tahoma' }}>
             <p>At SIGMA, we are proud to have a team of experienced leaders who are dedicated to providing our members with the best possible resources and opportunities. Our team consists of students from a variety of backgrounds who are passionate about business, data analytics, and machine learning.
@@ -64,7 +64,24 @@ const IndexPage: React.FC = () => {
             <p style={{ lineHeight: "5.5em" }}>Experienced Leadership</p>
           </div>
         </div>
+      </div> */}
+
+      <div className="p-8 flex flex-grow text-black dark:text-white bg-slate-400 flex-col md:flex-row">
+        {/* For smaller screens, switch to columnar fashion */}
+        <div className="leadership-content-box w-full md:w-8/12 mr-4">
+          <div className="leadership-content p-4 border border-black dark:border-white h-full flex items-center rounded-3xl" style={{ fontFamily: 'tahoma' }}>
+            <p>At SIGMA, we are proud to have a team of experienced leaders who are dedicated to providing our members with the best possible resources and opportunities. Our team consists of students from a variety of backgrounds who are passionate about business, data analytics, and machine learning. Our leaders have a wealth of experience in their respective fields, and they are committed to helping our members develop their skills and interests. They work hard to organize events, workshops, and other activities that provide our members with valuable learning experiences. We are always looking for new members to join our team, so if you are interested in becoming a part of SIGMA, please don't hesitate to get in touch with us.</p>
+          </div>
+        </div>
+
+        {/* Display the "Experienced Leadership" text first for smaller screens */}
+        <div className="order-first w-full mb-5 md:w-3/12 mr-20">
+          <div className="p-4 border border-black dark:border-white text-center flex-grow text-4xl experienced-leadership rounded-3xl">
+            <p style={{ lineHeight: "1.5em" }}>Experienced Leadership</p>
+          </div>
+        </div>
       </div>
+
 
       {/* <div className="p-8 flex items-stretch justify-center bg-white">
         <div className="flex-none w-1/3 pr-4">

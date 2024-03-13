@@ -72,9 +72,18 @@
         background-color: white;
       }
       .explore-our-text {
-        font-size: 50px;
+        font-size: 60px;
         font-weight: bold;
         color: white;
+      }
+
+      .title {
+        font-size: 35px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        font-weight: normal;
+        color: black;
+        font-family: impact;
       }
   }
   
