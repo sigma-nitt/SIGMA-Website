@@ -11,9 +11,6 @@ const Home = () => {
         </div>
         <div className={styles.textContainer}>
           <div className={styles.sigmaText}>SIGMA</div>
-          <br></br>
-          <br></br>
-          <br></br>
           <div className={styles.businessClub}>Business Club of NITT</div>
         </div>
       </div>

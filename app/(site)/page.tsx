@@ -80,7 +80,7 @@ export default function Home() {
           <Hero />
         </div>
 
-        <div className="bg-blue-50 p-4" style={{ backgroundImage: `url('/images/dowbload.jpg')`, opacity: '0.5', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', marginTop: '-18vw', paddingTop: '0vw', clipPath: 'ellipse(100% 80% at 50% 100%)' }}>
+        <div className="bg-blue-50 p-4" style={{ backgroundImage: `url('/images/business.jpg')`, opacity: '0.4', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', marginTop: '-18vw', paddingTop: '0vw', clipPath: 'ellipse(100% 80% at 50% 100%)' }}>
           <WhoAreWe />
         </div>
 

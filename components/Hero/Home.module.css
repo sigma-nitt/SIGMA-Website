@@ -57,6 +57,7 @@
   font-weight: bold; 
   text-align: center; 
   color: white;
+  margin-bottom: 90px;
 }
 
 .businessClub {
@@ -65,14 +66,14 @@
   color: white;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .sigmaContainer {
     flex-direction: column; 
     align-items: center;
   }
 
   .sigmaSymbolContainer {
-    margin-bottom: 120px; 
+    margin-bottom: 50px; 
   }
 
   .sigmaSymbol {
@@ -80,10 +81,11 @@
   }
 
   .sigmaText {
-    font-size: 3em; 
+    font-size: 4em; 
+    margin-bottom: 20px;
   }
 
   .businessClub {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }

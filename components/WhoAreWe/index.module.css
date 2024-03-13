@@ -17,7 +17,7 @@
 
 .gridLine {
   height: 80%;
-  border-left: 2px solid #ccc;
+  border-left: 12px solid #ccc;
 }
 
 .gridItem {
@@ -25,18 +25,21 @@
 }
 
 .heading {
-  font-size: 36px;
+  font-size: 86px;
   margin-bottom: 10px;
   color: black;
+  font-weight: bold;
+  opacity: 10;
 }
 
 .paragraph {
-  font-size: 20px;
+  font-size: 23px;
   line-height: 1.5;
-  opacity: 0;
+  opacity: 10;
   transform: translateX(-20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
   color: black;
+  font-weight: bold;
 }
 
 .paragraph.animate {
@@ -48,11 +51,11 @@
 /* Responsive styles for small screens */
 @media screen and (max-width: 600px) {
   .heading {
-    font-size: 24px; /* Reduced font size for small screens */
+    font-size: 30px; /* Reduced font size for small screens */
   }
 
   .paragraph {
-    font-size: 16px; /* Reduced font size for small screens */
+    font-size: 12px; /* Reduced font size for small screens */
   }
 
   .gridContainer {
