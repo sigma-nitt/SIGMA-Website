@@ -61,7 +61,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .our-story-text {
-    font-size: 8px; /* Adjust the font size as needed for smaller screens */
+    font-size: 14px; /* Adjust the font size as needed for smaller screens */
   }
 }
 
@@ -89,11 +89,55 @@ body {
   bottom: 0;
   left: 0;
   border-radius: 50%;
-  border: 10px solid transparent; /* Adjust the border width */
-  -webkit-mask-image: -webkit-radial-gradient(white, black); /* Safari/Chrome only */
+  border: 10px solid transparent; 
+  -webkit-mask-image: -webkit-radial-gradient(white, black); 
   mask-image: radial-gradient(white, black);
-  filter: blur(10px); /* Adjust the blur radius */
+  filter: blur(10px); 
   z-index: -1;
 }
+
+@media only screen and (max-width: 568px) {
+  .analytics-content,
+  .case-studies-content {
+    width: 100%; 
+    margin: 0 0 16px; 
+  }
+}
+
+
+
+.leadership-content{
+  font-size: 16px; 
+}
+
+@media (max-width: 768px) {
+  .leadership-content{
+    font-size: 12px;
+  }
+}
+
+.our-story-word{
+  font-size: 2.5em;
+}
+
+@media (max-width: 768px) {
+  .our-story-word{
+    font-size: 2em;
+  }
+}
+
+
+.our-mission-head{
+  font-size: 5m;
+}
+
+@media (max-width: 768px) {
+  .our-mission-head{
+    font-size: 5em;
+  }
+}
+
+
+
 
 
