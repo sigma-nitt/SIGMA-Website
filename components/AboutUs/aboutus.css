@@ -65,6 +65,7 @@ body {
   }
 }
 
+
 .text-container {
   z-index: 1;
 }
@@ -119,7 +120,6 @@ body {
 @media (max-width: 468px) {
   .leadership-content{
     font-size: 8px;
-    width: 90%;
   }
 }
 
@@ -127,15 +127,9 @@ body {
   font-size: 2.5em;
 }
 
-@media (min-width: 468px) {
+@media (min-width: 768px) {
   .our-story-word{
     font-size: 2em;
-  }
-}
-
-@media (max-width: 468px) {
-  .our-story-word{
-    font-size: 1.5em;
   }
 }
 
@@ -146,6 +140,16 @@ body {
 @media (max-width: 768px) {
   .our-mission-head{
     font-size: 4.5em;
+  }
+}
+
+.our-story-box{
+  width: 75%;
+}
+
+@media (max-width: 468px) {
+  .our-story-box{
+    width: 95%;
   }
 }
 

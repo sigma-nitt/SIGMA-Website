@@ -24,13 +24,9 @@ const IndexPage: React.FC = () => {
       </div>
 
       <div className="p-8 flex justify-center bg-slate-400">
-        <div className="w-9/12 mr-4 h-full text-black dark:text-white relative" style={{ height: '500px' }}>
+        <div className="our-story-box w-9/12 mr-4 h-full text-black dark:text-white relative" style={{ height: '500px' }}>
           <div className="our-story-word p-6 flex flex-col h-full border-8 border-black dark:border-white text-center flex justify-center items-center align-middle text-5xl relative rounded-3xl">
             <p style={{ fontSize: '2.5em', fontWeight: 'bold', color: '#ff0000' }}>OUR STORY</p>
-            {/* <div
-              className="absolute inset-0 bg-cover bg-center filter blur-sm opacity-50 transition-all duration-300 hover:opacity-100"
-              style={{ backgroundImage: `url(${backgroundImage})` }}
-            /> */}
 
             <div className="absolute inset-0 filter blur-sm opacity-50 transition-all duration-300 hover:opacity-100">
               <img
