@@ -166,7 +166,7 @@
 
 .image-stylecssm {
     position: absolute;
-    top: 210px;
+    top: 240px;
     right: 150px;
     width: 100px;
     height: 100px;
@@ -237,11 +237,11 @@
 }
 
 .link-style1sm {
-    top: 110px;
+    top: 140px;
     right: 20px;
 }
 
 .link-style2sm {
-    top: 300px;
+    top: 390px;
     right: 150px;
 }
