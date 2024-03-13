@@ -1,163 +1,161 @@
+// "use client"
+// // MyComponent.tsx
+// import React from 'react';
+// import './MyComponent.css';
+
+// const MyComponent: React.FC = () => {
+//   return (
+//     <div className="container">
+//       <table className="table">
+//         <tbody>
+//           <tr>
+//             <td className="left-cell">
+//               <h1 className="domain-style">DOMAINS</h1>
+//               <br />
+//               <p className="domain-style-text"></p>
+//             </td>
+//             <td className="right-cell">
+//               <img src="/images/analytics logo.png" alt="Image Alt Text" className="image-styleda" />
+//               <br />
+//               <a href="/dataanalytics" className="link-style1">View Projects</a>
+//               <img src="/images/casestudies logo.png" alt="Image Alt Text" className="image-stylecs" />
+//               <br />
+//               <a href="/casestudies" className="link-style2">View Projects</a>
+//             </td>
+//           </tr>
+//         </tbody>
+//       </table>
+
+//       <div className="box-style1">
+//         <br />
+//         <h2 className="heading-style">Analytics</h2>
+//         <p className="content-style"></p>
+//       </div>
+
+//       <div className="box-style2">
+//         <br />
+//         <h2 className="heading-style">Case Studies</h2>
+//         <p className="content-style"></p>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default MyComponent;
+
+
+
 "use client"
-import React from 'react';
+// MyComponent.tsx
+import React, { useEffect, useState } from 'react';
+import './MyComponent.css';
 
 const MyComponent: React.FC = () => {
-    const containerStyle: React.CSSProperties = {
-        position: 'relative',
-        backgroundColor: 'black',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '130vh',
-    };
+    const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setIsSmallScreen(window.innerWidth <= 600);
+      };
+  
+      // Check if window is defined before using it
+      if (typeof window !== 'undefined') {
+        // Initial check on mount
+        handleResize();
+  
+        // Add event listener for resizing
+        window.addEventListener('resize', handleResize);
+  
+        // Cleanup event listener on component unmount
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+      }
+    }, []);
 
-    const tableStyle: React.CSSProperties = {
-        borderCollapse: 'collapse',
-        width: '80%',
-        height: '60%',
-    };
-
-    const leftCellStyle: React.CSSProperties = {
-        width: '30%',
-        border: '3px solid white',
-        padding: '8px',
-        textAlign: 'left',
-    };
-
-    const rightCellStyle: React.CSSProperties = {
-        width: '70%',
-        border: '3px solid white',
-        padding: '8px',
-        textAlign: 'left',
-        position: 'relative', 
-    };
-
-    const imageStyleda: React.CSSProperties = {
-        position: 'absolute',
-        top: '-50px', 
-        right: '-20px', 
-        width: '400px', 
-        height: '400px',
-    };
-
-    const imageStylecs: React.CSSProperties = {
-        position: 'absolute',
-        top: '280px', 
-        right: '520px', 
-        width: '260px',
-        height: '260px', 
-    };
-
-    const boxStyle1: React.CSSProperties = {
-        position: 'absolute',
-        top: '150px',
-        left: '700px',
-        width: '200px',
-        height: '150px',
-        backgroundColor: 'blue',
-        color: 'white',
-        textAlign: 'center',
-        lineHeight: '3',
-        borderRadius: '6px',
-        fontFamily: 'Arial, sans-serif', 
-    };
-    
-    const boxStyle2: React.CSSProperties = {
-        position: 'absolute',
-        top: '650px',
-        left: '1000px',
-        width: '200px',
-        height: '150px',
-        backgroundColor: 'blue',
-        color: 'white',
-        textAlign: 'center',
-        lineHeight: '3',
-        borderRadius: '6px',
-        fontFamily: 'Arial, sans-serif',
-    };
-    
-    const headingStyle: React.CSSProperties = {
-        fontSize: '35px', 
-        fontWeight: 'bold', 
-        // margin: '8px 0', 
-        lineHeight: '1',
-    };
-    
-    const contentStyle: React.CSSProperties = {
-        fontSize: '14px', 
-        fontWeight: 'normal', 
-        margin: '0', 
-    };
-
-    const domainStyle: React.CSSProperties = {
-        fontSize: '60px',
-        fontWeight: 'bold',
-        marginBottom: '20px',
-        textAlign: 'center',
-        color: 'white',
-        fontFamily: 'optima',
-    }
-
-    const domainStyleText: React.CSSProperties = {
-        fontSize: '17px',
-        fontWeight: 'normal',
-        textAlign: 'center',
-        color: 'white',
-    }
-
-    const linkStyle1: React.CSSProperties = {
-        position: 'absolute',
-        top: '280px',
-        right: '130px',  
-        zIndex: 2,  
-        color: 'cyan',  // Set color to blue
-        textDecoration: 'underline',  // Add underline
-    };  
-    
-    const linkStyle2: React.CSSProperties = {
-        position: 'absolute',
-        top: '520px',
-        right: '600px',  
-        zIndex: 2,  
-        color: 'cyan',  // Set color to blue
-        textDecoration: 'underline',  // Add underline
-    };   
-    
-    return (
-        <div style={containerStyle}>
-            <table style={tableStyle}>
+  const renderTable = () => {
+    if (isSmallScreen) {
+      return (
+        <div className="containersm">
+            <table className="tablesm">
                 <tbody>
                     <tr>
-                        <td style={leftCellStyle}>
-                            <h1 style={domainStyle}>DOMAINS</h1>
-                            <br></br>
-                            <p style={domainStyleText}></p>
-                        </td>
-                        <td style={rightCellStyle}>
-                            <img src="/images/analytics logo.png" alt="Image Alt Text" style={imageStyleda} />
-                            <br></br>
-                            <a href="/dataanalytics" style={linkStyle1}>View Projects</a>
-                            <img src="/images/casestudies logo.png" alt="Image Alt Text" style={imageStylecs} />
-                            <br></br>
-                            <a href="/casestudies" style={linkStyle2}>View Projects</a>
-                        </td>
+                    <td className="left-cellsm" colSpan={2}>
+                        <h1 className="domain-stylesm">DOMAINS</h1>
+                        <p className="domain-style-textsm"></p>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td className="right-cellsm" colSpan={2}>
+                        <img src="/images/analytics logo.png" alt="Image Alt Text" className="image-styledasm" />
+
+                        <a href="/dataanalytics" className="link-style1sm">View Projects</a>
+                        <img src="/images/casestudies logo.png" alt="Image Alt Text" className="image-stylecssm" />
+ 
+                        <a href="/casestudies" className="link-style2sm">View Projects</a>
+                    </td>
                     </tr>
                 </tbody>
             </table>
 
-            <div style={boxStyle1}>
-                <br></br>
-                <h2 style={headingStyle}>Analytics</h2>
-                <p style={contentStyle}></p>
+            <div className="box-style1sm">
+                <h2 className="heading-styledasm">Analytics</h2>
+                <p className="content-style"></p>
             </div>
 
-            <div style={boxStyle2}>
-                <br></br>
-                <h2 style={headingStyle}>Case Studies</h2>
-                <p style={contentStyle}></p>
+            <div className="box-style2sm">
+                <br />
+                <h2 className="heading-stylecssm">Case Studies</h2>
+                <p className="content-style"></p>
             </div>
         </div>
-    );
+        
+      );
+    } else {
+      return (
+        <div className="container">
+            <table className="table">
+                <tbody>
+                    <tr>
+                    <td className="left-cell">
+                        <h1 className="domain-style">DOMAINS</h1>
+                        <br />
+                        <p className="domain-style-text"></p>
+                    </td>
+                    <td className="right-cell">
+                        <img src="/images/analytics logo.png" alt="Image Alt Text" className="image-styleda" />
+                        <br />
+                        <a href="/dataanalytics" className="link-style1">View Projects</a>
+                        <img src="/images/casestudies logo.png" alt="Image Alt Text" className="image-stylecs" />
+                        <br />
+                        <a href="/casestudies" className="link-style2">View Projects</a>
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <div className="box-style1">
+                <br />
+                <h2 className="heading-style">Analytics</h2>
+                <p className="content-style"></p>
+            </div>
+
+            <div className="box-style2">
+                <br />
+                <h2 className="heading-style">Case Studies</h2>
+                <p className="content-style"></p>
+            </div>
+        </div>
+        
+      );
+    }
+  };
+
+  return (
+    <div className="container">
+        {renderTable()}
+    </div>
+  );
 };
 
 export default MyComponent;

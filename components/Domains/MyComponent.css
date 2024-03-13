@@ -1,0 +1,247 @@
+/* MyComponent.css */
+
+.container {
+    position: relative;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130vh;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 80%;
+    height: 60%;
+    flex-direction: row;
+}
+
+.left-cell {
+    width: 30%;
+    border: 3px solid white;
+    padding: 8px;
+    text-align: left;
+}
+
+.right-cell {
+    width: 70%;
+    border: 3px solid white;
+    padding: 8px;
+    text-align: left;
+    position: relative;
+}
+
+.image-styleda {
+    position: absolute;
+    top: -50px;
+    right: -20px;
+    width: 400px;
+    height: 400px;
+}
+
+.image-stylecs {
+    position: absolute;
+    top: 280px;
+    right: 520px;
+    width: 260px;
+    height: 260px;
+}
+
+.box-style1,
+.box-style2 {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    line-height: 3;
+    border-radius: 6px;
+    font-family: 'Arial, sans-serif';
+}
+
+.box-style1 {
+    top: 150px;
+    left: 700px;
+}
+
+.box-style2 {
+    top: 650px;
+    left: 1000px;
+}
+
+.heading-style {
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.content-style {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.domain-style {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+    font-family: optima;
+}
+
+.domain-style-text {
+    font-size: 17px;
+    font-weight: normal;
+    text-align: center;
+    color: white;
+}
+
+.link-style1,
+.link-style2 {
+    position: absolute;
+    color: cyan;
+    text-decoration: underline;
+}
+
+.link-style1 {
+    top: 280px;
+    right: 130px;
+}
+
+.link-style2 {
+    top: 520px;
+    right: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+/* MyComponent.css */
+
+.containersm {
+    position: relative;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600vh;
+}
+
+.tablesm {
+    border-collapse: collapse;
+    width: 280px;
+    height: 50%;
+    flex-direction: row;
+}
+
+.left-cellsm {
+    height: 30px;
+    border: 3px solid white;
+    padding: 8px;
+    text-align: center;
+}
+
+.right-cellsm {
+    border: 3px solid white;
+    padding: 8px;
+    text-align: left;
+    position: relative;
+}
+
+.image-styledasm {
+    position: absolute;
+    top: -30px;
+    right: -20px;
+    width: 180px;
+    height: 180px;
+}
+
+.image-stylecssm {
+    position: absolute;
+    top: 210px;
+    right: 150px;
+    width: 100px;
+    height: 100px;
+}
+
+.box-style1sm,
+.box-style2sm {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    line-height: 3;
+    border-radius: 6px;
+    font-family: 'Arial, sans-serif';
+}
+
+.box-style1sm {
+    top: 300px;
+    left: -15px;
+}
+
+.box-style2sm {
+    top: 500px;
+    left: 200px;
+}
+
+.heading-styledasm {
+    font-size: 25px;
+    line-height: 1;
+    margin-top: 35px;
+}
+.heading-stylecssm {
+    font-size: 25px;
+    line-height: 1;
+    margin-top: -20px;
+}
+
+.content-stylesm {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.domain-stylesm {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+    font-family: optima;
+    margin-top: 10px;
+}
+
+.domain-style-textsm {
+    font-size: 17px;
+    font-weight: normal;
+    text-align: center;
+    color: white;
+}
+
+.link-style1sm,
+.link-style2sm {
+    position: absolute;
+    color: cyan;
+    text-decoration: underline;
+}
+
+.link-style1sm {
+    top: 110px;
+    right: 20px;
+}
+
+.link-style2sm {
+    top: 300px;
+    right: 150px;
+}

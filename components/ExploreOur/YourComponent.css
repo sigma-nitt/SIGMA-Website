@@ -13,7 +13,7 @@
     position: absolute;
     left: 300px;
     top: 100px;
-    height: 90%;
+    height: 80%;
     width: 8px;
     background-color: white;
   }
@@ -38,7 +38,7 @@
     width: 500px;
     height: 300px;
     background-color: #1976D2;
-    margin: 30px;
+    margin: 10px;
     padding: 15px;
     text-align: center;
     border-radius: 5px;
@@ -46,13 +46,26 @@
     color: white;
   }
 
+  .link {
+    text-decoration: none;
+  }
+  
+  .title {
+    font-size: 44px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-weight: normal;
+    color: black;
+    font-family: impact;
+  }
+
   @media (max-width: 568px) {
     .box{
       width: 300px;
-      height: 300px;
+      height: 250px;
     }
     .paragraph{
-        font-size: 12px !important;
+        font-size: 10px !important;
     }
     .vertical-line {
         position: absolute;
@@ -78,27 +91,26 @@
       }
 
       .title {
-        font-size: 35px;
-        margin-bottom: 20px;
-        margin-top: 10px;
+        font-size: 25px;
+        margin-bottom: 5px;
+        margin-top: 5px;
         font-weight: normal;
         color: black;
         font-family: impact;
       }
+
+      .container {
+        background-color: black;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
   }
   
-  .link {
-    text-decoration: none;
-  }
-  
-  .title {
-    font-size: 44px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    font-weight: normal;
-    color: black;
-    font-family: impact;
-  }
+ 
   
   .paragraph {
     font-size: 20px;
@@ -106,4 +118,5 @@
   }
   
   /* Additional styles for other box titles and paragraphs */
+  
   

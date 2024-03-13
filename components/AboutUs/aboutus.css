@@ -166,6 +166,12 @@ body {
   }
 }
 
+@media (max-width: 568px) {
+  .black-box{
+    text-align: center;
+  }
+}
+
 
 
 
