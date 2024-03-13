@@ -8,8 +8,8 @@
 }
 
 .pdf-page {
-  width: 45%; /* Adjust as needed */
-  height: auto; /* Adjust as needed */
-  border: 1px solid black; /* Optional: Add border for visualization */
-  margin: 5px; /* Adjust as needed for spacing */
+  width: 45%; 
+  height: auto; 
+  border: 1px solid black; 
+  margin: 5px;
 }

@@ -145,9 +145,9 @@
   margin-bottom: 1rem;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 500px) {
   .modal-content {
-    padding: 10px; /* Adjust padding for small screens */
-    max-height: 55vh; /* Adjust max-height for small screens */
+    padding: 10px; 
+    max-height: 85vh; 
   }
 }

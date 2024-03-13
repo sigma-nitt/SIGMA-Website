@@ -1,16 +1,13 @@
-/* Small screens */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 524px) {
   .mt-custom {
-    margin-top: 0 !important; /* Resetting margin-top */
-    padding-top: 100px; /* Adjust the padding-top value based on your navbar's height */
+    margin-top: 0 !important; 
+    padding-top: 100px; 
   }
 }
 
-/* Large screens */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 524px) {
   .mt-custom {
     margin-top: 20px !important;
-    padding-top: 0; /* Resetting padding-top */
+    padding-top: 0;
   }
 }
-

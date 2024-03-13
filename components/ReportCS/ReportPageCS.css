@@ -8,34 +8,50 @@
   padding: 40px;
 }
 
-/* Small screens */
-@media screen and (max-width: 1000px) {
-  .report-container {
-    margin-top: 180px !important;
-  }
+.report-heading {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2b6cb0;
 }
 
 .report-box {
   flex: 0 0 calc(33.33% - 16px);
-  height: 500px; /* Set a fixed height for the report box */
+  height: 500px;
   margin-bottom: 20px;
-  overflow: hidden; /* Add overflow property to the report box */
+  overflow: hidden; 
 }
 
 .report-intro-text {
   font-size: 1rem;
   color: #4a5568;
   margin-top: 1rem;
-  max-width: 70%; /* Cover 70% of the report box width */
+  max-width: 70%; 
   overflow: hidden;
-  text-overflow: ellipsis; /* Show ellipsis for overflow */
+  text-overflow: ellipsis; 
   margin: 0 auto;
 }
 
 /* Small screens */
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 600px) {
+  .report-container {
+    margin-top: 50px !important;
+    flex-direction: column; /* Change to column layout for small screens */
+    align-items: center;
+  }
+  .report-heading {
+    font-size: 1.5em;
+  }
+
+  .report-intro-text {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 510px) {
   .report-box {
     height: 300px !important;
+    width: 90% !important;
   }
 }
 
@@ -45,17 +61,11 @@
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   max-width: 800px;
-  height: 100%; /* Ensure that the box takes up the full height of the parent */
+  height: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
 
-.report-heading {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #2b6cb0;
-}
 
 .report-image {
   width: 100%;
@@ -110,15 +120,12 @@
   -webkit-backdrop-filter: blur(5px);
 }
 
-/* Small screens */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 500px) {
   .modal-overlay {
-    margin-top: 150px !important;
+    margin-top: 10px !important;
   }
 }
-
-/* Large screens */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 500px) {
   .modal-overlay {
     margin-top: 10px !important;
   }
@@ -138,9 +145,9 @@
   margin-bottom: 1rem;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 500px) {
   .modal-content {
-    padding: 10px; /* Adjust padding for small screens */
-    max-height: 55vh; /* Adjust max-height for small screens */
+    padding: 10px; 
+    max-height: 85vh; 
   }
 }

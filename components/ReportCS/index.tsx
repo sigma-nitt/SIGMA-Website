@@ -2,7 +2,7 @@
 // components/ReportPage.tsx
 import React, { useState, useEffect } from 'react';
 import imageUrlBuilder from '@sanity/image-url';
-import client from '@/sanityClient';
+import createClient from '@/sanityClient';
 import './ReportPageCS.css';
 import PortableText from '@sanity/block-content-to-react';
 
@@ -44,7 +44,7 @@ interface ProjectData {
   content: ContentItem[];
 }
 
-const builder = imageUrlBuilder(client);
+const builder = imageUrlBuilder(createClient);
 const imageUrlFor = (source: any) => builder.image(source);
 
 const ReportPage: React.FC = () => {
@@ -92,143 +92,148 @@ const ReportPage: React.FC = () => {
   };
 
   return (
-    <div className="report-container">
-      {projectData &&
-        projectData.map((data, index) => (
-          <div key={index} className="report-box">
-            <div className="individual-report">
-              <h1 className="report-heading" style={{ marginTop: '15px' }}>
-                {data.heading}
-              </h1>
-              <img
-                src={
-                  data.introductoryImage
-                    ? imageUrlFor(data.introductoryImage).width(400).url()
-                    : ''
-                }
-                alt="Introductory Image"
-                className="report-image"
-                style={{ width: '70%', margin: '0 auto' }}
-              />
-              {/* <p className="report-intro-text">
-                {data.introductoryText || 'Two lines about the project.'}
-              </p> */}
-              <div className="introductory-text-wrapper">
-                <p className="report-intro-text">
-                  {data.introductoryText || 'Two lines about the project.'}
-                </p>
-              </div>
-              {expandedProjectIndex !== index ? (
-                <button onClick={() => handleExpand(index)} className="expand-button">
-                  View full report
-                </button>
-              ) : (
-                <div className="modal-overlay">
-                  <div className="modal-content">
-                    <div className="text-center bg-white p-8 rounded-lg shadow-md mx-auto max-w-screen-md max-w-screen-lg max-w-screen-xl">
-                      <h1 style={{ marginBottom: '1rem', fontSize: '2rem', fontWeight: 'bold', color: '#2b6cb0' }}>
-                        REPORT
-                      </h1>
-                      {data.content && data.content.length > 0 ? (
-                        <div>
-                          {data.content.map((contentItem, index) => (
-                            <div key={index} className="mb-4">
-                              {contentItem._type === 'subheading' && (
-                                <h3
-                                  style={{
-                                    fontSize: contentItem.fontSize + 'px',
-                                    fontWeight: 'bold',
-                                    color: contentItem.color || '#333',
-                                  }}
-                                >
-                                  {contentItem.value}
-                                </h3>
-                              )}
+    <div>
+      <div className="bg-white p-4 mb-8 mt-5">
+        <h1 className="text-6xl text-center text-slate-500 " style={{ fontFamily: 'impact'}}>
+          EXPLORE CASE STUDIES !
+        </h1>
+      </div>
 
-                              {contentItem._type === 'richText' && (
-                                <div
-                                  className="left-aligned"
-                                  style={{
-                                    color: contentItem.color || '#333',
-                                    fontSize: contentItem.fontSize + 'px',
-                                    textAlign: 'left',
-                                  }}
-                                >
-                                  {contentItem.value && (
-                                    <ul>
-                                      {contentItem.value.map((item, index) => (
-                                        <li key={index}>
-                                          <PortableText blocks={item} />
-                                        </li>
-                                      ))}
-                                    </ul>
-                                  )}
-                                </div>
-                              )}
-
-                              {contentItem._type === 'bulletList' && (
-                                <div
-                                  className="left-aligned"
-                                  style={{
-                                    color: contentItem.color || '#333',
-                                    fontSize: contentItem.fontSize + 'px',
-                                    textAlign: 'left',
-                                  }}
-                                >
-                                  {contentItem.items && (
-                                    <ul style={{ listStyleType: 'circle', paddingLeft: '20px' }}>
-                                      {contentItem.items.map((item, index) => (
-                                        <li key={index}>
-                                          <PortableText blocks={item} />
-                                        </li>
-                                      ))}
-                                    </ul>
-                                  )}
-                                </div>
-                              )}
-
-                              {contentItem._type === 'imageWithCaption' && (
-                                <div className="mb-2">
-                                  <img
-                                    src={imageUrlFor(contentItem.image).width(400).url()}
-                                    alt={contentItem.caption}
+      <div className="report-container">
+        {projectData &&
+          projectData.map((data, index) => (
+            <div key={index} className="report-box">
+              <div className="individual-report">
+                <h1 className="report-heading" style={{ marginTop: '15px' }}>
+                  {data.heading.toUpperCase()}
+                </h1>
+                <img
+                  src={
+                    data.introductoryImage
+                      ? imageUrlFor(data.introductoryImage).width(400).url()
+                      : ''
+                  }
+                  alt="Introductory Image"
+                  className="report-image"
+                  style={{ width: '70%', margin: '0 auto' }}
+                />
+                <div className="introductory-text-wrapper">
+                  <p className="report-intro-text">
+                    {data.introductoryText || 'Two lines about the project.'}
+                  </p>
+                </div>
+                {expandedProjectIndex !== index ? (
+                  <button onClick={() => handleExpand(index)} className="expand-button">
+                    View full report
+                  </button>
+                ) : (
+                  <div className="modal-overlay">
+                    <div className="modal-content">
+                      <div className="text-center bg-white p-8 rounded-lg shadow-md mx-auto max-w-screen-md max-w-screen-lg max-w-screen-xl">
+                        <h1 style={{ marginBottom: '1rem', fontSize: '2rem', fontWeight: 'bold', color: '#2b6cb0' }}>
+                          REPORT
+                        </h1>
+                        {data.content && data.content.length > 0 ? (
+                          <div>
+                            {data.content.map((contentItem, index) => (
+                              <div key={index} className="mb-4">
+                                {contentItem._type === 'subheading' && (
+                                  <h3
                                     style={{
-                                      width: '80%',
-                                      height: 'auto',
-                                      borderColor: contentItem.borderColor || '#333',
-                                      borderWidth: contentItem.borderWidth + 'px' || '0px',
-                                      display: 'block',
-                                      marginLeft: 'auto',
-                                      marginRight: 'auto',
-                                    }}
-                                  />
-                                  <p
-                                    style={{
-                                      fontStyle: 'italic',
-                                      fontSize: '0.875rem',
-                                      color: '#4a5568',
+                                      fontSize: contentItem.fontSize + 'px',
+                                      fontWeight: 'bold',
+                                      color: contentItem.color || '#333',
                                     }}
                                   >
-                                    {contentItem.caption}
-                                  </p>
-                                </div>
-                              )}
-                            </div>
-                          ))}
-                        </div>
-                      ) : (
-                        <p>No additional content available</p>
-                      )}
-                      <button onClick={handleCollapse} className="collapse-button">
-                        Close Report
-                      </button>
+                                    {contentItem.value}
+                                  </h3>
+                                )}
+
+                                {contentItem._type === 'richText' && (
+                                  <div
+                                    className="left-aligned"
+                                    style={{
+                                      color: contentItem.color || '#333',
+                                      fontSize: contentItem.fontSize + 'px',
+                                      textAlign: 'left',
+                                    }}
+                                  >
+                                    {contentItem.value && (
+                                      <ul>
+                                        {contentItem.value.map((item, index) => (
+                                          <li key={index}>
+                                            <PortableText blocks={item} />
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    )}
+                                  </div>
+                                )}
+
+                                {contentItem._type === 'bulletList' && (
+                                  <div
+                                    className="left-aligned"
+                                    style={{
+                                      color: contentItem.color || '#333',
+                                      fontSize: contentItem.fontSize + 'px',
+                                      textAlign: 'left',
+                                    }}
+                                  >
+                                    {contentItem.items && (
+                                      <ul style={{ listStyleType: 'circle', paddingLeft: '20px' }}>
+                                        {contentItem.items.map((item, index) => (
+                                          <li key={index}>
+                                            <PortableText blocks={item} />
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    )}
+                                  </div>
+                                )}
+
+                                {contentItem._type === 'imageWithCaption' && (
+                                  <div className="mb-2">
+                                    <img
+                                      src={imageUrlFor(contentItem.image).width(400).url()}
+                                      alt={contentItem.caption}
+                                      style={{
+                                        width: '50%',
+                                        height: 'auto',
+                                        borderColor: contentItem.borderColor || '#333',
+                                        borderWidth: contentItem.borderWidth + 'px' || '0px',
+                                        display: 'block',
+                                        marginLeft: 'auto',
+                                        marginRight: 'auto',
+                                      }}
+                                    />
+                                    <p
+                                      style={{
+                                        fontStyle: 'italic',
+                                        fontSize: '0.875rem',
+                                        color: '#4a5568',
+                                      }}
+                                    >
+                                      {contentItem.caption}
+                                    </p>
+                                  </div>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <p>No additional content available</p>
+                        )}
+                        <button onClick={handleCollapse} className="collapse-button">
+                          Close Report
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+      </div>
     </div>
   );
 };
