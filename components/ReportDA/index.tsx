@@ -110,9 +110,6 @@ const ReportPage: React.FC = () => {
                 className="report-image"
                 style={{ width: '70%', margin: '0 auto' }}
               />
-              {/* <p className="report-intro-text">
-                {data.introductoryText || 'Two lines about the project.'}
-              </p> */}
               <div className="introductory-text-wrapper">
                 <p className="report-intro-text">
                   {data.introductoryText || 'Two lines about the project.'}
