@@ -119,6 +119,7 @@ body {
 @media (max-width: 468px) {
   .leadership-content{
     font-size: 8px;
+    width: 90%;
   }
 }
 
