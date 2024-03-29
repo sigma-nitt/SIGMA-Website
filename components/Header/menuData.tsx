@@ -20,7 +20,26 @@ const menuData: Menu[] = [
     path: "/team",
   },
   {
-    id: 3.1,
+    id: 4,
+    title: "Projects",
+    newTab: false,
+    submenu: [
+      {
+        id: 4.1,
+        title: "Data Analytics",
+        newTab: false,
+        path: "/dataanalytics",
+      },
+      {
+        id: 4.2,
+        title: "Case Studies",
+        newTab: false,
+        path: "/casestudies",
+      },
+    ],
+  },
+  {
+    id: 5,
     title: "Events",
     newTab: false,
     path: "/events",
@@ -44,24 +63,12 @@ const menuData: Menu[] = [
       },
       {
         id: 5.2,
-        title: "Projects - Data Analytics",
-        newTab: false,
-        path: "/dataanalytics",
-      },
-      {
-        id: 5.3,
-        title: "Projects - Case Studies",
-        newTab: false,
-        path: "/casestudies",
-      },
-      {
-        id: 5.4,
         title: "Enigma",
         newTab: false,
         path: "/enigma",
       },
       {
-        id: 5.5,
+        id: 5.3,
         title: "Resources",
         newTab: false,
         path: "/resources",

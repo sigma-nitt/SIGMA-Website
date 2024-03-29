@@ -55,7 +55,7 @@ const Footer = () => {
                 </p>
                 <a
                   href="/contactus"
-                  className="text-itemtitle font-medium text-muted-foreground hover:text-muted-foreground"
+                  className="text-itemtitle text-lg text-muted-foreground hover:text-muted-foreground"
                 >
                   sigma.nitt@gmail.com
                 </a>

@@ -68,8 +68,6 @@ const HeroSection: FC = () => {
             <br></br>
             <br></br>
 
-            <p className="businessclub text-2xl text-center mb-8">Explore our projects, blogs, resources and much more.</p>
-
             <Link
               id="transform-anim"
               href="/dataanalytics"
@@ -83,6 +81,8 @@ const HeroSection: FC = () => {
                 <Icons.chevronRight className="h-3 w-3 text-black/60" />
               </span>
             </Link>
+            <br></br>
+            <p className="businessclub text-2xl text-center mb-8">Explore our projects, blogs, resources and much more.</p>
             <br></br>
             <br></br>
             <br></br>
