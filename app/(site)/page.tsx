@@ -46,7 +46,7 @@ export default function Home() {
           <Hero />
         </div>
         <MembersProjects />
-        <div className="p-15">
+        <div className="p-5 md:p-15">
           <div className="bg-background p-4 w-70">
             <WhoAreWe />
           </div>

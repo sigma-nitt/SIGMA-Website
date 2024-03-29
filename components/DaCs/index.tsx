@@ -46,7 +46,7 @@ const Features: FC<FeaturesProps> = () => {
               <h3 className="text-center font-heading text-2xl font-bold leading-normal tracking-tight bg-secondary-gradient-2 bg-clip-text text-transparent lg:text-3xl">
                 {feature.title.toUpperCase()}
               </h3>
-              <p className="text-center text-muted-foreground lg:text-lg">
+              <p className="text-center text-muted-foreground text-sm lg:text-lg">
                 {feature.description}
               </p>
             </div>
