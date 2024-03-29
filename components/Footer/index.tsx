@@ -139,32 +139,32 @@ const Footer = () => {
                   className="animate_top"
                 >
                   <h4 className="mb-5 mt-8 text-itemtitle2 font-medium text-white">
-                    Support
+                    Our Initiatives
                   </h4>
 
                   <ul>
                     <li>
                       <a
-                        href="#"
+                        href="/podcast"
                         className="mb-3 inline-block text-muted-foreground hover:text-muted-foreground"
                       >
-                        Company
+                        Podcasts
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/enigma"
                         className="mb-3 inline-block text-muted-foreground hover:text-muted-foreground"
                       >
-                        Press media
+                        ENIGMA
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/resources"
                         className="mb-3 inline-block text-muted-foreground hover:text-muted-foreground"
                       >
-                        Our Blog
+                        Resources
                       </a>
                     </li>
                     <li>
