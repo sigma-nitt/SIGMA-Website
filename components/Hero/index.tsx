@@ -60,8 +60,8 @@ const HeroSection: FC = () => {
           <div className="flex flex-col items-center justify-center">
             {/* <img className="imgsigma mt-40" src="/images/logo.jpg" alt="Description of the image" style={{ width: "500px", height: "500px" }}/> */}
 
-            <h1 className="sigma text-8xl text-center mb-12">Welcome to SIGMA</h1>
-            <p className="businessclub text-5xl text-center mb-8">The Business Club of NIT Trichy</p>
+            <h1 className="sigma text-5xl text-center mb-12 md:text-8xl">Welcome to SIGMA</h1>
+            <p className="businessclub text-2xl text-center mb-8 md:text-5xl">The Business Club of NIT Trichy</p>
 
             <br></br>
             <br></br>
@@ -82,7 +82,7 @@ const HeroSection: FC = () => {
               </span>
             </Link>
             <br></br>
-            <p className="businessclub text-2xl text-center mb-8">Explore our projects, blogs, resources and much more.</p>
+            <p className="businessclub text-xl text-center mb-8 md:text-2xl">Explore our projects, blogs, resources and much more.</p>
             <br></br>
             <br></br>
             <br></br>
