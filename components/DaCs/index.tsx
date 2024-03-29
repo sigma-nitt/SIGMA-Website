@@ -2,6 +2,7 @@
 
 import { FC, useEffect } from "react"
 import { stagger, useAnimate, useInView } from "framer-motion"
+import './glow.css'
 
 import { Card, CardContent } from "../card"
 
@@ -40,7 +41,7 @@ const Features: FC<FeaturesProps> = () => {
   return (
     <div id="features" ref={scope} className="grid grid-cols-1 gap-10 py-16 md:grid-cols-2">
       {features.map((feature) => (
-        <Card className="overflow-hidden" key={feature.id} id="reveal-anim">
+        <Card className="container overflow-hidden" key={feature.id} id="reveal-anim">
           <CardContent className="space-y-10 p-0">
             <div className="space-y-5 px-6 py-8">
               <h3 className="text-center font-heading text-2xl font-bold leading-normal tracking-tight bg-secondary-gradient-2 bg-clip-text text-transparent lg:text-3xl">
