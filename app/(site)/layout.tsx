@@ -7,6 +7,7 @@ import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 import "../globals.css";
 const inter = Inter({ subsets: ["latin"] });
+import Background from "@/components/Background"
 
 import ToasterContext from "../context/ToastContext";
 
@@ -25,13 +26,15 @@ export default function RootLayout({
         <ThemeProvider
           enableSystem={false}
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
         >
+          <Background />
           <Header />
           <ToasterContext />
           {children}
           <Footer />
           <ScrollToTop />
+          
         </ThemeProvider>
       </body>
     </html>

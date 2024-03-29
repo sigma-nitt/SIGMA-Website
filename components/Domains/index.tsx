@@ -1,50 +1,3 @@
-// "use client"
-// // MyComponent.tsx
-// import React from 'react';
-// import './MyComponent.css';
-
-// const MyComponent: React.FC = () => {
-//   return (
-//     <div className="container">
-//       <table className="table">
-//         <tbody>
-//           <tr>
-//             <td className="left-cell">
-//               <h1 className="domain-style">DOMAINS</h1>
-//               <br />
-//               <p className="domain-style-text"></p>
-//             </td>
-//             <td className="right-cell">
-//               <img src="/images/analytics logo.png" alt="Image Alt Text" className="image-styleda" />
-//               <br />
-//               <a href="/dataanalytics" className="link-style1">View Projects</a>
-//               <img src="/images/casestudies logo.png" alt="Image Alt Text" className="image-stylecs" />
-//               <br />
-//               <a href="/casestudies" className="link-style2">View Projects</a>
-//             </td>
-//           </tr>
-//         </tbody>
-//       </table>
-
-//       <div className="box-style1">
-//         <br />
-//         <h2 className="heading-style">Analytics</h2>
-//         <p className="content-style"></p>
-//       </div>
-
-//       <div className="box-style2">
-//         <br />
-//         <h2 className="heading-style">Case Studies</h2>
-//         <p className="content-style"></p>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default MyComponent;
-
-
-
 "use client"
 // MyComponent.tsx
 import React, { useEffect, useState } from 'react';
@@ -58,15 +11,9 @@ const MyComponent: React.FC = () => {
         setIsSmallScreen(window.innerWidth <= 600);
       };
   
-      // Check if window is defined before using it
       if (typeof window !== 'undefined') {
-        // Initial check on mount
         handleResize();
-  
-        // Add event listener for resizing
         window.addEventListener('resize', handleResize);
-  
-        // Cleanup event listener on component unmount
         return () => {
           window.removeEventListener('resize', handleResize);
         };

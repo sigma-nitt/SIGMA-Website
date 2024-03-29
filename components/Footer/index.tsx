@@ -5,7 +5,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <>
-      <footer className="border-t border-stroke bg-white dark:border-strokedark dark:bg-blacksection">
+      <footer className="border-t bg-background dark:border-strokedark dark:bg-blacksection">
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           <div className="py-2 lg:py-3"> {/* for reducing height */}
             <div className="flex flex-wrap gap-8 lg:justify-between lg:gap-0">
@@ -55,7 +55,7 @@ const Footer = () => {
                 </p>
                 <a
                   href="/contactus"
-                  className="text-itemtitle font-medium text-black dark:text-white"
+                  className="text-itemtitle font-medium text-muted-foreground hover:text-muted-foreground"
                 >
                   sigma.nitt@gmail.com
                 </a>
@@ -80,7 +80,7 @@ const Footer = () => {
                   viewport={{ once: true }}
                   className="animate_top"
                 >
-                  <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
+                  <h4 className="mb-5 mt-8 text-itemtitle2 font-medium text-white">
                     Quick Links
                   </h4>
 
@@ -88,7 +88,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="mb-3 inline-block hover:text-primary"
+                        className="mb-3 inline-block text-muted-foreground hover:text-muted-foreground"
                       >
                         Home
                       </a>
@@ -96,7 +96,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="/aboutus"
-                        className="mb-3 inline-block hover:text-primary"
+                        className="mb-3 inline-block text-muted-foreground hover:text-muted-foreground"
                       >
                         About Us
                       </a>
@@ -104,7 +104,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="/team"
-                        className="mb-3 inline-block hover:text-primary"
+                        className="mb-3 inline-block text-muted-foreground hover:text-muted-foreground"
                       >
                         Team
                       </a>
@@ -112,71 +112,13 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="mb-3 inline-block hover:text-primary"
+                        className="mb-3 inline-block text-muted-foreground hover:text-muted-foreground"
                       >
                         Inductions
                       </a>
                     </li>
                   </ul>
                 </motion.div>
-
-                {/* <motion.div
-                  variants={{
-                    hidden: {
-                      opacity: 0,
-                      y: -20,
-                    },
-
-                    visible: {
-                      opacity: 1,
-                      y: 0,
-                    },
-                  }}
-                  initial="hidden"
-                  whileInView="visible"
-                  transition={{ duration: 1, delay: 0.1 }}
-                  viewport={{ once: true }}
-                  className="animate_top"
-                >
-                  <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
-                    Support
-                  </h4>
-
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Company
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Press media
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Our Blog
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Contact Us
-                      </a>
-                    </li>
-                  </ul>
-                </motion.div> */}
 
                 <motion.div
                   variants={{
@@ -196,10 +138,68 @@ const Footer = () => {
                   viewport={{ once: true }}
                   className="animate_top"
                 >
-                  <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
+                  <h4 className="mb-5 mt-8 text-itemtitle2 font-medium text-white">
+                    Support
+                  </h4>
+
+                  <ul>
+                    <li>
+                      <a
+                        href="#"
+                        className="mb-3 inline-block text-muted-foreground hover:text-muted-foreground"
+                      >
+                        Company
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        className="mb-3 inline-block text-muted-foreground hover:text-muted-foreground"
+                      >
+                        Press media
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        className="mb-3 inline-block text-muted-foreground hover:text-muted-foreground"
+                      >
+                        Our Blog
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        className="mb-3 inline-block text-muted-foreground hover:text-muted-foreground"
+                      >
+                        Contact Us
+                      </a>
+                    </li>
+                  </ul>
+                </motion.div>
+
+                <motion.div
+                  variants={{
+                    hidden: {
+                      opacity: 0,
+                      y: -20,
+                    },
+
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                    },
+                  }}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{ duration: 1, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="animate_top"
+                >
+                  <h4 className="mb-5 mt-8  text-itemtitle2 font-medium :text-white">
                     Stay In Touch
                   </h4>
-                  <p className="mb-4 w-[90%]">
+                  <p className="mb-4 w-[90%] text-muted-foreground hover:text-muted-foreground">
                     Subscribe
                   </p>
 
@@ -268,11 +268,6 @@ const Footer = () => {
                 <li>
                   <a href="#" className="hover:text-primary">
                     English
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-primary">
-                    Privacy Policy
                   </a>
                 </li>
                 <li>

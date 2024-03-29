@@ -11,7 +11,7 @@ const menuData: Menu[] = [
     id: 2,
     title: "About Us",
     newTab: false,
-    path: "/aboutus",
+    path: "#features",
   },
   {
     id: 3,
@@ -26,51 +26,41 @@ const menuData: Menu[] = [
     path: "/events",
   },
   {
-    id: 3.3,
-    title: "Podcasts",
-    newTab: false,
-    path: "/podcast",
-  },
-
-  {
-    id: 4,
-    title: "Enigma",
-    newTab: false,
-    path: "/enigma",
-  },
-  
-  {
     id: 5,
-    title: "Projects",
+    title: "Initiatives",
     newTab: false,
     submenu: [
       {
         id: 5.1,
-        title: "Case Studies",
+        title: "Podcasts",
+        newTab: false,
+        path: "/podcast",
+      },
+      {
+        id: 5.2,
+        title: "Projects - Data Analytics",
+        newTab: false,
+        path: "/dataanalytics",
+      },
+      {
+        id: 5.3,
+        title: "Projects - Case Studies",
         newTab: false,
         path: "/casestudies",
       },
       {
-        id: 5.2,
-        title: "Data Analytics",
+        id: 5.4,
+        title: "Enigma",
         newTab: false,
-        path: "/dataanalytics",
+        path: "/enigma",
+      },
+      {
+        id: 5.5,
+        title: "Resources",
+        newTab: false,
+        path: "/resources",
       },
     ],
-  },
-
-
-  {
-    id: 6,
-    title: "Initiatives",
-    newTab: false,
-    path: "/initiatives",
-  },
-  {
-    id: 7,
-    title: "Resources",
-    newTab: false,
-    path: "/resources",
   },
   {
     id: 8,

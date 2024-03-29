@@ -4,6 +4,8 @@ import WhoAreWe from "@/components/WhoAreWe";
 import ExploreOur from "@/components/ExploreOur";
 import Domains from '@/components/Domains';
 import MembersProjects from '@/components/membersprojects'
+import DaCs from '@/components/DaCs'
+import TestimonialsSections from '@/components/core23'
 
 export const metadata: Metadata = {
   title: "SIGMA NITT",
@@ -14,7 +16,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
-      <div className="bg-blue-950 relative overflow-hidden">
+      {/* <div className="bg-blue-950 relative overflow-hidden">
         <div className="bg-blue-950" style={{ borderRadius: '0 0 50% 50%', overflow: 'hidden'}}>
           <Hero />
         </div>
@@ -24,10 +26,19 @@ export default function Home() {
         </div>
 
         <MembersProjects />
-        <Domains />
-        <ExploreOur />
-      
-      </div> 
+        <div className="bg-black">
+          <Domains />
+          <ExploreOur />
+        </div>
+      </div>  */}
+      <div className="p-15">
+        <Hero />
+        <div className="bg-background p-4 w-70">
+          <WhoAreWe />
+        </div>
+        <DaCs />
+        <TestimonialsSections />
+      </div>
     </main>
   );
 }

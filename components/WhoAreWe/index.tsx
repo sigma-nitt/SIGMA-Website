@@ -104,17 +104,13 @@ const WhoWeAre: React.FC<WhoWeAreProps> = (props) => {
   return (
     <div>
       <div className={styles.container}>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
         <div className={styles.gridContainer}>
           <div className={styles.gridItem}>
             <h1 className={styles.heading}>Who we are?</h1>
           </div>
           <div className={styles.gridLine} />
           <div className={styles.gridItem}>
-            <p className={styles.paragraph}>
+            <p className="paragraph text-muted-foreground">
               Our club provides a platform where students can share a mutual interest in business and characteristic enthusiasm to succeed. We provide guidance replete with sufficient exposure and real-life projects.
             </p>
             <br></br>
@@ -123,7 +119,7 @@ const WhoWeAre: React.FC<WhoWeAreProps> = (props) => {
         <div className={styles.gridContainer}>
           <div className={styles.gridItem}>
             <br></br>
-            <p className={styles.paragraph}>
+            <p className="paragraph text-muted-foreground">
               SIGMA - The Business Club of NITT operates in four major fields, i.e., Projects, Data Analytics, Case Studies and Consulting, and Articles. We encourage our members to explore these domains as well as to participate and manage various events, including Guest Lectures, Workshops, and Competitions.
             </p>
           </div>

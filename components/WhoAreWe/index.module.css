@@ -3,8 +3,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 50vh;
   padding: 0 20px;
+  width: 100%;
 }
 
 .gridContainer {
@@ -17,7 +18,7 @@
 
 .gridLine {
   height: 80%;
-  border-left: 12px solid #ccc;
+  border-left: 2px solid #ccc;
 }
 
 .gridItem {
@@ -25,21 +26,21 @@
 }
 
 .heading {
-  font-size: 86px;
+  font-size: 56px;
   margin-bottom: 10px;
-  color: black;
   font-weight: bold;
   opacity: 10;
 }
 
 .paragraph {
-  font-size: 23px;
+  font-size: 18px;
   line-height: 1.5;
   opacity: 10;
   transform: translateX(-20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
   color: black;
   font-weight: bold;
+  margin-left: 15px;
 }
 
 .paragraph.animate {
