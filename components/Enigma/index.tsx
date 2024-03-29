@@ -52,8 +52,10 @@ const PDFViewer: React.FC = () => {
 
   return (
     <div style={{ maxWidth: '5000px', margin: '0 auto' }}>
-      <div className="bg-white p-4 mb-8 mt-5">
-        <h1 className="text-6xl text-center text-slate-500 " style={{ fontFamily: 'impact'}}>
+      {/* <div className="bg-white p-4 mb-8 mt-5">
+        <h1 className="text-6xl text-center text-slate-500 " style={{ fontFamily: 'impact'}}> */}
+      <div className="p-4 mb-8">
+        <h1 className="bg-secondary-gradient-2 bg-clip-text text-transparent text-6xl text-center text-slate-500" style={{ fontFamily: 'impact'}}>
           TAKE A LOOK AT OUR MAGAZINE !
         </h1>
       </div>
