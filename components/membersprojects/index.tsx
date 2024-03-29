@@ -6,7 +6,6 @@ const MembersProjectsComponent: React.FC = () => {
   return (
     <div className="members-projects"
       style={{
-        background: 'linear-gradient(to right, #0074cc, #001b40)',
         height: '40vh',
         display: 'flex',
         flexDirection: 'row',
@@ -15,14 +14,14 @@ const MembersProjectsComponent: React.FC = () => {
         padding: '0 20px',
       }}
     >
-      <div style={{ textAlign: 'center', margin: '10px', flex: 1 }}>
-        <h1 className="projects" style={{ fontSize: '3em', marginBottom: '10px', fontWeight: 'bold', color: 'white'}}>50+<br /><br />Projects</h1>
-        <div className="white-line" style={{ borderTop: '12px solid white', width: '30%', margin: 'auto', marginTop: '60px', marginBottom: '10px', borderRadius: '10px' }}></div>
+      <div style={{ textAlign: 'center', margin: '5px', flex: 1, transition: 'transform 0.3s' }} className="hover-enlarge">
+        <h1 className="p-1 bg-secondary-gradient bg-clip-text text-transparent mnt-10 font-bold text-6xl">50+<br />Projects</h1>
+        <div className="white-line" style={{ borderTop: '12px solid white', width: '30%', margin: 'auto', marginTop: '30px', marginBottom: '10px', borderRadius: '10px' }}></div>
       </div>
 
-      <div style={{ textAlign: 'center', margin: '10px', flex: 1 }}>
-        <h1 className="projects" style={{ fontSize: '3em', marginBottom: '10px', fontWeight: 'bold', color: 'white'}}>30+<br /><br />Members</h1>
-        <div className="white-line" style={{ borderTop: '12px solid white', width: '30%', margin: 'auto', marginTop: '60px', marginBottom: '10px', borderRadius: '20px' }}></div>
+      <div style={{ textAlign: 'center', margin: '5px', flex: 1, transition: 'transform 0.3s' }} className="hover-enlarge">
+        <h1 className="p-1 bg-secondary-gradient bg-clip-text text-transparent mnt-10 font-bold text-6xl mb-4">30+<br />Members</h1>
+        <div className="white-line" style={{ borderTop: '12px solid white', width: '30%', margin: 'auto', marginTop: '30px', marginBottom: '10px', borderRadius: '20px' }}></div>
       </div>
     </div>
   );

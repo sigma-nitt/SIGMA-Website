@@ -5,7 +5,7 @@ import ExploreOur from "@/components/ExploreOur";
 import Domains from '@/components/Domains';
 import MembersProjects from '@/components/membersprojects'
 import DaCs from '@/components/DaCs'
-import TestimonialsSections from '@/components/core23'
+// import TestimonialsSections from '@/components/core23'
 
 export const metadata: Metadata = {
   title: "SIGMA NITT",
@@ -31,14 +31,31 @@ export default function Home() {
           <ExploreOur />
         </div>
       </div>  */}
-      <div className="p-15">
-        <Hero />
-        <div className="bg-background p-4 w-70">
-          <WhoAreWe />
+      <div>
+        <div style={{ 
+          backgroundImage: `url('/images/bkg.jpg')`, 
+          backgroundSize: 'cover', 
+          backgroundPosition: 'center', 
+          backgroundRepeat: 'no-repeat', 
+          minHeight: '100vh', /* Set a minimum height to ensure the background covers the entire viewport */
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: '80px'
+          }}>
+          <Hero />
         </div>
-        <DaCs />
-        <TestimonialsSections />
+        <MembersProjects />
+        <div className="p-15">
+          <div className="bg-background p-4 w-70">
+            <WhoAreWe />
+          </div>
+          <DaCs />
+          {/* <TestimonialsSections /> */}
+        </div>
       </div>
+
+      
     </main>
   );
 }

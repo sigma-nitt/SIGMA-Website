@@ -26,6 +26,12 @@ const menuData: Menu[] = [
     path: "/events",
   },
   {
+    id: 4,
+    title: "Inductions",
+    newTab: false,
+    path: "/inductions",
+  },
+  {
     id: 5,
     title: "Initiatives",
     newTab: false,
@@ -63,13 +69,7 @@ const menuData: Menu[] = [
     ],
   },
   {
-    id: 8,
-    title: "Inductions",
-    newTab: false,
-    path: "/inductions",
-  },
-  {
-    id: 9,
+    id: 6,
     title: "Contact Us",
     newTab: false,
     path: "/contactus",

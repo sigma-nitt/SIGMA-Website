@@ -43,7 +43,7 @@ const Features: FC<FeaturesProps> = () => {
         <Card className="overflow-hidden" key={feature.id} id="reveal-anim">
           <CardContent className="space-y-10 p-0">
             <div className="space-y-5 px-6 py-8">
-              <h3 className="text-center font-heading text-2xl font-bold leading-normal tracking-tight text-foreground lg:text-3xl">
+              <h3 className="text-center font-heading text-2xl font-bold leading-normal tracking-tight bg-secondary-gradient-2 bg-clip-text text-transparent lg:text-3xl">
                 {feature.title.toUpperCase()}
               </h3>
               <p className="text-center text-muted-foreground lg:text-lg">

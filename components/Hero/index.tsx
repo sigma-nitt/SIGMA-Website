@@ -58,11 +58,21 @@ const HeroSection: FC = () => {
           className="relative flex flex-col items-center justify-center gap-y-24"
         >
           <div className="flex flex-col items-center justify-center">
-            <img className="imgsigma mt-40" src="/images/logo.jpg" alt="Description of the image" style={{ width: "500px", height: "500px" }}/>
+            {/* <img className="imgsigma mt-40" src="/images/logo.jpg" alt="Description of the image" style={{ width: "500px", height: "500px" }}/> */}
+
+            <h1 className="sigma text-8xl text-center mb-12">Welcome to SIGMA</h1>
+            <p className="businessclub text-5xl text-center mb-8">The Business Club of NIT Trichy</p>
+
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+
+            <p className="businessclub text-2xl text-center mb-8">Explore our projects, blogs, resources and much more.</p>
 
             <Link
               id="transform-anim"
-              href="/podcast"
+              href="/dataanalytics"
               className={cn(
                 buttonVariants({ variant: "cta" }),
                 "mt-8 flex h-12 items-center justify-center space-x-5 p-[.25rem_.3rem_.25rem_1.3rem] text-base"
@@ -80,7 +90,7 @@ const HeroSection: FC = () => {
         </div>
       </section>
 
-      <div className="members-projects"
+      {/* <div className="members-projects"
         style={{
           height: '40vh',
           display: 'flex',
@@ -99,7 +109,7 @@ const HeroSection: FC = () => {
           <h1 className="p-1 bg-secondary-gradient bg-clip-text text-transparent mnt-10 font-bold text-6xl mb-4">30+<br />Members</h1>
           <div className="white-line" style={{ borderTop: '12px solid white', width: '30%', margin: 'auto', marginTop: '30px', marginBottom: '10px', borderRadius: '20px' }}></div>
         </div>
-      </div>
+      </div> */}
 
     </div>
   )

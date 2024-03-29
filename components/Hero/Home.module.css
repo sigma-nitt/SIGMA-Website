@@ -45,6 +45,13 @@
   }
 }
 
+.sigma {
+  font-family:'Poppins', sans-serif;
+}
+
+.businessclub {
+  font-family:'Open Sans', sans-serif;
+}
 
 .textContainer {
   display: flex;
