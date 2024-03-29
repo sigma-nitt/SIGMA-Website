@@ -38,8 +38,7 @@
   opacity: 10;
   transform: translateX(-20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
-  color: black;
-  font-weight: bold;
+  color: white;
   margin-left: 15px;
 }
 
