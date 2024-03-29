@@ -78,6 +78,10 @@
   .gridItem:nth-child(4) {
     order: 4; /* "Who we are" text appears fourth */
   }
+
+  .container {
+    height: 60vh;
+  }
 }
 
 

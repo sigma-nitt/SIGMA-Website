@@ -219,7 +219,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`fixed left-0 top-0 z-99999 w-full py-4 bg-background shadow transition duration-100000 dark:bg-black animate__animated animate__fadeIn text-white text-lg ${stickyMenu ? 'sticky' : ''}`}>
+    <header className={`fixed right-0 top-0 z-99999 w-full py-4 bg-background shadow transition duration-100000 dark:bg-black animate__animated animate__fadeIn text-white text-lg ${stickyMenu ? 'sticky' : ''}`}>
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
         <div className="flex w-full items-start justify-between xl:w-1/4">
           <a href="/">
