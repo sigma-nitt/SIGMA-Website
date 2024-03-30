@@ -81,7 +81,7 @@ const MeetOurTeamPage = () => {
               className={`m-4 p-6 rounded-lg shadow-md w-64 transition-transform transform ${hoveredMember === member.name ? 'hover:scale-105' : ''} flipping-card`}
               onMouseEnter={() => handleMouseEnter(member.name)}
               onMouseLeave={handleMouseLeave}
-              style={{ background: 'linear-gradient(45deg, #cfd8dc, #90a4ae)' }}
+              style={{ background: 'white' }}
             >
               {member.image && (
                 <img

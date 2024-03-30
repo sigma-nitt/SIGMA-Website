@@ -5,7 +5,7 @@ import ExploreOur from "@/components/ExploreOur";
 import Domains from '@/components/Domains';
 import MembersProjects from '@/components/membersprojects'
 import DaCs from '@/components/DaCs'
-// import TestimonialsSections from '@/components/core23'
+import TestimonialsSections from '@/components/Testimonial'
 
 export const metadata: Metadata = {
   title: "SIGMA NITT",
@@ -51,7 +51,7 @@ export default function Home() {
             <WhoAreWe />
           </div>
           <DaCs />
-          {/* <TestimonialsSections /> */}
+          <TestimonialsSections />
         </div>
       </div>
 

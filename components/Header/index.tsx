@@ -226,8 +226,8 @@ const Header = () => {
             <Image
               src="/images/sigma symbol.png"
               alt="logo"
-              width={50}
-              height={50}
+              width={35}
+              height={35}
               className="w-full dark:hidden"
             />
           </a>

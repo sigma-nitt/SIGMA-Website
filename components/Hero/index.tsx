@@ -65,8 +65,6 @@ const HeroSection: FC = () => {
 
             <br></br>
             <br></br>
-            <br></br>
-            <br></br>
 
             <Link
               id="transform-anim"
@@ -78,7 +76,7 @@ const HeroSection: FC = () => {
             >
               <span className="text-white font-bold text-lg">Explore our Projects </span>
               <span className="right-0 inline-block rounded-full bg-white/50  p-[0.5rem]">
-                <Icons.chevronRight className="h-3 w-3 text-black/60" />
+                <Icons.chevronRight className="h-2 w-2 text-black/60" />
               </span>
             </Link>
             <br></br>

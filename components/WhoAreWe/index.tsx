@@ -106,11 +106,12 @@ const WhoWeAre: React.FC<WhoWeAreProps> = (props) => {
       <div className={styles.container}>
         <div className={styles.gridContainer}>
           <div className={styles.gridItem}>
-            <h1 className={styles.heading}>Who we are?</h1>
+            {/* <h1 className={styles.heading}>Who we are?</h1> */}
+            <h1 className="bg-secondary-gradient bg-clip-text text-transparent font-bold text-2xl md:text-5xl">Who we are?</h1>
           </div>
           <div className={styles.gridLine} />
           <div className={styles.gridItem}>
-            <p className={styles.paragraph}>
+            <p className={styles.paragraph1}>
               Our club provides a platform where students can share a mutual interest in business and characteristic enthusiasm to succeed. We provide guidance replete with sufficient exposure and real-life projects.
             </p>
             <br></br>
@@ -125,7 +126,8 @@ const WhoWeAre: React.FC<WhoWeAreProps> = (props) => {
           </div>
           <div className={styles.gridLine} />
           <div className={styles.gridItem}>
-            <h1 className={styles.heading}>What we do?</h1>
+            {/* <h1 className={styles.heading}>What we do?</h1> */}
+            <h1 className="bg-secondary-gradient bg-clip-text text-transparent font-bold text-2xl md:text-5xl">What we do?</h1>
           </div>
         </div>
       </div>

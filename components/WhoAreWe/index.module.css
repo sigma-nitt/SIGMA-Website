@@ -6,6 +6,7 @@
   height: 50vh;
   padding: 0 20px;
   width: 100%;
+  border-radius: 12px;
 }
 
 .gridContainer {
@@ -40,6 +41,17 @@
   transition: opacity 0.5s ease, transform 0.5s ease;
   color: white;
   margin-left: 15px;
+}
+
+.paragraph1 {
+  font-size: 18px;
+  line-height: 1.5;
+  opacity: 10;
+  transform: translateX(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  color: white;
+  margin-left: 15px;
+  margin-top: 20px;
 }
 
 .paragraph.animate {

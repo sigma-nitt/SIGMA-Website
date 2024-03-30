@@ -15,18 +15,20 @@ const Testimonial = () => {
   return (
     <>
       <section>
-        <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
-          {/* <!-- Section Title Start --> */}
-          <div className="animate_top mx-auto text-center">
+        {/* <div className="mx-auto max-w-c-1315 px-4 text-white md:px-8 xl:px-0">
+          <div className="animate_top mx-auto text-center text-white">
             <SectionHeader
               headerInfo={{
-                title: `TESTIMONIALS`,
-                subtitle: `Client’s Testimonials`,
-                description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`,
+                title: `Testimonials`,
+                subtitle: ``,
+                description: ``,
               }}
             />
           </div>
-          {/* <!-- Section Title End --> */}
+        </div> */}
+
+        <div className="bg-secondary-gradient bg-clip-text text-transparent text-5xl font-bold" style={{ textAlign: 'center' }}>
+            <p>Testimonials</p>
         </div>
 
         <motion.div
@@ -54,7 +56,7 @@ const Testimonial = () => {
               spaceBetween={50}
               slidesPerView={2}
               autoplay={{
-                delay: 2500,
+                delay: 3500,
                 disableOnInteraction: false,
               }}
               pagination={{
