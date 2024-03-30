@@ -1,13 +1,13 @@
 /* Small screens */
 @media screen and (max-width: 1024px) {
-    .mt-custom {
+    .wholecont {
       margin-top: 300px !important;
     }
   }
   
   /* Large screens */
   @media screen and (min-width: 1024px) {
-    .mt-custom {
+    .wholecont {
       margin-top: 150px !important;
     }
   }
