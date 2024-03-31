@@ -58,8 +58,6 @@ const HeroSection: FC = () => {
           className="relative flex flex-col items-center justify-center gap-y-24"
         >
           <div className="flex flex-col items-center justify-center">
-            {/* <img className="imgsigma mt-40" src="/images/logo.jpg" alt="Description of the image" style={{ width: "500px", height: "500px" }}/> */}
-
             <h1 className="sigma text-5xl text-center mb-12 md:text-8xl">Welcome to SIGMA</h1>
             <p className="businessclub text-2xl text-center mb-8 md:text-5xl">The Business Club of NIT Trichy</p>
 
@@ -85,28 +83,6 @@ const HeroSection: FC = () => {
           </div>
         </div>
       </section>
-
-      {/* <div className="members-projects"
-        style={{
-          height: '40vh',
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          padding: '0 20px',
-        }}
-      >
-        <div style={{ textAlign: 'center', margin: '5px', flex: 1, transition: 'transform 0.3s' }} className="hover-enlarge">
-          <h1 className="p-1 bg-secondary-gradient bg-clip-text text-transparent mnt-10 font-bold text-6xl">50+<br />Projects</h1>
-          <div className="white-line" style={{ borderTop: '12px solid white', width: '30%', margin: 'auto', marginTop: '30px', marginBottom: '10px', borderRadius: '10px' }}></div>
-        </div>
-
-        <div style={{ textAlign: 'center', margin: '5px', flex: 1, transition: 'transform 0.3s' }} className="hover-enlarge">
-          <h1 className="p-1 bg-secondary-gradient bg-clip-text text-transparent mnt-10 font-bold text-6xl mb-4">30+<br />Members</h1>
-          <div className="white-line" style={{ borderTop: '12px solid white', width: '30%', margin: 'auto', marginTop: '30px', marginBottom: '10px', borderRadius: '20px' }}></div>
-        </div>
-      </div> */}
-
     </div>
   )
 }

@@ -37,7 +37,7 @@ export default function Home() {
           backgroundSize: 'cover', 
           backgroundPosition: 'center', 
           backgroundRepeat: 'no-repeat', 
-          minHeight: '100vh', /* Set a minimum height to ensure the background covers the entire viewport */
+          minHeight: '100vh',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
