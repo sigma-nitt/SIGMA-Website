@@ -1,10 +1,9 @@
 "use client"
 
-import { FC, useEffect } from "react"
-import { stagger, useAnimate, useInView } from "framer-motion"
-import './glow.css'
-
-import { Card, CardContent } from "../card"
+import { FC, useEffect, useRef } from "react";
+import { useInView } from "react-intersection-observer";
+import { animateScroll as scroll } from "react-scroll";
+import { Card, CardContent } from "../card";
 
 interface FeaturesProps {}
 
@@ -23,33 +22,28 @@ const features = [
     thumbnail: "/images/features/reminder.webp",
     demo: "/images/cs.mp4",
   },
-]
+];
 
 const Features: FC<FeaturesProps> = () => {
-  const [scope, animate] = useAnimate()
-  const isInView = useInView(scope, { once: true })
+  const [inViewRef, inView] = useInView({ triggerOnce: true });
+  const featuresRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if (isInView) {
-      animate(
-        "#reveal-anim",
-        { opacity: [0, 1], y: [25, 0] },
-        { duration: 0.5, ease: "easeIn", delay: stagger(0.3) }
-      )
+    if (inView && featuresRef.current) {
+      scroll.scrollTo(featuresRef.current.offsetTop, { duration: 500, smooth: true });
     }
-  }, [animate, isInView])
+  }, [inView]);
+
   return (
-    <div id="features" ref={scope} className="grid grid-cols-1 gap-10 py-16 md:grid-cols-2">
+    <div ref={inViewRef} className="grid grid-cols-1 gap-10 py-16 md:grid-cols-2" id="features">
       {features.map((feature) => (
-        <Card className="container overflow-hidden" key={feature.id} id="reveal-anim">
+        <Card className="container overflow-hidden" key={feature.id} ref={featuresRef}>
           <CardContent className="space-y-10 p-0">
             <div className="space-y-5 px-6 py-8">
               <h3 className="text-center font-heading text-2xl font-bold leading-normal tracking-tight bg-secondary-gradient-2 bg-clip-text text-transparent lg:text-3xl">
                 {feature.title.toUpperCase()}
               </h3>
-              <p className="text-center text-muted-foreground text-sm lg:text-lg">
-                {feature.description}
-              </p>
+              <p className="text-center text-muted-foreground text-sm lg:text-lg">{feature.description}</p>
             </div>
             <div className="relative ">
               <div className="absolute inset-0 -top-1 left-9 z-0 rounded-md bg-primary-gradient" />
@@ -70,7 +64,7 @@ const Features: FC<FeaturesProps> = () => {
         </Card>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default Features
+export default Features;

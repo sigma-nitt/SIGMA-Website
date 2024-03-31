@@ -65,13 +65,14 @@ const HeroSection: FC = () => {
 
             <br></br>
             <br></br>
-
+            <br></br>
+            <p className="businessclub text-xl text-center mb-8 md:text-2xl">Explore our projects, blogs, resources and much more.</p>
             <Link
               id="transform-anim"
               href="/dataanalytics"
               className={cn(
                 buttonVariants({ variant: "cta" }),
-                "mt-8 flex h-12 items-center justify-center space-x-5 p-[.25rem_.3rem_.25rem_1.3rem] text-base"
+                "mt-2 flex h-12 items-center justify-center space-x-5 p-[.25rem_.3rem_.25rem_1.3rem] text-base"
               )}
             >
               <span className="text-white font-bold text-lg">Explore our Projects </span>
@@ -79,9 +80,6 @@ const HeroSection: FC = () => {
                 <Icons.chevronRight className="h-2 w-2 text-black/60" />
               </span>
             </Link>
-            <br></br>
-            <p className="businessclub text-xl text-center mb-8 md:text-2xl">Explore our projects, blogs, resources and much more.</p>
-            <br></br>
             <br></br>
             <br></br>
           </div>
