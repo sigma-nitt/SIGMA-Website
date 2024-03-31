@@ -405,7 +405,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`fixed left-0 top-0 z-99999 w-full py-7 bg-background shadow transition duration-100000 dark:bg-black animate__animated animate__fadeIn text-white text-lg ${stickyMenu ? 'sticky' : ''}`}>
+    <header className={`fixed left-0 top-0 z-99999 w-full py-7 bg-background shadow transition duration-100000 dark:bg-background text-white text-lg ${stickyMenu ? 'sticky' : ''}`}>
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
         <div className="flex w-full items-start justify-between xl:w-1/4">
           <a href="/">
@@ -471,7 +471,7 @@ const Header = () => {
         </div>
 
 
-        <div className={`xl:flex xl:w-full ${isDesktopMenuOpen ? 'visible' : 'hidden'} ${navigationOpen && 'navbar mt-4 h-auto max-h-[400px] rounded-md bg-blue-500 text-white p-7.5 shadow-solid-5 dark:bg-blacksection xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent'}`}>
+        <div className={`xl:flex xl:w-full ${isDesktopMenuOpen ? 'visible' : 'hidden'} ${navigationOpen && 'navbar mt-4 h-auto max-h-[400px] rounded-md bg-background text-white p-7.5 shadow-solid-5 dark:bg-background xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent'}`}>
           <nav>
             <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
               {menuData.map((menuItem, key) => (
