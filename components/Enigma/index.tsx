@@ -1,5 +1,4 @@
 "use client"
-// components/PDFViewer/index.tsx
 import React, { useState, useEffect } from 'react';
 import './enigma.css';
 
@@ -52,19 +51,18 @@ const PDFViewer: React.FC = () => {
 
   return (
     <div style={{ maxWidth: '5000px', margin: '0 auto' }}>
-      {/* <div className="bg-white p-4 mb-8 mt-5">
-        <h1 className="text-6xl text-center text-slate-500 " style={{ fontFamily: 'impact'}}> */}
       <div className="p-4 mb-8">
-        <h1 className="bg-secondary-gradient-2 bg-clip-text text-transparent text-6xl text-center text-slate-500" style={{ fontFamily: 'impact'}}>
+        <h1 className="bg-secondary-gradient-2 bg-clip-text text-transparent text-6xl text-center font-bold">
           TAKE A LOOK AT OUR MAGAZINE !
         </h1>
       </div>
 
       {pdfDocuments.map((pdf, index) => (
-        <div key={index} style={{ marginBottom: '40px', background: '#f9f9f9', padding: '20px', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', width: '80%', margin: '0 auto'}}>
+        <div className="box" key={index} style={{ marginBottom: '40px', background: '#f9f9f9', padding: '20px', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', width: '80%', margin: '0 auto'}}>
           <div style={{ display: 'flex' }}>
             <div style={{ width: '70%', marginRight: '2%' }}>
               <iframe
+                className="pdf-front"
                 src={pdf.url}
                 style={{ width: '100%', height: '500px', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}
                 frameBorder="0"
@@ -72,9 +70,9 @@ const PDFViewer: React.FC = () => {
               ></iframe>
             </div>
             <div style={{ width: '30%', margin: 'auto', textAlign: 'center' }}>
-              <h2 style={{ fontWeight: 'bold', fontSize: '45px', color: 'blue', marginBottom: '20px', fontFamily: 'tahoma', marginTop: '40px' }}>{pdf.title}</h2>
-              <p style={{ overflowWrap: 'break-word', wordWrap: 'break-word', color:'black' }}>{pdf.description}</p>
-              <button style={{ backgroundColor: 'blue', color: 'white', padding: '8px', borderRadius: '20px', cursor: 'pointer', marginTop:'20px' }} onClick={() => openPdf(pdf.url)}>Enlarge View</button>
+              <h2 className="pdf-title" style={{ fontWeight: 'bold', fontSize: '45px', color: 'blue', marginBottom: '20px', fontFamily: 'tahoma', marginTop: '40px' }}>{pdf.title}</h2>
+              <p className="pdf-desc" style={{ overflowWrap: 'break-word', wordWrap: 'break-word', color:'black' }}>{pdf.description}</p>
+              <button className="enlarge-button" style={{ backgroundColor: 'blue', color: 'white', padding: '8px', borderRadius: '20px', cursor: 'pointer', marginTop:'20px' }} onClick={() => openPdf(pdf.url)}>Enlarge View</button>
             </div>
           </div>
         </div>

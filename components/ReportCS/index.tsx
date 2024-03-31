@@ -93,10 +93,8 @@ const ReportPage: React.FC = () => {
 
   return (
     <div>
-      {/* <div className="bg-white p-4 mb-8 mt-5">
-        <h1 className="text-6xl text-center text-slate-500 " style={{ fontFamily: 'impact'}}> */}
       <div className="p-4 mb-8">
-        <h1 className="bg-secondary-gradient-2 bg-clip-text text-transparent text-6xl text-center text-slate-500" style={{ fontFamily: 'impact'}}>
+        <h1 className="bg-secondary-gradient-2 bg-clip-text text-transparent text-6xl text-center font-bold">
           EXPLORE CASE STUDIES !
         </h1>
       </div>

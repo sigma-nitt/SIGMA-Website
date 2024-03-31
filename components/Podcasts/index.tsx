@@ -45,10 +45,8 @@ const YouTubePodcasts: React.FC = () => {
 
   return (
     <div className="wholecont">
-      {/* <div className="bg-white p-4 mb-8 mt-40">
-        <h1 className="text-6xl text-center text-slate-500 " style={{ fontFamily: 'impact'}}> */}
       <div className="p-4 mb-8">
-        <h1 className="bg-secondary-gradient-2 bg-clip-text text-transparent text-6xl text-center text-slate-500" style={{ fontFamily: 'impact'}}>
+        <h1 className="bg-secondary-gradient-2 bg-clip-text text-transparent text-6xl text-center font-bold">
           WATCH OUR PODCASTS !
         </h1>
       </div>
@@ -59,10 +57,8 @@ const YouTubePodcasts: React.FC = () => {
             key={index}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 2 }} // Adjust the duration here for initial fade-in
-            whileHover={{ scale: 1.05, transition: { duration: 0.1 } }} // Adjust the duration here for hover
-            // className={`mt-${index === videos.length - 1 ? '5' : '20'} mb-${index === videos.length - 1 ? '10' : '5'} lg:flex items-center bg-gradient-to-l from-blue-200 to-blue-600 rounded-lg p-4 shadow-md`}
-            // className={`mt-15 mb-15 lg:flex items-center bg-gradient-to-l from-blue-200 to-blue-600 rounded-lg p-4 shadow-md`}
+            transition={{ duration: 2 }}
+            whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
             className={`mt-15 mb-15 lg:flex items-center bg-white rounded-lg p-4 shadow-md`}
             style={{borderRadius:'10px'}}
           >

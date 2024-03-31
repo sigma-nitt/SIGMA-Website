@@ -11,3 +11,22 @@
     padding-top: 0;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .enlarge-button {
+    display: none;
+  }
+
+  .pdf-title {
+    font-size: 22px !important;
+  }
+
+  .pdf-desc {
+    font-size: 12px !important;
+  }
+
+  .box {
+    width: 93% !important;
+  }
+}
+
