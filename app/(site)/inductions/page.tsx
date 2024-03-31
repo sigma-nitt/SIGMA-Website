@@ -1,5 +1,5 @@
 import React from 'react';
-import Resources from "@/components/Resources";
+import Inductions from "@/components/Inductions";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const PodcastsPage: React.FC = () => {
   return (
     <div>
-      <Resources />
+      <Inductions />
     </div>
   );
 };

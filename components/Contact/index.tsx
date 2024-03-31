@@ -373,7 +373,7 @@ const Contact = () => {
                       type="checkbox"
                       className="peer sr-only"
                     />
-                    <span className="border-gray-300 bg-gray-100 text-blue-600 group mt-2 flex h-5 min-w-[20px] items-center justify-center rounded peer-checked:bg-primary">
+                    <span className="border-gray-300 bg-black text-white group mt-2 flex h-5 min-w-[20px] items-center justify-center rounded peer-checked:bg-primary">
                       <svg
                         className="opacity-0 peer-checked:group-[]:opacity-100"
                         width="10"
