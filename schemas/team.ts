@@ -76,6 +76,11 @@ const teamMemberSchema = {
       },
     },
     {
+      name: 'aboutyou',
+      title: 'Something about you (max 30 words)',
+      type: 'string',
+    },
+    {
       name: 'image',
       title: 'Image',
       type: 'image',

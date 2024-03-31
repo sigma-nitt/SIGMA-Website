@@ -46,6 +46,10 @@ const ResourcePage = () => {
     return <p>Error :(</p>;
   }
 
+  // Filter resources based on type
+  const dataAnalyticsResources = resources.filter(resource => resource.type === 'Data Analytics');
+  const caseStudiesResources = resources.filter(resource => resource.type === 'Case Studies');
+
   return (
     <div>
       <div
@@ -68,17 +72,16 @@ const ResourcePage = () => {
       </div>
 
       <div className="container flex justify-center mt-20 mb-20">
-        {resources.map((resource, index) => (
-          <div key={index} className="w-1/2 mx-2 flex flex-col">
-            <div className="mb-10 pl-5 text-2xl font-bold bg-secondary-gradient bg-clip-text text-transparent hover-enlarge md:pl-60 md:text-5xl md:mb-10">
-              <h2>{resource.type}</h2>
-            </div>
-            <div className="w-full flex flex-wrap gap-4 text-black pl-7 md:pl-50 md:flex-wrap" style={{ maxHeight: '400px', overflowY: 'auto' }}>
-              <div className="w-5/6 md:w-4/5">
-                <div className="cont bg-white p-4" style={{borderRadius:'10px'}}>
-                  <h3 className="text-2xl font-bold text-center mb-5">{resource.title}</h3>
-                  <p className="text-center text-sm md:text-lg"><strong>Type:</strong> {resource.resourceType}</p>
-                  <div className="text-center text-sm md:text-lg">
+        {/* Data Analytics Column */}
+        <div className="w-1/2 overflow-y-auto" style={{ maxHeight: '500px' }}>
+          <div className="flex flex-col items-center">
+            <h2 className="text-4xl font-bold bg-secondary-gradient bg-clip-text text-transparent text-center hover-enlarge mb-10 md:text-5xl">Data Analytics</h2>
+            {dataAnalyticsResources.map((resource, index) => (
+              <div key={index} className="w-3/4 mb-8">
+                <div className="cont bg-white pl-5 pr-5 pt-4 pb-4 md:pl-15 md:pr-15 md:pt-4 md:pb-4" style={{ borderRadius: '10px' }}>
+                  <h3 className="text-xl font-bold text-center mb-5 text-black md:text-2xl" style={{ wordWrap: 'break-word' }}>{resource.title}</h3>
+                  <p className="text-center text-sm text-black" style={{ wordWrap: 'break-word' }}><strong>Type:</strong> {resource.resourceType}</p>
+                  <div className="text-center text-sm">
                     <a href={resource.link} target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
                       <strong>Link:</strong>{" "}
                       <span className="text-blue-500 underline" style={{ wordWrap: 'break-word' }}>{resource.link}</span>
@@ -86,13 +89,33 @@ const ResourcePage = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
-        ))}
+        </div>
+
+        {/* Case Studies Column */}
+        <div className="w-1/2 overflow-y-auto" style={{ maxHeight: '500px' }}>
+          <div className="flex flex-col items-center">
+            <h2 className="text-4xl font-bold bg-secondary-gradient bg-clip-text text-transparent text-center hover-enlarge mb-10 md:text-5xl">Case Studies</h2>
+            {caseStudiesResources.map((resource, index) => (
+              <div key={index} className="w-3/4 mb-8">
+                <div className="cont bg-white pl-5 pr-5 pt-4 pb-4 md:pl-15 md:pr-15 md:pt-4 md:pb-4" style={{ borderRadius: '10px' }}>
+                  <h3 className="text-xl font-bold text-center mb-5 text-black md:text-2xl" style={{ wordWrap: 'break-word' }}>{resource.title}</h3>
+                  <p className="text-center text-sm text-black" style={{ wordWrap: 'break-word' }}><strong>Type:</strong> {resource.resourceType}</p>
+                  <div className="text-center text-sm">
+                    <a href={resource.link} target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
+                      <strong>Link:</strong>{" "}
+                      <span className="text-blue-500 underline" style={{ wordWrap: 'break-word' }}>{resource.link}</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
 export default ResourcePage;
-

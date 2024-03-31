@@ -11,6 +11,7 @@ interface TeamMember {
   name: string;
   position: string;
   category: string;
+  aboutyou: string;
   image: string;
 }
 
@@ -92,7 +93,7 @@ const MeetOurTeamPage = () => {
               <div className="text-black">{member.position}</div>
               {hoveredMember === member.name && (
                 <div className="absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 rounded-lg p-4 text-white backdrop-filter backdrop-blur-md back-face">
-                  <p>Something about Something about Something about Something about Something about Something about Something about Something about Something about Something about Something about Something about Something about Something about Something about</p>
+                  <p>{member.aboutyou}</p>
                 </div>
               )}
             </div>

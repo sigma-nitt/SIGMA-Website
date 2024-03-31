@@ -24,6 +24,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       name,
       position,
       category,
+      aboutyou,
       image,
     }`;
     // Extract the selected category from the query parameters
