@@ -1,4 +1,39 @@
 .custom-table-width {
     width: 90%;
-  }
+}
+
+.cell {
+  height: 50px;
+}
+
+.cell2 {
+  height: 50px;
+  width: 30%;
+}
   
+.question-box {
+  width: 50%;
+}
+
+.answer-box {
+  width: 50%;
+}
+
+.arrow {
+  right: 5%;
+}
+
+@media screen and (max-width: 600px) {
+  .answer-box {
+    width: 70%;
+  }
+
+  .question-box {
+    width: 80%;
+  }
+
+  .arrow {
+    right: 2%;
+  }
+}
+
