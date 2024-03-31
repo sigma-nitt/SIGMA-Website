@@ -63,8 +63,8 @@ const YouTubePodcasts: React.FC = () => {
             style={{borderRadius:'10px'}}
           >
             <div className="w-full lg:w-1/2 lg:mr-8 mb-4 lg:mb-0">
-              <h2 className="font-bold text-3xl text-center lg:text-center text-black mb-6" style={{ fontFamily: 'tahoma'}}>{video.title.toUpperCase()}</h2>
-              <p className="text-center lg:text-center text-black">{video.description}</p>
+              <h2 className="font-bold text-xl text-center lg:text-center text-black mb-6 md:text-3xl" style={{ fontFamily: 'tahoma'}}>{video.title.toUpperCase()}</h2>
+              <p className="text-center text-sm lg:text-center text-black md:text-md">{video.description}</p>
             </div>
             <div className="w-full lg:w-1/2 mt-4 lg:mt-0">
               <YouTube videoId={video.videoId} opts={{ width: '100%', height: 315 }} />
