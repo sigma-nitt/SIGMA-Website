@@ -65,11 +65,11 @@ const MeetOurTeamPage = () => {
         </h1>
       </div>
       <br></br>
-      <div className="flex justify-around mb-8">
-        <button onClick={() => handleCategoryClick('core')} className={`py-2 px-4 font-bold rounded-full category-button ${selectedCategory.toLowerCase() === 'core' ? 'bg-green-500 text-black' : 'bg-gray-300'}`}>Core</button>
-        <button onClick={() => handleCategoryClick('senior manager')} className={`py-2 px-4 font-bold rounded-full category-button ${selectedCategory.toLowerCase() === 'senior manager' ? 'bg-green-500 text-black' : 'bg-gray-300'}`}>Senior Manager</button>
-        <button onClick={() => handleCategoryClick('manager')} className={`py-2 px-4 font-bold rounded-full category-button ${selectedCategory.toLowerCase() === 'manager' ? 'bg-green-500 text-black' : 'bg-gray-300'}`}>Manager</button>
-        <button onClick={() => handleCategoryClick('deputy manager')} className={`py-2 px-4 font-bold rounded-full category-button ${selectedCategory.toLowerCase() === 'deputy manager' ? 'bg-green-500 text-black' : 'bg-gray-300'}`}>Deputy Manager</button>
+      <div className="buttonarrangement flex justify-around mb-8">
+        <button onClick={() => handleCategoryClick('core')} className={`py-2 px-4 font-bold rounded-full category-button ${selectedCategory.toLowerCase() === 'core' ? 'bg-green-500 text-black' : 'bg-gray-300 text-black'}`}>Core</button>
+        <button onClick={() => handleCategoryClick('senior manager')} className={`py-2 px-4 font-bold rounded-full category-button ${selectedCategory.toLowerCase() === 'senior manager' ? 'bg-green-500 text-black' : 'bg-gray-300 text-black'}`}>Senior Manager</button>
+        <button onClick={() => handleCategoryClick('manager')} className={`py-2 px-4 font-bold rounded-full category-button ${selectedCategory.toLowerCase() === 'manager' ? 'bg-green-500 text-black' : 'bg-gray-300 text-black'}`}>Manager</button>
+        <button onClick={() => handleCategoryClick('deputy manager')} className={`py-2 px-4 font-bold rounded-full category-button ${selectedCategory.toLowerCase() === 'deputy manager' ? 'bg-green-500 text-black' : 'bg-gray-300 text-black'}`}>Deputy Manager</button>
       </div>
       <div className="flex flex-wrap justify-center">
         {teamMembers
