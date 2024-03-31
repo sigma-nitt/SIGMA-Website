@@ -66,7 +66,7 @@ const ResourcePage = () => {
         }}
       >
         <div style={{ backgroundColor: 'black', padding: '20px', textAlign: 'center', height: '200px', width: '1000px' }}>
-          <h1 className="sigma text-3xl text-center mb-4 mt-5 md:text-6xl">Resources</h1>
+          <h1 className="sigma text-3xl text-center mb-1 mt-3 md:text-6xl md:mb-4 md:mt-5">Resources</h1>
           <p className="businessclub text-md text-center md:text-xl">Check out our amazing collection of Case materials, Finance modules, and much more...</p>
         </div>
       </div>
@@ -78,8 +78,8 @@ const ResourcePage = () => {
             <h2 className="text-4xl font-bold bg-secondary-gradient bg-clip-text text-transparent text-center hover-enlarge mb-10 md:text-5xl">Data Analytics</h2>
             {dataAnalyticsResources.map((resource, index) => (
               <div key={index} className="w-3/4 mb-8">
-                <div className="cont bg-white pl-5 pr-5 pt-4 pb-4 md:pl-15 md:pr-15 md:pt-4 md:pb-4" style={{ borderRadius: '10px' }}>
-                  <h3 className="text-xl font-bold text-center mb-5 text-black md:text-2xl" style={{ wordWrap: 'break-word' }}>{resource.title}</h3>
+                <div className="cont bg-white pl-1 pr-1 pt-1 pb-1 md:pl-15 md:pr-15 md:pt-4 md:pb-4" style={{ borderRadius: '10px' }}>
+                  <h3 className="text-xl font-bold text-center mb-1 text-black md:text-2xl md:mb-5" style={{ wordWrap: 'break-word' }}>{resource.title}</h3>
                   <p className="text-center text-sm text-black" style={{ wordWrap: 'break-word' }}><strong>Type:</strong> {resource.resourceType}</p>
                   <div className="text-center text-sm">
                     <a href={resource.link} target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
