@@ -395,7 +395,7 @@ const Contact = () => {
                       className="flex max-w-[425px] cursor-pointer select-none pl-5 text-black"
                     >
                       By clicking Checkbox, you agree to use our “Form” terms
-                      And consent cookie usage in browser.
+                      and consent cookie usage in browser.
                     </label>
                   </div>
 
@@ -448,13 +448,13 @@ const Contact = () => {
                 <h3 className="bg-secondary-gradient bg-clip-text text-transparent mb-4 text-metatitle3 font-medium">
                   Our Location
                 </h3>
-                <p>NIT Trichy, Tiruchirappalli, India - 620015</p>
+                <p className="text-white">NIT Trichy, Tiruchirappalli, India - 620015</p>
               </div>
               <div className="5 mb-7">
                 <h3 className="mb-4 text-metatitle3 font-medium bg-secondary-gradient bg-clip-text text-transparent">
                   Email Address
                 </h3>
-                <p>
+                <p className="text-white">
                   <a href="#">sigma.nitt@gmail.com</a>
                 </p>
               </div>
@@ -462,7 +462,7 @@ const Contact = () => {
                 <h4 className="mb-4 text-metatitle3 font-medium bg-secondary-gradient bg-clip-text text-transparent">
                   Phone Number
                 </h4>
-                <p>
+                <p className="text-white">
                   <a href="#"></a>
                 </p>
               </div>

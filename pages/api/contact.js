@@ -25,7 +25,6 @@ export default async function handler(req, res) {
         <p>Name: ${name}</p>
         <p>Email: ${email}</p>
         <p>Phone Number: ${phoneNumber}</p>
-        <p>Subject: ${subject}</p>
         <p>Message: ${message}</p>
       `,
     };
