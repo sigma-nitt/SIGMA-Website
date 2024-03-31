@@ -4,7 +4,7 @@ import ReportPage from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SIGMA - Report",
+  title: "SIGMA - Contact Us",
   description: "This is Home for Solid Pro Report",
   // other metadata
 };

@@ -3,7 +3,7 @@ import Resources from "@/components/Resources";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SIGMA NITT",
+  title: "SIGMA - Resources",
   description: "This is Home for Solid Pro",
   // other metadata
 };

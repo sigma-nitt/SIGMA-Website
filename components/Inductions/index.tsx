@@ -23,9 +23,9 @@ const EventsPage: React.FC = () => {
   };
 
   return (
-    <div className="mt-30 relative">
+    <div className="mt-10 relative">
       <div className="relative">
-        <img src="/images/inductionsbg.png" className="w-full h-90" alt="Background" />
+        <img src="/images/inductionsbg.png" className="w-full" style={{ height: '80vh'}} alt="Background" />
         <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center">
           <h1 className="text-6xl">
             Inductions

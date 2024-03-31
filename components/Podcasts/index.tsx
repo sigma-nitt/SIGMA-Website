@@ -64,6 +64,7 @@ const YouTubePodcasts: React.FC = () => {
             // className={`mt-${index === videos.length - 1 ? '5' : '20'} mb-${index === videos.length - 1 ? '10' : '5'} lg:flex items-center bg-gradient-to-l from-blue-200 to-blue-600 rounded-lg p-4 shadow-md`}
             // className={`mt-15 mb-15 lg:flex items-center bg-gradient-to-l from-blue-200 to-blue-600 rounded-lg p-4 shadow-md`}
             className={`mt-15 mb-15 lg:flex items-center bg-white rounded-lg p-4 shadow-md`}
+            style={{borderRadius:'10px'}}
           >
             <div className="w-full lg:w-1/2 lg:mr-8 mb-4 lg:mb-0">
               <h2 className="font-bold text-3xl text-center lg:text-center text-black mb-6" style={{ fontFamily: 'tahoma'}}>{video.title.toUpperCase()}</h2>

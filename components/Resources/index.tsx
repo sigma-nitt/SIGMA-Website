@@ -1,68 +1,51 @@
 "use client"
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import './res.css';
+
+interface Resource {
+  title: string;
+  resourceType: string;
+  link: string;
+  type: string;
+}
 
 const ResourcePage = () => {
-  const dataAnalyticsResources = [
-    {
-      title: 'SQL',
-      type: 'Video',
-      url: 'https://www.youtube.com/watch?v=7S_tz1z_5bA&t=9891s',
-    },
-    {
-      title: 'Statistics',
-      type: 'Blog',
-      url: 'https://youtube.com/playlist?list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9&si=reEIlCSETLkvfoAz',
-    },
-    // Add more data analytics resources as needed
-  ];
+  const [resources, setResources] = useState<Resource[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
-  const caseStudiesResources = [
-    {
-        title: 'SQL',
-        type: 'Video',
-        url: 'https://www.youtube.com/watch?v=7S_tz1z_5bA&t=9891s',
-    },
-    {
-        title: 'Statistics',
-        type: 'Blog',
-        url: 'https://youtube.com/playlist?list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9&si=reEIlCSETLkvfoAz',
-    },
-    // Add more case studies resources as needed
-  ];
+  useEffect(() => {
+    const fetchResources = async () => {
+      try {
+        const response = await fetch('/api/resources');
+        if (!response.ok) {
+          throw new Error('Failed to fetch resources');
+        }
+        const data = await response.json();
+        setResources(data);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching resources:', error);
+        setError(true);
+        setLoading(false);
+      }
+    };
 
-  const renderResourceSection = (resources, sectionTitle) => (
-    <div>
-      <div className="mb-8" style={{ flex: 1, overflowY: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <h2 className="text-3xl font-bold mb-4">{sectionTitle}</h2>
-        <div className="grid gap-4" style={{ justifyContent: 'center' }}> {/* Update justifyContent */}
-          {resources.map((resource, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-md p-6 shadow-md hover:shadow-lg transition duration-300"
-              style={{ maxHeight: '200px', overflowY: 'auto', overflowX: 'hidden' }}
-            >
-              <h3 className="text-xl font-semibold mb-2">{resource.title}</h3>
-              <p className="text-gray-600 mb-2">
-                <strong>Type:</strong> {resource.type}
-              </p>
-              <p className="text-gray-600">
-                <strong>URL:</strong>{' '}
-                <a
-                  href={resource.url}
-                  rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline"
-                >
-                  {resource.url}
-                </a>
-              </p>
-            </div>
-          ))}
-        </div>
+    fetchResources();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <div className="animate-spin rounded-full border-t-4 border-blue-500 border-opacity-25 h-12 w-12"></div>
       </div>
-    </div>
-    
-  );
-  
+    );
+  }
+
+  if (error) {
+    return <p>Error :(</p>;
+  }
+
   return (
     <div>
       <div
@@ -71,7 +54,7 @@ const ResourcePage = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          minHeight: '70vh', /* Set a minimum height to ensure the background covers the entire viewport */
+          minHeight: '70vh',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
@@ -83,14 +66,35 @@ const ResourcePage = () => {
           <p className="businessclub text-md text-center md:text-xl">Check out our amazing collection of Case materials, Finance modules, and much more...</p>
         </div>
       </div>
-      <div className="min-h-screen py-12" style={{ marginTop: '150px', display: 'flex' }}>
-        <div className="max-w-4xl mx-auto flex">
-          {renderResourceSection(dataAnalyticsResources, 'Data Analytics')}
-          {renderResourceSection(caseStudiesResources, 'Case Studies')}
-        </div>
+
+      <div className="container flex justify-center mt-20 mb-20">
+        {resources.map((resource, index) => (
+          <div key={index} className="w-1/2 mx-2 flex flex-col">
+            <div className="hover-enlarge">
+              <div className="mb-10 pl-60 text-5xl font-bold bg-secondary-gradient bg-clip-text text-transparent">
+                <h2>{resource.type}</h2>
+              </div>
+            </div>
+            <div className="w-full flex flex-wrap gap-4 text-black pl-40" style={{ maxHeight: '400px', overflowY: 'auto' }}>
+              <div className="w-4/5">
+                <div className="cont bg-white p-4" style={{borderRadius:'10px'}}>
+                  <h3 className="text-2xl font-bold text-center mb-5">{resource.title}</h3>
+                  <p className="text-center"><strong>Type:</strong> {resource.resourceType}</p>
+                  <div className="text-center">
+                    <a href={resource.link} target="_blank" rel="noopener noreferrer">
+                      <strong>Link:</strong>{" "}
+                      <span className="text-blue-500 underline">{resource.link}</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
-  );  
+  );
 };
 
 export default ResourcePage;
+

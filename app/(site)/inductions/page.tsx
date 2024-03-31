@@ -3,7 +3,7 @@ import Inductions from "@/components/Inductions";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SIGMA NITT",
+  title: "SIGMA - Inductions",
   description: "This is Home for Solid Pro",
   // other metadata
 };
