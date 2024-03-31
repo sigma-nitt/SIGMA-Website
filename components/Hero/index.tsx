@@ -66,7 +66,7 @@ const HeroSection: FC = () => {
             <br></br>
             <br></br>
             <br></br>
-            <p className="businessclub text-xl text-center mb-8 md:text-2xl">Explore our projects, blogs, resources and much more.</p>
+            <p className="businessclub text-lg text-center mb-8 md:text-2xl">Explore our projects, blogs, resources and much more.</p>
             <Link
               id="transform-anim"
               href="/dataanalytics"
