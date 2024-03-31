@@ -6,7 +6,7 @@
   height: 50vh;
   padding: 0 20px;
   width: 100%;
-  border-radius: 12px;
+  
 }
 
 .gridContainer {
@@ -15,6 +15,7 @@
   grid-gap: 20px;
   align-items: center;
   justify-items: center;
+  border-radius: 12px;
 }
 
 .gridLine {
@@ -60,41 +61,41 @@
 }
 
 .container:hover {
-  /* Add styles for the glowing effect when container is hovered */
   box-shadow: 0px 4px 30px rgba(247, 176, 253, 0.5);
-  /* Adjust other styles as needed */
 }
 
-/* Responsive styles for small screens */
-/* Responsive styles for small screens */
+
 @media screen and (max-width: 600px) {
   .heading {
-    font-size: 30px; /* Reduced font size for small screens */
+    font-size: 30px;
   }
 
   .paragraph {
-    font-size: 12px; /* Reduced font size for small screens */
+    font-size: 12px;
+  }
+
+  .paragraph1 {
+    font-size: 12px;
   }
 
   .gridContainer {
-    grid-template-columns: 1fr; /* Change to a single column layout for small screens */
+    grid-template-columns: 1fr;
   }
 
-  /* Adjust order for small screens */
   .gridItem:nth-child(1) {
-    order: 1; /* "What we do" heading appears first */
+    order: 1;
   }
 
   .gridItem:nth-child(2) {
-    order: 2; /* "What we do" text appears second */
+    order: 2;
   }
 
   .gridItem:nth-child(3) {
-    order: 3; /* "Who we are" heading appears third */
+    order: 3;
   }
 
   .gridItem:nth-child(4) {
-    order: 4; /* "Who we are" text appears fourth */
+    order: 4;
   }
 
   .container {

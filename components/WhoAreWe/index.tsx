@@ -106,7 +106,6 @@ const WhoWeAre: React.FC<WhoWeAreProps> = (props) => {
       <div className={styles.container}>
         <div className={styles.gridContainer}>
           <div className={styles.gridItem}>
-            {/* <h1 className={styles.heading}>Who we are?</h1> */}
             <h1 className="bg-secondary-gradient bg-clip-text text-transparent font-bold text-2xl md:text-5xl">Who we are?</h1>
           </div>
           <div className={styles.gridLine} />
