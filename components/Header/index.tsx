@@ -414,7 +414,7 @@ const Header = () => {
               alt="logo"
               width={35}
               height={35}
-              className="w-full dark:hidden"
+              className="w-full"
             />
           </a>
 
@@ -422,7 +422,7 @@ const Header = () => {
             ☰
           </button>
 
-          <nav className={`lg:hidden ${isMobileMenuOpen ? 'visible' : 'hidden'}`}>
+          <nav className={`lg:hidden ${isMobileMenuOpen ? 'visible' : 'hidden'} ${isMobileMenuOpen ? 'h-70 text-sm' : ''}`}>
             {menuData.map((item) => (
               <div key={item.id}>
                 {item.submenu ? (
