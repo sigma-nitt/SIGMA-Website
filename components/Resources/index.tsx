@@ -70,20 +70,18 @@ const ResourcePage = () => {
       <div className="container flex justify-center mt-20 mb-20">
         {resources.map((resource, index) => (
           <div key={index} className="w-1/2 mx-2 flex flex-col">
-            <div className="hover-enlarge">
-              <div className="mb-10 pl-60 text-5xl font-bold bg-secondary-gradient bg-clip-text text-transparent">
-                <h2>{resource.type}</h2>
-              </div>
+            <div className="mb-10 pl-5 text-2xl font-bold bg-secondary-gradient bg-clip-text text-transparent hover-enlarge md:pl-60 md:text-5xl md:mb-10">
+              <h2>{resource.type}</h2>
             </div>
-            <div className="w-full flex flex-wrap gap-4 text-black pl-40" style={{ maxHeight: '400px', overflowY: 'auto' }}>
-              <div className="w-4/5">
+            <div className="w-full flex flex-wrap gap-4 text-black pl-7 md:pl-50 md:flex-wrap" style={{ maxHeight: '400px', overflowY: 'auto' }}>
+              <div className="w-5/6 md:w-4/5">
                 <div className="cont bg-white p-4" style={{borderRadius:'10px'}}>
                   <h3 className="text-2xl font-bold text-center mb-5">{resource.title}</h3>
-                  <p className="text-center"><strong>Type:</strong> {resource.resourceType}</p>
-                  <div className="text-center">
-                    <a href={resource.link} target="_blank" rel="noopener noreferrer">
+                  <p className="text-center text-sm md:text-lg"><strong>Type:</strong> {resource.resourceType}</p>
+                  <div className="text-center text-sm md:text-lg">
+                    <a href={resource.link} target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
                       <strong>Link:</strong>{" "}
-                      <span className="text-blue-500 underline">{resource.link}</span>
+                      <span className="text-blue-500 underline" style={{ wordWrap: 'break-word' }}>{resource.link}</span>
                     </a>
                   </div>
                 </div>
