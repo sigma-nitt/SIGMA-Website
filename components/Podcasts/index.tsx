@@ -46,7 +46,7 @@ const YouTubePodcasts: React.FC = () => {
   return (
     <div className="wholecont">
       <div className="p-4 mb-8">
-        <h1 className="bg-secondary-gradient-2 bg-clip-text text-transparent text-6xl text-center font-bold">
+        <h1 className="bg-secondary-gradient-2 bg-clip-text text-transparent text-4xl text-center font-bold md:text-6xl">
           WATCH OUR PODCASTS !
         </h1>
       </div>
