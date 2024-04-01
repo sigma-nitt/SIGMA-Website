@@ -32,11 +32,10 @@
   margin: 0 auto;
 }
 
-/* Small screens */
 @media screen and (max-width: 600px) {
   .report-container {
     margin-top: 50px !important;
-    flex-direction: column; /* Change to column layout for small screens */
+    flex-direction: column; 
     align-items: center;
   }
   .report-heading {
@@ -72,15 +71,6 @@
   height: auto;
   border-radius: 10px;
 }
-
-/* ReportPageCS.css */
-
-/* .report-intro-text {
-  font-size: 1rem;
-  color: #4a5568;
-  margin-top: 1rem;
-} */
-
 
 .expand-button{
   background-color: #3490dc;
@@ -124,6 +114,20 @@
   .modal-overlay {
     margin-top: 10px !important;
   }
+
+  .collapse-button {
+    background-color: #3490dc;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    position: fixed;
+    top: 12%;
+    right: 5%;
+  }
+  
 }
 @media screen and (min-width: 500px) {
   .modal-overlay {
