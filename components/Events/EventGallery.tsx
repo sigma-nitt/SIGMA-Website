@@ -36,7 +36,7 @@ const EventGallery: React.FC<EventGalleryProps> = ({ images, onClose }) => {
         </div>
         <button
           onClick={onClose}
-          className="absolute top-10 right-10 text-white font-bold text-xl cursor-pointer bg-blue-500 rounded-full py-2 px-4"
+          className="absolute top-2 right-10 text-white font-bold text-sm cursor-pointer bg-blue-500 rounded-full py-2 px-4"
         >
           Close
         </button>

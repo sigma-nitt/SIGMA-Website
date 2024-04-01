@@ -59,17 +59,15 @@ const EventsPage: React.FC = () => {
   return (
 
     <div>
-      {/* <div className="bg-white p-4 mb-8">
-        <h1 className="text-6xl text-center text-slate-500" style={{ fontFamily: 'impact'}}> */}
       <div className="p-4 mb-8">
         <h1 className="bg-secondary-gradient-2 bg-clip-text text-transparent text-6xl text-center font-bold">
           EXPLORE OUR EVENTS !
         </h1>
       </div>
 
-      <div className="container mx-auto py-8 relative" style={{ maxWidth: '75%' }}>
+      <div className="container mx-auto py-8 relative w-5/6 md:w-3/4">
         {events.map((event, index) => (
-          <div key={index} className="flex flex-wrap bg-white rounded-lg shadow-md overflow-hidden mb-8 relative">
+          <div key={index} className="flex flex-wrap bg-white shadow-md overflow-hidden mb-8 relative" style={{borderRadius: '10px'}}>
             <div className="w-full md:w-1/2 lg:w-1/2 p-4 md:p-8 lg:p-8">
               <h2 className="text-xl md:text-2xl lg:text-4xl font-semibold text-center mb-2" style={{ maxWidth: '100%', overflowWrap: 'break-word', color:'black', fontFamily:'tahoma' }}>
                 {event.title.toUpperCase()}
