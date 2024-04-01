@@ -42,7 +42,7 @@ const EventsPage: React.FC = () => {
             <tr>
               <td className="cell2" style={{ width: '20%', height:'300px', border: '1px solid white' }}>
                 <div className="flex justify-center">
-                  <img src="/images/inductionsbg.png" className="w-30 h-30" alt="Background" />
+                  <img src="/images/inductionspic.png" className="w-60 h-40" alt="Background" />
                 </div>
               </td>
               <td className="cell" style={{ width: '70%', height:'300px', border: '1px solid white' }}>
@@ -54,7 +54,7 @@ const EventsPage: React.FC = () => {
             <tr>
               <td className="cell2" style={{ width: '20%', height:'300px', border: '1px solid white' }}>
                 <div className="flex justify-center">
-                  <img src="/images/inductionsbg.png" className="w-30 h-30" alt="Background" />
+                  <img src="/images/dspic.png" className="w-30 h-30" alt="Background" />
                 </div>
               </td>
               <td className="cell" style={{ width: '70%', height:'300px', border: '1px solid white' }}>
@@ -66,7 +66,7 @@ const EventsPage: React.FC = () => {
             <tr>
               <td className="cell2" style={{ width: '20%', height:'300px', border: '1px solid white' }}>
                 <div className="flex justify-center">
-                  <img src="/images/inductionsbg.png" className="w-30 h-30" alt="Background" />
+                  <img src="/images/cspic.png" className="w-30 h-30" alt="Background" />
                 </div>
               </td>
               <td className="cell" style={{ width: '70%', height:'300px', border: '1px solid white' }}>
@@ -82,7 +82,7 @@ const EventsPage: React.FC = () => {
             <tr>
               <td className="cell1" style={{ width: '35%', height:'300px', border: '1px solid white' }}>
                 <div className="flex justify-center">
-                  <img src="/images/inductionsbg.png" className="h-full" alt="Background" />
+                  <img src="/images/whysigma.jpg" className="h-150" alt="Background" />
                 </div>
               </td>
               <td className="cell1" style={{ width: '60%', height:'300px', border: '1px solid white' }}>
