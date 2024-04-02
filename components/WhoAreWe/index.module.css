@@ -65,7 +65,42 @@
 }
 
 
-@media screen and (min-width:1000px) and (max-width: 1200px) {
+@media screen and (max-width: 500px) {
+
+  .paragraph {
+    font-size: 12px;
+  }
+
+  .paragraph1 {
+    font-size: 12px;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    height: 70vh;
+  }
+}
+
+@media screen and (min-width:400px) and (max-width: 1200px) {
+
+  .paragraph {
+    font-size: 13px;
+  }
+
+  .paragraph1 {
+    font-size: 13px;
+  }
+
+  .container {
+    height: 80vh;
+  }
+}
+
+
+/* @media screen and (min-width:1000px) and (max-width: 1200px) {
 
   .paragraph {
     font-size: 20px;
@@ -95,6 +130,6 @@
   .container {
     height: 70vh;
   }
-}
+} */
 
 
