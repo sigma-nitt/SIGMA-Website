@@ -36,13 +36,13 @@ const EventsPage: React.FC = () => {
         </div>
       </div>
 
-      <div className="p-2 w-9/10 mx-auto md:p-20 w-9/10 mx-auto">
+      <div className="p-2 w-9/10 mx-auto md:p-20 mx-auto">
         <table className="table-fixed text-left border-collapse custom-table-width">
           <tbody>
             <tr>
               <td className="cell2" style={{ width: '20%', height:'300px', border: '1px solid white' }}>
                 <div className="flex justify-center">
-                  <img src="/images/inductionspic.png" className="w-60 h-40" alt="Background" />
+                  <img src="/images/inductionspic.png" className="imageicon w-60 h-40" alt="Background" />
                 </div>
               </td>
               <td className="cell" style={{ width: '70%', height:'300px', border: '1px solid white' }}>
@@ -54,7 +54,7 @@ const EventsPage: React.FC = () => {
             <tr>
               <td className="cell2" style={{ width: '20%', height:'300px', border: '1px solid white' }}>
                 <div className="flex justify-center">
-                  <img src="/images/dspic.png" className="w-30 h-30" alt="Background" />
+                  <img src="/images/dspic.png" className="imageicon w-30 h-30" alt="Background" />
                 </div>
               </td>
               <td className="cell" style={{ width: '70%', height:'300px', border: '1px solid white' }}>
@@ -66,7 +66,7 @@ const EventsPage: React.FC = () => {
             <tr>
               <td className="cell2" style={{ width: '20%', height:'300px', border: '1px solid white' }}>
                 <div className="flex justify-center">
-                  <img src="/images/cspic.png" className="w-30 h-30" alt="Background" />
+                  <img src="/images/cspic.png" className="imageicon w-30 h-30" alt="Background" />
                 </div>
               </td>
               <td className="cell" style={{ width: '70%', height:'300px', border: '1px solid white' }}>
@@ -97,7 +97,7 @@ const EventsPage: React.FC = () => {
 
       <div className="faq-section mt-10 mb-15">
         <div className="faq-header cursor-pointer" onClick={toggleFAQ}>
-          <h2 className="font-bold text-3xl flex justify-center md:font-bold md:text-5xl md:flex justify-center">
+          <h2 className="font-bold text-3xl flex justify-center md:font-bold lg:text-5xl md:flex justify-center">
             Frequently Asked Questions 
             <span className={`ml-2 ${isOpen ? 'rotate-180' : ''}`}>▼</span>
           </h2>

@@ -35,5 +35,14 @@
   .arrow {
     right: 2%;
   }
+
+  .custom-table-width {
+    width: 100%;
+  }
+
+  .imageicon {
+    width: 80px;
+    height: 80px;
+  }
 }
 
