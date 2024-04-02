@@ -473,7 +473,7 @@ const Header = () => {
 
         <div className={`xl:flex xl:w-full ${isDesktopMenuOpen ? 'visible' : 'hidden'} ${navigationOpen && 'navbar mt-4 h-auto max-h-[400px] rounded-md bg-background text-white p-7.5 shadow-solid-5 dark:bg-background xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent'}`}>
           <nav>
-            <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
+            <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-9">
               {menuData.map((menuItem, key) => (
                 <li key={key} className={menuItem.submenu && "group relative"}>
                   {menuItem.submenu ? (

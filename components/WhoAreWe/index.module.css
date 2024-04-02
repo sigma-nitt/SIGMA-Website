@@ -65,10 +65,24 @@
 }
 
 
-@media screen and (max-width: 600px) {
-  .heading {
-    font-size: 30px;
+@media screen and (min-width:1000px) and (max-width: 1200px) {
+
+  .paragraph {
+    font-size: 20px;
   }
+
+  .paragraph1 {
+    font-size: 20px;
+  }
+
+  .container {
+    height: 70vh;
+  }
+}
+
+
+
+@media screen and (max-width: 1000px) {
 
   .paragraph {
     font-size: 12px;
@@ -77,27 +91,7 @@
   .paragraph1 {
     font-size: 12px;
   }
-
-  .gridContainer {
-    grid-template-columns: 1fr;
-  }
-
-  .gridItem:nth-child(1) {
-    order: 1;
-  }
-
-  .gridItem:nth-child(2) {
-    order: 2;
-  }
-
-  .gridItem:nth-child(3) {
-    order: 3;
-  }
-
-  .gridItem:nth-child(4) {
-    order: 4;
-  }
-
+  
   .container {
     height: 70vh;
   }
