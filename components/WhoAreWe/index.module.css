@@ -98,38 +98,3 @@
     height: 80vh;
   }
 }
-
-
-/* @media screen and (min-width:1000px) and (max-width: 1200px) {
-
-  .paragraph {
-    font-size: 20px;
-  }
-
-  .paragraph1 {
-    font-size: 20px;
-  }
-
-  .container {
-    height: 70vh;
-  }
-}
-
-
-
-@media screen and (max-width: 1000px) {
-
-  .paragraph {
-    font-size: 12px;
-  }
-
-  .paragraph1 {
-    font-size: 12px;
-  }
-  
-  .container {
-    height: 70vh;
-  }
-} */
-
-
