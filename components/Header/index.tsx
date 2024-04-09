@@ -89,8 +89,7 @@ const Header = () => {
 
                     <ul className={`dropdown ${isMobileMenuOpen ? 'flex' : ''}`}>
                       {item.submenu.map((subItem, subKey) => (
-                        // <li key={subKey} className="hover:text-primary group-hover:text-black">
-                        <li key={subKey} className="text-primary">
+                        <li key={subKey} className="hover:text-primary group-hover:text-black">
                           <Link href={subItem.path || "#"}>
                             {subItem.title}
                           </Link>
@@ -144,8 +143,7 @@ const Header = () => {
 
                       <ul className={`dropdown ${isDesktopMenuOpen ? 'flex' : ''}`}>
                         {menuItem.submenu.map((item, key) => (
-                          // <li key={key} className="hover:text-primary group-hover:text-black">
-                          <li key={key} className="text-white">
+                          <li key={key} className="hover:text-primary group-hover:text-black">
                             <Link href={item.path || "#"}>{item.title}</Link>
                           </li>
                         ))}
