@@ -45,30 +45,30 @@ const menuData: Menu[] = [
     path: "/events",
   },
   {
-    id: 4,
+    id: 6,
     title: "Inductions",
     newTab: false,
     path: "/inductions",
   },
   {
-    id: 5,
+    id: 7,
     title: "Initiatives",
     newTab: false,
     submenu: [
       {
-        id: 5.1,
+        id: 7.1,
         title: "Podcasts",
         newTab: false,
         path: "/podcast",
       },
       {
-        id: 5.2,
+        id: 7.2,
         title: "Enigma",
         newTab: false,
         path: "/enigma",
       },
       {
-        id: 5.3,
+        id: 7.3,
         title: "Resources",
         newTab: false,
         path: "/resources",
@@ -76,7 +76,7 @@ const menuData: Menu[] = [
     ],
   },
   {
-    id: 6,
+    id: 8,
     title: "Contact Us",
     newTab: false,
     path: "/contactus",

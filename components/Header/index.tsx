@@ -72,7 +72,8 @@ const Header = () => {
                   <div className="group relative">
                     <button
                       onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                      className="flex items-center justify-between gap-3 hover:text-primary focus:outline-none transition-transform transform"
+                      // className="flex items-center justify-between gap-3 hover:text-primary focus:outline-none transition-transform transform"
+                      className="flex items-center justify-between gap-3 focus:outline-none transition-transform transform"
                     >
                       {item.title}
                       <span>
@@ -88,7 +89,8 @@ const Header = () => {
 
                     <ul className={`dropdown ${isMobileMenuOpen ? 'flex' : ''}`}>
                       {item.submenu.map((subItem, subKey) => (
-                        <li key={subKey} className="hover:text-primary group-hover:text-black">
+                        // <li key={subKey} className="hover:text-primary group-hover:text-black">
+                        <li key={subKey} className="text-black">
                           <Link href={subItem.path || "#"}>
                             {subItem.title}
                           </Link>
@@ -101,8 +103,10 @@ const Header = () => {
                     href={item.path || "#"}
                     className={
                       pathUrl === item.path
-                        ? "text-primary hover:text-primary"
-                        : "hover:text-primary"
+                        // ? "text-primary hover:text-primary"
+                        // : "hover:text-primary"
+                        ? "text-primary"
+                        : "text-primary"
                     }
                   >
                     {item.title}
@@ -123,7 +127,8 @@ const Header = () => {
                     <>
                       <button
                         onClick={toggleDesktopMenu}
-                        className="flex items-center justify-between gap-3 hover:text-primary focus:outline-none transition-transform transform"
+                        // className="flex items-center justify-between gap-3 hover:text-primary focus:outline-none transition-transform transform"
+                        className="flex items-center justify-between gap-3 text-primary focus:outline-none transition-transform transform"
                       >
                         {menuItem.title}
                         <span>
@@ -139,7 +144,8 @@ const Header = () => {
 
                       <ul className={`dropdown ${isDesktopMenuOpen ? 'flex' : ''}`}>
                         {menuItem.submenu.map((item, key) => (
-                          <li key={key} className="hover:text-primary group-hover:text-black">
+                          // <li key={key} className="hover:text-primary group-hover:text-black">
+                          <li key={key} className="text-black">
                             <Link href={item.path || "#"}>{item.title}</Link>
                           </li>
                         ))}
@@ -150,13 +156,15 @@ const Header = () => {
                       href={`${menuItem.path}`}
                       className={
                         pathUrl === menuItem.path
-                          ? "text-primary hover:text-primary"
+                          // ? "text-primary hover:text-primary"
+                          ? "text-primary"
                           : menuItem.title === "Contact Us"
                           ? cn(
                               buttonVariants({ variant: "cta" }),
                               "flex h-12 items-center justify-center space-x-5 p-[.25rem_.3rem_.25rem_1.3rem] text-base"
                             )
-                          : "hover:text-primary"
+                          // : "hover:text-primary"
+                          : "text-primary"
                       }
                     >
                       {menuItem.title}
@@ -166,9 +174,6 @@ const Header = () => {
               ))}
             </ul>
           </nav>
-          {/* <div className="mt-7 flex items-center gap-6 xl:mt-0">
-            <ThemeToggler />
-          </div> */}
         </div>
       </div>
     </header>
