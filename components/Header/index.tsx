@@ -86,12 +86,19 @@ const Header = () => {
                       </span>
                     </button>
 
-                    <ul className={`dropdown ${isMobileMenuOpen ? 'flex' : ''}`}>
+                    {/* <ul className={`dropdown ${isMobileMenuOpen ? 'flex' : ''}`}>
                       {item.submenu.map((subItem, subKey) => (
                         <li key={subKey} className="hover:text-primary group-hover:text-black">
                           <Link href={subItem.path || "#"}>
                             {subItem.title}
                           </Link>
+                        </li>
+                      ))}
+                    </ul> */}
+                    <ul className={`dropdown ${isMobileMenuOpen || isDesktopMenuOpen ? 'flex' : ''}`}>
+                      {item.submenu.map((subItem, subKey) => (
+                        <li key={subKey} className={isMobileMenuOpen || isDesktopMenuOpen ? 'text-black' : ''}>
+                          <Link href={subItem.path || "#"}>{subItem.title}</Link>
                         </li>
                       ))}
                     </ul>
