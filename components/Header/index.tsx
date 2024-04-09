@@ -90,7 +90,7 @@ const Header = () => {
                     <ul className={`dropdown ${isMobileMenuOpen ? 'flex' : ''}`}>
                       {item.submenu.map((subItem, subKey) => (
                         // <li key={subKey} className="hover:text-primary group-hover:text-black">
-                        <li key={subKey} className="text-black">
+                        <li key={subKey} className="text-primary">
                           <Link href={subItem.path || "#"}>
                             {subItem.title}
                           </Link>
@@ -128,7 +128,7 @@ const Header = () => {
                       <button
                         onClick={toggleDesktopMenu}
                         // className="flex items-center justify-between gap-3 hover:text-primary focus:outline-none transition-transform transform"
-                        className="flex items-center justify-between gap-3 text-primary focus:outline-none transition-transform transform"
+                        className="flex items-center justify-between gap-3 text-white focus:outline-none transition-transform transform"
                       >
                         {menuItem.title}
                         <span>
@@ -145,7 +145,7 @@ const Header = () => {
                       <ul className={`dropdown ${isDesktopMenuOpen ? 'flex' : ''}`}>
                         {menuItem.submenu.map((item, key) => (
                           // <li key={key} className="hover:text-primary group-hover:text-black">
-                          <li key={key} className="text-black">
+                          <li key={key} className="text-white">
                             <Link href={item.path || "#"}>{item.title}</Link>
                           </li>
                         ))}
