@@ -88,7 +88,7 @@ const EventsPage: React.FC = () => {
     <div className="mt-10 relative">
       <div className="relative">
         <div className="absolute inset-0 flex flex-col text-white">
-          <h1 className="pl-5 pr-3 pt-3 pb-3 text-3xl mb-4 md:text-6xl md:pl-20">
+          <h1 className="pl-5 pr-3 pt-3 pb-3 text-5xl mb-4 md:text-7xl md:pl-20">
             Our Mission
           </h1>
           <p className="pl-5 pr-3 pt-3 pb-3 w-4/5 text-sm mt-5 md:text-lg md:w-3/5 md:pl-20">
