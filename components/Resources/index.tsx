@@ -71,7 +71,7 @@ const ResourcePage = () => {
         </div>
       </div>
 
-      <div className="container flex justify-center mt-20 mb-20">
+      <div className="flex justify-center mt-20 mb-20">
         {/* Data Analytics Column */}
         <div className="w-1/2 overflow-y-auto" style={{ maxHeight: '500px' }}>
           <div className="flex flex-col items-center">

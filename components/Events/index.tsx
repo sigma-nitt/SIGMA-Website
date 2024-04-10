@@ -65,9 +65,9 @@ const EventsPage: React.FC = () => {
         </h1>
       </div>
 
-      <div className="container mx-auto py-8 relative w-5/6 md:w-3/4">
+      <div className="mx-auto py-8 relative w-5/6 md:w-3/4">
         {events.map((event, index) => (
-          <div key={index} className="flex flex-wrap bg-white shadow-md overflow-hidden mb-8 relative" style={{borderRadius: '10px'}}>
+          <div key={index} className="flex flex-wrap bg-white overflow-hidden mb-8 relative" style={{borderRadius: '10px'}}>
             <div className="w-full md:w-1/2 lg:w-1/2 p-4 md:p-8 lg:p-8">
               <h2 className="text-xl md:text-2xl lg:text-4xl font-semibold text-center mb-2" style={{ maxWidth: '100%', overflowWrap: 'break-word', color:'black', fontFamily:'tahoma' }}>
                 {event.title.toUpperCase()}
