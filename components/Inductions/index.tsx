@@ -27,72 +27,77 @@ const EventsPage: React.FC = () => {
       <div className="relative">
         <img src="/images/inductionsbg.png" className="w-full" style={{ height: '80vh'}} alt="Background" />
         <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center">
-          <h1 className="text-6xl">
+          <h1 className="sigma text-5xl text-center mb-4 md:text-8xl">
             Inductions
           </h1>
-          <p className="text-2xl mt-10">
+          <p className="text-lg text-center mt-5 md:text-2xl">
             We will open our inductions soon
           </p>
         </div>
       </div>
 
-      <div className="p-2 w-9/10 mx-auto md:p-20 mx-auto">
-        <table className="table-fixed text-left border-collapse custom-table-width">
-          <tbody>
-            <tr>
-              <td className="cell2" style={{ width: '20%', height:'300px', border: '1px solid white' }}>
-                <div className="flex justify-center">
-                  <img src="/images/inductionspic.png" className="imageicon w-60 h-40" alt="Background" />
-                </div>
-              </td>
-              <td className="cell" style={{ width: '70%', height:'300px', border: '1px solid white' }}>
-                <h1 className="p-5 pl-15 font-bold text-2xl md:text-3xl md:p-5 md:pl-15 md:font-bold">When is the inductions?</h1>
-                <p className="pl-2 pr-2 text-sm text-muted-foreground md:text-lg md:pr-45 md:pl-15 md:pb-5">We offer a wide range of services and activities to our members, including publishing articles on medium, social media posts about business topics, case studies, and projects involving data analytics and machine learning. We also organize workshops, podcasts, events, and competitions for the college students of NIT Trichy. Our main focus is to showcase our projects, member details, and other initiatives in a professional manner. We are open to exploring different templates offered by Wix for our website design.</p>
-              </td>
-            </tr>
+      <div className="p-2 w-9/10 m-auto md:pr-20 pb-0 pl-20 pt-20 mx-auto">
+        <div className="table-div">
+          <table className="table-fixed text-left border-collapse custom-table-width">
+            <tbody>
+              <tr>
+                <td className="cell2" style={{ width: '20%', height:'300px', border: '1px solid white' }}>
+                  <div className="flex justify-center">
+                    <img src="/images/inductionspic.png" className="imageicon w-60 h-40" alt="Background" />
+                  </div>
+                </td>
+                <td className="cell" style={{ width: '70%', height:'300px', border: '1px solid white' }}>
+                  <h1 className="p-2 pl-2 font-bold text-2xl md:text-3xl md:p-5 md:pl-15 md:font-bold">When is the inductions?</h1>
+                  <p className="pl-2 pr-2 text-sm text-muted-foreground md:text-lg md:pr-45 md:pl-15 md:pb-5">We offer a wide range of services and activities to our members, including publishing articles on medium, social media posts about business topics, case studies, and projects involving data analytics and machine learning. We also organize workshops, podcasts, events, and competitions for the college students of NIT Trichy. Our main focus is to showcase our projects, member details, and other initiatives in a professional manner. We are open to exploring different templates offered by Wix for our website design.</p>
+                </td>
+              </tr>
 
-            <tr>
-              <td className="cell2" style={{ width: '20%', height:'300px', border: '1px solid white' }}>
-                <div className="flex justify-center">
-                  <img src="/images/dspic.png" className="imageicon w-30 h-30" alt="Background" />
-                </div>
-              </td>
-              <td className="cell" style={{ width: '70%', height:'300px', border: '1px solid white' }}>
-                <h1 className="p-5 pl-15 font-bold text-2xl md:text-3xl md:p-5 md:pl-15 md:font-bold">Data Science and Analytics</h1>
-                <p className="pl-2 pr-2 text-sm text-muted-foreground md:text-lg md:pr-45 md:pl-15 md:pb-5">We provide data science and analytics services to help businesses gain insights from their data. Our team of experts uses the latest tools and technologies to provide accurate and timely analysis.</p>
-              </td>
-            </tr>
+              <tr>
+                <td className="cell2" style={{ width: '20%', height:'300px', border: '1px solid white' }}>
+                  <div className="flex justify-center">
+                    <img src="/images/dspic.png" className="imageicon w-30 h-30" alt="Background" />
+                  </div>
+                </td>
+                <td className="cell" style={{ width: '70%', height:'300px', border: '1px solid white' }}>
+                  <h1 className="p-2 pl-2 font-bold text-2xl md:text-3xl md:p-5 md:pl-15 md:font-bold">Data Science and Analytics</h1>
+                  <p className="pl-2 pr-2 text-sm text-muted-foreground md:text-lg md:pr-45 md:pl-15 md:pb-5">We provide data science and analytics services to help businesses gain insights from their data. Our team of experts uses the latest tools and technologies to provide accurate and timely analysis.</p>
+                </td>
+              </tr>
 
-            <tr>
-              <td className="cell2" style={{ width: '20%', height:'300px', border: '1px solid white' }}>
-                <div className="flex justify-center">
-                  <img src="/images/cspic.png" className="imageicon w-30 h-30" alt="Background" />
-                </div>
-              </td>
-              <td className="cell" style={{ width: '70%', height:'300px', border: '1px solid white' }}>
-                <h1 className="p-5 pl-15 font-bold text-2xl md:text-3xl md:p-5 md:pl-15 md:font-bold">Case Studies</h1>
-                <p className="pl-2 pr-2 text-sm text-muted-foreground md:text-lg md:pr-45 md:pl-15 md:pb-5">We specialize in developing versatile applications that meet the unique needs of our clients. Our team of developers works closely with clients to understand their requirements and provide customized solutions.</p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+              <tr>
+                <td className="cell2" style={{ width: '20%', height:'300px', border: '1px solid white' }}>
+                  <div className="flex justify-center">
+                    <img src="/images/cspic.png" className="imageicon w-30 h-30" alt="Background" />
+                  </div>
+                </td>
+                <td className="cell" style={{ width: '70%', height:'300px', border: '1px solid white' }}>
+                  <h1 className="p-2 pl-2 font-bold text-2xl md:text-3xl md:p-5 md:pl-15 md:font-bold">Case Studies</h1>
+                  <p className="pl-2 pr-2 text-sm text-muted-foreground md:text-lg md:pr-45 md:pl-15 md:pb-5">We specialize in developing versatile applications that meet the unique needs of our clients. Our team of developers works closely with clients to understand their requirements and provide customized solutions.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-        <table className="table-fixed text-left border-collapse custom-table-width">
-          <tbody>
-            <tr>
-              <td className="cell1" style={{ width: '35%', height:'300px', border: '1px solid white' }}>
-                <div className="flex justify-center">
-                  <img src="/images/whysigma.jpg" className="h-150" alt="Background" />
-                </div>
-              </td>
-              <td className="cell1" style={{ width: '60%', height:'300px', border: '1px solid white' }}>
-                <p className="pl-2 pr-2 text-sm text-muted-foreground md:text-lg md:pr-45 md:pl-15 md:pb-5">At SIGMA, we are committed to providing our members with the best possible experience. We work closely with our clients to understand their needs and provide customized solutions that meet their unique requirements.</p>
-                <p className="pl-2 pr-2 text-sm text-muted-foreground md:text-lg md:pr-45 md:pl-15 md:pb-5">Our team of 40+ is dedicated to providing high-quality services and ensuring customer satisfaction. We are always looking for ways to improve our services and enhance the value we provide to our members.</p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
+      <div className="p-2 w-9/10 m-auto md:pb-20 pl-20 pr-20 pt-0 mx-auto">
+        <div className="table-div">
+          <table className="table-fixed text-left border-collapse custom-table-width">
+            <tbody>
+              <tr>
+                <td className="cell1" style={{ width: '35%', height:'300px', border: '1px solid white' }}>
+                  <div className="flex justify-center">
+                    <img src="/images/whysigma.jpg" className="h-150" alt="Background" />
+                  </div>
+                </td>
+                <td className="cell1" style={{ width: '60%', height:'300px', border: '1px solid white' }}>
+                  <p className="pl-2 pr-2 text-sm text-muted-foreground md:text-lg md:pr-45 md:pl-15 md:pb-5">At SIGMA, we are committed to providing our members with the best possible experience. We work closely with our clients to understand their needs and provide customized solutions that meet their unique requirements.</p>
+                  <p className="pl-2 pr-2 text-sm text-muted-foreground md:text-lg md:pr-45 md:pl-15 md:pb-5">Our team of 40+ is dedicated to providing high-quality services and ensuring customer satisfaction. We are always looking for ways to improve our services and enhance the value we provide to our members.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <div className="faq-section mt-10 mb-15">

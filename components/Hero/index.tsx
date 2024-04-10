@@ -65,7 +65,7 @@ import { FC, useEffect } from "react";
 import { stagger, useAnimate } from "framer-motion";
 import { buttonVariants } from "../button";
 import { Icons } from "../icons";
-import './members.css';
+import './Home.module.css';
 
 import clsx from 'clsx';
 

@@ -23,6 +23,10 @@
   right: 5%;
 }
 
+.inductions {
+  font-family:'Poppins', sans-serif;
+}
+
 @media screen and (max-width: 600px) {
   .answer-box {
     width: 70%;
@@ -44,5 +48,10 @@
     width: 80px;
     height: 80px;
   }
+}
+
+.table-div {
+  display: flex;
+  justify-content: center;
 }
 

@@ -45,7 +45,7 @@ const Features: FC<FeaturesProps> = () => {
               </h3>
               <p className="text-center text-muted-foreground text-sm lg:text-lg">{feature.description}</p>
             </div>
-            <div className="relative ">
+            <div className="relative">
               <div className="absolute inset-0 -top-1 left-9 z-0 rounded-md bg-primary-gradient" />
               <video
                 autoPlay
