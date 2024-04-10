@@ -30,8 +30,6 @@ const images = [
 const Gallery: React.FC = () => {
   const [index, setIndex] = useState(0);
   const [transitionDuration, setTransitionDuration] = useState(3);
-
-  // Set index to 0 when the component mounts
   useState(() => {
     setIndex(images.length - 6);
   });
