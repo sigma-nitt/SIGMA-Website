@@ -85,7 +85,7 @@ import 'slick-carousel/slick/slick-theme.css';
 const EventsPage: React.FC = () => {
 
   return (
-    <div className="mt-10 relative">
+    <div className="mt-9 relative">
       <div className="relative">
         <div className="absolute inset-0 flex flex-col text-white">
           <h1 className="pl-5 pr-3 pt-3 pb-3 text-5xl mb-4 md:text-7xl md:pl-20">
