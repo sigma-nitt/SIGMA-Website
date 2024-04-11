@@ -85,9 +85,16 @@ const EventsPage: React.FC = () => {
           <table className="table-fixed text-left border-collapse custom-table-width">
             <tbody>
               <tr>
-                <td className="cell1" style={{ width: '35%', height:'300px', border: '1px solid white' }}>
-                  <div className="flex justify-center">
-                    <img src="/images/whysigma.jpg" className="h-150" alt="Background" />
+                <td className="cell2" style={{ width: '35%', border: '1px solid white' }}>
+                  <div className="flex justify-center relative" style={{ height: '300px' }}>
+                    <img src="/images/ourstory.png" className="background-image h-full absolute inset-0 z-0 object-cover" alt="Background" />
+                    <div className="flex justify-center items-center h-full relative z-10">
+                        <div className="text-center">
+                            <h1 className="sigma text-2xl mb-4 font-bold md:text-4xl">
+                                Why choose SIGMA ?
+                            </h1>
+                        </div>
+                    </div>
                   </div>
                 </td>
                 <td className="cell1" style={{ width: '60%', height:'300px', border: '1px solid white' }}>
