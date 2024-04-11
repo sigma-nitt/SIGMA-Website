@@ -236,6 +236,7 @@ const Header = () => {
     flexDirection: "column",
     alignItems: "flex-start",
     gap: "10px",
+    marginRight: "25px",
   };
 
   const laptopMenuOptionsStyles: React.CSSProperties = {
