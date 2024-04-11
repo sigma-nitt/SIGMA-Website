@@ -251,7 +251,7 @@ const Header = () => {
       }`}
     >
       <div className="relative mx-auto max-w-screen-xl flex items-center justify-between lg:justify-start gap-20">
-        <a href="/">
+        <a href="/" className="ml-5">
           <Image
             src="/images/sigma symbol.png"
             alt="logo"
