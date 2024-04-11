@@ -60,10 +60,10 @@ const EventsPage: React.FC = () => {
               <tr>
                 <td className="cell1" style={{ width: '70%', height: '300px', border: '1px solid white' }}>
                   <div className="flex justify-center items-center h-full">
-                    <p className="pl-2 pr-2 text-sm text-muted-foreground md:text-lg md:pr-45 md:pl-15 md:pb-5 text-center">
+                    <p className="pl-2 pr-2 text-sm text-muted-foreground md:text-lg md:pr-45 md:pl-15 md:pb-5 md:pt-3 text-center">
                       At SIGMA, we are proud to have a team of experienced leaders who are dedicated to providing our members with the best possible resources and opportunities. Our team consists of students from a variety of backgrounds who are passionate about business, data analytics, and machine learning.
                       Our leaders have a wealth of experience in their respective fields, and they are committed to helping our members develop their skills and interests. They work hard to organize events, workshops, and other activities that provide our members with valuable learning experiences.
-                      We are always looking for new members to join our team, so if you are interested in becoming a part of SIGMA, please don't hesitate to get in touch with us.
+                      We are always looking for new members to join our team, so if you are interested in becoming a part of SIGMA, please don't hesitate to get in touch.
                     </p>
                   </div>
                 </td>
