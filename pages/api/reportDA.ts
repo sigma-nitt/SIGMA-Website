@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       useCdn: false
     });
 
-    const query = `*[_type == "reportDA"] {
+    const query = `*[_type == "reportDA"] | order(_createdAt asc) | {
       heading,
       introductoryText,
       introductoryImage,

@@ -20,7 +20,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   });
 
   try {
-    const query = `*[_type == "teamMember" && category == $selectedCategory] {
+    const query = `*[_type == "teamMember" && category == $selectedCategory] | order(_createdAt asc) | {
       name,
       position,
       category,

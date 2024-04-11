@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         useCdn: false
     });
 
-    const query = `*[_type == "pdfDocument"] | order(title asc) | {
+    const query = `*[_type == "pdfDocument"] | order(title desc) | {
       title,
       description,
       "url": pdfFile.asset->url
