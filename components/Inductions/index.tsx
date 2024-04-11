@@ -36,7 +36,7 @@ const EventsPage: React.FC = () => {
         </div>
       </div>
 
-      <div className="p-2 w-9/10 m-auto md:pr-20 pb-0 pl-20 pt-20 mx-auto">
+      <div className="p-2 w-9/10 m-auto md:pr-20 pb-0 md:pl-20 pt-20 mx-auto">
         <div className="table-div">
           <table className="table-fixed text-left border-collapse custom-table-width">
             <tbody>
@@ -80,7 +80,7 @@ const EventsPage: React.FC = () => {
         </div>
       </div>
 
-      <div className="p-2 w-9/10 m-auto md:pb-20 pl-20 pr-20 pt-0 mx-auto">
+      <div className="p-2 w-9/10 m-auto md:pb-20 md:pl-20 md:pr-20 pt-0 mx-auto">
         <div className="table-div">
           <table className="table-fixed text-left border-collapse custom-table-width">
             <tbody>

@@ -94,14 +94,14 @@ const EventsPage: React.FC = () => {
           <h1 className="pl-5 pr-3 pt-3 pb-3 text-5xl mb-4 md:text-7xl md:pl-20">
             Our Mission
           </h1>
-          <p className="pl-5 pr-3 pt-3 pb-3 w-4/5 text-sm mt-5 md:text-lg md:w-3/5 md:pl-20">
+          <p className="pl-5 pr-3 pt-3 pb-3 w-5/5 text-sm mt-5 md:text-lg md:w-3/5 md:pl-20">
             At SIGMA, we are committed to providing our members with a wide range of services and activities to help them develop their skills and interests in business, data analytics, and machine learning. Our mission is to empower our members with the knowledge and resources they need to succeed in their careers and make a positive impact in their communities.
           </p>
         </div>
       </div>
 
       {/* Our Story Section */}
-      <div className="pl-2 pr-2 pt-80 w-9/10 m-auto md:pr-20 md:pb-0 md:pl-20 md:pt-80 mx-auto">
+      <div className="pl-2 pr-2 pt-90 w-9/10 m-auto md:pr-20 md:pb-0 md:pl-20 md:pt-80 mx-auto">
         <div className="table-div">
           <table className="table-fixed text-left border-collapse custom-table-width">
             <tbody>
@@ -111,7 +111,7 @@ const EventsPage: React.FC = () => {
                     <img src="/images/ourstory.png" className="background-image h-full absolute inset-0 z-0 object-cover" alt="Background" />
                     <div className="flex justify-center items-center h-full relative z-10">
                         <div className="text-center">
-                            <h1 className="sigma text-2xl mb-4 md:text-4xl">
+                            <h1 className="sigma text-xl md:text-4xl">
                                 Our Story
                             </h1>
                         </div>
@@ -152,7 +152,7 @@ const EventsPage: React.FC = () => {
                   <div className="flex justify-center items-center h-full relative">
                     <img src="/images/bkg.jpg" className="background-image h-full absolute inset-0 z-0 object-cover" alt="Background" />
                     <div className="flex justify-center items-center z-10 text-center">
-                      <h1 className="sigma text-2xl text-center mb-4 md:text-4xl">
+                      <h1 className="sigma text-xl text-center md:text-4xl">
                         Experienced Leadership
                       </h1>
                     </div>
