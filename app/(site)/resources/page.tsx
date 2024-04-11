@@ -5,9 +5,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "SIGMA - Resources",
   description: "This is Home for Solid Pro",
-  // other metadata
 };
-
 
 const PodcastsPage: React.FC = () => {
   return (

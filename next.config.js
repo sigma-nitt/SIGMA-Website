@@ -35,7 +35,6 @@ const nextConfig = {
     ],
   },
   webpack: (config, { isServer }) => {
-    // Add a rule to handle .node files using file-loader
     config.module.rules.push({
       test: /\.node$/,
       use: 'file-loader',

@@ -46,7 +46,6 @@ const ResourcePage = () => {
     return <p>Error :(</p>;
   }
 
-  // Filter resources based on type
   const dataAnalyticsResources = resources.filter(resource => resource.type === 'Data Analytics');
   const caseStudiesResources = resources.filter(resource => resource.type === 'Case Studies');
 
@@ -72,7 +71,6 @@ const ResourcePage = () => {
       </div>
 
       <div className="flex justify-center mt-20 mb-20">
-        {/* Data Analytics Column */}
         <div className="w-1/2 overflow-y-auto" style={{ maxHeight: '500px' }}>
           <div className="flex flex-col items-center">
             <h2 className="hdng text-4xl font-bold bg-secondary-gradient bg-clip-text text-transparent text-center hover-enlarge mb-10 md:text-5xl">Data Analytics</h2>
@@ -93,7 +91,6 @@ const ResourcePage = () => {
           </div>
         </div>
 
-        {/* Case Studies Column */}
         <div className="w-1/2 overflow-y-auto" style={{ maxHeight: '500px' }}>
           <div className="flex flex-col items-center">
             <h2 className="hdng text-4xl font-bold bg-secondary-gradient bg-clip-text text-transparent text-center hover-enlarge mb-10 md:text-5xl">Case Studies</h2>

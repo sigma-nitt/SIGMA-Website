@@ -1,3 +1,7 @@
+.hdng {
+  font-family:'Poppins', sans-serif;
+}
+
 @media screen and (max-width: 524px) {
   .mt-custom {
     margin-top: 0 !important; 
@@ -30,8 +34,5 @@
   }
 }
 
-.hdng {
-  font-family:'Poppins', sans-serif;
-}
 
 

@@ -11,7 +11,6 @@ const EventsPage: React.FC = () => {
   const questions = [
     { id: 1, question: "Pre-requisites for applying for inductions Pre-requisites for applying for inductions", answer: "Nothing" },
     { id: 2, question: "Question 2", answer: "Answer to question 2." },
-    // Add more questions here as needed
   ];
 
   const toggleFAQ = () => {
@@ -122,7 +121,6 @@ const EventsPage: React.FC = () => {
                   <h3 className="inline-block">{item.question}</h3>
                   <span className={`arrow ml-2 absolute right-20 top-1/2 transform -translate-y-1/2 ${activeQuestion === item.id ? 'rotate-180' : ''}`}>▼</span>
                 </div>
-                {/* Answer box */}
                 {activeQuestion === item.id && (
                   <div className="answer-box bg-white text-black p-4 mx-auto mt-2">
                     <p>{item.answer}</p>

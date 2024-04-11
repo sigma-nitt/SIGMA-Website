@@ -5,7 +5,6 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "SIGMA - Events",
     description: "This is Home for Solid Pro",
-    // other metadata
 };
 
 const TeamPage = () => {
@@ -16,4 +15,4 @@ const TeamPage = () => {
     );
   };
   
-  export default TeamPage;
+export default TeamPage;

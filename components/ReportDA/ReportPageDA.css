@@ -1,5 +1,3 @@
-/* ReportPageCS.css */
-
 .report-container {
   display: flex;
   flex-wrap: wrap;
@@ -37,7 +35,6 @@
   font-family:'Poppins', sans-serif;
 }
 
-
 @media screen and (max-width: 600px) {
   .report-container {
     margin-top: 50px !important;
@@ -53,13 +50,6 @@
   }
 }
 
-@media screen and (max-width: 510px) {
-  .report-box {
-    height: 300px !important;
-    width: 90% !important;
-  }
-}
-
 .individual-report {
   background-color: white;
   padding: 8px;
@@ -70,7 +60,6 @@
   margin: 0 auto;
   overflow: hidden;
 }
-
 
 .report-image {
   width: 100%;
@@ -116,6 +105,27 @@
   -webkit-backdrop-filter: blur(5px);
 }
 
+.modal-content {
+  margin-top: 100px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1010;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.content-item {
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 510px) {
+  .report-box {
+    height: 300px !important;
+    width: 90% !important;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .modal-overlay {
     margin-top: 10px !important;
@@ -135,24 +145,11 @@
   }
   
 }
+
 @media screen and (min-width: 500px) {
   .modal-overlay {
     margin-top: 10px !important;
   }
-}
-
-.modal-content {
-  margin-top: 100px;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  z-index: 1010;
-  overflow-y: auto;
-  max-height: 80vh;
-}
-
-.content-item {
-  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 500px) {

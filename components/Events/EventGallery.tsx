@@ -1,4 +1,3 @@
-// components/EventGallery.tsx
 import React from 'react';
 import imageUrlBuilder from '@sanity/image-url';
 import client from '@/sanityClient';
@@ -12,10 +11,9 @@ const builder = imageUrlBuilder(client);
 const imageUrlFor = (source: any) => builder.image(source);
 
 const EventGallery: React.FC<EventGalleryProps> = ({ images, onClose }) => {
-  // Calculate the total height of the navbar
-  const navbarHeight = 60; // Adjust this value based on your actual navbar height
-  const galleryHeight = 500; // Set a fixed height for the gallery container
-  const galleryMargin = 20; // Set left and right margin for the gallery container
+  const navbarHeight = 60; 
+  const galleryHeight = 500;
+  const galleryMargin = 20; 
 
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-95 flex justify-center items-center">

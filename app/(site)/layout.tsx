@@ -1,19 +1,13 @@
 "use client";
-
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 import "../globals.css";
-const inter = Inter({ subsets: ["latin"] });
 import Background from "@/components/Background"
-
 import ToasterContext from "../context/ToastContext";
-
-// export const metadata = () => {
-
-// }
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -34,7 +28,6 @@ export default function RootLayout({
           {children}
           <Footer />
           <ScrollToTop />
-          
         </ThemeProvider>
       </body>
     </html>

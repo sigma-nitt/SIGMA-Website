@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   description: "This is Home for Solid Pro",
 };
 
-
 const PodcastsPage: React.FC = () => {
   return (
     <div className="bg-background">

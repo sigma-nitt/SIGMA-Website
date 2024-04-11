@@ -52,7 +52,6 @@ const EventsPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Experienced Leadership Section */}
       <div className="pl-2 pr-2 w-9/10 m-auto md:pr-20 md:pb-0 md:pl-20 mx-auto">
         <div className="table-div">
           <table className="table-fixed text-left border-collapse custom-table-width">

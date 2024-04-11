@@ -27,6 +27,11 @@
   font-family:'Poppins', sans-serif;
 }
 
+.table-div {
+  display: flex;
+  justify-content: center;
+}
+
 @media screen and (max-width: 600px) {
   .answer-box {
     width: 70%;
@@ -50,8 +55,4 @@
   }
 }
 
-.table-div {
-  display: flex;
-  justify-content: center;
-}
 

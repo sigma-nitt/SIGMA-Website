@@ -1,5 +1,4 @@
 "use client"
-
 import { FC, useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import { animateScroll as scroll } from "react-scroll";

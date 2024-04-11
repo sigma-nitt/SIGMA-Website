@@ -17,10 +17,10 @@
         width: 350px !important;
         height: 350px !important;
     }
-  }
+}
 
-  .hover-enlarge:hover {
-    transform: scale(1.2); /* Increase the size by 10% on hover */
-  }
+.hover-enlarge:hover {
+    transform: scale(1.2);
+}
   
   

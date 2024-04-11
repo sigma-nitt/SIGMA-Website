@@ -2,31 +2,6 @@
 import React, { useState } from 'react';
 import './trips.css';
 
-// const images = [
-//   './images/john.jpg',
-//   './images/bkg.jpg',
-//   './images/bkg.jpg',
-//   './images/john.jpg',
-//   './images/bkg.jpg',
-//   './images/john.jpg',
-//   './images/john.jpg',
-//   './images/john.jpg',
-//   './images/john.jpg',
-//   './images/bkg.jpg',
-//   './images/john.jpg',
-//   './images/john.jpg',
-//   './images/bkg.jpg',
-//   './images/bkg.jpg',
-//   './images/john.jpg',
-//   './images/bkg.jpg',
-//   './images/john.jpg',
-//   './images/john.jpg',
-//   './images/john.jpg',
-//   './images/john.jpg',
-//   './images/bkg.jpg',
-//   './images/john.jpg',
-// ];
-
 const images = [
   './images/1.jpg',
   './images/2.jpg',

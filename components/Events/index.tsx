@@ -1,4 +1,3 @@
-// pages/events.tsx
 "use client";
 import React, { useState, useEffect } from 'react';
 import imageUrlBuilder from '@sanity/image-url';

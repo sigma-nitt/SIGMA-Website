@@ -1,7 +1,4 @@
-// components/index.tsx
 "use client";
-// MeetOurTeamPage.jsx
-
 import React, { useState, useEffect } from 'react';
 import './team.css';
 import imageUrlBuilder from '@sanity/image-url';

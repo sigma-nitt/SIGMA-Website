@@ -1,21 +1,21 @@
 .cont:hover {
-    box-shadow: 0px 4px 30px rgba(247, 176, 253, 0.5);
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+  box-shadow: 0px 4px 30px rgba(247, 176, 253, 0.5);
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 .hover-enlarge:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-  }
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
 
-  .hdng {
-    font-family:'Poppins', sans-serif;
-  }
+.hdng {
+  font-family:'Poppins', sans-serif;
+}
 
-  .sigma {
-    font-family:'Poppins', sans-serif;
-  }
+.sigma {
+  font-family:'Poppins', sans-serif;
+}
   
   
   

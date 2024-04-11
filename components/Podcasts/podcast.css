@@ -1,11 +1,9 @@
-/* Small screens */
 @media screen and (max-width: 524px) {
     .wholecont {
       margin-top: 100px !important;
     }
   }
   
-/* Large screens */
 @media screen and (min-width: 525px) {
   .wholecont {
     margin-top: 150px !important;
