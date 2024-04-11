@@ -75,7 +75,7 @@ const ResourcePage = () => {
         {/* Data Analytics Column */}
         <div className="w-1/2 overflow-y-auto" style={{ maxHeight: '500px' }}>
           <div className="flex flex-col items-center">
-            <h2 className="text-4xl font-bold bg-secondary-gradient bg-clip-text text-transparent text-center hover-enlarge mb-10 md:text-5xl">Data Analytics</h2>
+            <h2 className="hdng text-4xl font-bold bg-secondary-gradient bg-clip-text text-transparent text-center hover-enlarge mb-10 md:text-5xl">Data Analytics</h2>
             {dataAnalyticsResources.map((resource, index) => (
               <div key={index} className="w-3/4 mb-8">
                 <div className="cont bg-white pl-1 pr-1 pt-1 pb-1 md:pl-15 md:pr-15 md:pt-4 md:pb-4" style={{ borderRadius: '10px' }}>
@@ -96,7 +96,7 @@ const ResourcePage = () => {
         {/* Case Studies Column */}
         <div className="w-1/2 overflow-y-auto" style={{ maxHeight: '500px' }}>
           <div className="flex flex-col items-center">
-            <h2 className="text-4xl font-bold bg-secondary-gradient bg-clip-text text-transparent text-center hover-enlarge mb-10 md:text-5xl">Case Studies</h2>
+            <h2 className="hdng text-4xl font-bold bg-secondary-gradient bg-clip-text text-transparent text-center hover-enlarge mb-10 md:text-5xl">Case Studies</h2>
             {caseStudiesResources.map((resource, index) => (
               <div key={index} className="w-3/4 mb-8">
                 <div className="cont bg-white pl-1 pr-1 pt-1 pb-1 md:pl-15 md:pr-15 md:pt-4 md:pb-4" style={{ borderRadius: '10px' }}>

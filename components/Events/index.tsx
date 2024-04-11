@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import imageUrlBuilder from '@sanity/image-url';
 import client from '@/sanityClient';
 import EventGallery from '@/components/Events/EventGallery';
+import "./events.css";
 
 interface Event {
   title: string;
@@ -60,7 +61,7 @@ const EventsPage: React.FC = () => {
 
     <div>
       <div className="p-4 mb-8">
-        <h1 className="bg-secondary-gradient-2 bg-clip-text text-transparent text-6xl text-center font-bold">
+        <h1 className="hdng bg-secondary-gradient-2 bg-clip-text text-transparent text-6xl text-center font-bold">
           EXPLORE OUR EVENTS !
         </h1>
       </div>

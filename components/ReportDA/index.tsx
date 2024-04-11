@@ -94,7 +94,7 @@ const ReportPage: React.FC = () => {
   return (
     <div>
       <div className="p-4 mb-8">
-        <h1 className="bg-secondary-gradient-2 bg-clip-text text-transparent text-4xl text-center font-bold md:text-6xl">
+        <h1 className="hdng bg-secondary-gradient-2 bg-clip-text text-transparent text-4xl text-center font-bold md:text-6xl">
           DIVE INTO THE WORLD OF ANALYTICS !
         </h1>
       </div>

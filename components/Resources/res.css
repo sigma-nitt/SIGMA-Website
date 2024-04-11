@@ -8,4 +8,14 @@
     transform: scale(1.1);
     transition: transform 0.3s ease;
   }
+
+  .hdng {
+    font-family:'Poppins', sans-serif;
+  }
+
+  .sigma {
+    font-family:'Poppins', sans-serif;
+  }
+  
+  
   

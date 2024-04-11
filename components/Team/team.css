@@ -26,6 +26,10 @@
   perspective: 1000px;
 }
 
+.hdng {
+  font-family:'Poppins', sans-serif;
+}
+
 
 .flipping-card {
   transition: transform 1.0s;

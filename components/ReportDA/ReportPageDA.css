@@ -33,6 +33,11 @@
   margin-top: 0.4em;
 }
 
+.hdng {
+  font-family:'Poppins', sans-serif;
+}
+
+
 @media screen and (max-width: 600px) {
   .report-container {
     margin-top: 50px !important;
