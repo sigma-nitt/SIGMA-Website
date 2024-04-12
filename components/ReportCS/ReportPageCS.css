@@ -107,7 +107,7 @@
 @media screen and (max-width: 600px) {
   .report-container {
     margin-top: 50px !important;
-    flex-direction: column; /* Change to column layout for small screens */
+    flex-direction: column;
     align-items: center;
   }
   .report-heading {

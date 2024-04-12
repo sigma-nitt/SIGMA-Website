@@ -95,7 +95,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/aboutus"
                         className="mb-3 inline-block text-muted-foreground hover:text-muted-foreground"
                       >
                         About Us

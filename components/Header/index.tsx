@@ -397,9 +397,9 @@ const Header = () => {
     flexDirection: "column",
     alignItems: "flex-start",
     gap: "10px",
-    width: "100%", // Make the column wider in the mobile menu
+    width: "100%",
     marginRight: "10px",
-    fontSize: "0.875rem" // Adjust font size for smaller text
+    fontSize: "0.875rem"
   };
 
   const laptopMenuOptionsStyles: React.CSSProperties = {
@@ -422,7 +422,7 @@ const Header = () => {
             width={35}
             height={35}
             className="w-full"
-            style={{ width: "35px" }} // Keep the logo consistent in width
+            style={{ width: "35px" }}
           />
         </a>
 
@@ -448,8 +448,10 @@ const Header = () => {
                       onClick={() => handleSubmenuToggle(menuItem.id)}
                     >
                       {menuItem.title}
-                      <span className="transform transition-transform group-hover:rotate-180">
-                        <DownCaret />
+                      <span className={clsx("transform transition-transform", {
+                          "rotate-180": activeSubmenu === menuItem.id,
+                      })}>
+                          <DownCaret />
                       </span>
                     </button>
                     <ul

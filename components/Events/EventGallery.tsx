@@ -1,6 +1,7 @@
 import React from 'react';
 import imageUrlBuilder from '@sanity/image-url';
 import client from '@/sanityClient';
+import './event1.css';
 
 interface EventGalleryProps {
   images: string[];
@@ -34,7 +35,7 @@ const EventGallery: React.FC<EventGalleryProps> = ({ images, onClose }) => {
         </div>
         <button
           onClick={onClose}
-          className="absolute top-2 right-10 text-white font-bold text-sm cursor-pointer bg-blue-500 rounded-full py-2 px-4"
+          className="close-button absolute top-2 right-10 text-white font-bold text-sm cursor-pointer bg-blue-500 rounded-full py-2 px-4"
         >
           Close
         </button>
