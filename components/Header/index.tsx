@@ -262,7 +262,7 @@ const Header = () => {
           />
         </a>
 
-        <button className="lg:hidden text-white pr-3 ml-2" onClick={toggleMobileMenu}>
+        <button className="lg:hidden text-white pr-1 ml-1" onClick={toggleMobileMenu}>
           ☰
         </button>
 
