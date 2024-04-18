@@ -60,7 +60,7 @@ const PDFViewer: React.FC = () => {
       {pdfDocuments.map((pdf, index) => (
         <div className="box bg-white p-4" key={index} style={{ borderRadius: '8px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', width: '80%', margin: '0 auto', marginBottom: '80px' }}>
           <div style={{ display: 'flex' }}>
-            <div style={{ width: '70%', marginRight: '2%' }}>
+            <div className="pdf-box" style={{ width: '70%', marginRight: '2%' }}>
               <iframe
                 className="pdf-front"
                 src={pdf.url}
@@ -69,7 +69,7 @@ const PDFViewer: React.FC = () => {
                 scrolling="auto"
               ></iframe>
             </div>
-            <div style={{ width: '30%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', paddingLeft: '2%' }}>
+            <div className="desc-box" style={{ width: '30%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', paddingLeft: '2%' }}>
               <div>
                 <h2 className="pdf-title font-bold text-4xl text-blue-600 text-center mb-5 mt-5" style={{ wordWrap: 'break-word' }}>
                   {pdf.title}

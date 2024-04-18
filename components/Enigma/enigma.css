@@ -7,6 +7,18 @@
     margin-top: 0 !important; 
     padding-top: 100px; 
   }
+
+  .pdf-box {
+    width: 30% !important;
+  }
+
+  .pdf-front {
+    height: 250px !important;
+  }
+
+  .desc-box {
+    width: 70% !important;
+  }
 }
 
 @media screen and (min-width: 524px) {
