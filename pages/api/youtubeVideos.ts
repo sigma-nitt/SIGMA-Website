@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         useCdn: false
     });
 
-    const query = `*[_type == "youtubeVideo"] | order(_createdAt desc) | {
+    const query = `*[_type == "youtubeVideo"] | order(_createdAt asc) | {
       videoId,
       title,
       description

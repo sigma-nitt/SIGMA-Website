@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main>
       <div>
-        <div style={{ 
+        {/* <div style={{ 
           backgroundImage: `url('/images/bkg.jpg')`, 
           backgroundSize: 'cover', 
           backgroundPosition: 'center', 
@@ -23,8 +23,35 @@ export default function Home() {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          marginTop: '80px'
+          marginTop: '80px',
           }}>
+          <Hero />
+        </div> */}
+        <div
+          style={{
+            minHeight: '100vh',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginTop: '80px',
+            position: 'relative',
+          }}
+        >
+          <div
+            style={{
+              backgroundImage: `url('/images/bkg.jpg')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              opacity: 0.4,
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              zIndex: -1,
+            }}
+          />
           <Hero />
         </div>
         <MembersProjects />

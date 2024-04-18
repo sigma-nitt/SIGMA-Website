@@ -112,13 +112,16 @@
 
 
 
+
+
+
 "use client";
 import React, { useState, useEffect } from 'react';
 import imageUrlBuilder from '@sanity/image-url';
 import { motion } from 'framer-motion';
 import client from '@/sanityClient';
 import EventGallery from '@/components/Events/EventGallery';
-import "./events.css";
+import './events.css';
 
 interface Event {
   title: string;
@@ -186,7 +189,7 @@ const EventsPage: React.FC = () => {
       <div className="mx-auto py-8 relative w-5/6 md:w-3/4">
         {events.map((event, index) => {
           // Randomly determine if the animation should start from the left or right
-          const initialX = Math.random() > 0.5 ? -1000 : 1000; // -1000 for left, 1000 for right
+          const initialX = Math.random() > 0.5 ? -1000 : 1000;
 
           return (
             <motion.div
@@ -197,13 +200,15 @@ const EventsPage: React.FC = () => {
               className="flex flex-wrap bg-white overflow-hidden mb-8 relative"
               style={{ borderRadius: '10px' }}
             >
-              <div className="w-full md:w-1/2 lg:w-1/2 p-4 md:p-8 lg:p-8">
+              {/* Description side */}
+              <div className="w-full md:w-1/2 lg:w-1/2 p-4 md:p-8 lg:p-8 flex flex-col justify-between">
+                {/* Title and description */}
                 <motion.div
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 2.5 }}
+                  transition={{ duration: 0.5 }}
                 >
-                  <h2 className="text-xl md:text-2xl lg:text-4xl font-semibold text-center mb-2" style={{ maxWidth: '100%', overflowWrap: 'break-word', color: 'black', fontFamily: 'tahoma' }}>
+                  <h2 className="text-xl md:text-2xl lg:text-4xl font-semibold text-center mb-2" style={{ maxWidth: '100%', overflowWrap: 'break-word', color: 'black', fontFamily: 'Tahoma' }}>
                     {event.title.toUpperCase()}
                   </h2>
                   <p className="text-sm md:text-base lg:text-base text-gray-700 text-center mt-4" style={{ maxWidth: '100%', overflowWrap: 'break-word', fontFamily: 'Tahoma' }}>
@@ -211,14 +216,19 @@ const EventsPage: React.FC = () => {
                   </p>
                 </motion.div>
 
-                <button
-                  onClick={() => handleExpandClick(index)}
-                  className="bg-blue-500 text-white py-2 px-4 rounded-full mx-auto flex items-center justify-center"
-                  style={{ width: '100%', maxWidth: '200px', marginTop: '10px' }}
-                >
-                  {selectedEvent === index ? 'Collapse' : 'View Image Gallery'}
-                </button>
+                {/* Button */}
+                <div className="flex justify-center mt-auto">
+                  <button
+                    onClick={() => handleExpandClick(index)}
+                    className="bg-blue-500 text-white py-2 px-4 rounded-full"
+                    style={{ width: '100%', maxWidth: '200px' }}
+                  >
+                    {selectedEvent === index ? 'Collapse' : 'View Image Gallery'}
+                  </button>
+                </div>
               </div>
+
+              {/* Image side */}
               <div className="w-full md:w-1/2 lg:w-1/2 p-4 md:p-8 lg:p-8 relative" style={{ maxHeight: '400px' }}>
                 <img
                   src={imageUrlFor(event.images[0]).url()}

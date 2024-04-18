@@ -151,7 +151,8 @@ const YouTubePodcasts: React.FC = () => {
                 transition={{ duration: 2.5 }}
               >
                 <h2 className="font-bold text-xl text-center lg:text-center text-black mb-6 md:text-3xl" style={{ fontFamily: 'Tahoma' }}>
-                  {video.title.toUpperCase()}
+                  {/* {video.title.toUpperCase()} */}
+                  {video.title}
                 </h2>
                 <p className="text-center text-sm lg:text-center text-black md:text-md">
                   {video.description}

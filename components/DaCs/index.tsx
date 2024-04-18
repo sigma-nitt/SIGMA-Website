@@ -17,7 +17,7 @@ const features = [
   {
     id: "reminder",
     title: `Case Studies`,
-    description: ` At Case Studies, we analyze real-world problems and understand the business notions behind those problems. We focus on different topics such as economics, finance, marketing, supply chain & business happenings in and around the world, and publish several Articles, Projects, & Infographics based on these. We also participate in various case study competitions & conduct regular fun interaction sessions to enhance our knowledge and skill set.`,
+    description: ` At Case Studies, we analyze real-world problems and understand the business notions behind those problems. We focus on different topics such as economics, finance, marketing, supply chain & business happenings in and around the world. We also participate in various case study competitions & conduct regular fun interaction sessions to enhance our knowledge and skill set.`,
     thumbnail: "/images/features/reminder.webp",
     demo: "/images/cs.mp4",
   },
