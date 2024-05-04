@@ -22,17 +22,9 @@ export const testimonialData: Testimonial[] = [
   {
     id: 3,
     name: "Vimalesan T",
-    designation: "AbInBev",
+    designation: "",
     image: image1,
     content:
       "Sigma was the first club that accepted me after rejections from almost every team in NITT (partly because I was not a big talker initially later because of Rajesh Shaker), mainly due to Sundar, Nishant and Modi vouching for me during the selection process. It helped me to orient myself better for my career in management and has been a talking point in quite a few interviews leading to my MBA admission and even post that. One important learning I had was how far team building and respecting your peers can get you with respect to getting work done. Though I didn't really have the best farewell from the club, I still talk proudly on how some analytics tasks that comes up would be easily done by a Sigma junior when my colleagues and batchmates at IIM would complain about the difficulty and Sigma inadvertently led to the strengthening of my friendship with Sundar which I will always cherish. I still think I owe the juniors for my absence during the final year whatever the reasons may be, I felt less ownership over the club after that and it is something I have been working to avoid in other instances. Also, F 180DC and datatype I can't recollect the actual name of that club :p",
-  },
-  {
-    id: 4,
-    name: "Anand Modi",
-    designation: "AbInBev",
-    image: image2,
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, ligula sit amet cursus tincidunt, lorem sem elementum nisi, convallis fringilla ante nibh non urna.",
   },
 ];
