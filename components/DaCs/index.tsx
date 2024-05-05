@@ -36,7 +36,18 @@ const Features: FC<FeaturesProps> = () => {
   return (
     <div ref={inViewRef} className="grid grid-cols-1 gap-10 py-16 md:grid-cols-2" id="features">
       {features.map((feature) => (
-        <Card className="container overflow-hidden" key={feature.id} ref={featuresRef}>
+        // <Card className="container overflow-hidden" key={feature.id} ref={featuresRef}>
+        <Card 
+          className="container overflow-hidden" 
+          key={feature.id} 
+          ref={featuresRef} 
+          style={{ 
+            borderWidth: '4px', 
+            borderStyle: 'solid', 
+            borderImage: 'linear-gradient(45deg, #ff0000, #00ff00, #0000ff)', 
+            borderImageSlice: '1'
+          }}
+        >
           <CardContent className="space-y-10 p-0">
             <div className="space-y-5 px-6 py-8">
               <h3 className="text-center font-heading text-2xl font-bold leading-normal tracking-tight bg-secondary-gradient-2 bg-clip-text text-transparent lg:text-3xl">

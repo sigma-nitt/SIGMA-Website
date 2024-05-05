@@ -37,9 +37,16 @@ const HeroSection: FC = () => {
           className="relative flex flex-col items-center justify-center gap-y-24"
         >
           <div className="flex flex-col items-center justify-center">
-            <h1 className="sigma text-5xl text-center mb-12 md:text-8xl">Welcome to SIGMA</h1>
+            {/* <h1 className="sigma text-5xl text-center mb-12 md:text-8xl">Welcome to SIGMA</h1>
+            <p className="businessclub text-2xl text-center mb-8 md:text-5xl">The Business Club of NIT Trichy</p>
+            <p className="businessclub text-lg text-center p-5 mb-8 mt-30 md:text-2xl">Explore our projects, blogs, resources and much more.</p> */}
+            <div className="flex justify-center items-center">
+                <h1 className="sigma text-5xl text-center mb-12 mt-8 md:text-8xl">Welcome to </h1>
+                <img src="/images/wordsigma.png" alt="Sigma Image" className="ml-8 h-80 w-90"/>
+            </div>
             <p className="businessclub text-2xl text-center mb-8 md:text-5xl">The Business Club of NIT Trichy</p>
             <p className="businessclub text-lg text-center p-5 mb-8 mt-30 md:text-2xl">Explore our projects, blogs, resources and much more.</p>
+
             <button
               id="transform-anim"
               onClick={handleExploreProjects}
