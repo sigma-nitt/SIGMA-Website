@@ -26,7 +26,7 @@
   font-family:'Poppins', sans-serif;
 }
 
-.flipping-card {
+/* .flipping-card {
   transition: transform 1.0s;
   transform-style: preserve-3d;
   transform-origin: center; 
@@ -39,7 +39,37 @@
 
 .flipping-card:hover {
   transform: rotateY(180deg) scale(1.05); 
+} */
+.flipping-card {
+  position: relative;
 }
+
+.text-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: opacity 0.3s;
+  opacity: 0;
+  z-index: 1;
+  height: 80%; /* Adjust the percentage as needed */
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.75); /* Ensures the text box has a background */
+  padding: 10px; /* Adjust padding if necessary */
+  border-radius: 0 0 10px 10px; /* Matches the card's border radius */
+}
+
+
+.flipping-card:hover .text-overlay {
+  opacity: 1;
+}
+
+.flipping-card:hover img {
+  filter: blur(4px);
+}
+
 
 @keyframes cardEntranceLeft {
   0% {

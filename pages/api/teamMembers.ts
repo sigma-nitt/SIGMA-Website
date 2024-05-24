@@ -26,6 +26,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       category,
       aboutyou,
       image,
+      instagramUrl,
+      linkedinUrl,
     }`;
     // Extract the selected category from the query parameters
     const params = { selectedCategory: categoryString };

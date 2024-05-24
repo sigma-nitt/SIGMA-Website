@@ -13,4 +13,9 @@
         margin-top: 40px !important;
     }
 }
+
+.hover-enlarge:hover {
+    transform: scale(1.5); /* Enlarge the element by 10% on hover */
+  }
+  
   
