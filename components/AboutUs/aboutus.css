@@ -1,4 +1,4 @@
-.background-image {
+/* .background-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -12,6 +12,73 @@
 
 @media (max-width: 768px) {
 
+  .custom-table-width {
+    width: 100% !important;
+  }
+
+  .cell1 {
+    height: 400px !important;
+  }
+
+  .cell {
+    height: 500px !important;
+  }
+
+  .table-div table {
+    display: block !important;
+  }
+
+  .table-div table tr {
+    display: block !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .table-div table td {
+    display: block !important;
+    width: 100% !important;
+    padding: 5px !important;
+  }
+} */
+
+
+.table-div {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.custom-table-width {
+  width: 100%;
+  border-collapse: separate; /* Separate borders to allow for spacing */
+  border-spacing: 20px; /* Add space between cells */
+}
+
+.cell1,
+.cell2 {
+  padding: 6px;
+  border: 1px solid white; /* Keep border for separation */
+  border-radius: 20px;
+}
+
+.cell {
+  padding: 6px;
+  border: 1px solid white; /* Keep border for separation */
+  border-radius: 20px;
+  margin-top: 20px !important;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.background-image1 {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
   .custom-table-width {
     width: 100% !important;
   }
