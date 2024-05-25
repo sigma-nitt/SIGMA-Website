@@ -219,10 +219,14 @@ module.exports = {
           "linear-gradient(to right, rgb(34, 105, 229), rgb(128, 215, 255))",
         "primary-gradient-2":
           "linear-gradient(120deg, #6836c9, #e6a9fa 100%, #eed4f4 100%, #ff99d7)",
+        // "secondary-gradient":
+        //   "linear-gradient(to right, rgb(34, 105, 229), rgb(128, 215, 255))",
         "secondary-gradient":
-          "linear-gradient(to right, rgb(34, 105, 229), rgb(128, 215, 255))",
+          "linear-gradient(to right, rgb(189, 159, 103), rgb(189, 159, 103))",
+        // "secondary-gradient-2":
+        //   "linear-gradient(to right, rgb(34, 105, 229), rgb(128, 215, 255))",
         "secondary-gradient-2":
-          "linear-gradient(to right, rgb(34, 105, 229), rgb(128, 215, 255))",
+          "linear-gradient(to right, rgb(189, 159, 103), rgb(189, 159, 103))",
         "secondary-gradient-3":
           "linear-gradient(to right, rgb(249, 168, 212), rgb(216, 180, 254), rgb(129, 140, 248))",
         "secondary-gradient-4":

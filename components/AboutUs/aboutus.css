@@ -106,3 +106,16 @@
     padding: 5px !important;
   }
 }
+
+.hdng1::after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 5px;
+  background-color: yellow;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+
+
