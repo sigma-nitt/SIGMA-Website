@@ -93,7 +93,6 @@ import React from 'react';
 import './aboutus.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import './aboutus.css';
 
 const EventsPage: React.FC = () => {
   return (
