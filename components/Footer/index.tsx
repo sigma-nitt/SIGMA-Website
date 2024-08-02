@@ -5,7 +5,13 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <>
-      <footer className="border-t bg-background dark:border-strokedark dark:bg-blacksection">
+      {/* <footer className="border-t bg-background dark:border-strokedark dark:bg-blacksection"> */}
+      <footer 
+        className="border-t bg-gradient dark:border-strokedark dark:bg-blacksection"
+        style={{
+          background: 'linear-gradient(85.24deg, #1B1F2D -6.44%, #172C28 25.82%, #1E3432 57.01%, #111648 99.67%)',
+        }}
+      >
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           <div className="py-2 lg:py-3">
             <div className="flex flex-wrap gap-8 lg:justify-between lg:gap-0">

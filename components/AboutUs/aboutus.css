@@ -1,121 +1,30 @@
-/* .background-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+
+.sigma {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 55px;
+  text-align: left;
 }
 
-.background-image1 {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
+.gradient-text {
+  background: linear-gradient(90deg, #8062F0 1.49%, #697EE2 10.56%, #5D8CDB 19.39%, #4BA6CC 28.63%, #40BAC0 36.16%, #2BDDAD 46.66%);
+  -webkit-background-clip: text; /* For Chrome, Safari, and Opera */
+  -moz-background-clip: text; /* For Firefox */
+  background-clip: text; /* Standard property */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  color: transparent; /* For non-WebKit browsers */
+  font-weight: 400;
 }
 
-@media (max-width: 768px) {
-
-  .custom-table-width {
-    width: 100% !important;
-  }
-
-  .cell1 {
-    height: 400px !important;
-  }
-
-  .cell {
-    height: 500px !important;
-  }
-
-  .table-div table {
-    display: block !important;
-  }
-
-  .table-div table tr {
-    display: block !important;
-    margin-bottom: 1rem !important;
-  }
-
-  .table-div table td {
-    display: block !important;
-    width: 100% !important;
-    padding: 5px !important;
-  }
-} */
-
-
-.table-div {
-  width: 100%;
-  overflow-x: auto;
+.custom-paragraph {
+  top: 860px !important; 
+  margin-right: 50px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: 'Acumin Pro', sans-serif; /* Ensure this font is available or imported */
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
 }
-
-.custom-table-width {
-  width: 100%;
-  border-collapse: separate; /* Separate borders to allow for spacing */
-  border-spacing: 20px; /* Add space between cells */
-}
-
-.cell1,
-.cell2 {
-  padding: 6px;
-  border: 1px solid white; /* Keep border for separation */
-  border-radius: 20px;
-}
-
-.cell {
-  padding: 6px;
-  border: 1px solid white; /* Keep border for separation */
-  border-radius: 20px;
-  margin-top: 20px !important;
-}
-
-.background-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.background-image1 {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-}
-
-@media (max-width: 768px) {
-  .custom-table-width {
-    width: 100% !important;
-  }
-
-  .cell1 {
-    height: 400px !important;
-  }
-
-  .cell {
-    height: 500px !important;
-  }
-
-  .table-div table {
-    display: block !important;
-  }
-
-  .table-div table tr {
-    display: block !important;
-    margin-bottom: 1rem !important;
-  }
-
-  .table-div table td {
-    display: block !important;
-    width: 100% !important;
-    padding: 5px !important;
-  }
-}
-
-.hdng1::after {
-  content: '';
-  display: block;
-  width: 200px;
-  height: 5px;
-  background-color: yellow;
-  margin-top: 20px;
-  margin-left: 20px;
-}
-
-
-

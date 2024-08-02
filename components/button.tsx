@@ -88,10 +88,14 @@ const buttonVariants = cva(
           "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
         secondary:
           "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
+        // cta: [
+        //   "bg-primary-gradient rounded-tl-full rounded-tr-full rounded-bl-full rounded-br-full hover:bg-primary-gradient hover:shadow-[0px_4px_30px] hover:shadow-[rgb(247_176_253_/_50%)] transition-shadow duration-300",
+        //   "[&_.highlight]:ml-2",
+        // ],
         cta: [
-          "bg-primary-gradient rounded-tl-full rounded-tr-full rounded-bl-full rounded-br-full hover:bg-primary-gradient hover:shadow-[0px_4px_30px] hover:shadow-[rgb(247_176_253_/_50%)] transition-shadow duration-300",
+          "bg-[hsla(155,89%,51%,1)] rounded-tl-full rounded-tr-full rounded-bl-full rounded-br-full hover:shadow-[0px_4px_30px] hover:shadow-[rgb(247_176_253_/_50%)] transition-shadow duration-300",
           "[&_.highlight]:ml-2",
-        ],
+        ],        
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
       },

@@ -18,19 +18,19 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); //This line prevents the default form submission behavior, which would cause a page refresh. This allows the form to be handled programmatically without reloading the page
     try {
       const response = await fetch('/api/contact', {
-        method: 'POST',
+        method: 'POST', //method: 'POST': Specifies that this is a POST request, which is used for sending data to the server.(In your form, users are entering contact information (name, email, subject, phone number, and message) that needs to be sent to the server. This is a data submission operation, which is why POST is appropriate. You are not simply requesting data from the server but rather providing new data to be processed or stored.)
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json', //headers: { 'Content-Type': 'application/json' }: Indicates that the request body will be in JSON format.
         },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
         alert('Message sent successfully!');
-        setFormData({
+        setFormData({ //reset form fields
           name: '',
           email: '',
           subject: '',
@@ -46,6 +46,8 @@ const Contact = () => {
     }
   };
 
+
+  // This prevents the component from showing anything until it is fully loaded.
   const [hasMounted, setHasMounted] = useState(false);
   
   useEffect(() => {
@@ -55,6 +57,7 @@ const Contact = () => {
   if (!hasMounted) {
     return null;
   }
+
 
   return (
     <>

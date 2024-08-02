@@ -288,7 +288,7 @@ const Header = () => {
                     <>
                       <button
                         onClick={() => handleSubmenuToggle(menuItem.id)}
-                        className="flex cursor-pointer items-center justify-between gap-3 hover:text-primary"
+                        className="flex cursor-pointer items-center justify-between gap-3 hover:text-white"
                       >
                         {menuItem.title}
                         <span>
@@ -302,7 +302,7 @@ const Header = () => {
                         }`}
                       >
                         {menuItem.submenu.map((subItem) => (
-                          <li key={subItem.title} className="hover:text-black text-black">
+                          <li key={subItem.title} className="hover:text-white text-black">
                             <Link href={subItem.path || "#"} onClick={() => setActiveSubmenu(null)}>
                               {subItem.title}
                             </Link>
@@ -315,8 +315,8 @@ const Header = () => {
                       href={menuItem.path || "#"}
                       className={
                         pathUrl === menuItem.path
-                          ? "text-primary hover:text-black"
-                          : "hover:text-black"
+                          ? "text-primary hover:text-white"
+                          : "hover:text-primary"
                       }
                     >
                       {menuItem.title}
@@ -326,12 +326,12 @@ const Header = () => {
               ))}
             </ul>
           </nav>
-          <div className="mt-7 flex items-center gap-6 xl:mt-0">
+          <div className="mt-7 flex items-center gap-6 xl:mt-0 text-black">
             <Link
               href="/contactus"
               className={clsx("p-2", buttonVariants({ variant: "cta" }))}
             >
-              Contact Us
+              CONTACT US
             </Link>
           </div>
         </div>

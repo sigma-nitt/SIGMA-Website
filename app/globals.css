@@ -76,7 +76,8 @@ pre {
 @layer base {
 
   :root {
-    --background: 222.2 84% 4.9%;
+    /* --background: 222.2 84% 4.9%; */
+    --background: linear-gradient(229.1deg, #313ED0 -35.29%, #232971 30.74%, #0E113A 56.42%);
     --foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
