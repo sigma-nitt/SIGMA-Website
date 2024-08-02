@@ -111,6 +111,15 @@ pre {
     scroll-behavior: smooth;
   }
 
+  /* styles/fonts.css */
+@font-face {
+  font-family: 'Acumin Pro';
+  src:    url('/fonts/Acumin-RPro.otf') format('opentype'),
+          url('/fonts/Acumin-RPro.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
   body {
     @apply bg-background text-foreground relative z-1 font-inter text-regular font-normal;
     font-feature-settings: "rlig" 1, "calt" 1;
@@ -124,12 +133,18 @@ pre {
 
 @layer components {
   .dropdown {
-    @apply -left-7.5 mt-2 hidden min-w-max flex-col gap-4 rounded-md border border-stroke bg-white px-8 py-5 shadow-solid-13 duration-300 ease-in dark:border-strokedark dark:bg-black xl:invisible xl:absolute
+    @apply -left-7.5 mt-2 hidden min-w-max flex-col gap-4 rounded-md border border-stroke bg-white px-8 py-5 shadow-solid-13 duration-300 ease-in dark:border-strokedark dark:bg-background xl:invisible xl:absolute
     xl:mt-0 xl:flex xl:w-[250px] xl:translate-y-10 xl:opacity-0
     xl:before:absolute xl:before:-top-1.5 xl:before:left-10 xl:before:h-3 xl:before:w-3 xl:before:rotate-45 xl:before:border-l xl:before:border-t xl:before:border-stroke xl:before:bg-white xl:group-hover:visible xl:group-hover:translate-y-6.5 
-    xl:group-hover:opacity-100 xl:dark:before:border-strokedark xl:dark:before:bg-black;
+    xl:group-hover:opacity-100 xl:dark:before:border-strokedark xl:dark:before:bg-background;
   }
 
+  @layer components {
+    .header {
+      background: linear-gradient(229.1deg, #313ED0 -35.29%, #232971 30.74%, #0E113A 56.42%);
+    }
+  }
+  
 }
 
 @media (max-width: 1280px) {

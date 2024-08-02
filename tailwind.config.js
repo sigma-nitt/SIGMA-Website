@@ -232,7 +232,7 @@ module.exports = {
         "secondary-gradient-4":
           "linear-gradient(to bottom, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0))",
         "heading-gradient":
-          "linear-gradient(to right bottom, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0.38))",
+          "background: linear-gradient(229.1deg, #313ED0 -35.29%, #232971 30.74%, #0E113A 56.42%)",
         "landing-gradient":
           "radial-gradient(circle, rgba(2, 0, 36, 0) 0, hsl(var(--background)) 100%)",
         "landing-gradient-2":

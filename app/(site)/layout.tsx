@@ -16,19 +16,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`dark:bg-black ${inter.className}`}>
-        <ThemeProvider
+      <body className={`dark:bg-background ${inter.className}`}>
+        {/* <ThemeProvider
           enableSystem={false}
           attribute="class"
           defaultTheme="dark"
-        >
+        > */}
           <Background />
           <Header />
           <ToasterContext />
           {children}
           <Footer />
           <ScrollToTop />
-        </ThemeProvider>
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );

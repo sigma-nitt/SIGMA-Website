@@ -72,18 +72,6 @@ export default function Home() {
   return (
     <main>
       <div>
-        {/* <div
-          style={{
-            minHeight: '100vh',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            marginTop: '80px',
-            position: 'relative',
-          }}
-        >
-          <Hero />
-        </div> */}
         <Hero />
         <MembersProjects />
         <div className="p-5 md:p-15">

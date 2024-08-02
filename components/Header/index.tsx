@@ -169,6 +169,7 @@ import { useEffect, useState } from "react";
 import clsx from "clsx";
 import menuData from "./menuData";
 import { buttonVariants } from "../button";
+import './styles.css';
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
@@ -217,9 +218,7 @@ const Header = () => {
   return (
     <header
       className={`fixed left-0 top-0 z-50 w-full py-7 ${
-        stickyMenu
-          ? "bg-background !py-4 shadow transition duration-100 dark:bg-background"
-          : ""
+        stickyMenu ? "bg-custom-gradient shadow transition duration-100 dark:bg-custom-gradient" : ""
       }`}
     >
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
@@ -235,6 +234,7 @@ const Header = () => {
             />
           </a>
 
+         {/*starts here */}
           <button
             aria-label="hamburger Toggler"
             className="block xl:hidden"
@@ -274,10 +274,13 @@ const Header = () => {
           </button>
         </div>
 
+        {/*ends here */}
+
+        
         <div
           className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
             navigationOpen &&
-            "navbar !visible mt-4 h-auto max-h-[400px] rounded-md bg-black p-7.5 shadow-solid-5 dark:bg-black xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-black"
+            "navbar !visible mt-4 h-auto max-h-[400px] rounded-md bg-background p-7.5 shadow-solid-5 dark:bg-background xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-background"
           }`}
         >
           <nav>

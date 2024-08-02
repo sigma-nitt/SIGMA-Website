@@ -1,4 +1,4 @@
-# Solid - Free Next.js Web Template and Starter Kit for SaaS
+<!-- # Solid - Free Next.js Web Template and Starter Kit for SaaS
 
 Solid is a free Next.js template specifically crafted for startups, SaaS, and software websites. It provides an extensive array of necessary sections, elements, and pages required to build a fully-equipped website for any SaaS, software, or startup site. Comes with all cutting edge React and Next.js features - **Built with Next.js 13, React 18 and TypeScript.**
 
@@ -86,4 +86,7 @@ Solid Free is 100% free and open-source, feel free to use with your personal and
 ### 💜 Support
 If you like the template, please star this repository to inspire the team to create more stuff like this and reach more users like you!
 
-### ✨ Browse and Download - Best Free [Next.js Templates](https://nextjstemplates.com/templates)
+### ✨ Browse and Download - Best Free [Next.js Templates](https://nextjstemplates.com/templates) -->
+
+
+Welcome to SIGMA - The Business Club of NITT !
