@@ -104,7 +104,7 @@ const EventsPage: React.FC = () => {
           <h1 className="sigma text-4xl text-center md:text-4xl pr-10">
             <span className="gradient-text">We Power</span> the mindset of business
           </h1>
-          <p className="customParagraph">
+          <p>
             SIGMA is a business club based in NIT Trichy, India. Our club was founded with the vision of providing learning resources for students from technical backgrounds who are interested in managerial and techno-managerial disciplines. Since then, we have grown to become a thriving community of students who are passionate about business, data analytics, and machine learning.
             At SIGMA, we offer a wide range of services and activities to our members, including publishing articles on Medium, social media posts about business topics, case studies, and projects involving data analytics and machine learning. We also organize workshops, podcasts, events, and competitions for college students in NIT Trichy.
             Our club is run by a team of experienced leaders who are committed to providing our members with the best possible resources and opportunities. We believe that by working together, we can achieve great things and make a positive impact in our community.
