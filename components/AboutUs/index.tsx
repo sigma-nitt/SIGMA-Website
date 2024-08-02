@@ -104,7 +104,7 @@ const EventsPage: React.FC = () => {
           <h1 className="sigma text-4xl text-center md:text-4xl pr-10">
             <span className="gradient-text">We Power</span> the mindset of business
           </h1>
-          <p className="custom-paragraph">
+          <p className="customParagraph">
             SIGMA is a business club based in NIT Trichy, India. Our club was founded with the vision of providing learning resources for students from technical backgrounds who are interested in managerial and techno-managerial disciplines. Since then, we have grown to become a thriving community of students who are passionate about business, data analytics, and machine learning.
             At SIGMA, we offer a wide range of services and activities to our members, including publishing articles on Medium, social media posts about business topics, case studies, and projects involving data analytics and machine learning. We also organize workshops, podcasts, events, and competitions for college students in NIT Trichy.
             Our club is run by a team of experienced leaders who are committed to providing our members with the best possible resources and opportunities. We believe that by working together, we can achieve great things and make a positive impact in our community.
@@ -161,7 +161,7 @@ const EventsPage: React.FC = () => {
           <h1 className="sigma text-4xl text-center mb-5 md:text-4xl pr-10">
             <span className="gradient-text">Experienced Leadership</span>
           </h1>
-          <p className="custom-paragraph">
+          <p className="customParagraph">
             At SIGMA, we are proud to have a team of experienced leaders who are dedicated to providing our members with the best possible resources and opportunities. Our team consists of students from a variety of backgrounds who are passionate about business, data analytics, and machine learning. Our leaders have a wealth of experience in their respective fields, and they are committed to helping our members develop their skills and interests. They work hard to organize events, workshops, and other activities that provide our members with valuable learning experiences. We are always looking for new members to join our team, so if you are interested in becoming a part of SIGMA, please don't hesitate to get in touch.
           </p>
         </div>
