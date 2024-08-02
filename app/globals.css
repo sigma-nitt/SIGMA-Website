@@ -111,14 +111,6 @@ pre {
     scroll-behavior: smooth;
   }
 
-  /* styles/fonts.css */
-@font-face {
-  font-family: 'Acumin Pro';
-  src:url('/fonts/Acumin-ItPro.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-
   body {
     @apply bg-background text-foreground relative z-1 font-inter text-regular font-normal;
     font-feature-settings: "rlig" 1, "calt" 1;
@@ -128,6 +120,14 @@ pre {
     @apply border-border;
   }
 
+}
+
+  /* styles/fonts.css */
+@font-face {
+  font-family: 'Acumin Pro';
+  src:url('/fonts/Acumin-ItPro.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
 }
 
 @layer components {
