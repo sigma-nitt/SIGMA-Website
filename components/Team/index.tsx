@@ -67,8 +67,8 @@ const MeetOurTeamPage = () => {
 
   return (
     <div className="text-center flipping-container">
-      <div className="p-4 mb-8 mt-30">
-        <h1 className="hdng bg-secondary-gradient-2 bg-clip-text text-transparent text-6xl text-center font-bold">
+      <div className="p-4 mb-8">
+        <h1 className="hdng mt-25 bg-secondary-gradient-2 bg-clip-text text-transparent text-6xl text-center font-bold">
           OUR TEAM' 23
         </h1>
       </div>

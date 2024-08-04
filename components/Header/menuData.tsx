@@ -21,6 +21,12 @@ const menuData: Menu[] = [
     path: "/team",
   },
   {
+    id: 5,
+    title: "Achievements",
+    newTab: false,
+    path: "/events",
+  },
+  {
     id: 4,
     title: "Projects",
     newTab: false,
@@ -38,18 +44,6 @@ const menuData: Menu[] = [
         path: "/casestudies",
       },
     ],
-  },
-  {
-    id: 5,
-    title: "Events",
-    newTab: false,
-    path: "/events",
-  },
-  {
-    id: 6,
-    title: "Inductions",
-    newTab: false,
-    path: "/inductions",
   },
   {
     id: 7,
@@ -74,14 +68,20 @@ const menuData: Menu[] = [
         newTab: false,
         path: "/resources",
       },
+      {
+        id: 7.4,
+        title: "Events",
+        newTab: false,
+        path: "/events",
+      }
     ],
   },
-  // {
-  //   id: 8,
-  //   title: "Contact Us",
-  //   newTab: false,
-  //   path: "/contactus",
-  // }
+  {
+    id: 6,
+    title: "Inductions",
+    newTab: false,
+    path: "/inductions",
+  },
 ];
 
 export default menuData;

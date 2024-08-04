@@ -53,7 +53,7 @@ const EventsPage: React.FC = () => {
     };
 
     return (
-        <div className="mt-10 relative">
+        <div className="relative">
             <div className="relative">
                 <img src="/images/inductionsbg.png" className="w-full" style={{ height: '50vh' }} alt="Background" />
                 <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center">

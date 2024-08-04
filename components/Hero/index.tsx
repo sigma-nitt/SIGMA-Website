@@ -50,12 +50,12 @@ const HeroSection: FC = () => {
         backgroundPosition: 'center',
         height: '600px', // Set fixed height for the background image
         transition: 'height 0.5s ease', // Add transition for smooth height change
-        marginTop: '100px'
+        // marginTop: '100px'
       }}
     >
-      <section className="mt-[1vh]">
+      <section>
         <div ref={scope} className="relative flex flex-col items-center justify-center gap-y-24">
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center mt-15">
             <div className="flex justify-center items-center">
               <ReactTyped
                 strings={["Welcome to SIGMA"]}
