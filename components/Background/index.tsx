@@ -9,10 +9,10 @@
 
 
 
-// export default function Background() {
-//   return (
-//     <div className="pointer-events-none fixed z-[-1] min-h-screen w-screen bg-[linear-gradient(229.1deg,#313ED0_-35.29%,#232971_30.74%,#0E113A_56.42%)] animate-gradient">
-//       {/* The background is now a simple linear gradient */}
-//     </div>
-//   );
-// }
+export default function Background() {
+  return (
+    <div className="pointer-events-none fixed z-[-1] min-h-screen w-screen bg-[linear-gradient(229.1deg,#313ED0_-35.29%,#232971_30.74%,#0E113A_56.42%)] animate-gradient">
+      {/* The background is now a simple linear gradient */}
+    </div>
+  );
+}
