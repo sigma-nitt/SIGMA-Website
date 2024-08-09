@@ -73,14 +73,14 @@ export default function Home() {
     <main>
       <div>
         <Hero />
-        <MembersProjects />
+        {/* <MembersProjects />
         <div className="p-5 md:p-15">
           <div className="bg-background p-4 w-70">
             <WhoAreWe />
           </div>
           <DaCs />
           <TestimonialsSections />
-        </div>
+        </div> */}
       </div>
     </main>
   );

@@ -21,14 +21,14 @@ export default function RootLayout({
           enableSystem={false}
           attribute="class"
           defaultTheme="dark"
-        > */}
+        > 
           <Background />
           <Header />
           <ToasterContext />
           {children}
           <Footer />
           <ScrollToTop />
-        {/* </ThemeProvider> */}
+          </ThemeProvider> */}
       </body>
     </html>
   );
