@@ -9,37 +9,45 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+.catgry
+{
+  background: linear-gradient(90deg, #8062F0 1.49%, #697EE2 10.56%, #5D8CDB 19.39%, #4BA6CC 28.63%, #40BAC0 36.16%, #2BDDAD 46.66%);
+  -webkit-background-clip: text; /* For Chrome, Safari, and Opera */
+  -moz-background-clip: text; /* For Firefox */
+  background-clip: text; /* Standard property */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  color: transparent; /* For non-WebKit browsers */
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 92px;
+  text-align: left;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+
+.gradientBackgrnd
+{
+  background: linear-gradient(85.14deg, #181C28 5.41%, #172C28 47%, #1E3432 62.02%, #111648 99.67%);
+}
+
+/* @media screen and (max-width: 1024px) {
   .buttonarrangement {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 10px;
   }
-}
+} */
 
-.flipping-container {
-  perspective: 1000px;
-}
+/* .flipping-container {
+  perspective: 800px;
+} */
 
 .hdng {
   font-family:'Poppins', sans-serif;
 }
 
-/* .flipping-card {
-  transition: transform 1.0s;
-  transform-style: preserve-3d;
-  transform-origin: center; 
-  animation: cardEntranceLeft 0.5s ease-out;
-}
-
-.flipping-card:nth-child(odd) {
-  animation: cardEntranceRight 0.5s ease-out;
-}
-
-.flipping-card:hover {
-  transform: rotateY(180deg) scale(1.05); 
-} */
 .flipping-card {
   position: relative;
 }
@@ -52,7 +60,7 @@
   transition: opacity 0.3s;
   opacity: 0;
   z-index: 1;
-  height: 80%; /* Adjust the percentage as needed */
+  height: 65%; /* Adjust the percentage as needed */
   bottom: 0;
   position: absolute;
   width: 100%;
