@@ -217,8 +217,8 @@ const MeetOurTeamPage = () => {
       {categories.map((category) => (
         <div key={category}>
           {/* <h2 className="catgry">{category}</h2> */}
-          <h2 className="text-left mt-8 mb-2">
-            <span className="catgry">{toPascalCase(category)}</span>
+          <h2 className="md:text-left mt-8 mb-2">
+            <span className="catgry md:ml-22">{toPascalCase(category)}</span>
           </h2>
           <div className="gradientBackgrnd flex flex-wrap justify-center">
             {teamMembers
@@ -226,7 +226,7 @@ const MeetOurTeamPage = () => {
               .map((member, index) => (
                 <div
                   key={index}
-                  className={`mt-8 mb-8 mr-2 ml-2 p-6 rounded-lg shadow-md w-54 transition-transform transform ${
+                  className={`mt-8 mb-8 mr-2 ml-2 p-6 rounded-lg shadow-md w-50 md:w-60 transition-transform transform ${
                     hoveredMember === member.name ? 'hover:scale-105' : ''
                   } flipping-card`}
                   onMouseEnter={() => handleMouseEnter(member.name)}
@@ -236,7 +236,7 @@ const MeetOurTeamPage = () => {
                     borderRadius: '40px',
                     position: 'relative',
                     overflow: 'hidden',
-                    width: '238.42px', 
+                    // width: '238.42px', 
                     height: '351.72px',
                   }}
                 >
@@ -253,8 +253,8 @@ const MeetOurTeamPage = () => {
                           }}
                         />
                       )}
-                      <div className="text-lg text-white">{member.name}</div>
-                      <div className="text-white">{member.position}</div>
+                      <div className="text-md md:text-lg text-white">{member.name}</div>
+                      <div className="md:text-md text-sm text-white">{member.position}</div>
                       {hoveredMember === member.name && (
                         <div className="absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 rounded-lg p-4 text-white backdrop-filter backdrop-blur-md text-overlay">
                           <p className="text-sm">{member.aboutyou}</p>
