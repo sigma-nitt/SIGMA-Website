@@ -123,13 +123,13 @@ const HeroSection: FC = () => {
       }}
     >
       <div className="text-center">
-        <p className="text-5xl font-bold">
+        <p className="text-3xl md:text-5xl font-bold">
           The Business Club to 
         </p>
-        <h1 className="text-center text-5xl pt-2">
+        <h1 className="text-center text-3xl md:text-5x pt-2">
             <span className="gradient-text">Delight your Scrutiny</span>
         </h1>
-        <p className="text-5xl font-bold pt-2">
+        <p className="text-3xl md:text-5x font-bold pt-2">
           and Supercharge you 
         </p>
         <button

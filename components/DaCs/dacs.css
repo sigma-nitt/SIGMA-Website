@@ -16,3 +16,30 @@
   color: transparent; /* For non-WebKit browsers */
   font-weight: 400;
 }
+
+.img1 {
+  height: 411px;
+  width: 396px;
+  object-fit: cover;
+}
+
+.img2 {
+  height: 411px;
+  width: 842px;
+  object-fit: cover;
+}
+
+ /* Media query for small screens */
+ @media (max-width: 768px) {
+  .img2 {
+    height: 211px;
+    width: 442px;
+    object-fit: cover;
+  }
+
+  .img1{
+    height: 311px;
+    width: 296px;
+    object-fit: cover;
+  }
+}

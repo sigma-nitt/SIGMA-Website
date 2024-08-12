@@ -20,6 +20,14 @@
   height: 539.1px;
 }
 
+@media (max-width: 768px) {
+  .testimonial {
+    position: relative;
+    width: 448.86px;
+    height: 709.1px;
+  }
+}
+
 /* Group 1 */
 .group-1 {
   position: absolute;
@@ -146,4 +154,18 @@
   background: url('C:/Users/Admin/Desktop/solid-nextjs-main/public/images/tanishq.png');
   border-radius: 50%;
   overflow: hidden;
+}
+
+
+@media (max-width: 768px) {
+  .ellipse-2 {
+    position: absolute;
+    left: 5.29%;
+    right: 76.82%;
+    top: -10%;
+    bottom: 90.2%;
+    background: url('C:/Users/Admin/Desktop/solid-nextjs-main/public/images/tanishq.png');
+    border-radius: 50%;
+    overflow: hidden;
+  }
 }

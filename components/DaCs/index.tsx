@@ -112,11 +112,7 @@ const Features: FC<FeaturesProps> = () => {
             src="./images/earnings.png"
             alt="Earnings"
             loading="lazy"
-            style={{
-              height: '411px',
-              width: '396px',
-              objectFit: 'cover',
-            }}
+            className="img1"
           />
         </div>
 
@@ -125,11 +121,7 @@ const Features: FC<FeaturesProps> = () => {
             src="./images/insights.png"
             alt="Insights"
             loading="lazy"
-            style={{
-              height: '411px',
-              width: '842px',
-              objectFit: 'cover',
-            }}
+            className="img2"
           />
         </div>
       </div>
