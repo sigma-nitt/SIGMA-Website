@@ -244,19 +244,22 @@ const MeetOurTeamPage = () => {
                     <div>
                       {member.image && (
                         <img
-                          src={imageUrlFor(member.image).url()}
+                          // src={imageUrlFor(member.image).url()}
+                          src = '.\images\tanishq.png'
                           alt={member.name}
                           className="rounded-full mx-auto mb-8 transition-transform transform hover:scale-110"
                           style={{
                             width: '176.17px',
                             height: '184.88px',
+                            // backgroundColor: 'blue', // Blue background color
+                            background: 'linear-gradient(229.1deg, #313ED0 -35.29%, #232971 30.74%, #0E113A 56.42%)',
                           }}
                         />
                       )}
                       <div className="text-md md:text-lg text-white">{member.name}</div>
                       <div className="md:text-md text-sm text-white">{member.position}</div>
                       {hoveredMember === member.name && (
-                        <div className="absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 rounded-lg p-4 text-white backdrop-filter backdrop-blur-md text-overlay">
+                        <div className="absolute inset-0 flex items-center justify-center bg-green rounded-lg p-4 text-white backdrop-filter backdrop-blur-md text-overlay">
                           <p className="text-sm">{member.aboutyou}</p>
                         </div>
                       )}

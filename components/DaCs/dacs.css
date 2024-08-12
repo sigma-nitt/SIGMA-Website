@@ -1,0 +1,18 @@
+.container {
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  }
+  
+.container:hover {
+  transform: perspective(1000px) rotateX(2.76deg) rotateY(-2.81deg) scale3d(1.05, 1.05, 1.05) translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #8062F0 1.49%, #697EE2 10.56%, #5D8CDB 19.39%, #4BA6CC 28.63%, #40BAC0 36.16%, #2BDDAD 46.66%);
+  -webkit-background-clip: text; /* For Chrome, Safari, and Opera */
+  -moz-background-clip: text; /* For Firefox */
+  background-clip: text; /* Standard property */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  color: transparent; /* For non-WebKit browsers */
+  font-weight: 400;
+}

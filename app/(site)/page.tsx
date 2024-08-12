@@ -74,11 +74,13 @@ export default function Home() {
       <div>
         <Hero />
         <MembersProjects />
-        <div className="p-5 md:p-15">
-          <div className="bg-background p-4 w-70">
+        <div>
+          <div className="mt-18">
             <WhoAreWe />
           </div>
-          <DaCs />
+          <div className="mt-18">
+            <DaCs />
+          </div>
           <TestimonialsSections />
         </div>
       </div>
