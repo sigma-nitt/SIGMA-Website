@@ -113,37 +113,39 @@ const HeroSection: FC = () => {
   };
 
   return (
-    <div
-      className="hero-section"
-      style={{
-        height: '70vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
-    >
-      <div className="text-center">
-        <p className="text-3xl md:text-5xl font-bold">
-          The Business Club to 
-        </p>
-        <h1 className="text-center text-3xl md:text-5xl pt-2">
-            <span className="gradient-text">Delight your Scrutiny</span>
-        </h1>
-        <p className="text-3xl md:text-5xl font-bold pt-2">
-          and Supercharge you 
-        </p>
-        <button
-          id="transform-anim"
-          onClick={handleExploreProjects}
-          className={cn(
-            buttonVariants({ variant: "cta1" }),
-            "mt-12 flex items-center justify-center space-x-5 p-3 text-base"
-          )}
-        >
-          <span className="text-black text-2xl">Explore our Projects</span>
-        </button>
+    <section className="overflow-hidden pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46">
+      <div
+        className="hero-section"
+        style={{
+          height: '70vh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <div className="text-center">
+          <p className="text-3xl md:text-5xl font-bold">
+            The Business Club to 
+          </p>
+          <h1 className="text-center text-3xl md:text-5xl pt-2">
+              <span className="gradient-text">Delight your Scrutiny</span>
+          </h1>
+          <p className="text-3xl md:text-5xl font-bold pt-2">
+            and Supercharge you 
+          </p>
+          <button
+            id="transform-anim"
+            onClick={handleExploreProjects}
+            className={cn(
+              buttonVariants({ variant: "cta1" }),
+              "mt-12 flex items-center justify-center space-x-5 p-3 text-base"
+            )}
+          >
+            <span className="text-black text-2xl">Explore our Projects</span>
+          </button>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
