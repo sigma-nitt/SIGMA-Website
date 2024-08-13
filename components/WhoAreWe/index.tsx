@@ -86,14 +86,8 @@ const Features: FC<FeaturesProps> = () => {
   }, [inView]);
 
   return (
-    <div ref={inViewRef} className="bg-[hsla(0,0%,10%,1)] flex flex-col md:h-[527px]">
-      <div className="mt-8 mb-18">
-          <h1 className="text-center text-3xl pb-2 font-semibold lg:text-5xl md:text-4xl md:text-center md:pr-10 md:leading-none">
-            <span className="gradient-text">DATA ANALYTICS & MANAGEMENT</span>
-          </h1>
-      </div>
-
-      <div className="flex items-center justify-center md:flex-row flex-col">
+    <div ref={inViewRef} className="bg-[hsla(0,0%,10%,1)] flex flex-col md:h-[377px]">
+      <div className="flex items-center justify-center md:flex-row flex-col mt-10">
         <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-28">
           <svg width="100%" height="304" viewBox="0 0 413 304" fill="none" xmlns="http://www.w3.org/2000/svg">
           <mask id="path-1-inside-1_554_1909" fill="white">
