@@ -126,10 +126,10 @@ const HeroSection: FC = () => {
         <p className="text-3xl md:text-5xl font-bold">
           The Business Club to 
         </p>
-        <h1 className="text-center text-3xl md:text-5x pt-2">
+        <h1 className="text-center text-3xl md:text-5xl pt-2">
             <span className="gradient-text">Delight your Scrutiny</span>
         </h1>
-        <p className="text-3xl md:text-5x font-bold pt-2">
+        <p className="text-3xl md:text-5xl font-bold pt-2">
           and Supercharge you 
         </p>
         <button
@@ -140,7 +140,7 @@ const HeroSection: FC = () => {
             "mt-12 flex items-center justify-center space-x-5 p-3 text-base"
           )}
         >
-          <span className="text-black text-lg">Explore our Projects</span>
+          <span className="text-black text-2xl">Explore our Projects</span>
         </button>
       </div>
     </div>

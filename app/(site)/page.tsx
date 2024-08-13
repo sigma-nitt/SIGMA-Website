@@ -68,23 +68,40 @@ export const metadata: Metadata = {
   description: "Sigma - The Official Business Club of NIT Trichy. Data Analytics, Case Studies, Business Analytics, Quantitative Finance, Forecasting, Predicting.",
 }; 
 
+// export default function Home() {
+//   return (
+//     <main>
+//       <div>
+//         <Hero />
+//         <MembersProjects />
+//         <div>
+//           <div className="mt-18">
+//             <WhoAreWe />
+//           </div>
+//           <div className="mt-18">
+//             <DaCs />
+//           </div>
+//           <TestimonialsSections />
+//         </div>
+//       </div>
+//     </main>
+//   );
+// }
+
 export default function Home() {
   return (
-    <main>
+    <div>
+      <Hero />
+      <MembersProjects />
       <div>
-        <Hero />
-        <MembersProjects />
-        <div>
-          <div className="mt-18">
-            <WhoAreWe />
-          </div>
-          <div className="mt-18">
-            <DaCs />
-          </div>
-          <TestimonialsSections />
+        <div className="mt-18">
+          <WhoAreWe />
         </div>
+        <div className="mt-18">
+          <DaCs />
+        </div>
+        <TestimonialsSections />
       </div>
-    </main>
+    </div>
   );
 }
-
