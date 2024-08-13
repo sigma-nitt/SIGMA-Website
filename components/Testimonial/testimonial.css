@@ -28,6 +28,13 @@
   }
 }
 
+@media (max-width: 498px) {
+  .testimonial {
+    position: relative;
+    width: 348.86px;
+    height: 759.1px;
+  }
+}
 /* Group 1 */
 .group-1 {
   position: absolute;
