@@ -69,6 +69,8 @@ pre {
 
 
 
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -76,7 +78,6 @@ pre {
 @layer base {
 
   :root {
-    /* --background: 222.2 84% 4.9%; */
     --background: linear-gradient(229.1deg, #313ED0 -35.29%, #232971 30.74%, #0E113A 56.42%);
     --foreground: 210 40% 98%;
 
@@ -138,8 +139,6 @@ pre {
   animation: gradient 15s ease-in infinite;
 }
 
-
-  /* styles/fonts.css */
 @font-face {
   font-family: 'Acumin Pro';
   src:url('/fonts/Acumin-ItPro.otf') format('opentype');

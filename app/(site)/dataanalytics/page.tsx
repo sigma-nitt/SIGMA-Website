@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const ReportPageWrapper = () => {
   return (
-    <div className="pb-20 pt-40">
+    <div className="pb-20">
       <ReportDA />
     </div>
   );

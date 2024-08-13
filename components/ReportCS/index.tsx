@@ -92,139 +92,152 @@ const ReportPage: React.FC = () => {
   return (
     <div>
       <div className="p-4 mb-8">
-        <h1 className="hdng bg-secondary-gradient-2 bg-clip-text text-transparent text-6xl text-center font-bold">
-          EXPLORE CASE STUDIES !
+        <h1 className="sigma mt-[183px] text-center text-3xl pb-2 font-semibold lg:text-5xl md:text-4xl md:pr-10 md:leading-none">
+          <span className="gradient-text">Break the case!</span>
         </h1>
       </div>
 
-      <div className="report-container">
+      <div className="backgroundGradient flex flex-wrap justify-center gap-[107px]">
         {projectData &&
           projectData.map((data, index) => (
-            <div key={index} className="report-box">
-              <div className="individual-report">
-                <h1 className="report-heading" style={{ marginTop: '15px' }}>
-                  {data.heading.toUpperCase()}
-                </h1>
-                <img
-                  src={
-                    data.introductoryImage
-                      ? imageUrlFor(data.introductoryImage).width(400).url()
-                      : ''
-                  }
-                  alt="Introductory Image"
-                  className="report-image"
-                  style={{ width: '70%', margin: '0 auto' }}
-                />
-                <div className="introductory-text-wrapper">
-                  <p className="report-intro-text">
-                    {data.introductoryText || 'Two lines about the project.'}
-                  </p>
-                </div>
+            <div
+              key={index}
+              className="relative w-[559px] h-[652px] rounded-[28px] bg-[hsla(227,60%,17%,1)] mt-[87px] shadow-lg flex flex-col items-center"
+            >
+              <img
+                src={data.introductoryImage ? imageUrlFor(data.introductoryImage).url() : ""}
+                alt="Introductory Image"
+                className="h-[286px] w-[456px] rounded-[28px] mt-[60px] object-cover mb-4"
+              />
+              <h1 className="text-3xl mt-[40px] font-bold text-left ml-[52px] w-[456px]">
+                {data.heading}
+              </h1>
+              <div className="text-left ml-[52px] w-[456px] mt-[25px] leading-[34px]">
+                <p>{data.introductoryText || "Two lines about the project."}</p>
+              </div>
+
+              <div className="absolute top-[84px] left-[85px] flex items-center">
+                <svg width="117" height="47" viewBox="0 0 117 47" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-2">
+                  <rect opacity="0.5" width="117" height="47" rx="23.5" fill="#D9D9D9"/>
+                  <text
+                    x="50%"
+                    y="50%"
+                    textAnchor="middle"
+                    dominantBaseline="middle"
+                    fontSize="14"
+                    fill="#333"
+                    fontFamily="Arial, sans-serif"
+                  >
+                    done
+                  </text>
+                </svg>
+              </div>
+
+              <div className="absolute top-[84px] left-[332px]">
                 {expandedProjectIndex !== index ? (
-                  <button onClick={() => handleExpand(index)} className="expand-button">
-                    View full report
+                  <button
+                    onClick={() => handleExpand(index)}
+                    className="buttonBG text-white py-2 px-4 rounded-[28px] h-[47px] w-[150px]"
+                  >
+                    View insights
                   </button>
                 ) : (
-                  <div className="modal-overlay">
-                    <div className="modal-content">
-                      <div className="text-center bg-white p-8 rounded-lg shadow-md mx-auto max-w-screen-md max-w-screen-lg max-w-screen-xl">
-                        <h1 style={{ marginBottom: '1rem', fontSize: '2rem', fontWeight: 'bold', color: '#2b6cb0' }}>
-                          REPORT
-                        </h1>
-                        {data.content && data.content.length > 0 ? (
-                          <div>
-                            {data.content.map((contentItem, index) => (
-                              <div key={index} className="mb-4">
-                                {contentItem._type === 'subheading' && (
-                                  <h3
+                  <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center z-50">
+                    <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-3xl">
+                      <h1 className="text-2xl font-bold text-blue-700 mb-4">REPORT</h1>
+                      {data.content && data.content.length > 0 ? (
+                        <div>
+                          {data.content.map((contentItem, index) => (
+                            <div key={index} className="mb-4">
+                              {contentItem._type === "subheading" && (
+                                <h3
+                                  style={{
+                                    fontSize: contentItem.fontSize + "px",
+                                    fontWeight: "bold",
+                                    color: contentItem.color || "#333",
+                                  }}
+                                >
+                                  {contentItem.value}
+                                </h3>
+                              )}
+
+                              {contentItem._type === "richText" && (
+                                <div
+                                  className="left-aligned"
+                                  style={{
+                                    color: contentItem.color || "#333",
+                                    fontSize: contentItem.fontSize + "px",
+                                    textAlign: "left",
+                                  }}
+                                >
+                                  {contentItem.value && (
+                                    <ul>
+                                      {contentItem.value.map((item, index) => (
+                                        <li key={index}>
+                                          <PortableText blocks={item} />
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  )}
+                                </div>
+                              )}
+
+                              {contentItem._type === "bulletList" && (
+                                <div
+                                  className="left-aligned"
+                                  style={{
+                                    color: contentItem.color || "#333",
+                                    fontSize: contentItem.fontSize + "px",
+                                    textAlign: "left",
+                                  }}
+                                >
+                                  {contentItem.items && (
+                                    <ul style={{ listStyleType: "circle", paddingLeft: "20px" }}>
+                                      {contentItem.items.map((item, index) => (
+                                        <li key={index}>
+                                          <PortableText blocks={item} />
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  )}
+                                </div>
+                              )}
+
+                              {contentItem._type === "imageWithCaption" && (
+                                <div className="mb-2">
+                                  <img
+                                    src={imageUrlFor(contentItem.image).width(400).url()}
+                                    alt={contentItem.caption}
                                     style={{
-                                      fontSize: contentItem.fontSize + 'px',
-                                      fontWeight: 'bold',
-                                      color: contentItem.color || '#333',
+                                      width: "50%",
+                                      height: "auto",
+                                      borderColor: contentItem.borderColor || "#333",
+                                      borderWidth: contentItem.borderWidth + "px" || "0px",
+                                      display: "block",
+                                      marginLeft: "auto",
+                                      marginRight: "auto",
+                                    }}
+                                  />
+                                  <p
+                                    style={{
+                                      fontStyle: "italic",
+                                      fontSize: "0.875rem",
+                                      color: "#4a5568",
                                     }}
                                   >
-                                    {contentItem.value}
-                                  </h3>
-                                )}
-
-                                {contentItem._type === 'richText' && (
-                                  <div
-                                    className="left-aligned"
-                                    style={{
-                                      color: contentItem.color || '#333',
-                                      fontSize: contentItem.fontSize + 'px',
-                                      textAlign: 'left',
-                                    }}
-                                  >
-                                    {contentItem.value && (
-                                      <ul>
-                                        {contentItem.value.map((item, index) => (
-                                          <li key={index}>
-                                            <PortableText blocks={item} />
-                                          </li>
-                                        ))}
-                                      </ul>
-                                    )}
-                                  </div>
-                                )}
-
-                                {contentItem._type === 'bulletList' && (
-                                  <div
-                                    className="left-aligned"
-                                    style={{
-                                      color: contentItem.color || '#333',
-                                      fontSize: contentItem.fontSize + 'px',
-                                      textAlign: 'left',
-                                    }}
-                                  >
-                                    {contentItem.items && (
-                                      <ul style={{ listStyleType: 'circle', paddingLeft: '20px' }}>
-                                        {contentItem.items.map((item, index) => (
-                                          <li key={index}>
-                                            <PortableText blocks={item} />
-                                          </li>
-                                        ))}
-                                      </ul>
-                                    )}
-                                  </div>
-                                )}
-
-                                {contentItem._type === 'imageWithCaption' && (
-                                  <div className="mb-2">
-                                    <img
-                                      src={imageUrlFor(contentItem.image).width(400).url()}
-                                      alt={contentItem.caption}
-                                      style={{
-                                        width: '50%',
-                                        height: 'auto',
-                                        borderColor: contentItem.borderColor || '#333',
-                                        borderWidth: contentItem.borderWidth + 'px' || '0px',
-                                        display: 'block',
-                                        marginLeft: 'auto',
-                                        marginRight: 'auto',
-                                      }}
-                                    />
-                                    <p
-                                      style={{
-                                        fontStyle: 'italic',
-                                        fontSize: '0.875rem',
-                                        color: '#4a5568',
-                                      }}
-                                    >
-                                      {contentItem.caption}
-                                    </p>
-                                  </div>
-                                )}
-                              </div>
-                            ))}
-                          </div>
-                        ) : (
-                          <p>No additional content available</p>
-                        )}
-                        <button onClick={handleCollapse} className="collapse-button">
-                          Close Report
-                        </button>
-                      </div>
+                                    {contentItem.caption}
+                                  </p>
+                                </div>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <p>No additional content available</p>
+                      )}
+                      <button onClick={handleCollapse} className="mt-4 bg-red-500 text-white py-2 px-4 rounded">
+                        Close Report
+                      </button>
                     </div>
                   </div>
                 )}

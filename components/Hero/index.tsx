@@ -113,11 +113,11 @@ const HeroSection: FC = () => {
   };
 
   return (
-    <section className="overflow-hidden pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46">
+    <section className="overflow-hidden pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-[147px]">
       <div
         className="hero-section"
         style={{
-          height: '70vh',
+          height: '35vh',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -138,7 +138,7 @@ const HeroSection: FC = () => {
             onClick={handleExploreProjects}
             className={cn(
               buttonVariants({ variant: "cta1" }),
-              "mt-12 flex items-center justify-center space-x-5 p-3 text-base"
+              "mt-18 flex items-center justify-center space-x-5 p-3 text-base"
             )}
           >
             <span className="text-black text-2xl">Explore our Projects</span>
