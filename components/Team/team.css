@@ -1,14 +1,3 @@
-@media (max-width: 1067px) {
-
-  .text-center {
-    padding: 20px;
-  }
-
-  .text-10xl {
-    font-size: 3rem;
-  }
-}
-
 .catgry
 {
   background: linear-gradient(90deg, #8062F0 1.49%, #697EE2 10.56%, #5D8CDB 19.39%, #4BA6CC 28.63%, #40BAC0 36.16%, #2BDDAD 46.66%);
@@ -29,23 +18,6 @@
 .gradientBackgrnd
 {
   background: linear-gradient(85.14deg, #181C28 5.41%, #172C28 47%, #1E3432 62.02%, #111648 99.67%);
-}
-
-/* @media screen and (max-width: 1024px) {
-  .buttonarrangement {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 10px;
-  }
-} */
-
-/* .flipping-container {
-  perspective: 800px;
-} */
-
-.hdng {
-  font-family:'Poppins', sans-serif;
 }
 
 .flipping-card {
@@ -78,28 +50,6 @@
   filter: blur(4px);
 }
 
-
-@keyframes cardEntranceLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes cardEntranceRight {
-  0% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 
 .flipping-card .back-face {
   transform: rotateY(180deg);
