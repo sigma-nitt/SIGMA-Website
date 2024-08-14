@@ -75,8 +75,8 @@ const MeetOurTeamPage = () => {
       </div>
       {categories.map((category) => (
         <div key={category}>
-          <h2 className="md:text-left mt-8 mb-2">
-            <span className="catgry md:ml-22">{toPascalCase(category)}</span>
+          <h2 className="font-poppins text-[30px] md:text-[48px] md:text-left md:mt-[30px] mb-2">
+            <span className="catgry md:ml-22 leading-[92px]">{toPascalCase(category)}</span>
           </h2>
           <div className="gradientBackgrnd flex flex-wrap justify-center">
             {teamMembers
@@ -95,7 +95,7 @@ const MeetOurTeamPage = () => {
                     overflow: 'hidden',
                   }}
                 >
-                  <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <div className="flex flex-col h-[100%]">
                     <div>
                       {member.image && (
                         <img
@@ -112,11 +112,11 @@ const MeetOurTeamPage = () => {
                       <div className="md:text-md text-sm text-white">{member.position}</div>
                       {hoveredMember === member.name && (
                         <div className="absolute inset-0 flex items-center justify-center bg-green rounded-lg p-4 text-white backdrop-filter backdrop-blur-md text-overlay">
-                          <p className="text-sm">{member.aboutyou}</p>
+                          <p className="text-[11px] leading-[12px] md:text-sm">{member.aboutyou}</p>
                         </div>
                       )}
                     </div>
-                    <div style={{ marginTop: '20px', textAlign: 'center' }}>
+                    <div className="mt-[20px] text-center">
                       {member.linkedinUrl && (
                         <a href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 mr-8">
                           <FontAwesomeIcon icon={faLinkedin} size="2x" />
