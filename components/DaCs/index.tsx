@@ -101,8 +101,8 @@ const Features: FC<FeaturesProps> = () => {
   return (
     <div ref={inViewRef} className="bg-[linear-gradient(229.1deg,#313ED0_-35.29%,#232971_30.74%,#0E113A_56.42%)] flex flex-col md:h-[636px]">
       <div className="mt-8 mb-18">
-          <h1 className="text-center text-3xl pb-2 font-semibold lg:text-5xl md:text-4xl md:text-center md:pr-10 md:leading-none">
-            <span className="gradient-text">DATA ANALYTICS & MANAGEMENT</span>
+          <h1 className="text-center text-[40px] pb-2 font-semibold md:text-center md:leading-none">
+            <span className="gradient-text font-poppins">DATA ANALYTICS & MANAGEMENT</span>
           </h1>
       </div>
 

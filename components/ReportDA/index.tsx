@@ -93,32 +93,32 @@ const ReportPage: React.FC = () => {
   return (
     <div>
       <div className="p-4 mb-8">
-        <h1 className="sigma mt-[183px] text-center text-3xl pb-2 font-semibold lg:text-5xl md:text-4xl md:pr-10 md:leading-none">
-          <span className="gradient-text">Excavate the insights!</span>
+        <h1 className="mt-[80px] md:mt-[183px] h-[87px] text-center text-3xl pb-2 font-semibold lg:text-5xl md:text-4xl md:pr-10 md:leading-none">
+          <span className="gradient-text font-poppins">Excavate the insights!</span>
         </h1>
       </div>
 
-      <div className="backgroundGradient flex flex-wrap justify-center gap-[107px]">
+      <div className="backgroundGradient flex flex-wrap justify-center gap-[0px] md:gap-[107px]">
         {projectData &&
           projectData.map((data, index) => (
             <div
               key={index}
-              className="relative w-[559px] h-[652px] rounded-[28px] bg-[hsla(227,60%,17%,1)] mt-[87px] shadow-lg flex flex-col items-center"
+              className="relative w-[300px] h-[350px] md:w-[559px] md:h-[652px] rounded-[28px] bg-[hsla(227,60%,17%,1)] mt-[20px] md:mt-[87px] shadow-lg flex flex-col items-center"
             >
               <img
                 src={data.introductoryImage ? imageUrlFor(data.introductoryImage).url() : ""}
                 alt="Introductory Image"
-                className="h-[286px] w-[456px] rounded-[28px] mt-[60px] object-cover mb-4"
+                className="w-[250px] h-[150px] mt-[30px] md:h-[286px] md:w-[456px] rounded-[28px] md:mt-[60px] object-cover mb-4"
               />
-              <h1 className="text-3xl mt-[40px] font-bold text-left ml-[52px] w-[456px]">
+              <h1 className="text-lg  font-poppins md:text-3xl md:mt-[40px] font-bold text-left md:ml-[52px] md:w-[456px]">
                 {data.heading}
               </h1>
-              <div className="text-left ml-[52px] w-[456px] mt-[25px] leading-[34px]">
+              <div className="text-sm text-center mt-[5px] pl-3 pr-3 md:text-left md:ml-[52px] md:w-[456px] md:mt-[25px] md:leading-[34px]">
                 <p>{data.introductoryText || "Two lines about the project."}</p>
               </div>
 
-              <div className="absolute top-[84px] left-[85px] flex items-center">
-                <svg width="117" height="47" viewBox="0 0 117 47" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-2">
+              <div className="absolute top-[35px] left-[35px] md:top-[84px] md:left-[332px]">
+                <svg viewBox="0 0 117 47" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-2 h-[30px] w-[50px] md:w-[147px] md:h-[47px]">
                   <rect opacity="0.5" width="117" height="47" rx="23.5" fill="#D9D9D9"/>
                   <text
                     x="50%"
@@ -134,11 +134,11 @@ const ReportPage: React.FC = () => {
                 </svg>
               </div>
 
-              <div className="absolute top-[84px] left-[332px]">
+              <div className="absolute top-[35px] left-[145px] md:top-[84px] md:left-[332px]">
                 {expandedProjectIndex !== index ? (
                   <button
                     onClick={() => handleExpand(index)}
-                    className="buttonBG text-white py-2 px-4 rounded-[28px] h-[47px] w-[150px]"
+                    className="buttonBG text-sm md:text-lg text-white md:py-2 md:px-4 rounded-[28px] h-[30px] w-[120px] md:h-[47px] md:w-[150px]"
                   >
                     View insights
                   </button>

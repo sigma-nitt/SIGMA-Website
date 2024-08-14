@@ -130,7 +130,7 @@
 } */
 
 
-.gradient-text {
+.gradient-textHero {
   background: linear-gradient(90deg, #8062F0 1.49%, #697EE2 10.56%, #5D8CDB 19.39%, #4BA6CC 28.63%, #40BAC0 36.16%, #2BDDAD 46.66%);
   -webkit-background-clip: text; /* For Chrome, Safari, and Opera */
   -moz-background-clip: text; /* For Firefox */
@@ -138,4 +138,6 @@
   -webkit-text-fill-color: transparent; /* For WebKit browsers */
   color: transparent; /* For non-WebKit browsers */
   font-weight: 400;
+  font-size: 48px;
+  line-height: 72px;
 }

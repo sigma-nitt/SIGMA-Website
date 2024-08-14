@@ -15,6 +15,9 @@ module.exports = {
       inter: ["Inter", "sans-serif"],
       sans: ["var(--font-sans)"],
       heading: ["var(--font-heading)"],
+      poppins: ["Poppins", "sans-serif"],
+      acumin: ["Acumin Pro", "sans-serif"],
+      roboto: ["Roboto", "sans-serif"],
     },
     extend: {
       colors: {

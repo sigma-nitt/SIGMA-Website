@@ -82,6 +82,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
 import SingleTestimonial from "./SingleTestimonial";
 import { testimonialData } from "./testimonialData";
+import './testimonial.css';
 
 const Testimonial = () => {
   const backgroundImageStyle = {
@@ -96,8 +97,8 @@ const Testimonial = () => {
     <>
       <section className="mt-18">
         <div>
-          <h1 className="text-center text-3xl pb-2 font-semibold lg:text-5xl md:text-4xl md:text-center md:pr-10 md:leading-none">
-            <span className="gradient-text">TESTIMONIALS</span>
+          <h1 className="md:ml-[102px] md:leading-none">
+            <span className="gradient-textTest">TESTIMONIALS</span>
           </h1>
         </div>
 
@@ -117,7 +118,7 @@ const Testimonial = () => {
           whileInView="visible"
           transition={{ duration: 1, delay: 0.1 }}
           viewport={{ once: true }}
-          className="animate_top mx-auto mt-15 max-w-c-1235 px-4 md:px-8 xl:mt-20 xl:px-0"
+          className="animate_top mx-auto mt-[24px] max-w-c-1235 px-4 md:px-8 xl:px-0"
         >
           <div className="swiper testimonial-01 mb-20 pb-22.5" style={backgroundImageStyle}>
             <Swiper

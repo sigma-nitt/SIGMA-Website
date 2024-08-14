@@ -2,7 +2,7 @@
   box-shadow: 0px 4px 30px rgba(247, 176, 253, 0.5);
 } */
 
-.gradient-text {
+.gradient-textTest {
   background: linear-gradient(90deg, #8062F0 1.49%, #697EE2 10.56%, #5D8CDB 19.39%, #4BA6CC 28.63%, #40BAC0 36.16%, #2BDDAD 46.66%);
   -webkit-background-clip: text; /* For Chrome, Safari, and Opera */
   -moz-background-clip: text; /* For Firefox */
@@ -10,6 +10,9 @@
   -webkit-text-fill-color: transparent; /* For WebKit browsers */
   color: transparent; /* For non-WebKit browsers */
   font-weight: 400;
+  text-align: left;
+  letter-spacing: 0.17em;
+  font-size: 38px;
 }
 
 
