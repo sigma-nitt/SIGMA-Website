@@ -117,20 +117,20 @@ const HeroSection: FC = () => {
       <div
         className="hero-section"
         style={{
-          height: '35vh',
+          // height: '45vh',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
         }}
       >
         <div className="text-center">
-          <p className="font-poppins text-[48px] font-semibold leading-[72px]">
+          <p className="font-poppins mt-[32px] text-[25px] md:text-[35px] lg:text-[48px] font-semibold leading-[40px] md:leading-[50px] lg:leading-[72px]">
             The Business Club to 
           </p>
-          <h1 className="font-poppins text-center pt-2">
-              <span className="gradient-textHero">Delight your Scrutiny</span>
+          <h1 className="font-poppins text-center">
+              <span className="gradient-textHero text-[25px] md:text-[35px] lg:text-[48px] leading-[50px] md:leading-[72px]">Delight your Scrutiny</span>
           </h1>
-          <p className="font-poppins text-3xl md:text-5xl font-semibold pt-2">
+          <p className="font-poppins text-[25px] md:text-[35px] lg:text-[48px] font-semibold">
             and Supercharge you 
           </p>
           <button
@@ -138,10 +138,10 @@ const HeroSection: FC = () => {
             onClick={handleExploreProjects}
             className={cn(
               buttonVariants({ variant: "cta1" }),
-              "mt-18 flex items-center justify-center space-x-5 p-3 text-base"
+              "mt-10 md:mt-18 flex items-center justify-center space-x-5 md:p-3 font-poppins"
             )}
           >
-            <span className="font-poppins text-black text-2xl">Explore our Projects</span>
+            <span className="font-poppins text-black text-[15px] md:text-[20px] lg:text-[27.74px]">Explore our Projects</span>
           </button>
         </div>
       </div>
