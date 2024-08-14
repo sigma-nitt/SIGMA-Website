@@ -12,7 +12,6 @@
   font-weight: 400;
   text-align: left;
   letter-spacing: 0.17em;
-  font-size: 38px;
 }
 
 
@@ -35,7 +34,7 @@
   .testimonial {
     position: relative;
     width: 348.86px;
-    height: 809.1px;
+    height: 709.1px;
   }
 }
 /* Group 1 */
@@ -171,11 +170,23 @@
   .ellipse-2 {
     position: absolute;
     left: 5.29%;
-    right: 76.82%;
-    top: -10%;
+    right: 66.82%;
+    top: -12%;
     bottom: 90.2%;
     background: url('C:/Users/Admin/Desktop/solid-nextjs-main/public/images/tanishq.png');
     border-radius: 50%;
     overflow: hidden;
+  }
+
+  .testimonial-content{
+    top: 15%;
+  }
+
+  .name{
+    top: 75%;
+  }
+
+  .president{
+    top: 80%;
   }
 }
