@@ -101,8 +101,8 @@ const Features: FC<FeaturesProps> = () => {
   return (
     <div ref={inViewRef} className="bg-[linear-gradient(229.1deg,#313ED0_-35.29%,#232971_30.74%,#0E113A_56.42%)] flex flex-col md:h-[636px]">
       <div className="mt-8 mb-18">
-          <h1 className="text-center text-[40px] pb-2 font-semibold md:text-center md:leading-none">
-            <span className="gradient-text font-poppins">DATA ANALYTICS & MANAGEMENT</span>
+          <h1 className="text-center pb-2 font-semibold md:text-center md:leading-none">
+            <span className="gradient-text text-[25px] md:text-[40px] font-poppins">DATA ANALYTICS & MANAGEMENT</span>
           </h1>
       </div>
 
@@ -112,7 +112,7 @@ const Features: FC<FeaturesProps> = () => {
             src="./images/earnings.png"
             alt="Earnings"
             loading="lazy"
-            className="img1"
+            className="img1 h-[251px] w-[100%] md:h-[411px] md:w-[396px]"
           />
         </div>
 
@@ -121,7 +121,7 @@ const Features: FC<FeaturesProps> = () => {
             src="./images/insights.png"
             alt="Insights"
             loading="lazy"
-            className="img2"
+            className="img2 h-[151px] w-[100%] md:h-[411px] md:w-[842px]"
           />
         </div>
       </div>

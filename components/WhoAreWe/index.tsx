@@ -89,7 +89,7 @@ const Features: FC<FeaturesProps> = () => {
     <div ref={inViewRef} className="bg-[hsla(0,0%,10%,1)] flex flex-col md:h-[377px]">
       <div className="flex items-center justify-center md:flex-row flex-col mt-10">
         <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-28">
-          <svg width="100%" height="304" viewBox="0 0 413 304" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="w-[90%] h-[304px] md:w-[100%] md:h-[304px]" viewBox="0 0 413 304" fill="none" xmlns="http://www.w3.org/2000/svg">
           <mask id="path-1-inside-1_554_1909" fill="white">
           <path d="M0 0H413V52H0V0Z"/>
           </mask>
@@ -114,15 +114,13 @@ const Features: FC<FeaturesProps> = () => {
         </div>
 
         <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-4">
-          {/* <svg width="130" height="130" viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg"> */}
-          <svg width="100%" height="130" viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="w-[90%] h-[130px] md:w-[100%] md:h-[130px]" viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M28.6813 0C12.8459 0 0 13.1339 0 29.3313C0 45.5288 12.8459 58.6217 28.6813 58.6217C32.2583 58.6217 35.68 57.9399 38.8376 56.7124L81.9407 79.0558C79.7943 81.0702 77.966 83.4105 76.4967 86.003H93.6813C101.623 86.003 107.981 92.5041 107.981 100.628C107.981 108.751 101.623 115.334 93.6813 115.334H76.4967C81.4577 124.088 90.7151 130 101.319 130C117.154 130 130 116.826 130 100.628C130 84.4308 117.154 71.3376 101.319 71.3376C97.7285 71.3376 94.2893 72.0103 91.1217 73.247L48.0187 50.903C50.1739 48.8844 52.0293 46.5572 53.5033 43.9563H36.3187C28.3765 43.9563 22.0187 37.4549 22.0187 29.3313C22.0187 21.2077 28.3765 14.625 36.3187 14.625H53.5033C48.5423 5.8713 39.2849 0 28.6813 0ZM40.1376 19.053C33.7992 19.053 28.681 23.655 28.681 29.3313C28.681 35.0076 33.7992 39.5687 40.1376 39.5687H118.543C124.882 39.5687 130 35.0076 130 29.3313C130 23.655 124.882 19.053 118.543 19.053H40.1376ZM11.4563 90.3907C5.11757 90.3907 0 94.9517 0 100.628C0 106.304 5.11785 110.947 11.4563 110.947H89.8626C96.2008 110.947 101.319 106.304 101.319 100.628C101.319 94.9517 96.2008 90.3907 89.8626 90.3907H11.4563Z" fill="#737373"/>
           </svg>
         </div>
 
         <div className="flex-shrink-0 mb-4 md:mb-0 md:ml-28">
-          {/* <svg width="413" height="262" viewBox="0 0 413 262" fill="none" xmlns="http://www.w3.org/2000/svg"> */}
-          <svg width="100%" height="262" viewBox="0 0 413 262" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="w-[90%] h-[262px] md:w-[100%] md:h-[262px]" viewBox="0 0 413 262" fill="none" xmlns="http://www.w3.org/2000/svg">
           <mask id="path-1-inside-1_554_1918" fill="white">
           <path d="M0 0H413V52H0V0Z"/>
           </mask>
