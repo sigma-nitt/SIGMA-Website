@@ -24,7 +24,7 @@
 @media (max-width: 768px) {
   .testimonial {
     position: relative;
-    width: 448.86px;
+    width: 100%;
     height: 709.1px;
   }
 }
@@ -32,7 +32,7 @@
 @media (max-width: 498px) {
   .testimonial {
     position: relative;
-    width: 348.86px;
+    width: 100%;
     height: 709.1px;
   }
 }

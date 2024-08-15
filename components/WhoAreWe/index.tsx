@@ -18,7 +18,7 @@ const Features: FC<FeaturesProps> = () => {
 
   return (
     <div ref={inViewRef} className="bg-[hsla(0,0%,10%,1)] flex flex-col md:h-[377px]">
-      <div className="flex items-center justify-center md:flex-row flex-col mt-10">
+      <div className="wholecontent flex items-center justify-center md:flex-row flex-col mt-10">
         <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-28">
           <svg className="w-[90%] h-[304px] md:w-[100%] md:h-[304px]" viewBox="0 0 413 304" fill="none" xmlns="http://www.w3.org/2000/svg">
           <mask id="path-1-inside-1_554_1909" fill="white">
