@@ -156,6 +156,7 @@ pre {
 
   @layer components {
     .header {
+      /* background: linear-gradient(229.1deg, #313ED0 -35.29%, #232971 30.74%, #0E113A 56.42%); */
       background: linear-gradient(229.1deg, #313ED0 -35.29%, #232971 30.74%, #0E113A 56.42%);
     }
   }

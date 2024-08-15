@@ -1,24 +1,3 @@
-/* .members-projects {
-    background: linear-gradient(85.14deg, #000000 5.41%, #000000 19.17%, #111648 99.67%);
-}
-
-@media (max-width: 768px) {
-    .members-projects {
-        background: linear-gradient(85.14deg, #000000 5.41%, #000000 19.17%, #111648 99.67%);
-        flex-direction: column !important;
-        height: 130vh !important;
-    }
-
-    .white-line {
-        width: 60% !important;
-        margin-top: 10px !important;
-    }
-
-    .projects {
-        margin-top: 40px !important;
-    }
-} */
-
 .hover-enlarge:hover {
     transform: scale(1.1); /* Enlarge the element by 10% on hover */
   }

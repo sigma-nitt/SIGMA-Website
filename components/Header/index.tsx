@@ -225,15 +225,15 @@ const Header = () => {
       className="fixed left-0 top-0 z-50 w-full py-7 bg-custom-gradient shadow transition duration-100 dark:bg-custom-gradient">
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
       {/* <div className="relative mx-auto max-w-c-1390 items-center justify-between md:px-8 xl:flex 2xl:px-0"> */}
-        <div className="flex w-full items-center justify-between xl:w-1/4">
+        <div className="flex items-center justify-between mr-[80px]">
           <a href="/" className="ml-5">
             <Image
               src="/images/sigma symbol.png"
               alt="logo"
               width={35}
-              height={35}
+              height={85}
               className="w-full"
-              style={{ width: "35px" }}
+              // style={{ width: "35px" }}
             />
           </a>
 
@@ -287,7 +287,7 @@ const Header = () => {
           }`}
         >
           <nav>
-            <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-14">
+            <ul className="flex flex-col gap-2 xl:flex-row xl:items-center xl:gap-14 text-[15px] md:text-[20px]">
               {menuData.map((menuItem) => (
                 <li key={menuItem.id} className={menuItem.submenu && "group relative"}>
                   {menuItem.submenu ? (
@@ -303,12 +303,12 @@ const Header = () => {
                       </button>
 
                       <ul
-                        className={`dropdown ${
+                        className={`dropdown text-white rounded-[18px] w-[116px] bg-[hsla(236,32%,29%,0.8)] ${
                           activeSubmenu === menuItem.id ? "flex" : ""
                         }`}
                       >
                         {menuItem.submenu.map((subItem) => (
-                          <li key={subItem.title} className="hover:text-white text-black">
+                          <li key={subItem.title} className="text-white tex-[13px] font-poppins">
                             <Link href={subItem.path || "#"} onClick={() => setActiveSubmenu(null)}>
                               {subItem.title}
                             </Link>

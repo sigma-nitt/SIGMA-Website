@@ -97,7 +97,7 @@ const Testimonial = () => {
     <>
       <section className="mt-18">
         <div>
-          <h1 className="ml-[25%] md:ml-[102px] md:leading-none">
+          <h1 className="text-center md:text-left md:ml-[102px] md:leading-none">
             <span className="gradient-textTest text-[25px] md:text-[38px]">TESTIMONIALS</span>
           </h1>
         </div>

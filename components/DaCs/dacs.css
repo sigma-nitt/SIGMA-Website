@@ -18,6 +18,18 @@
   letter-spacing: 0.43em;
 }
 
+@media (max-width: 768px) {
+  .gradient-text {
+    letter-spacing: 0.3em;
+  }
+}
+
+@media (max-width: 480px) {
+  .gradient-text {
+    letter-spacing: 0.05em; 
+  }
+}
+
 .img1 {
   object-fit: cover;
 }
