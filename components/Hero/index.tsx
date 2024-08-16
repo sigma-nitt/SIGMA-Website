@@ -30,13 +30,13 @@ const HeroSection: FC = () => {
         }}
       >
         <div className="text-center">
-          <p className="font-poppins mt-[32px] text-[25px] md:text-[35px] lg:text-[48px] font-semibold leading-[40px] md:leading-[50px] lg:leading-[72px]">
+          <p className="font-poppins mt-[32px] text-[25px] md:text-[35px] lg:text-[48px] font-semibold leading-[40px] md:leading-[72px] lg:leading-[72px]">
             The Business Club to 
           </p>
           <h1 className="font-poppins text-center">
-              <span className="gradient-textHero text-[25px] md:text-[35px] lg:text-[48px] leading-[50px] md:leading-[72px]">Delight your Scrutiny</span>
+              <span className="gradient-textHero text-[25px] md:text-[35px] lg:text-[48px] leading-[40px] md:leading-[72px]">Delight your Scrutiny</span>
           </h1>
-          <p className="font-poppins mt-[20px] text-[25px] md:text-[35px] lg:text-[48px] font-semibold">
+          <p className="font-poppins text-[25px] md:text-[35px] lg:text-[48px] font-semibold leading-[35px] md:leading-[50px]">
             and Supercharge you 
           </p>
           <button

@@ -122,26 +122,9 @@ pre {
   }
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.animate-gradient {
-  background-size: 400% 400%;
-  animation: gradient 15s ease-in infinite;
-}
-
 @font-face {
   font-family: 'Acumin Pro';
-  src:url('/fonts/Acumin-ItPro.otf') format('opentype');
+  src:url('/fonts/Acumin-RPro.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
