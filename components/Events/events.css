@@ -1,4 +1,61 @@
 .hdng {
   font-family:'Poppins', sans-serif;
 }
-  
+
+body {
+  margin: 0;
+  background: linear-gradient(90deg, #0F1017 0%, #0E113A 100%);
+}
+
+.container {
+  padding-top: 150px; /* This creates the 500px gap */
+}
+
+.backgroundGradient {
+  background: linear-gradient(90deg, #0F1017 0%, #0E113A 100%);
+  height: 827px;
+}
+
+.buttonBG {
+  background: hsla(252, 100%, 66%, 1);
+}
+
+.gradient-textDA {
+  background: linear-gradient(90deg, #8062F0 1.49%, #697EE2 10.56%, #5D8CDB 19.39%, #4BA6CC 28.63%, #40BAC0 36.16%, #2BDDAD 46.66%);
+  -webkit-background-clip: text; /* For Chrome, Safari, and Opera */
+  -moz-background-clip: text; /* For Firefox */
+  background-clip: text; /* Standard property */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  color: transparent; /* For non-WebKit browsers */
+  font-weight: 400;
+  height: 87px;
+}
+
+/* .gallery-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.event-wrapper {
+  display: flex;
+  transition: transform 1s ease;
+} */
+
+
+.gallery-container {
+  overflow: hidden; /* Prevent more than two boxes from being visible */
+  width: 1198px; /* 559px * 2 (for two visible boxes) */
+  margin: 0 auto;
+}
+
+.event-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: max-content; /* Ensure the wrapper width adjusts to fit all events */
+}
+
+.event-box {
+  width: 559px; /* Fixed width for each box */
+  flex-shrink: 0; /* Prevent boxes from shrinking */
+  margin-right: 40px; /* Space between boxes */
+}

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const TeamPage = () => {
     return (
-      <div className="pb-20 pt-40">
+      <div>
         <Event />
       </div>
     );
