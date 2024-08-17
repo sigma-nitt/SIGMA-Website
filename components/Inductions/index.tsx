@@ -215,13 +215,12 @@ const EventsPage: React.FC = () => {
                     }}
                 >
                     <div className="flex items-center justify-center">
-                        <img src="./images/image.png" alt="Image 1" className="w-full h-auto" />
+                        <img src="./images/image.png" alt="Image 1" className="w-[90%] md:w-full h-auto" />
                     </div>
                     <div 
-                        className="flex items-center justify-center" 
+                        className="flex items-center justify-center w-[250px] md:w-[434px] h-[150px] md:h-[266px]" 
                         style={{ 
                             transform: 'translateY(-105px)',
-                            width: '434px',
                             height: '266px',
                             background: 'rgba(255, 255, 255, 0.05)',  // Updated background to match provided CSS
                             boxShadow: '46px 46px 40px rgba(0, 0, 0, 0.25)',  // Updated boxShadow to match provided CSS
@@ -232,7 +231,7 @@ const EventsPage: React.FC = () => {
                             boxSizing: 'border-box',
                         }}
                     >
-                        <div className="text-center font-poppins text-[40px] text-white">
+                        <div className="text-center font-poppins text-[30px] md:text-[40px] text-white">
                             <div className="leading-[63px]">We</div>
                             <div className="leading-[63px]">Are</div>
                             <div className="leading-[63px]">
@@ -241,16 +240,16 @@ const EventsPage: React.FC = () => {
                         </div>
                     </div>
                     <div className="flex items-center justify-center">
-                        <img src="./images/image.png" alt="Image 3" className="w-full h-auto" />
+                        <img src="./images/image.png" alt="Image 3" className="w-[90%] md:w-full h-auto" />
                     </div>
                     <div className="flex items-center justify-center">
-                        <img src="./images/image.png" alt="Image 4" className="w-full h-auto" />
+                        <img src="./images/image.png" alt="Image 4" className="w-[90%] md:w-full h-auto" />
                     </div>
                     <div className="flex items-center justify-center">
-                        <img src="./images/image.png" alt="Image 5" className="w-full h-auto" />
+                        <img src="./images/image.png" alt="Image 5" className="w-[90%] md:w-full h-auto" />
                     </div>
                     <div className="flex items-center justify-center">
-                        <img src="./images/image.png" alt="Image 6" className="w-full h-auto" />
+                        <img src="./images/image.png" alt="Image 6" className="w-[90%] md:w-full h-auto" />
                     </div>
                 </div>
             </div>
