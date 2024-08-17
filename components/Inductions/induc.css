@@ -1,73 +1,39 @@
-@keyframes slideUp {
-  from {
-      opacity: 0;
-      transform: translateY(20px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
+/* induc.css */
+
+body {
+  margin: 0;
+  background: linear-gradient(90deg, #0F1017 0%, #0E113A 100%);
 }
 
-.row-animated {
-  animation: slideUp 1.5s ease-out forwards;
+.container {
+  padding-top: 203px; /* This creates the 500px gap */
 }
 
-.custom-table-width {
-    width: 90%;
+.gradient-textABTUS {
+  background: linear-gradient(90deg, #8062F0 1.49%, #697EE2 10.56%, #5D8CDB 19.39%, #4BA6CC 28.63%, #40BAC0 36.16%, #2BDDAD 46.66%);
+  -webkit-background-clip: text; /* For Chrome, Safari, and Opera */
+  -moz-background-clip: text; /* For Firefox */
+  background-clip: text; /* Standard property */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  color: transparent; /* For non-WebKit browsers */
+  font-weight: 400;
 }
 
-.cell {
-  height: 50px;
+.plus-button {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.cell2 {
-  height: 50px;
-  width: 30%;
-}
-  
-.question-box {
-  width: 50%;
+.plus-button:hover {
+  background-color: hsla(203, 72%, 60%, 1);
 }
 
-.answer-box {
-  width: 50%;
+.textQuestions {
+  background: hsla(203, 72%, 60%, 1);
+  -webkit-background-clip: text; /* For Chrome, Safari, and Opera */
+  -moz-background-clip: text; /* For Firefox */
+  background-clip: text; /* Standard property */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  color: transparent; /* For non-WebKit browsers */
+  font-weight: 400;
 }
-
-.arrow {
-  right: 5%;
-}
-
-.inductions {
-  font-family:'Poppins', sans-serif;
-}
-
-.table-div {
-  display: flex;
-  justify-content: center;
-}
-
-@media screen and (max-width: 600px) {
-  .answer-box {
-    width: 70%;
-  }
-
-  .question-box {
-    width: 70%;
-  }
-
-  .arrow {
-    right: 2%;
-  }
-
-  .custom-table-width {
-    width: 100%;
-  }
-
-  .imageicon {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-
