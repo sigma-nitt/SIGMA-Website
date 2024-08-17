@@ -93,7 +93,7 @@ const ReportPage: React.FC = () => {
   return (
     <div>
       <div className="p-4 mb-8">
-        <h1 className="mt-[80px] md:mt-[183px] h-[87px] text-center text-3xl pb-2 font-semibold lg:text-5xl md:text-4xl md:pr-10 md:leading-none">
+        <h1 className="mt-[150px] md:mt-[183px] h-[87px] text-center text-3xl pb-2 font-semibold lg:text-5xl md:text-4xl md:pr-10 md:leading-none">
           <span className="gradient-textDA font-poppins">Excavate the insights!</span>
         </h1>
       </div>
