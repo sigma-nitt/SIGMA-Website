@@ -74,3 +74,17 @@ body {
   flex-shrink: 0; /* Prevent boxes from shrinking */
   margin-right: 40px; /* Space between boxes */
 }
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  align-items: center;
+}
+
+.hamburger-line {
+  width: 400px;
+  height: 11px;
+  background: hsla(227, 21%, 46%, 1);
+  border-radius: 10px;
+}

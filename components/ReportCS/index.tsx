@@ -252,6 +252,9 @@
 // export default ReportPage;
 
 
+
+
+
 "use client";
 import React, { useState, useEffect } from "react";
 import imageUrlBuilder from "@sanity/image-url";
@@ -527,7 +530,7 @@ const ReportPage: React.FC = () => {
         </button>
       </div>
       <div className="flex items-center justify-center">
-        <Image className="mt-[32px] mb-[32px]"
+        <Image className="mt-[32px] mb-[32px] w-[90px] h-[100px] md:w-[167px] md:h-[182px]"
           src="/images/sigma symbol.png"
           alt="logo"
           width={167}

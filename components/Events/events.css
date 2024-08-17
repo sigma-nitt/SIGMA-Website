@@ -58,3 +58,12 @@ body {
   flex-shrink: 0; /* Prevent boxes from shrinking */
   margin-right: 40px; /* Space between boxes */
 }
+
+/* .hamburger-menu {
+  display: flex;
+  flex-direction: column;
+} */
+
+.hamburger-line {
+  background: hsla(227, 21%, 46%, 1);
+}
