@@ -347,6 +347,7 @@ import React, { useState, useEffect } from 'react';
 import imageUrlBuilder from '@sanity/image-url';
 import client from '@/sanityClient';
 import './events.css';
+import Image from 'next/image';
 
 interface Event {
   title: string;
@@ -429,7 +430,7 @@ const EventsPage: React.FC = () => {
   }
 
   return (
-    <div className="container">
+    <div className="containerEvent">
       <div className="mb-8">
         <h1 className="h-[87px] text-center text-3xl pb-2 font-semibold lg:text-5xl md:text-4xl md:pr-10 md:leading-none">
           <span className="gradient-textDA font-poppins">Explore our Events!</span>
@@ -519,6 +520,14 @@ const EventsPage: React.FC = () => {
         >
           {">"}
         </button>
+      </div>
+      <div className="flex items-center justify-center">
+        <Image className="mt-[32px] mb-[32px]"
+          src="/images/sigma symbol.png"
+          alt="logo"
+          width={167}
+          height={182}
+        />
       </div>
     </div>
   );

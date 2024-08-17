@@ -4,6 +4,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import createClient from "@/sanityClient";
 import PortableText from "@sanity/block-content-to-react";
 import './ReportPageDA.css';
+import Image from 'next/image';
 
 interface Subheading {
   _type: "subheading";
@@ -92,7 +93,7 @@ const ReportPage: React.FC = () => {
 
   return (
     <div>
-      <div className="p-4 mb-8">
+      <div className="pt-4">
         <h1 className="mt-[150px] md:mt-[183px] h-[87px] text-center text-3xl pb-2 font-semibold lg:text-5xl md:text-4xl md:pr-10 md:leading-none">
           <span className="gradient-textDA font-poppins">Excavate the insights!</span>
         </h1>
@@ -245,6 +246,15 @@ const ReportPage: React.FC = () => {
               </div>
             </div>
           ))}
+      </div>
+
+      <div className="flex items-center justify-center">
+        <Image className="mt-[32px] mb-[32px]"
+          src="/images/sigma symbol.png"
+          alt="logo"
+          width={167}
+          height={182}
+        />
       </div>
     </div>
   );

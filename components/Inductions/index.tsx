@@ -144,7 +144,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from 'react';
 import './induc.css';
-import { FaPlus, FaMinus } from 'react-icons/fa'; // Importing the plus icon from Font Awesome
+import { FaPlus, FaMinus } from 'react-icons/fa';
 
 const EventsPage: React.FC = () => {
     const [isOpen, setIsOpen] = useState(true);
@@ -202,7 +202,7 @@ const EventsPage: React.FC = () => {
     return (
         <div className="container">
             <div
-                className="h-[697px]"
+                className="h-[2000px] md:h-[697px]"
                 style={{ background: 'linear-gradient(90deg, #0F1017 0%, #0E113A 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
             >
                 <div
@@ -211,11 +211,11 @@ const EventsPage: React.FC = () => {
                         display: 'grid',
                         gridTemplateColumns: 'repeat(3, 1fr)',
                         gridTemplateRows: 'repeat(2, auto)',
-                        gap: '20px',
+                        gap: '10px 40px',
                     }}
                 >
                     <div className="flex items-center justify-center">
-                        <img src="./images/bkg.jpg" alt="Image 1" className="w-full h-auto" />
+                        <img src="./images/image.png" alt="Image 1" className="w-full h-auto" />
                     </div>
                     <div 
                         className="flex items-center justify-center" 
@@ -241,23 +241,23 @@ const EventsPage: React.FC = () => {
                         </div>
                     </div>
                     <div className="flex items-center justify-center">
-                        <img src="./images/bkg.jpg" alt="Image 3" className="w-full h-auto" />
+                        <img src="./images/image.png" alt="Image 3" className="w-full h-auto" />
                     </div>
                     <div className="flex items-center justify-center">
-                        <img src="./images/bkg.jpg" alt="Image 4" className="w-full h-auto" />
+                        <img src="./images/image.png" alt="Image 4" className="w-full h-auto" />
                     </div>
                     <div className="flex items-center justify-center">
-                        <img src="./images/bkg.jpg" alt="Image 5" className="w-full h-auto" />
+                        <img src="./images/image.png" alt="Image 5" className="w-full h-auto" />
                     </div>
                     <div className="flex items-center justify-center">
-                        <img src="./images/bkg.jpg" alt="Image 6" className="w-full h-auto" />
+                        <img src="./images/image.png" alt="Image 6" className="w-full h-auto" />
                     </div>
                 </div>
             </div>
 
             <div className="faq-section mt-[34px] mb-[34px] h-auto pb-10 p-1" style={{ backgroundColor: 'hsla(201, 68%, 5%, 1)' }}>
                 <div className="faq-header cursor-pointer" onClick={toggleFAQ}>
-                    <h2 className="font-poppins font-normal text-[50px] leading-[72px] w-[450px] ml-[376px] mt-[92px] text-left">
+                    <h2 className="font-poppins font-normal text-[35px] md:text-[50px] leading-[50px] md:leading-[72px] w-full md:w-[450px] ml-[30px] md:ml-[376px] mt-[92px] text-left">
                         FREQUENTLY ASKED 
                         <span className="textQuestions font-normal"> QUESTIONS</span>
                     </h2>
@@ -270,11 +270,11 @@ const EventsPage: React.FC = () => {
                                 key={item.id} 
                                 onClick={() => toggleAnswer(item.id)}
                             >
-                                <div className={`font-poppins text-white mx-auto relative inline-block w-[768px] border-2 border-[hsla(200, 33%, 12%, 1)] h-auto flex flex-col transition-all duration-300 rounded-[8px]`}>
+                                <div className={`font-poppins text-white mx-auto relative inline-block w-[95%] md:w-[768px] border-2 border-[hsla(200, 33%, 12%, 1)] h-auto flex flex-col transition-all duration-300 rounded-[8px]`}>
                                     <div className="flex items-center justify-between">
-                                        <div className="flex items-center ml-[40px]">
-                                            <span className="font-poppins text-[24px] mr-[50px]">{index + 1}</span>
-                                            <span className="text-center text-[24px]">{item.question}</span>
+                                        <div className="flex items-center ml-[10px] md:ml-[40px]">
+                                            <span className="font-poppins text-[15px] md:text-[24px] mr-[30px] md:mr-[50px]">{index + 1}</span>
+                                            <span className="text-center text-[15px] md:text-[24px]">{item.question}</span>
                                         </div>
                                         <div className="flex items-center justify-center w-[80px] h-[80px] rounded-[8px] plus-button">
                                             {/* <FaPlus className="text-white w-[22px] h-[22px]" /> */}
