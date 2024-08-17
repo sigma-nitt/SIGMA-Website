@@ -600,7 +600,7 @@ const EventsPage: React.FC = () => {
   }, []);
 
   const handleExpandClick = (index: number) => {
-    setSelectedEvent(index === selectedEvent ? null : index);
+    setSelectedEvent(index);
   };
 
   const handleCloseGallery = () => {
@@ -640,7 +640,7 @@ const EventsPage: React.FC = () => {
   return (
     <div className="containerEvent">
       <div className="mb-8">
-        <h1 className="h-[87px] text-center text-3xl pb-2 font-semibold lg:text-5xl md:text-4xl md:pr-10 md:leading-none">
+        <h1 className="h-[87px] text-center text-4xl pb-2 font-semibold lg:text-5xl md:text-4xl md:pr-10 md:leading-none">
           <span className="gradient-textDA font-poppins">Explore our Events!</span>
         </h1>
       </div>
@@ -665,9 +665,6 @@ const EventsPage: React.FC = () => {
             {events.map((event, index) => (
               <div
                 key={index}
-                // className={`relative w-[300px] h-[400px] md:w-[559px] md:h-[652px] rounded-[28px] bg-[hsla(227,60%,17%,1)] mt-[20px] md:mt-[87px] shadow-lg flex flex-col items-center ${
-                //   index % 2 === 0 ? 'ml-[30px] md:mr-[40px] md:ml-[0px]' : index % 2 === 1 ? 'ml-[30px] md:ml-[40px]' : ''
-                // }`}
                 className="relative mr-[40px] w-[290px] h-[400px] md:w-[559px] md:h-[652px] rounded-[28px] bg-[hsla(227,60%,17%,1)] mt-[20px] md:mt-[7px] shadow-lg flex flex-col items-center"
               >
                 {/* Image */}
@@ -678,18 +675,18 @@ const EventsPage: React.FC = () => {
                 />
 
                 {/* Title and Description */}
-                <div className="text-left mt-[25px] pl-3 pr-3">
-                  <h2 className="text-lg font-poppins md:text-3xl font-bold">
+                <div className="items-left mt-[25px] pl-3 pr-3">
+                  <h2 className="text-lg text-center md:text-left font-poppins md:text-3xl font-bold">
                     {event.title}
                   </h2>
                   <div
-                    className="text-sm items-center md:items-left text-center md:text-left mt-[5px] md:text-left md:w-[456px] md:mt-[25px] md:leading-[34px] cursor-pointer"
+                    className="text-sm items-center md:items-left text-center md:text-left mt-[5px] md:w-[456px] md:mt-[25px] md:leading-[34px] cursor-pointer"
                     onClick={() => toggleIntroText(index)}
                   >
                     {isIntroTextVisible[index] ? (
                       <p>{event.description || "Two lines about the project."}</p>
                     ) : (
-                      <div className="flex flex-col items-center md:items-left mt-[23px] gap-[15px] md:gap-[23px]">
+                      <div className="flex flex-col text-center items-center md:items-left mt-[23px] gap-[15px] md:gap-[23px]">
                         <div className="hamburger-line w-[200px] h-[8px] md:w-[452px] md:h-[11px] rounded-[10px]"></div>
                         <div className="hamburger-line w-[200px] h-[8px] md:w-[452px] md:h-[11px] rounded-[10px]"></div>
                         <div className="hamburger-line w-[200px] h-[8px] md:w-[452px] md:h-[11px] rounded-[10px]"></div>
@@ -707,28 +704,6 @@ const EventsPage: React.FC = () => {
                     {selectedEvent === index ? 'Collapse' : 'View Gallery'}
                   </button>
                 </div>
-
-                {/* Expanded content (Image Gallery) */}
-                {selectedEvent === index && (
-                  <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center z-50">
-                    <div className="bg-white p-8 rounded-lg shadow-md w-[90%]">
-                      <h1 className="text-2xl font-bold text-blue-700 mb-4">GALLERY</h1>
-                      <div className="flex flex-wrap gap-4">
-                        {events[selectedEvent].images.map((image, idx) => (
-                          <img
-                            key={idx}
-                            src={imageUrlFor(image).url()}
-                            alt={`Gallery Image ${idx + 1}`}
-                            className="w-[400px] h-[200px] object-cover rounded-lg shadow-md"
-                          />
-                        ))}
-                      </div>
-                      <button onClick={handleCloseGallery} className="mt-4 bg-red-500 text-white py-2 px-4 rounded">
-                        Close Gallery
-                      </button>
-                    </div>
-                  </div>
-                )}
               </div>
             ))}
           </div>
@@ -742,8 +717,35 @@ const EventsPage: React.FC = () => {
           {">"}
         </button>
       </div>
+
+      {/* Image Gallery Modal */}
+      {selectedEvent !== null && (
+        <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center z-50">
+          <div className="bg-white p-8 rounded-lg shadow-md w-[90%] md:w-[90%] lg:w-[90%] h-[80%] md:h-[90%] lg:h-[80%] overflow-y-auto">
+            <h1 className="text-2xl font-bold text-blue-700 mb-4 text-center">GALLERY</h1>
+            <div className="grid grid-cols-3 gap-4">
+              {events[selectedEvent].images.map((image, idx) => (
+                <img
+                  key={idx}
+                  src={imageUrlFor(image).url()}
+                  alt={`Gallery Image ${idx + 1}`}
+                  className="w-full h-[100px] md:h-[150px] lg:h-[175px] object-cover rounded-lg shadow-md"
+                />
+              ))}
+            </div>
+            <button
+              onClick={handleCloseGallery}
+              className="mt-4 bg-red-500 text-white py-2 px-4 rounded block mx-auto"
+            >
+              Close Gallery
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="flex items-center justify-center">
-        <Image className="mt-[32px] mb-[32px]"
+        <Image
+          className="mt-[32px] mb-[32px]"
           src="/images/sigma symbol.png"
           alt="logo"
           width={167}
