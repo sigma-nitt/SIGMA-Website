@@ -32,7 +32,8 @@ const Gallery: React.FC = () => {
           {"<"}
         </button>
         <div className="gallery-container">
-          <div className="image-wrapper" style={{ transform: `translateX(-${index * (400 + 20) + 40}px)` }}>
+          {/* <div className="image-wrapper" style={{ transform: `translateX(-${index * (400 + 20) + 40}px)` }}> */}
+          <div className="image-wrapper" style={{ transform: `translateX(-${index * (200 + 20) + 40}px)` }}>
             {images.map((src, i) => (
               <img key={i} src={src} alt={`Image ${i}`} className="image" />
             ))}
