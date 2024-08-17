@@ -392,7 +392,7 @@ const ReportPage: React.FC = () => {
         </h1>
       </div>
 
-      <div className="backgroundGradient flex justify-between items-center gap-[0px] md:gap-[107px]">
+      <div className="backgroundGradient h-[500px] md:h-[827px] flex justify-between items-center gap-[0px] md:gap-[81px]">
         <button
           onClick={handleSwipeRight}
           disabled={translateX === 0}
