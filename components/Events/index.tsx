@@ -437,11 +437,11 @@ const EventsPage: React.FC = () => {
         </h1>
       </div>
 
-      <div className="backgroundGradient flex justify-between items-center gap-[0px] md:gap-[81px]">
+      <div className="backgroundGradient h-[500px] md:h-[827px] flex justify-between items-center gap-[0px] md:gap-[81px]">
         <button
           onClick={handleSwipeRight}
           disabled={translateX === 0}
-          className="text-2xl pl-[50px]"
+          className="text-2xl pl-[15px] md:pl-[50px] pr-[5px] md:pr-[0px]"
         >
           {"<"}
         </button>
@@ -460,7 +460,7 @@ const EventsPage: React.FC = () => {
                 // className={`relative w-[300px] h-[400px] md:w-[559px] md:h-[652px] rounded-[28px] bg-[hsla(227,60%,17%,1)] mt-[20px] md:mt-[87px] shadow-lg flex flex-col items-center ${
                 //   index % 2 === 0 ? 'ml-[30px] md:mr-[40px] md:ml-[0px]' : index % 2 === 1 ? 'ml-[30px] md:ml-[40px]' : ''
                 // }`}
-                className="relative mr-[40px] w-[300px] h-[400px] md:w-[559px] md:h-[652px] rounded-[28px] bg-[hsla(227,60%,17%,1)] mt-[20px] md:mt-[87px] shadow-lg flex flex-col items-center"
+                className="relative mr-[40px] w-[290px] h-[400px] md:w-[559px] md:h-[652px] rounded-[28px] bg-[hsla(227,60%,17%,1)] mt-[20px] md:mt-[87px] shadow-lg flex flex-col items-center"
               >
                 {/* Image */}
                 <img
@@ -516,7 +516,7 @@ const EventsPage: React.FC = () => {
         <button
           onClick={handleSwipeLeft}
           disabled={translateX <= -(boxWidth * (events.length - 2))}
-          className="text-2xl pr-[50px]"
+          className="text-2xl pr-[10px] md:pr-[50px] pl-[5px] md:pl-[0px]"
         >
           {">"}
         </button>

@@ -200,7 +200,7 @@ const EventsPage: React.FC = () => {
     };
 
     return (
-        <div className="container">
+        <div className="containerInd">
             <div
                 className="h-[2000px] md:h-[697px]"
                 style={{ background: 'linear-gradient(90deg, #0F1017 0%, #0E113A 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
@@ -257,7 +257,7 @@ const EventsPage: React.FC = () => {
 
             <div className="faq-section mt-[34px] mb-[34px] h-auto pb-10 p-1" style={{ backgroundColor: 'hsla(201, 68%, 5%, 1)' }}>
                 <div className="faq-header cursor-pointer" onClick={toggleFAQ}>
-                    <h2 className="font-poppins font-normal text-[35px] md:text-[50px] leading-[50px] md:leading-[72px] w-full md:w-[450px] ml-[30px] md:ml-[376px] mt-[92px] text-left">
+                    <h2 className="font-poppins font-normal text-[30px] md:text-[50px] leading-[50px] md:leading-[72px] w-full md:w-[450px] ml-[20px] md:ml-[376px] mt-[92px] text-left">
                         FREQUENTLY ASKED 
                         <span className="textQuestions font-normal"> QUESTIONS</span>
                     </h2>
