@@ -14,6 +14,24 @@
   background: linear-gradient(85.14deg, #181C28 5.41%, #172C28 47%, #1E3432 62.02%, #111648 99.67%);
 }
 
+.memberName
+{
+  background: hsla(0, 0%, 73%, 1);
+  -webkit-background-clip: text; /* For Chrome, Safari, and Opera */
+  -moz-background-clip: text; /* For Firefox */
+  background-clip: text; /* Standard property */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  color: transparent; /* For non-WebKit browsers */
+  font-weight: 500;
+  font: "Poppins", "sans-serif";
+}
+
+.memberPosition
+{
+  font: "Poppins", "sans-serif";
+  font-weight: 400;
+}
+
 .flipping-card {
   position: relative;
 }

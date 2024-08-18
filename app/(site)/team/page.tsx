@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const TeamPage = () => {
   return (
-    <div>
+    <div className="py-[100px]">
       <Team />
     </div>
   );

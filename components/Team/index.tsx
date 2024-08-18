@@ -71,20 +71,20 @@ const MeetOurTeamPage = () => {
 
   return (
     <div className="text-center flipping-container">
-      <div className="p-10 mb-8">
-      </div>
+      {/* <div className="p-10 mb-8">
+      </div> */}
       {categories.map((category) => (
         <div key={category}>
-          <h2 className="font-poppins text-[30px] md:text-[48px] md:text-left md:mt-[30px] mb-2">
+          <h2 className="font-poppins text-[40px] lg:text-[48px] lg:text-left lg:mt-[30px]">
             <span className="catgry md:ml-22 leading-[92px]">{toPascalCase(category)}</span>
           </h2>
-          <div className="gradientBackgrnd flex flex-wrap justify-center">
+          <div className="gradientBackgrnd flex flex-wrap justify-center gap-[15px] lg:mt-[30px] lg:gap-[15px] lg:pb-[42.14px] lg:px-[5%]">
             {teamMembers
               .filter((member) => member.category === category)
               .map((member, index) => (
                 <div
                   key={index}
-                  className={`mt-4 mr-1 ml-1 mb-2 md:mt-8 md:mb-8 md:mr-2 md:ml-2 md:p-6 rounded-[15px] md:rounded-[31px] shadow-md h-[250px] w-[40%] md:h-[351.72px] md:w-[238px] transition-transform transform ${
+                  className={`items-center justify-center rounded-[15px] md:rounded-[31px] shadow-md mt-[24px] mb-[24px] lg:mt-[42.14px] lg:mb-[0px] w-[40%] md:w-[22%] lg:w-[238px] md:h-[280px] lg:h-[351.72px] transition-transform transform ${
                     hoveredMember === member.name ? 'hover:scale-105' : ''
                   } flipping-card`}
                   onMouseEnter={() => handleMouseEnter(member.name)}
@@ -93,32 +93,38 @@ const MeetOurTeamPage = () => {
                     background: 'linear-gradient(180deg, #1D1D1D 0%, #111112 100%)',
                     position: 'relative',
                     overflow: 'hidden',
+                    aspectRatio: '10 / 14',
                   }}
                 >
-                  <div className="flex flex-col h-[100%]">
+                  <div className="flex flex-col items-center justify-center h-[100%]">
                     <div>
                       {member.image && (
                         <img
                           // src={imageUrlFor(member.image).url()}
                           src = '.\images\tanishq.png'
                           alt={member.name}
-                          className="rounded-full mx-auto transition-transform transform hover:scale-110 w-[60%] mt-4 md:mt-0 md:w-[176.17px] md:h-[184.88px]"
+                          // className="rounded-full mx-auto transition-transform transform hover:scale-110 w-[60%] mt-4 md:mt-0 md:w-[176.17px] md:h-[184.88px]"
+                          className="rounded-full mx-auto transition-transform transform hover:scale-110 w-[60%] md:w-[70%] lg:w-[184.88px] lg:h-[184.88px]"
                           style={{
                             background: 'linear-gradient(229.1deg, #313ED0 -35.29%, #232971 30.74%, #0E113A 56.42%)',
                           }}
                         />
                       )}
-                      <div className="text-md mt-[4px] md:text-[18.68px] md:mt-[8px] text-white">{member.name}</div>
-                      <div className="md:text-md text-sm text-white">{member.position}</div>
+                      <div className="text-sm mt-[4px] md:text-[15px] lg:text-[18.68px] md:mt-[8px] lg:leading:[28.01px]">
+                        <span className="memberName">
+                          {member.name}
+                        </span>
+                      </div>
+                      <div className="memberPosition leading-[12px] md:[14px] text-[12px] md:text-[14px] lg:text-[16.81px] lg:leading-[25.21px] lg:mt-[7.41px] text-white">{member.position}</div>
                       {hoveredMember === member.name && (
                         <div className="absolute inset-0 flex items-center justify-center bg-green rounded-lg p-4 text-white backdrop-filter backdrop-blur-md text-overlay">
                           <p className="text-[11px] leading-[12px] md:text-sm">{member.aboutyou}</p>
                         </div>
                       )}
                     </div>
-                    <div className="mt-[20px] text-center">
+                    <div className="mt-[8px] lg:mt-[8px] text-center">
                       {member.linkedinUrl && (
-                        <a href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 mr-8">
+                        <a href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" className="mr-8">
                           <FontAwesomeIcon icon={faLinkedin} size="2x" />
                         </a>
                       )}

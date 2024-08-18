@@ -1,8 +1,3 @@
-
-.sigma {
-  font-family: 'Poppins', sans-serif;
-}
-
 .gradient-textABTUS {
   background: linear-gradient(90deg, #8062F0 3.18%, #697EE2 22.63%, #5D8CDB 41.56%, #4BA6CC 61.36%, #40BAC0 77.5%, #2BDDAD 100%);
   -webkit-background-clip: text; /* For Chrome, Safari, and Opera */
@@ -10,7 +5,7 @@
   background-clip: text; /* Standard property */
   -webkit-text-fill-color: transparent; /* For WebKit browsers */
   color: transparent; /* For non-WebKit browsers */
-  font-weight: 400;
+ 
 }
 
 .wepower
