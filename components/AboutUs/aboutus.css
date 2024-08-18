@@ -4,11 +4,16 @@
 }
 
 .gradient-textABTUS {
-  background: linear-gradient(90deg, #8062F0 1.49%, #697EE2 10.56%, #5D8CDB 19.39%, #4BA6CC 28.63%, #40BAC0 36.16%, #2BDDAD 46.66%);
+  background: linear-gradient(90deg, #8062F0 3.18%, #697EE2 22.63%, #5D8CDB 41.56%, #4BA6CC 61.36%, #40BAC0 77.5%, #2BDDAD 100%);
   -webkit-background-clip: text; /* For Chrome, Safari, and Opera */
   -moz-background-clip: text; /* For Firefox */
   background-clip: text; /* Standard property */
   -webkit-text-fill-color: transparent; /* For WebKit browsers */
   color: transparent; /* For non-WebKit browsers */
   font-weight: 400;
+}
+
+.wepower
+{
+  font-weight: 250;
 }

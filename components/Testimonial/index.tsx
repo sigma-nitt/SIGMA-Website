@@ -86,8 +86,8 @@ import './testimonial.css';
 
 const Testimonial = () => {
   const backgroundImageStyle = {
-    backgroundImage: 'url(./images/testiback.png)', // Replace with your image path
-    backgroundSize: 'cover', // Ensures the image covers the container
+    backgroundImage: 'url(/images/testiback.png)', // Replace with your image path
+    // backgroundSize: 'cover', // Ensures the image covers the container
     backgroundRepeat: 'repeat', // Repeats the image both horizontally and vertically
     backgroundPosition: 'center', // Center the image in the container
     backgroundAttachment: 'fixed', // Keeps the background fixed

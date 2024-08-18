@@ -99,7 +99,7 @@ const Features: FC<FeaturesProps> = () => {
   }, [inView]);
 
   return (
-    <div ref={inViewRef} className="bg-[linear-gradient(229.1deg,#313ED0_-35.29%,#232971_30.74%,#0E113A_56.42%)] flex flex-col md:h-[636px]">
+    <div ref={inViewRef} className="bgBox flex flex-col md:h-[636px]">
       <div className="mt-8 mb-18">
           <h1 className="text-center pb-2 font-semibold md:text-center md:leading-none">
             <span className="gradient-text text-[25px] md:text-[40px] font-poppins">DATA ANALYTICS & MANAGEMENT</span>
@@ -130,3 +130,4 @@ const Features: FC<FeaturesProps> = () => {
 };
 
 export default Features;
+

@@ -129,8 +129,8 @@ pre {
 @font-face {
   font-family: 'Acumin Pro';
   src:url('/fonts/Acumin-RPro.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
+  /* font-weight: 400; */
+  /* font-style: normal; */
 }
 
 @layer components {

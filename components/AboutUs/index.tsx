@@ -14,11 +14,10 @@ const EventsPage: React.FC = () => {
           <h1 className="font-poppins text-center text-[30px] pb-2 font-semibold md:text-[48px] md:text-left md:pr-10 leading-[30px] md:leading-[55px]">
             <span className="gradient-textABTUS">We Power</span> the mindset of business
           </h1>
-          <p className="font-poppins text-sm text-center p-4 md:p-0 md:text-[20px] md:leading-[26px] md:text-left">
+          <p className="wepower font-acumin text-sm text-center p-4 md:p-0 md:text-[20px] md:leading-[26px] md:text-left w-[607px]">
             SIGMA is a business club based in NIT Trichy, India. Our club was founded with the vision of providing learning resources for students from technical backgrounds who are interested in managerial and techno-managerial disciplines. Since then, we have grown to become a thriving community of students who are passionate about business, data analytics, and machine learning.
             At SIGMA, we offer a wide range of services and activities to our members, including publishing articles on Medium, social media posts about business topics, case studies, and projects involving data analytics and machine learning. We also organize workshops, podcasts, events, and competitions for college students in NIT Trichy.
-            Our club is run by a team of experienced leaders who are committed to providing our members with the best possible resources and opportunities. We believe that by working together, we can achieve great things and make a positive impact in our community.
-          </p>
+            </p>
         </div>
         <div className="flex justify-center p-4 md:mt-50 md:mb-15 items-center w-full md:w-1/2 md:pr-8">
           <svg width="613" height="496" viewBox="0 0 1338 1313" fill="none" xmlns="http://www.w3.org/2000/svg">
