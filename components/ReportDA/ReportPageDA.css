@@ -9,6 +9,10 @@
   height: 87px;
 }
 
+.containerEvent {
+  padding-top: 150px; /* This creates the 500px gap */
+}
+
 .backgroundGradient {
   background: linear-gradient(90deg, #0F1017 0%, #0E113A 100%);
 }
@@ -75,16 +79,15 @@ body {
   margin-right: 40px; /* Space between boxes */
 }
 
-.hamburger-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 23px;
-  align-items: center;
+.hamburger-line {
+  background: hsla(227, 21%, 46%, 1);
 }
 
-.hamburger-line {
-  width: 400px;
-  height: 11px;
-  background: hsla(227, 21%, 46%, 1);
-  border-radius: 10px;
+.no-scrollbar {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
 }
