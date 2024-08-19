@@ -204,7 +204,7 @@ const YouTubePodcasts: React.FC = () => {
             ref={sliderRef}
             className="h-[500px] lg:h-[927px] flex overflow-x-scroll no-scrollbar"
           >
-            <div className="video-wrapper flex mt-[35px] lg:mt-[87px] w-[95%]">
+            {/* <div className="video-wrapper flex mt-[35px] lg:mt-[87px] w-[95%]">
               {videos.map((video, index) => (
                 <div
                   key={index}
@@ -241,7 +241,52 @@ const YouTubePodcasts: React.FC = () => {
                   </div>
                 </div>
               ))}
+            </div> */}
+            <div className="video-wrapper flex mt-[35px] lg:mt-[87px] w-[95%]">
+              {videos.map((video, index) => (
+                <div
+                  key={index}
+                  className="relative mr-[10px] lg:mr-[40px] w-[290px] lg:w-[559px] h-[400px] lg:h-[752px] rounded-[28px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={() => handleMouseLeave(index)}
+                  onClick={() => toggleIntroText(index)}
+                >
+                  <div className="w-[90%] lg:w-[456px] mt-[30px] lg:mt-[60px] object-cover mb-4">
+                    <YouTube
+                      videoId={video.videoId}
+                      opts={{
+                        width: '100%',
+                        height: window.innerWidth >= 1024 ? 300 : 150, // Adjust height based on screen width
+                      }}
+                    />
+                  </div>
+
+                  <div className="flex flex-col mt-[-10px] lg:ml-[48px] lg:mt-[30px]">
+                    <div className="w-[90%] lg:w-full ml-[15px] lg:ml-[0px]">
+                      <h2 className="text-center lg:text-left font-poppins text-[15px] lg:text-[20px] font-bold lg:leading-[30px]">
+                        {video.title}
+                      </h2>
+                    </div>
+                    <div
+                      className="text-[10px] lg:text-[13px] mt-[5px] w-[90%] lg:w-[456px] lg:mt-[10px] ml-[15px] lg:ml-[0px] cursor-pointer"
+                    >
+                      {isIntroTextVisible[index] ? (
+                        <p className="font-poppins leading-[10px] lg:leading-[28.5px]">
+                          {video.description || "Two lines about the project."}
+                        </p>
+                      ) : (
+                        <div className="flex flex-col items-center lg:items-left mt-[23px] gap-[15px] lg:gap-[23px]">
+                          <div className="hamburger-line w-[90%] lg:w-[452px] h-[8px] md:h-[11px] rounded-[10px]"></div>
+                          <div className="hamburger-line w-[90%] lg:w-[452px] h-[8px] md:h-[11px] rounded-[10px]"></div>
+                          <div className="hamburger-line w-[90%] lg:w-[452px] h-[8px] md:h-[11px] rounded-[10px]"></div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
+
           </div>
         </div>
       </div>

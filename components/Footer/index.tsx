@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import './footer.css';
 
 const Footer = () => {
   return (
@@ -12,8 +13,8 @@ const Footer = () => {
           background: 'linear-gradient(85.24deg, #1B1F2D -6.44%, #172C28 25.82%, #1E3432 57.01%, #111648 99.67%)',
         }}
       >
-        <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
-          <div className="py-2 lg:py-3">
+        <div className="mx-auto 2xl:px-0">
+          <div className="py-2 px-16 lg:py-3">
             <div className="flex flex-wrap gap-8 lg:justify-between lg:gap-0">
               <motion.div
                 variants={{
@@ -248,8 +249,9 @@ const Footer = () => {
               </div>
             </div>
           </div>
-
-          <div className="flex flex-col flex-wrap items-center justify-center gap-5 border-t border-stroke py-7 dark:border-strokedark lg:flex-row lg:justify-between lg:gap-0">
+          
+          <div className="extraDiv px-16">
+          <div className="flex flex-col flex-wrap items-center justify-center gap-5  py-7 dark:border-strokedark lg:flex-row lg:justify-between lg:gap-0">
             <motion.div
               variants={{
                 hidden: {
@@ -426,6 +428,7 @@ const Footer = () => {
 
               </ul>
             </motion.div>
+          </div>
           </div>
         </div>
       </footer>
