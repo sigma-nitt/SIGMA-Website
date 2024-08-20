@@ -1,4 +1,4 @@
-.gallery-container {
+/* .gallery-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +32,24 @@
     }
 
     .image {
-        margin-right: 10px; /* Adjust gap for smaller screens */
+        margin-right: 10px;
     }
+} */
+
+
+
+.no-scrollbar {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
 }
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+  
+.image {
+    width: 200px; /* Adjust as needed */
+    height: auto;
+    margin-right: 10px; /* Adjust space between images */
+}
+  

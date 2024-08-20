@@ -189,3 +189,34 @@
     top: 80%;
   }
 }
+
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+.testimonial-item {
+  flex: 0 0 auto; /* Prevent items from shrinking */
+  margin-right: 20px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+@media (max-width: 768px) {
+  .testimonial-item {
+    width: 90%;
+    margin-right: 10px;
+  }
+
+  .name {
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .testimonial-content {
+    font-size: 0.875rem; /* Adjust font size */
+  }
+}
