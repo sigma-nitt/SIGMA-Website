@@ -38,7 +38,7 @@ body {
 }
 
 .hamburger-line {
-  background: hsla(227, 21%, 46%, 1);
+  background: hsla(227, 21%, 46%, 1) !important;
 }
 
 .no-scrollbar {
@@ -48,4 +48,12 @@ body {
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;  /* Safari and Chrome */
+}
+
+/* Portrait styles */
+.flipbook-portrait {
+}
+
+/* Landscape styles */
+.flipbook-landscape {
 }
