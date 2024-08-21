@@ -30,39 +30,23 @@ body {
   height: 87px;
 }
 
-/* .gallery-container {
-  width: 100%;
-  overflow: hidden;
-}
-
-.event-wrapper {
-  display: flex;
-  transition: transform 1s ease;
-} */
-
-
 .gallery-container {
-  overflow: hidden; /* Prevent more than two boxes from being visible */
-  width: 1198px; /* 559px * 2 (for two visible boxes) */
+  overflow: hidden;
+  width: 1198px; 
   margin: 0 auto;
 }
 
 .event-wrapper {
   display: flex;
   transition: transform 0.5s ease;
-  width: max-content; /* Ensure the wrapper width adjusts to fit all events */
+  width: max-content;
 }
 
 .event-box {
-  width: 559px; /* Fixed width for each box */
-  flex-shrink: 0; /* Prevent boxes from shrinking */
-  margin-right: 40px; /* Space between boxes */
+  width: 559px;
+  flex-shrink: 0;
+  margin-right: 40px;
 }
-
-/* .hamburger-menu {
-  display: flex;
-  flex-direction: column;
-} */
 
 .hamburger-line {
   background: hsla(227, 21%, 46%, 1);

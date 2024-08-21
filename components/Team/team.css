@@ -44,13 +44,13 @@
   transition: opacity 0.3s;
   opacity: 0;
   z-index: 1;
-  height: 65%; /* Adjust the percentage as needed */
+  height: 65%;
   bottom: 0;
   position: absolute;
   width: 100%;
-  background: rgba(0, 0, 0, 0.75); /* Ensures the text box has a background */
-  padding: 10px; /* Adjust padding if necessary */
-  border-radius: 0 0 10px 10px; /* Matches the card's border radius */
+  background: rgba(0, 0, 0, 0.75);
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
 }
 
 

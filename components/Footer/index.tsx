@@ -51,18 +51,18 @@ const Footer = () => {
                   />
                 </a>
 
-                <p className="mb-10 mt-5">
-                  SIGMA<br></br>
+                <div className="mb-4 mt-5 font-acumin text-white">
+                  <p className="font-acumin text-white font-bold text-[26px]">SIGMA</p>
                   NIT Trichy<br></br>
                   Tamil Nadu, India<br></br>
-                </p>
+                </div>
 
-                <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
+                <p className="uppercase tracking-[5px] font-acumin text-white text-[19px]">
                   contact
                 </p>
                 <a
                   href="/contactus"
-                  className="text-itemtitle text-lg text-muted-foreground hover:text-muted-foreground"
+                  className="text-itemtitle text-lg font-acumin text-white"
                 >
                   sigma.nitt@gmail.com
                 </a>
@@ -87,7 +87,7 @@ const Footer = () => {
                   viewport={{ once: true }}
                   className="animate_top"
                 >
-                  <h4 className="mb-5 mt-8 text-itemtitle2 font-medium text-white">
+                  <h4 className="font-acumin font-bold mb-5 mt-8 text-itemtitle2 text-white">
                     Quick Links
                   </h4>
 
@@ -95,7 +95,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="mb-3 inline-block text-muted-foreground hover:text-muted-foreground"
+                        className="mb-3 inline-block font-acumin text-white "
                       >
                         Home
                       </a>
@@ -103,7 +103,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="/aboutus"
-                        className="mb-3 inline-block text-muted-foreground hover:text-muted-foreground"
+                        className="mb-3 inline-block font-acumin text-white "
                       >
                         About Us
                       </a>
@@ -111,7 +111,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="/team"
-                        className="mb-3 inline-block text-muted-foreground hover:text-muted-foreground"
+                        className="mb-3 inline-block font-acumin text-white "
                       >
                         Team
                       </a>
@@ -119,7 +119,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="/inductions"
-                        className="mb-3 inline-block text-muted-foreground hover:text-muted-foreground"
+                        className="mb-3 inline-block font-acumin text-white "
                       >
                         Inductions
                       </a>
@@ -145,7 +145,7 @@ const Footer = () => {
                   viewport={{ once: true }}
                   className="animate_top"
                 >
-                  <h4 className="mb-5 mt-8 text-itemtitle2 font-medium text-white">
+                  <h4 className="mb-5 mt-8 text-itemtitle2 font-acumin font-bold text-white">
                     Our Initiatives
                   </h4>
 
@@ -153,7 +153,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="/podcast"
-                        className="mb-3 inline-block text-muted-foreground hover:text-muted-foreground"
+                        className="mb-3 inline-block font-acumin text-white"
                       >
                         Podcasts
                       </a>
@@ -161,7 +161,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="/enigma"
-                        className="mb-3 inline-block text-muted-foreground hover:text-muted-foreground"
+                        className="mb-3 inline-block font-acumin text-white"
                       >
                         ENIGMA
                       </a>
@@ -169,7 +169,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="/resources"
-                        className="mb-3 inline-block text-muted-foreground hover:text-muted-foreground"
+                        className="mb-3 inline-block font-acumin text-white"
                       >
                         Resources
                       </a>
@@ -177,7 +177,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="/contactus"
-                        className="mb-3 inline-block text-muted-foreground hover:text-muted-foreground"
+                        className="font-acumin text-white mb-3 inline-block"
                       >
                         Contact Us
                       </a>
@@ -203,19 +203,19 @@ const Footer = () => {
                   viewport={{ once: true }}
                   className="animate_top"
                 >
-                  <h4 className="mb-5 mt-8  text-itemtitle2 font-medium :text-white">
+                  <h4 className="mb-5 mt-8  text-itemtitle2 font-acumin font-bold text-white">
                     Stay In Touch
                   </h4>
-                  <p className="mb-4 w-[90%] text-muted-foreground hover:text-muted-foreground">
+                  <p className="mb-4 w-[90%] font-acumin text-white">
                     Subscribe
                   </p>
 
                   <form action="#">
-                    <div className="relative">
+                    <div className="relative text-white">
                       <input
                         type="text"
                         placeholder="Email address"
-                        className="w-full rounded-full border border-stroke px-6 py-3 shadow-solid-11 focus:border-primary focus:outline-none dark:border-strokedark dark:bg-black dark:shadow-none dark:focus:border-primary"
+                        className="emailbutton w-full rounded-full px-6 py-3"
                       />
 
                       <button
@@ -223,7 +223,7 @@ const Footer = () => {
                         className="absolute right-0 p-4"
                       >
                         <svg
-                          className="fill-[#757693] hover:fill-primary dark:fill-white"
+                          className="fill-[#757693]"
                           width="20"
                           height="20"
                           viewBox="0 0 20 20"

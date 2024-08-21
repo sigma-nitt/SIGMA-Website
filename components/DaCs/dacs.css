@@ -40,6 +40,5 @@
 
 .bgBox
 {
-  opacity: 40%;
-  background: hsla(0, 0%, 10%, 1);
+  background: hsla(0, 0%, 10%, 0.4);
 }

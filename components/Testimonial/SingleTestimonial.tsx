@@ -1,29 +1,3 @@
-// import { Testimonial } from "@/types/testimonial";
-// import Image from "next/image";
-// import './testimonial.css'
-
-// const SingleTestimonial = ({ review }: { review: Testimonial }) => {
-//   const { name, designation, image, content } = review;
-//   return (
-//     <div className="container">
-//       <div className="mb-7.5 flex justify-between border-b border-stroke pb-6 dark:border-strokedark">
-//         <div>
-//           <h3 className="mb-1.5 text-metatitle3 text-white dark:text-black">
-//             {name}
-//           </h3>
-//           <p className="text-black">{designation}</p>
-//         </div>
-//         <Image width={60} height={50} className="" src={image} alt={name} />
-//       </div>
-
-//       <p className="text-muted-foreground">{content}</p>
-//     </div>
-//   );
-// };
-
-// export default SingleTestimonial;
-
-
 import Image from "next/image";
 import { Testimonial } from "@/types/testimonial";
 import './testimonial.css';

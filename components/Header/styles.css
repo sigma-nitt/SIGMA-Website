@@ -3,8 +3,13 @@
   background: linear-gradient(229.1deg, #313ED0 -35.29%, #232971 30.74%, #0E113A 56.42%);
 } */
 
+/* .bg-custom-gradient {
+  background-color: rgba(0, 0, 0, 0.5);
+} */
+
 .bg-custom-gradient {
-  background-color: rgba(0, 0, 0, 0.0); /* Adjust the RGBA values for the color and opacity */
+  background-color: rgba(0, 0, 0, 0); /* Start with 0 opacity */
+  transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 .dropdown{
