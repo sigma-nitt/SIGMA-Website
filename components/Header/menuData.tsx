@@ -24,7 +24,7 @@ const menuData: Menu[] = [
     id: 5,
     title: "Achievements",
     newTab: false,
-    path: "/events",
+    path: "/achievements",
   },
   {
     id: 4,
