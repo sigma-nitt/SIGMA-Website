@@ -1,4 +1,5 @@
-.gradient-textTest {
+.tstm
+{
   background: linear-gradient(90deg, #8062F0 1.49%, #697EE2 10.56%, #5D8CDB 19.39%, #4BA6CC 28.63%, #40BAC0 36.16%, #2BDDAD 46.66%);
   -webkit-background-clip: text; /* For Chrome, Safari, and Opera */
   -moz-background-clip: text; /* For Firefox */
@@ -6,15 +7,15 @@
   -webkit-text-fill-color: transparent; /* For WebKit browsers */
   color: transparent; /* For non-WebKit browsers */
   font-weight: 400;
-  letter-spacing: 0.17em;
 }
 
 
 /* Testimonial */
 .testimonial {
   position: relative;
-  width: 608.86px;
-  height: 539.1px;
+  width: 609px;
+  height: 481px;
+  margin-bottom: 100px;
 }
 
 @media (max-width: 768px) {
@@ -50,7 +51,9 @@
   bottom: 0%;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
   backdrop-filter: blur(21px);
-  /* Note: backdrop-filter has minimal browser support */
+  border: 3px solid;
+  border-image-source: radial-gradient(0% 50% at 50% 50%, #0F0F0F 0%, rgba(21, 21, 21, 0) 100%),radial-gradient(198.89% 50% at 50% 50%, #0A7ABF 0%, rgba(255, 255, 255, 0.7) 100%),radial-gradient(170.42% 50% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  border-image-slice: 1;
   border-radius: 25px;
 }
 
@@ -64,7 +67,6 @@
   bottom: 0%;
   background: url('C:/Users/Admin/Desktop/solid-nextjs-main/public/images/cardback.png');
   mix-blend-mode: overlay;
-  border-radius: 25px;
 }
 
 /* Mask Group */
@@ -92,10 +94,10 @@
 .vector {
   position: absolute;
   /* left: -3.41%; */
-  left: 0%;
+  left: -4%;
   right: 69.41%;
   top: 66.88%;
-  bottom: -3.26%;
+  bottom: 0.26%;
   background: url('data:image/svg+xml;utf8,<svg width="187" height="146" viewBox="0 0 187 146" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M74.505 118.343C74.5274 123.955 73.3645 129.506 71.0958 134.616C68.8271 139.725 65.5064 144.272 61.361 147.945C52.4659 156.255 40.7758 160.72 28.7378 160.406C13.4557 160.406 1.38954 154.96 -7.46073 144.07C-16.3018 133.242 -21.0254 119.509 -20.7624 105.398C-20.7624 71.6151 -11.7106 46.1926 6.39302 29.1307C24.4966 12.0687 44.5368 2.62272 66.5135 0.792728L66.5135 37.85C55.4387 39.0575 44.9542 43.5679 36.3612 50.8214C31.939 54.2085 28.296 58.5471 25.6889 63.5316C23.0818 68.5161 21.5741 74.0251 21.272 79.6707C24.9219 77.8506 28.9368 76.9291 32.9964 76.9795C46.1228 76.9795 56.3225 80.792 63.5955 88.417C67.2694 92.4097 70.127 97.1137 72.0004 102.253C73.8738 107.392 74.7254 112.862 74.505 118.343ZM186.229 118.343C186.256 123.956 185.096 129.509 182.827 134.619C180.558 139.729 177.234 144.276 173.085 147.945C164.19 156.255 152.499 160.72 140.461 160.406C125.214 160.406 113.245 154.96 104.552 144.07C95.8174 133.19 91.1572 119.479 91.4082 105.398C91.4082 71.6151 100.364 46.1926 118.274 29.1307C136.185 12.0687 156.199 2.58681 178.316 0.685059V37.7424C167.266 38.9966 156.818 43.5443 148.269 50.8214C143.814 54.1884 140.138 58.519 137.502 63.5052C134.867 68.4914 133.337 74.0107 133.022 79.6707C136.662 77.85 140.669 76.9283 144.72 76.9795C157.829 76.9795 168.029 80.792 175.319 88.417C178.993 92.4084 181.849 97.1128 183.718 102.253C185.588 107.392 186.432 112.863 186.202 118.343H186.229Z" fill="%23F3F5F7" fill-opacity="0.1"/></svg>') no-repeat center center;
   background-size: contain;
 }
@@ -106,7 +108,7 @@
   position: absolute;
   left: 4.35%;
   right: 32.12%;
-  top: 89.4%;
+  top: 90.4%;
   bottom: 6.2%;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
@@ -122,12 +124,12 @@
   position: absolute;
   left: 4.35%;
   right: 7.06%;
-  top: 32.46%;
+  top: 18.46%;
   bottom: 18.11%;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 22px;
   /* line-height: 3px; */
   color: #FFFFFF;
 }
@@ -216,3 +218,6 @@
     font-size: 0.875rem; /* Adjust font size */
   }
 }
+
+
+

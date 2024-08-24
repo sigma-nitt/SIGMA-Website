@@ -182,8 +182,8 @@ const Header = () => {
     setStickyMenu(window.scrollY >= 80);
     const header = document.querySelector('.bg-custom-gradient') as HTMLElement | null;
     if (header) {
-      if (window.scrollY > 10) { 
-        header.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+      if (window.scrollY > 5) { 
+        header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
       } else {
         header.style.backgroundColor = 'rgba(0, 0, 0, 0)';
       }

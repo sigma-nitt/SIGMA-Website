@@ -18,10 +18,10 @@ export default function Home() {
           <Hero />
           <MembersProjects />
           <div>
-            <div className="mt-18">
+            <div className="mt-[13px]">
               <WhoAreWe />
             </div>
-            <div className="mt-18">
+            <div className="mt-[13px]">
               <DaCs />
             </div>
             <TestimonialsSections />

@@ -19,13 +19,8 @@ const HeroSection: FC = () => {
   return (
     <section className="overflow-hidden pt-35 md:pt-40 xl:pt-[147px]">
       <div
-        className="hero-section"
-        style={{
-          display: 'flex',
-          flexDirection: 'row', // Keep the text and image side by side
-        }}
-      >
-        <div className="w-[67%] items-center text-center lg:items-right lg:text-right">
+        className="hero-section flex flex-row">
+        <div className="w-[50%] items-center text-center lg:items-right lg:text-right">
           <p className="font-poppins lg:mr-[10px] mt-[32px] text-[22px] md:text-[35px] lg:text-[48px] font-semibold leading-[40px] md:leading-[72px] lg:leading-[72px] lg:text-right lg:h-[72px]">
             The Business Club to
           </p>
@@ -50,9 +45,9 @@ const HeroSection: FC = () => {
             </span>
           </button>
         </div>
-        <div className="w-[33%] mt-[-50px] lg:mt-[-70px] flex justify-center items-center">
+        <div className="w-[50%] mt-[-50px] lg:mt-[-70px] flex text-center justify-center items-center">
           <Image
-            className="mt-[32px] lg:mr-[100px] w-[150px] h-[300px] md:w-[281px] md:h-[508px]"
+            className="justify-center mt-[32px] w-[150px] h-[300px] md:w-[321px] md:h-[578px]"
             src="/images/bulb.png"
             alt="logo"
             width={281}
