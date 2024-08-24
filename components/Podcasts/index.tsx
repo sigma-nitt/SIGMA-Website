@@ -141,10 +141,10 @@ const YouTubePodcasts: React.FC = () => {
                           {video.description || "Two lines about the project."}
                         </p>
                       ) : (
-                        <div className="flex flex-col items-center lg:items-left mt-[23px] gap-[15px] lg:gap-[23px]">
+                        <div className="flex flex-col items-left lg:items-left mt-[23px] gap-[15px] lg:gap-[23px]">
                           <div className="hamburger-line w-[90%] lg:w-[452px] h-[8px] md:h-[11px] rounded-[10px]"></div>
                           <div className="hamburger-line w-[90%] lg:w-[452px] h-[8px] md:h-[11px] rounded-[10px]"></div>
-                          <div className="hamburger-line w-[90%] lg:w-[452px] h-[8px] md:h-[11px] rounded-[10px]"></div>
+                          <div className="hamburger-line w-[90%] lg:w-[256px] h-[8px] md:h-[11px] rounded-[10px]"></div>
                         </div>
                       )}
                     </div>

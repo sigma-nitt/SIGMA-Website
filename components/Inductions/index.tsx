@@ -78,50 +78,14 @@ const EventsPage: React.FC = () => {
                     <div className="flex items-center justify-center">
                         <img src="./images/image.png" alt="Image 1" className="w-[90%] md:w-full h-auto" />
                     </div>
-                    {/* <div 
-                        className="flex items-center justify-center w-[250px] md:w-[434px] h-[150px] md:h-[266px]" 
-                        style={{ 
-                            transform: 'translateY(-105px)',
-                            background: 'rgba(255, 255, 255, 0.05)',
-                            boxShadow: '46px 46px 40px rgba(0, 0, 0, 0.25)',
-                            backdropFilter: 'blur(25px)',
-                            border: '3px solid',
-                            borderRadius: '40px',
-                            boxSizing: 'border-box',
-                            borderImageSource: 'linear-gradient(113.96deg, rgba(255, 231, 231, 0.46) -4.81%, rgba(255, 255, 255, 0.47) 2.49%, rgba(0, 0, 0, 0) 19.15%, rgba(255, 255, 255, 0.3) 53%, rgba(115, 129, 255, 0.45) 76.47%, rgba(0, 7, 73, 0.31) 95.19%)',
-                            borderImageSlice: 1,
-                            overflow: 'hidden', // Ensures the border follows the rounded corners
-                        }}
-                    > */}
                     <div 
-                        className="relative flex items-center justify-center w-[250px] lg:w-[434px] h-[150px] lg:h-[266px]"
+                        className="relative flex items-center justify-center w-[250px] lg:w-[434px] h-[150px] lg:h-[316px]"
                         style={{ 
-                            transform: 'translateY(-105px)',
-                            background: 'rgba(255, 255, 255, 0.05)',
-                            boxShadow: '46px 46px 40px rgba(0, 0, 0, 0.25)',
-                            backdropFilter: 'blur(25px)',
-                            borderRadius: '40px',
+                            transform: 'translateY(-115px)',
                             overflow: 'hidden',
                         }}
                     >
-                        <div
-                            className="absolute inset-0"
-                            style={{
-                                content: "",
-                                border: '3px solid transparent',
-                                borderRadius: '40px',
-                                borderImageSource: 'linear-gradient(113.96deg, rgba(255, 231, 231, 0.46) -4.81%, rgba(255, 255, 255, 0.47) 2.49%, rgba(0, 0, 0, 0) 19.15%, rgba(255, 255, 255, 0.3) 53%, rgba(115, 129, 255, 0.45) 76.47%, rgba(0, 7, 73, 0.31) 95.19%)',
-                            borderImageSlice: 1,
-                            overflow: 'hidden', // Ensures the border follows the rounded corners
-                            }}
-                        />
-                        <div className="text-center font-poppins text-[30px] md:text-[40px] text-white">
-                            <div className="leading-[63px]">We</div>
-                            <div className="leading-[63px]">Are</div>
-                            <div className="leading-[63px]">
-                                <span className="gradient-textABTUS">Inducting</span>
-                            </div>
-                        </div>
+                        <img src="./images/weareinducting.png" alt="Image 3" className="w-[90%] md:w-full h-auto ml-[75px]" />
                     </div>
                     <div className="flex items-center justify-center">
                         <img src="./images/image.png" alt="Image 3" className="w-[90%] md:w-full h-auto" />
@@ -130,7 +94,7 @@ const EventsPage: React.FC = () => {
                         <img src="./images/image.png" alt="Image 4" className="w-[90%] md:w-full h-auto" />
                     </div>
                     <div className="flex items-center justify-center">
-                        <img src="./images/image.png" alt="Image 5" className="w-[90%] md:w-full h-auto" />
+                        <img src="./images/image.png" alt="Image 5" className="w-[90%] md:w-[90%] h-auto" />
                     </div>
                     <div className="flex items-center justify-center">
                         <img src="./images/image.png" alt="Image 6" className="w-[90%] md:w-full h-auto" />
