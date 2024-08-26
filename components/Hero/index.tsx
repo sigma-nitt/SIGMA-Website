@@ -18,18 +18,17 @@ const HeroSection: FC = () => {
 
   return (
     <section className="overflow-hidden pt-35 md:pt-40 xl:pt-[147px]">
-      <div
-        className="hero-section flex flex-row">
-        <div className="w-[50%] items-center text-center lg:items-right lg:text-right">
-          <p className="font-poppins lg:mr-[10px] mt-[32px] text-[22px] md:text-[35px] lg:text-[48px] font-semibold leading-[40px] md:leading-[72px] lg:leading-[72px] lg:text-right lg:h-[72px]">
+      <div className="hero-section flex flex-row lg:ml-[170.44px]">
+        <div className="w-[50%] text-left lg:items-left lg:text-left">
+          <p className="font-poppins mt-[32px] text-[22px] md:text-[35px] lg:text-[48px] font-semibold leading-[40px] md:leading-[72px] lg:leading-[72px] lg:text-left lg:h-[72px]">
             The Business Club to
           </p>
-          <h1 className="font-poppins lg:text-right lg:h-[72px]">
-            <span className="gradient-textHero lg:mr-[22px] text-[20px] md:text-[35px] lg:text-[48px] leading-[40px] md:leading-[72px] lg:text-right">
+          <h1 className="font-poppins lg:text-left lg:h-[72px]">
+            <span className="gradient-textHero text-[20px] md:text-[35px] lg:text-[48px] leading-[40px] md:leading-[72px] lg:text-right">
               Delight your Scrutiny
             </span>
           </h1>
-          <p className="font-poppins text-[22px] md:text-[35px] lg:text-[48px] font-semibold leading-[35px] md:leading-[72px] lg:text-right lg:h-[72px]">
+          <p className="font-poppins text-[22px] md:text-[35px] lg:text-[48px] font-semibold leading-[35px] md:leading-[72px] lg:text-left lg:h-[72px]">
             and Supercharge you
           </p>
           <button
@@ -37,7 +36,7 @@ const HeroSection: FC = () => {
             onClick={handleExploreProjects}
             className={cn(
               buttonVariants({ variant: "cta1" }),
-              "lg:mr-[90px] mt-10 md:mt-18 flex items-center justify-center space-x-5 md:p-3 font-poppins"
+              "lg:ml-[89px] mt-10 md:mt-18 flex items-center justify-center space-x-5 md:p-3 font-poppins"
             )}
           >
             <span className="font-poppins font-semibold text-black text-[15px] md:text-[20px] lg:text-[27.74px]">

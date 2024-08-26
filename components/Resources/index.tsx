@@ -1,5 +1,6 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { FaChevronDown } from 'react-icons/fa';
 import './res.css';
 
 interface Resource {
@@ -13,8 +14,8 @@ const ResourcePage = () => {
   const [resources, setResources] = useState<Resource[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [dataAnalyticsLoaded, setDataAnalyticsLoaded] = useState(false);
-  const [caseStudiesLoaded, setCaseStudiesLoaded] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState<'Data Analytics' | 'Case Studies'>('Data Analytics');
+  const sliderRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const fetchResources = async () => {
@@ -26,8 +27,6 @@ const ResourcePage = () => {
         const data = await response.json();
         setResources(data);
         setLoading(false);
-        setDataAnalyticsLoaded(true);
-        setCaseStudiesLoaded(true);
       } catch (error) {
         console.error('Error fetching resources:', error);
         setError(true);
@@ -38,8 +37,46 @@ const ResourcePage = () => {
     fetchResources();
   }, []);
 
+  useEffect(() => {
+    const handleScroll = (event: WheelEvent) => {
+      if (sliderRef.current) {
+        sliderRef.current.scrollLeft += event.deltaY;
+      }
+    };
+
+    const sliderElement = sliderRef.current;
+    if (sliderElement) {
+      sliderElement.addEventListener("wheel", handleScroll);
+    }
+
+    return () => {
+      if (sliderElement) {
+        sliderElement.removeEventListener("wheel", handleScroll);
+      }
+    };
+  }, []);
+
+  const openResource = (link: string) => {
+    window.open(link, '_blank');
+  };  
+
   const dataAnalyticsResources = resources.filter(resource => resource.type === 'Data Analytics');
   const caseStudiesResources = resources.filter(resource => resource.type === 'Case Studies');
+
+  // Split the documents into two arrays
+  const firstRowDocsDA = dataAnalyticsResources.slice(0, Math.ceil(dataAnalyticsResources.length / 2));
+  const secondRowDocsDA = dataAnalyticsResources.slice(Math.ceil(dataAnalyticsResources.length / 2));
+  const firstRowDocsCS = caseStudiesResources.slice(0, Math.ceil(caseStudiesResources.length / 2));
+  const secondRowDocsCS = caseStudiesResources.slice(Math.ceil(caseStudiesResources.length / 2));
+
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
+
+  const handleSelect = (category: 'Data Analytics' | 'Case Studies') => {
+    setSelectedCategory(category);
+    setDropdownOpen(false); // Close the dropdown when an option is selected
+  };
 
   if (loading) {
     return (
@@ -54,66 +91,207 @@ const ResourcePage = () => {
   }
 
   return (
-    <div>
-      <div
-        style={{
-          backgroundImage: `url('/images/bookshelf.jpg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          minHeight: '70vh',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          // marginTop: '100px'
-        }}
-      >
-        <div style={{ backgroundColor: 'black', padding: '20px', textAlign: 'center', height: '200px', width: '1000px' }}>
-          <h1 className="sigma text-3xl text-center mb-1 mt-3 md:text-6xl md:mb-4 md:mt-5">Resources</h1>
-          <p className="businessclub text-md text-center md:text-xl">Check out our amazing collection of Case materials, Finance modules, and much more...</p>
-        </div>
+    <div className="containerDA pb-30">
+      <div className="mb-25 lg:mb-30 flex justify-center items-center">
+        <h1 className="h-[87px] w-[80%] lg:w-[759px] text-center text-[30px] font-semibold lg:text-[37px] leading-[30px] lg:leading-[57px]">
+          <span className="gradient-textDA font-poppins">
+            Your destination for valuable resources 
+            on statistics, ML and Case Comps.
+          </span>
+        </h1>
       </div>
 
-      <div className="flex justify-center mt-20 mb-20">
-        <div className={`w-1/2 overflow-y-auto data-analytics-section ${dataAnalyticsLoaded ? 'load-from-left' : ''}`} style={{ maxHeight: '500px' }}>
-          <div className="flex flex-col items-center">
-            <h2 className="hdng text-4xl font-bold bg-secondary-gradient bg-clip-text text-transparent text-center hover-enlarge mb-10 md:text-5xl">Data Analytics</h2>
-            {dataAnalyticsResources.map((resource, index) => (
-              <div key={index} className="w-3/4 mb-8">
-                <div className="cont bg-white pl-1 pr-1 pt-1 pb-1 md:pl-15 md:pr-15 md:pt-4 md:pb-4" style={{ borderRadius: '10px' }}>
-                  <h3 className="text-xl font-bold text-center mb-1 text-black md:text-2xl md:mb-5" style={{ wordWrap: 'break-word' }}>{resource.title}</h3>
-                  <p className="text-center text-sm text-black" style={{ wordWrap: 'break-word' }}><strong>Type:</strong> {resource.resourceType}</p>
-                  <div className="text-center text-sm">
-                    <a href={resource.link} target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
-                      <strong>Link:</strong>{" "}
-                      <span className="text-blue-500 underline" style={{ wordWrap: 'break-word' }}>{resource.link}</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+      <div 
+        onClick={toggleDropdown} 
+        className="w-[400px] bg-transparent text-white font-bold font-poppins text-[20px] lg:text-[30px] cursor-pointer flex items-center mb-8 lg:mb-15 ml-10 lg:ml-20 relative"
+        style={{ textTransform: 'uppercase', border: 'none', outline: 'none' }}
+      >
+        {selectedCategory}
+        <FaChevronDown className="ml-3"/>
 
-        <div className={`w-1/2 overflow-y-auto case-studies-section ${caseStudiesLoaded ? 'load-from-right' : ''}`} style={{ maxHeight: '500px' }}>
-          <div className="flex flex-col items-center">
-            <h2 className="hdng text-4xl font-bold bg-secondary-gradient bg-clip-text text-transparent text-center hover-enlarge mb-10 md:text-5xl">Case Studies</h2>
-            {caseStudiesResources.map((resource, index) => (
-              <div key={index} className="w-3/4 mb-8">
-                <div className="cont bg-white pl-1 pr-1 pt-1 pb-1 md:pl-15 md:pr-15 md:pt-4 md:pb-4" style={{ borderRadius: '10px' }}>
-                  <h3 className="text-xl font-bold text-center mb-1 text-black md:text-2xl md:mb-5" style={{ wordWrap: 'break-word' }}>{resource.title}</h3>
-                  <p className="text-center text-sm text-black" style={{ wordWrap: 'break-word' }}><strong>Type:</strong> {resource.resourceType}</p>
-                  <div className="text-center text-sm">
-                    <a href={resource.link} target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
-                      <strong>Link:</strong>{" "}
-                      <span className="text-blue-500 underline" style={{ wordWrap: 'break-word' }}>{resource.link}</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
+        {dropdownOpen && (
+          <div className="absolute top-full left-0 lg:mt-2 bg-transparent text-white w-[300px] z-10">
+            <div 
+              onClick={() => handleSelect('Data Analytics')} 
+              className="pt-2 lg:pt-4 cursor-pointer bg-transparent"
+            >
+              Data Analytics
+            </div>
+            <div 
+              onClick={() => handleSelect('Case Studies')} 
+              className="pt-2 lg:pt-4 cursor-pointer bg-transparent"
+            >
+              Management
+            </div>
           </div>
-        </div>
+        )}
+      </div>
+
+      <div className="backgroundGradientDA">
+        {selectedCategory === 'Data Analytics' && (
+          <div className="w-[95%] lg:w-[90%] ml-[20px] md:ml-[80px]">
+            <div
+              ref={sliderRef}
+              className="h-[763px] md:h-[1003px] flex flex-col overflow-x-scroll no-scrollbar"
+            >
+              {/* First row */}
+              <div className="da-wrapper flex mt-[35px] lg:mt-[67px] w-[95%]">
+                {firstRowDocsDA.map((resource, index) => (
+                  <div
+                    key={index}
+                    className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[381px] h-[300px] lg:h-[377.13px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
+                  >
+                    <img
+                      src="/images/sigma symbol.png"
+                      alt="Introductory Image"
+                      className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover"
+                    />
+                    <div className="flex flex-col mt-[30px] lg:mt-[22.46px]">
+                      <div>
+                        <h2 className="font-poppins text-center text-[20px] lg:text-[21.68px] font-bold">
+                          {resource.title.toUpperCase()}
+                        </h2>
+                      </div>
+                      <div
+                        className="text-[16px] lg:text-[21.68px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[25px]"
+                      >
+                        <p className="introtext text-center font-poppins">
+                          {resource.resourceType || "Two lines about the project."}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="absolute top-[40px] left-[145px] md:top-[64px] md:left-[254px]">
+                      <button
+                        onClick={() => openResource(resource.link)}
+                        className="buttonBG text-sm md:text-[12.24px] text-white md:px-4 rounded-[28px] h-[30px] w-[120px] md:h-[28.75px] md:w-[91.77px]"
+                      >
+                        LINK
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="da-wrapper flex mt-[35px] lg:mt-[67px] w-[95%]">
+                {secondRowDocsDA.map((resource, index) => (
+                  <div
+                    key={index}
+                    className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[381px] h-[300px] lg:h-[377.13px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
+                  >
+                    <img
+                      src="/images/sigma symbol.png"
+                      alt="Introductory Image"
+                      className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover"
+                    />
+                    <div className="flex flex-col mt-[30px] lg:mt-[22.46px]">
+                      <div>
+                        <h2 className="font-poppins text-center text-[20px] lg:text-[21.68px] font-bold">
+                          {resource.title.toUpperCase()}
+                        </h2>
+                      </div>
+                      <div
+                        className="text-[16px] lg:text-[21.68px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[25px]"
+                      >
+                        <p className="introtext text-center font-poppins">
+                          {resource.resourceType || "Two lines about the project."}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="absolute top-[40px] left-[145px] md:top-[64px] md:left-[254px]">
+                      <button
+                        onClick={() => openResource(resource.link)}
+                        className="buttonBG text-sm md:text-[12.24px] text-white md:px-4 rounded-[28px] h-[30px] w-[120px] md:h-[28.75px] md:w-[91.77px]"
+                      >
+                        LINK
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+          {selectedCategory === 'Case Studies' && (
+          <div className="w-[95%] lg:w-[90%] ml-[20px] md:ml-[80px]">
+            <div
+              ref={sliderRef}
+              className="h-[763px] md:h-[1003px] flex flex-col overflow-x-scroll no-scrollbar"
+            >
+              {/* First row */}
+              <div className="da-wrapper flex mt-[35px] lg:mt-[67px] w-[95%]">
+                {firstRowDocsCS.map((resource, index) => (
+                  <div
+                    key={index}
+                    className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[381px] h-[300px] lg:h-[377.13px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
+                  >
+                    <img
+                      src="/images/sigma symbol.png"
+                      alt="Introductory Image"
+                      className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover"
+                    />
+                    <div className="flex flex-col mt-[30px] lg:mt-[22.46px]">
+                      <div>
+                        <h2 className="font-poppins text-center text-[20px] lg:text-[21.68px] font-bold">
+                          {resource.title.toUpperCase()}
+                        </h2>
+                      </div>
+                      <div
+                        className="text-[16px] lg:text-[21.68px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[25px]"
+                      >
+                        <p className="introtext text-center font-poppins">
+                          {resource.resourceType || "Two lines about the project."}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="absolute top-[40px] left-[145px] md:top-[64px] md:left-[254px]">
+                      <button
+                        onClick={() => openResource(resource.link)}
+                        className="buttonBG text-sm md:text-[12.24px] text-white md:px-4 rounded-[28px] h-[30px] w-[120px] md:h-[28.75px] md:w-[91.77px]"
+                      >
+                        LINK
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="da-wrapper flex mt-[35px] lg:mt-[67px] w-[95%]">
+                {secondRowDocsCS.map((resource, index) => (
+                  <div
+                    key={index}
+                    className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[381px] h-[300px] lg:h-[377.13px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
+                  >
+                    <img
+                      src="/images/sigma symbol.png"
+                      alt="Introductory Image"
+                      className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover"
+                    />
+                    <div className="flex flex-col mt-[30px] lg:mt-[22.46px]">
+                      <div>
+                        <h2 className="font-poppins text-center text-[20px] lg:text-[21.68px] font-bold">
+                          {resource.title.toUpperCase()}
+                        </h2>
+                      </div>
+                      <div
+                        className="text-[16px] lg:text-[21.68px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[25px]"
+                      >
+                        <p className="introtext text-center font-poppins">
+                          {resource.resourceType || "Two lines about the project."}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="absolute top-[40px] left-[145px] md:top-[64px] md:left-[254px]">
+                      <button
+                        onClick={() => openResource(resource.link)}
+                        className="buttonBG text-sm md:text-[12.24px] text-white md:px-4 rounded-[28px] h-[30px] w-[120px] md:h-[28.75px] md:w-[91.77px]"
+                      >
+                        LINK
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
