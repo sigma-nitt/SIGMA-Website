@@ -96,7 +96,7 @@ const ResourcePage = () => {
         <h1 className="h-[87px] w-[80%] lg:w-[759px] text-center text-[30px] font-semibold lg:text-[37px] leading-[30px] lg:leading-[57px]">
           <span className="gradient-textDA font-poppins">
             Your destination for valuable resources 
-            on statistics, ML and Case Comps.
+            on Statistics, ML and Case Comps
           </span>
         </h1>
       </div>
