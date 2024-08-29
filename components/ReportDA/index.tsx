@@ -166,38 +166,39 @@ const PDFViewerComponent: React.FC = () => {
   return (
     <div className="containerDA">
       <div className="mb-8">
-        <h1 className="h-[87px] text-center text-4xl pb-2 font-semibold lg:text-5xl md:text-4xl md:pr-10 md:leading-none">
-          <span className="gradient-textDA font-poppins">
-            Excatavate the insights!
+        <h1 className="h-[87px] text-center pb-2 font-semibold text-[30px] md:text-[45px] lg:text-[58px]">
+          <span className="gradient-textEvent font-poppins">
+            Excavate the Insights!
           </span>
         </h1>
       </div>
 
       <div className="backgroundGradientDA">
-        <div className="w-[95%] lg:w-[90%] ml-[20px] md:ml-[80px]">
+        <div className="ml-[20px] md:ml-[80px]">
           <div
             ref={sliderRef}
-            className="h-[1003px] md:h-[1003px] flex flex-col overflow-x-scroll no-scrollbar"
+            className="flex flex-col h-[973px] lg:h-[1013px] overflow-x-scroll no-scrollbar"
           >
             {/* First row */}
-            <div className="da-wrapper flex mt-[35px] lg:mt-[67px] w-[95%]">
+            <div className="flex transition-transform duration-500 ease w-max mt-[35px] lg:mt-[67px] w-[95%]">
               {firstRowDocs.map((pdf, index) => (
-                
-              <div
-                key={index}
-                className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[342px] h-[400px] lg:h-[398.9px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={() => handleMouseLeave(index)}
-                onClick={() => toggleIntroText(index)}
-              >
+                <div
+                  key={index}
+                  className="relative  flex flex-col items-center mr-[20px] lg:mr-[80px] w-[290px] lg:w-[342px] h-[400px] lg:h-[398.9px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg"
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={() => handleMouseLeave(index)}
+                  onClick={() => toggleIntroText(index)}
+                >
+
                 <img
                   src={pdf.coverPage ? imageUrlFor(pdf.coverPage).url() : ""}
                   alt="Introductory Image"
                   className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover"
                 />
+
                 <div className="flex flex-col mt-[30px] lg:mt-[20px]">
                   <div>
-                    <h2 className="font-poppins text-[20px] lg:text-[17.13px] font-bold">
+                    <h2 className="font-poppins text-[17px] lg:text-[17.13px] font-bold">
                       {pdf.title}
                     </h2>
                   </div>
@@ -205,22 +206,23 @@ const PDFViewerComponent: React.FC = () => {
                     className="text-[12px] lg:text-[13px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]"
                   >
                     {isIntroTextVisible[index] ? (
-                      <p className="introtext font-poppins font-bold">
-                        {pdf.description || "Two lines about the project."}
+                      <p className="introtext font-poppins lg:font-bold">
+                        {pdf.description || "SIGMA event"}
                       </p>
                     ) : (
                       <div className="flex flex-col mt-[15px] gap-[15px] lg:gap-[14.07px]">
-                        <div className="hamburger-line w-full h-[5px] md:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
-                        <div className="hamburger-line w-full h-[5px] md:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
-                        <div className="hamburger-line w-[50%] h-[5px] md:w-[138.27px] md:h-[6.73px] rounded-[10px]"></div>
+                        <div className="hamburger-line w-full h-[5px] lg:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
+                        <div className="hamburger-line w-full h-[5px] lg:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
+                        <div className="hamburger-line w-[50%] h-[5px] lg:w-[138.27px] md:h-[6.73px] rounded-[10px]"></div>
                       </div>
                     )}
                   </div>
                 </div>
-                <div className="absolute top-[40px] left-[135px] md:top-[44px] md:left-[204px]">
-                  <button
+
+                  <div className="absolute top-[10%] left-[58%] lg:top-[10%] lg:left-[61%]">
+                    <button
                     onClick={() => openFlipbook(pdf)}
-                    className="buttonBG text-sm md:text-[12.24px] text-white md:px-4 rounded-[28px] h-[30px] w-[120px] md:h-[28.75px] md:w-[91.77px]"
+                    className="buttonBG text-[12.24px] text-white rounded-[28px] h-[28.75px] w-[91.77px]"
                   >
                     View PDF
                   </button>
@@ -228,52 +230,56 @@ const PDFViewerComponent: React.FC = () => {
               </div>
               ))}
             </div>
+
             {/* Second row */}
-            <div className="da-wrapper flex mt-[35px] lg:mt-[20px] w-[95%]">
+            <div className="flex transition-transform duration-500 ease w-max mt-[35px] lg:mt-[67px] w-[95%]">
               {secondRowDocs.map((pdf, index) => (
                 <div
                   key={index}
-                  className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[342px] h-[400px] lg:h-[398.9px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
+                  className="relative  flex flex-col items-center mr-[20px] lg:mr-[80px] w-[290px] lg:w-[342px] h-[400px] lg:h-[398.9px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg"
                   onMouseEnter={() => handleMouseEnter(index)}
                   onMouseLeave={() => handleMouseLeave(index)}
                   onClick={() => toggleIntroText(index)}
                 >
-                  <img
-                    src={pdf.coverPage ? imageUrlFor(pdf.coverPage).url() : ""}
-                    alt="Introductory Image"
-                    className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover"
-                  />
-                  <div className="flex flex-col mt-[20px]">
-                    <div>
-                      <h2 className="font-poppins text-[20px] lg:text-[17.13px] font-bold">
-                        {pdf.title}
-                      </h2>
-                    </div>
-                    <div
-                      className="text-[12px] lg:text-[13px] w-[235px] lg:w-[276.54px] leading-[14px] lg:leading-[18px] cursor-pointer mt-[15px] lg:mt-[10px]"
-                    >
-                      {isIntroTextVisible[index] ? (
-                        <p className="introtext font-poppins font-bold">
-                          {pdf.description || "Two lines about the project."}
-                        </p>
-                      ) : (
-                        <div className="flex flex-col mt-[15px] gap-[15px] lg:gap-[14.07px]">
-                          <div className="hamburger-line w-full h-[5px] md:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
-                          <div className="hamburger-line w-full h-[5px] md:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
-                          <div className="hamburger-line w-[50%] h-[5px] md:w-[138.27px] md:h-[6.73px] rounded-[10px]"></div>
-                        </div>
-                      )}
-                    </div>
+
+                <img
+                  src={pdf.coverPage ? imageUrlFor(pdf.coverPage).url() : ""}
+                  alt="Introductory Image"
+                  className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover"
+                />
+
+                <div className="flex flex-col mt-[30px] lg:mt-[20px]">
+                  <div>
+                    <h2 className="font-poppins text-[17px] lg:text-[17.13px] font-bold">
+                      {pdf.title}
+                    </h2>
                   </div>
-                  <div className="absolute top-[40px] left-[135px] md:top-[44px] md:left-[204px]">
-                    <button
-                      onClick={() => openFlipbook(pdf)}
-                      className="buttonBG text-sm md:text-[12.24px] text-white md:px-4 rounded-[28px] h-[30px] w-[120px] md:h-[28.75px] md:w-[91.77px]"
-                    >
-                      View PDF
-                    </button>
+                  <div
+                    className="text-[12px] lg:text-[13px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]"
+                  >
+                    {isIntroTextVisible[index] ? (
+                      <p className="introtext font-poppins lg:font-bold">
+                        {pdf.description || "SIGMA event"}
+                      </p>
+                    ) : (
+                      <div className="flex flex-col mt-[15px] gap-[15px] lg:gap-[14.07px]">
+                        <div className="hamburger-line w-full h-[5px] lg:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
+                        <div className="hamburger-line w-full h-[5px] lg:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
+                        <div className="hamburger-line w-[50%] h-[5px] lg:w-[138.27px] md:h-[6.73px] rounded-[10px]"></div>
+                      </div>
+                    )}
                   </div>
                 </div>
+
+                  <div className="absolute top-[10%] left-[58%] lg:top-[10%] lg:left-[61%]">
+                    <button
+                    onClick={() => openFlipbook(pdf)}
+                    className="buttonBG text-[12.24px] text-white rounded-[28px] h-[28.75px] w-[91.77px]"
+                  >
+                    View PDF
+                  </button>
+                </div>
+              </div>
               ))}
             </div>
           </div>

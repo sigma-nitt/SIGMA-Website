@@ -1,4 +1,4 @@
-.gradient-textDA {
+.gradient-textRes {
   background: linear-gradient(90deg, #8062F0 1.49%, #697EE2 10.56%, #5D8CDB 19.39%, #4BA6CC 28.63%, #40BAC0 36.16%, #2BDDAD 46.66%);
   -webkit-background-clip: text; /* For Chrome, Safari, and Opera */
   -moz-background-clip: text; /* For Firefox */
@@ -9,11 +9,11 @@
   height: 87px;
 }
 
-.containerDA {
+.containerRes {
   padding-top: 150px; /* This creates the 500px gap */
 }
 
-.backgroundGradientDA {
+.backgroundGradientRes {
   background: linear-gradient(90deg, #0F1017 0%, #0E113A 100%);
 }
 
@@ -31,7 +31,7 @@ body {
   background: linear-gradient(90deg, #0F1017 0%, #0E113A 100%);
 }
 
-.da-wrapper {
+.res-wrapper {
   display: flex;
   transition: transform 0.5s ease;
   width: max-content; /* Ensure the wrapper width adjusts to fit all events */
@@ -50,16 +50,3 @@ body {
   display: none;  /* Safari and Chrome */
 }
 
-/* Portrait styles */
-.flipbook-portrait {
-}
-
-/* Landscape styles */
-.flipbook-landscape {
-}
-
-.introtext {
-  white-space: normal;
-  word-wrap: break-word;
-  word-break: break-word;
-}

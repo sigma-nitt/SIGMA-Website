@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
 import './res.css';
+import Image from 'next/image';
 
 interface Resource {
   title: string;
@@ -91,10 +92,10 @@ const ResourcePage = () => {
   }
 
   return (
-    <div className="containerDA pb-30">
+    <div className="containerRes">
       <div className="mb-25 lg:mb-30 flex justify-center items-center">
         <h1 className="h-[87px] w-[80%] lg:w-[759px] text-center text-[30px] font-semibold lg:text-[37px] leading-[30px] lg:leading-[57px]">
-          <span className="gradient-textDA font-poppins">
+          <span className="gradient-textRes font-poppins">
             Your destination for valuable resources 
             on Statistics, ML and Case Comps
           </span>
@@ -127,15 +128,15 @@ const ResourcePage = () => {
         )}
       </div>
 
-      <div className="backgroundGradientDA">
+      <div className="backgroundGradientRes">
         {selectedCategory === 'Data Analytics' && (
-          <div className="w-[95%] lg:w-[90%] ml-[20px] md:ml-[80px]">
+          <div className="ml-[20px] md:ml-[80px]">
             <div
               ref={sliderRef}
               className="h-[763px] md:h-[1003px] flex flex-col overflow-x-scroll no-scrollbar"
             >
               {/* First row */}
-              <div className="da-wrapper flex mt-[35px] lg:mt-[67px] w-[95%]">
+              <div className="res-wrapper flex mt-[35px] lg:mt-[67px] w-[95%]">
                 {firstRowDocsDA.map((resource, index) => (
                   <div
                     key={index}
@@ -155,12 +156,12 @@ const ResourcePage = () => {
                       <div
                         className="text-[16px] lg:text-[21.68px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[25px]"
                       >
-                        <p className="introtext text-center font-poppins">
+                        <p className="text-center font-poppins">
                           {resource.resourceType || "Two lines about the project."}
                         </p>
                       </div>
                     </div>
-                    <div className="absolute top-[40px] left-[145px] md:top-[64px] md:left-[254px]">
+                    <div className="absolute top-[40px] left-[145px] lg:top-[64px] lg:left-[254px]">
                       <button
                         onClick={() => openResource(resource.link)}
                         className="buttonBG text-sm md:text-[12.24px] text-white md:px-4 rounded-[28px] h-[30px] w-[120px] md:h-[28.75px] md:w-[91.77px]"
@@ -171,7 +172,7 @@ const ResourcePage = () => {
                   </div>
                 ))}
               </div>
-              <div className="da-wrapper flex mt-[35px] lg:mt-[67px] w-[95%]">
+              <div className="res-wrapper flex mt-[35px] lg:mt-[67px] w-[95%]">
                 {secondRowDocsDA.map((resource, index) => (
                   <div
                     key={index}
@@ -211,13 +212,13 @@ const ResourcePage = () => {
           </div>
         )}
           {selectedCategory === 'Case Studies' && (
-          <div className="w-[95%] lg:w-[90%] ml-[20px] md:ml-[80px]">
+          <div className="ml-[20px] md:ml-[80px]">
             <div
               ref={sliderRef}
               className="h-[763px] md:h-[1003px] flex flex-col overflow-x-scroll no-scrollbar"
             >
               {/* First row */}
-              <div className="da-wrapper flex mt-[35px] lg:mt-[67px] w-[95%]">
+              <div className="res-wrapper flex mt-[35px] lg:mt-[67px] w-[95%]">
                 {firstRowDocsCS.map((resource, index) => (
                   <div
                     key={index}
@@ -237,7 +238,7 @@ const ResourcePage = () => {
                       <div
                         className="text-[16px] lg:text-[21.68px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[25px]"
                       >
-                        <p className="introtext text-center font-poppins">
+                        <p className="text-center font-poppins">
                           {resource.resourceType || "Two lines about the project."}
                         </p>
                       </div>
@@ -253,7 +254,7 @@ const ResourcePage = () => {
                   </div>
                 ))}
               </div>
-              <div className="da-wrapper flex mt-[35px] lg:mt-[67px] w-[95%]">
+              <div className="res-wrapper flex mt-[35px] lg:mt-[67px] w-[95%]">
                 {secondRowDocsCS.map((resource, index) => (
                   <div
                     key={index}
@@ -273,7 +274,7 @@ const ResourcePage = () => {
                       <div
                         className="text-[16px] lg:text-[21.68px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[25px]"
                       >
-                        <p className="introtext text-center font-poppins">
+                        <p className="text-center font-poppins">
                           {resource.resourceType || "Two lines about the project."}
                         </p>
                       </div>
@@ -293,6 +294,17 @@ const ResourcePage = () => {
           </div>
         )}
       </div>
+
+      <div className="flex items-center justify-center">
+        <Image
+          className="mt-[32px] mb-[32px] w-[90px] h-[100px] md:w-[167px] md:h-[182px]"
+          src="/images/sigma symbol.png"
+          alt="logo"
+          width={167}
+          height={182}
+        />
+      </div>
+
     </div>
   );
 };

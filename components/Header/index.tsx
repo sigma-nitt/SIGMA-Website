@@ -297,7 +297,7 @@ const Header = () => {
           }`}
         >
           <nav>
-            <ul className="flex flex-col gap-2 xl:flex-row xl:items-center xl:gap-14 text-[15px] md:text-[20px]">
+            <ul className="flex flex-col xl:flex-row xl:items-center lg:gap-[30px] 2xl:gap-[56px] text-[15px] md:text-[20px]">
               {menuData.map((menuItem) => (
                 <li key={menuItem.id} className={menuItem.submenu && "group relative"}>
                   {menuItem.submenu ? (

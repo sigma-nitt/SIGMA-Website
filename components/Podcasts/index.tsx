@@ -174,6 +174,8 @@
 
 
 
+
+
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
 import createClient from "@/sanityClient";
@@ -280,7 +282,7 @@ const YouTubePodcasts: React.FC = () => {
                 
               <div
                 key={index}
-                className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[542px] h-[400px] lg:h-[548.9px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
+                className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[542px] h-[480px] lg:h-[548.9px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={() => handleMouseLeave(index)}
                 onClick={() => toggleIntroText(index)}
@@ -295,14 +297,14 @@ const YouTubePodcasts: React.FC = () => {
                   />
                 </div>
                 
-                <div className="flex flex-col mt-[30px] lg:mt-[150px] w-[90%]">
+                <div className="flex flex-col mt-[10px] lg:mt-[150px] w-[90%]">
                   <div>
-                    <h2 className="font-poppins text-[20px] lg:text-[17.13px] font-bold">
-                    {video.title}
+                    <h2 className="font-poppins text-[14px] lg:text-[17.13px] font-bold">
+                      {video.title}
                     </h2>
                   </div>
                   <div
-                    className="text-[12px] lg:text-[13px] w-[235px] lg:w-[500px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]"
+                    className="text-[12px] lg:text-[13px] w-[265px] lg:w-[500px] leading-[12px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]"
                   >
                     {isIntroTextVisible[index] ? (
                       <p className="introtext font-poppins">
@@ -320,13 +322,14 @@ const YouTubePodcasts: React.FC = () => {
               </div>
               ))}
             </div>
+
             {/* Second row */}
-            <div className="da-wrapper flex mt-[35px] lg:mt-[67px] w-[95%] mb-20">
+            <div className="da-wrapper flex mt-[35px] lg:mt-[67px] w-[95%]">
               {secondRowDocs.map((video, index) => (
                 
               <div
                 key={index}
-                className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[542px] h-[400px] lg:h-[598.9px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
+                className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[542px] h-[480px] lg:h-[548.9px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={() => handleMouseLeave(index)}
                 onClick={() => toggleIntroText(index)}
@@ -341,14 +344,14 @@ const YouTubePodcasts: React.FC = () => {
                   />
                 </div>
                 
-                <div className="flex flex-col mt-[30px] lg:mt-[150px] w-[90%]">
+                <div className="flex flex-col mt-[10px] lg:mt-[150px] w-[90%]">
                   <div>
-                    <h2 className="font-poppins text-[20px] lg:text-[17.13px] font-bold">
-                    {video.title}
+                    <h2 className="font-poppins text-[14px] lg:text-[17.13px] font-bold">
+                      {video.title}
                     </h2>
                   </div>
                   <div
-                    className="text-[12px] lg:text-[13px] w-[235px] lg:w-[500px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]"
+                    className="text-[12px] lg:text-[13px] w-[265px] lg:w-[500px] leading-[12px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]"
                   >
                     {isIntroTextVisible[index] ? (
                       <p className="introtext font-poppins">
