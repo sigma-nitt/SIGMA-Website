@@ -124,6 +124,25 @@ pre {
   * {
     @apply border-border;
   }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 10px;
+    border: 2px solid var(--scrollbar-track);
+  }
 }
 
 @font-face {
@@ -156,3 +175,7 @@ pre {
   }
 }
 
+:root {
+  --scrollbar-thumb: rgba(113, 228, 150, 0.6);
+  --scrollbar-track: rgba(113, 128, 150, 0.1);
+}

@@ -87,10 +87,11 @@ const PDFViewerComponent: React.FC = () => {
       const pdf = await pdfjs.getDocument({ data: pdfData }).promise;
       const numPages = pdf.numPages;
       const pages: string[] = [];
+      // const scale = 1.0;
 
       for (let pageNum = 1; pageNum <= numPages; pageNum++) {
         const page = await pdf.getPage(pageNum);
-        const viewport = page.getViewport({ scale: 1 });
+        const viewport = page.getViewport({ scale: 2.0 });
         const canvas = document.createElement("canvas");
         const context = canvas.getContext("2d")!;
         canvas.height = viewport.height;
@@ -167,7 +168,7 @@ const PDFViewerComponent: React.FC = () => {
     <div className="containerDA">
       <div className="mb-8">
         <h1 className="h-[87px] text-center pb-2 font-semibold text-[30px] md:text-[45px] lg:text-[58px]">
-          <span className="gradient-textEvent font-poppins">
+          <span className="gradient-textDA font-poppins">
             Excavate the Insights!
           </span>
         </h1>
@@ -175,7 +176,7 @@ const PDFViewerComponent: React.FC = () => {
 
       <div className="backgroundGradientDA">
         <div className="ml-[20px] md:ml-[80px]">
-          <div
+           <div
             ref={sliderRef}
             className="flex flex-col h-[973px] lg:h-[1013px] overflow-x-scroll no-scrollbar"
           >
@@ -286,52 +287,19 @@ const PDFViewerComponent: React.FC = () => {
         </div>
       </div>
 
+      {/* PDF Viewer */}
       {isFlipbookOpen && currentPDF && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-          <div className="relative bg-white p-8 rounded-lg">
-            <button
-              onClick={closeFlipbook}
-              className="absolute top-0 right-0 m-2 text-gray-500 hover:text-gray-700"
-            >
-              X
-            </button>
-            <HTMLFlipBook
-              className={isPortrait ? "flipbook-portrait" : "flipbook-landscape"}
-              width={isPortrait ? 250 : 400} // Adjust width for portrait and landscape
-              height={isPortrait ? 350 : 570} // Adjust height for portrait and landscape
-              size="fixed"
-              minWidth={815}
-              maxWidth={2000}
-              minHeight={400}
-              maxHeight={1500}
-              drawShadow={true}
-              flippingTime={1000}
-              usePortrait={isPortrait}
-              startZIndex={0}
-              autoSize={true}
-              maxShadowOpacity={1}
-              showCover={true}
-              mobileScrollSupport={true}
-              swipeDistance={30}
-              clickEventForward={true}
-              useMouseEvents={true}
-              renderOnlyPageLengthChange={false}
-              style={{ borderRadius: "1px" }}
-              startPage={0}
-              showPageCorners={true}
-              disableFlipByClick={false}
-            >
-              {pdfPages.map((page, index) => (
-                <div key={index} className="demoPage">
-                  <img src={page} alt={`Page ${index + 1}`} />
-                  <p>Page {index + 1}</p>
-                </div>
-              ))}
-            </HTMLFlipBook>
+        <div className="mx-auto fixed inset-0 z-50 flex flex-col items-center justify-center bg-white w-[50%] mt-5 h-[95%] overflow-y-auto">
+          <button onClick={closeFlipbook} className="absolute top-5 right-5 p-2 bg-red-500 text-white rounded">
+            Close
+          </button>
+          <div className="w-full max-w-3xl mt-10 overflow-y-auto">
+            {pdfPages.map((pageSrc, index) => (
+              <img key={index} src={pageSrc} alt={`PDF page ${index + 1}`} className="mb-4 w-full" />
+            ))}
           </div>
         </div>
       )}
-
       <div className="flex items-center justify-center">
         <Image
           className="mt-[32px] mb-[32px] w-[90px] h-[100px] md:w-[167px] md:h-[182px]"

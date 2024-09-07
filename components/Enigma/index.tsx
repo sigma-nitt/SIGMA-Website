@@ -391,7 +391,7 @@ const PDFViewerComponent: React.FC = () => {
 
       for (let pageNum = 1; pageNum <= numPages; pageNum++) {
         const page = await pdf.getPage(pageNum);
-        const viewport = page.getViewport({ scale: 1 });
+        const viewport = page.getViewport({ scale: 2.0 });
         const canvas = document.createElement("canvas");
         const context = canvas.getContext("2d")!;
         canvas.height = viewport.height;
