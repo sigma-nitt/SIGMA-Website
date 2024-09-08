@@ -97,7 +97,7 @@ const buttonVariants = cva(
           "[&_.highlight]:ml-2",
         ],    
         cta1: [
-          "bg-white rounded-tl-full w-[200px] h-[40px] md:w-[250px] md:h-[50px] lg:h-[68px] lg:w-[342px] rounded-tr-full rounded-bl-full rounded-br-full hover:shadow-[0px_4px_30px] hover:shadow-[rgb(247_176_253_/_50%)] transition-shadow duration-300",
+          "bg-white rounded-tl-full w-[200px] h-[40px] md:w-[250px] md:h-[50px] lg:h-[68px] lg:w-[342px] rounded-tr-full rounded-bl-full rounded-br-full",
           "[&_.highlight]:ml-2",
         ],      
         ghost: "hover:bg-accent hover:text-accent-foreground",

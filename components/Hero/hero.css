@@ -12,3 +12,15 @@
 .image-hover {
   transition: opacity 1000ms ease-in-out 800ms; /* Smooth transition with 800ms delay */
 }
+
+.bg-gradient-blur {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  background: linear-gradient(90deg, #8062F0 1.49%, #697EE2 10.56%, #5D8CDB 19.39%, #4BA6CC 28.63%, #40BAC0 36.16%, #2BDDAD 46.66%);
+  filter: blur(20px);
+  z-index: -1;
+}

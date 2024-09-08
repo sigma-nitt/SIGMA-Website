@@ -345,7 +345,7 @@ const Header = () => {
           <div className="mt-7 flex items-center gap-6 xl:mt-0 text-black">
             <Link
               href="/contactus"
-              className={clsx("p-2", buttonVariants({ variant: "cta" }))}
+              className={clsx("p-2 font-semibold", buttonVariants({ variant: "cta" }))}
             >
               CONTACT US
             </Link>
