@@ -7,3 +7,8 @@
   color: transparent; /* For non-WebKit browsers */
   font-weight: 400;
 }
+
+/* Add CSS for transitions */
+.image-hover {
+  transition: opacity 1000ms ease-in-out 800ms; /* Smooth transition with 800ms delay */
+}
