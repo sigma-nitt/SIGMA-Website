@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
-      <div className="w-full bg-[linear-gradient(229.1deg,#313ED0_-35.29%,#232971_30.74%,#0E113A_56.42%)]">
+      <div className="w-full">
         <div>
           <Hero />
           <MembersProjects />
