@@ -20,9 +20,8 @@
     height: 100vh;
     z-index: -1;
   
-    /* Moving gradient background */
     background: linear-gradient(229.1deg, #313ED0 -35.29%, #232971 30.74%, #0E113A 56.42%);
-    background-size: 200% 200%; /* Enlarge background to create smooth motion */
-    animation: backgroundAnimation 6s linear infinite; /* Infinite smooth animation */
+    background-size: 200% 200%;
+    animation: backgroundAnimation 6s linear infinite;
   }
   
