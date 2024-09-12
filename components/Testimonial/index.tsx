@@ -8,9 +8,9 @@ const Testimonial: React.FC = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="ml-[74px] md:pt-1">
+    <div className="lg:ml-[74px] md:pt-1">
       <div>
-        <h2 className="font-poppins text-[40px] lg:text-[38px] lg:text-left lg:mt-[30px]">
+        <h2 className="font-poppins text-[30px] lg:text-[38px] text-center lg:text-left lg:mt-[30px]">
           <span className="tstm leading-[92px]">TESTIMONIALS</span>
         </h2>
       </div>
