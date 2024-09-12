@@ -48,7 +48,7 @@ const HeroSection: FC = () => {
               onClick={handleExploreProjects}
               className={cn(
                 buttonVariants({ variant: "cta1" }),
-                "mt-10 md:mt-18 ml-[20%] md:ml-18 flex items-center justify-center space-x-5 md:p-3 font-poppins relative"
+                "mt-10 md:mt-18 ml-[15%] md:ml-18 flex items-center justify-center space-x-5 md:p-3 font-poppins relative"
               )}
               style={{
                 backgroundColor: 'hsla(0, 0%, 15%, 1)',
