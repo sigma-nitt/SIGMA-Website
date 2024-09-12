@@ -16,6 +16,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       resourceType,
       link,
       type,
+      thumbnail,
     }`;
 
     const videos = await client.fetch(query);

@@ -3,13 +3,19 @@ import React, { useState, useEffect, useRef } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
 import './res.css';
 import Image from 'next/image';
+import imageUrlBuilder from "@sanity/image-url";
+import createClient from "@/sanityClient";
 
 interface Resource {
   title: string;
   resourceType: string;
   link: string;
   type: string;
+  thumbnail: { asset: { _ref: string } };
 }
+
+const builder = imageUrlBuilder(createClient);
+const imageUrlFor = (source: any) => builder.image(source);
 
 const ResourcePage = () => {
   const [resources, setResources] = useState<Resource[]>([]);
@@ -143,7 +149,7 @@ const ResourcePage = () => {
                     className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[381px] h-[300px] lg:h-[377.13px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
                   >
                     <img
-                      src="/images/sigma symbol.png"
+                      src={resource.thumbnail ? imageUrlFor(resource.thumbnail).url() : ""}
                       alt="Introductory Image"
                       className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover"
                     />
@@ -179,7 +185,7 @@ const ResourcePage = () => {
                     className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[381px] h-[300px] lg:h-[377.13px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
                   >
                     <img
-                      src="/images/sigma symbol.png"
+                      src={resource.thumbnail ? imageUrlFor(resource.thumbnail).url() : ""}
                       alt="Introductory Image"
                       className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover"
                     />
@@ -225,7 +231,7 @@ const ResourcePage = () => {
                     className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[381px] h-[300px] lg:h-[377.13px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
                   >
                     <img
-                      src="/images/sigma symbol.png"
+                      src={resource.thumbnail ? imageUrlFor(resource.thumbnail).url() : ""}
                       alt="Introductory Image"
                       className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover"
                     />
@@ -261,7 +267,7 @@ const ResourcePage = () => {
                     className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[381px] h-[300px] lg:h-[377.13px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
                   >
                     <img
-                      src="/images/sigma symbol.png"
+                      src={resource.thumbnail ? imageUrlFor(resource.thumbnail).url() : ""}
                       alt="Introductory Image"
                       className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover"
                     />

@@ -66,7 +66,7 @@ const HeroSection: FC = () => {
           onMouseLeave={handleMouseLeave}
         >
           <Image
-            className="absolute justify-center mt-[32px] w-[150px] h-[300px] md:w-[410px] md:h-[578px] transition-opacity duration-1000 ease-in-out"
+            className="lg:ml-[150px] absolute justify-center mt-[32px] w-[150px] h-[300px] md:w-[450px] md:h-[578px] transition-opacity duration-1000 ease-in-out"
             src="/images/bulb.png"
             alt="logo"
             width={281}
@@ -74,7 +74,7 @@ const HeroSection: FC = () => {
             style={{ opacity: isHovered ? 0 : 1 }} // Fade out on hover
           />
           <Image
-            className="absolute justify-center mt-[32px] w-[150px] h-[300px] md:w-[410px] md:h-[578px] transition-opacity duration-1000 ease-in-out delay-800"
+            className="lg:ml-[150px] absolute justify-center mt-[32px] w-[150px] h-[300px] md:w-[450px] md:h-[578px] transition-opacity duration-1000 ease-in-out delay-800"
             src="/images/bulb1.png"
             alt="logo"
             width={281}
