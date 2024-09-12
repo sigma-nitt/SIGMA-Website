@@ -462,8 +462,8 @@ const Contact = () => {
               <p>NIT Trichy, Tiruchirappalli, India - 620015</p>
             </div>
 
-            <div className="mt-[120px]">
-              <ul className="flex items-center gap-8">
+            <div className="mt-[30px] lg:mt-[120px] pb-8 lg:pb-0">
+              <ul className="flex lg:items-left items-center lg:text-left text-center lg:justify-start justify-center gap-8">
                 <li>
                 <a href="https://www.instagram.com/sigma_nitt/" aria-label="social icon" target="_blank" rel="noopener noreferrer">
                   <img src="./images/insta.png" alt="Image 3" className="bg-transparent w-[30px] h-[30px]" />
