@@ -250,7 +250,7 @@ const Header = () => {
          {/*starts here */}
           <button
             aria-label="hamburger Toggler"
-            className="block xl:hidden"
+            className="block xl:hidden mr-[-60px]"
             onClick={toggleMobileMenu}
           >
             <span className="relative block h-5.5 w-5.5 cursor-pointer">

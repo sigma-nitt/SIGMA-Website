@@ -105,27 +105,30 @@
 //     return <p>Error :(</p>;
 //   }
 
+//   const firstRowEvents = events.slice(0, Math.ceil(events.length / 2));
+//   const secondRowEvents = events.slice(Math.ceil(events.length / 2));
+
 //   return (
 //     <div className="containerEvent">
 //       <div className="mb-8">
-//         <h1 className="h-[87px] text-center text-4xl pb-2 font-semibold lg:text-5xl md:text-4xl md:pr-10 md:leading-none">
-//           <span className="gradient-textDA font-poppins">
+//         <h1 className="h-[87px] text-center pb-2 font-semibold text-[30px] md:text-[45px] lg:text-[58px]">
+//           <span className="gradient-textEvent font-poppins">
 //             Explore our Events!
 //           </span>
 //         </h1>
 //       </div>
 
 //       <div className="backgroundGradient">
-//         <div className="w-[95%] lg:w-[90%] ml-[20px] md:ml-[80px]">
+//         <div className="ml-[20px] md:ml-[80px]">
 //           <div
 //             ref={sliderRef}
-//             className="h-[500px] md:h-[827px] flex overflow-x-scroll no-scrollbar"
+//             className="flex flex-col h-[973px] lg:h-[1013px] overflow-x-scroll no-scrollbar"
 //           >
-//             <div className="event-wrapper flex mt-[35px] lg:mt-[87px] w-[95%]">
-//               {events.map((event, index) => (
+//             <div className="flex transition-transform duration-500 ease w-max mt-[35px] lg:mt-[67px] w-[95%]">
+//               {firstRowEvents.map((event, index) => (
 //                 <div
 //                   key={index}
-//                   className="relative mr-[10px] lg:mr-[40px] w-[290px] lg:w-[559px] h-[400px] lg:h-[652px] rounded-[28px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
+//                   className="relative  flex flex-col items-center mr-[20px] lg:mr-[80px] w-[290px] lg:w-[342px] h-[400px] lg:h-[398.9px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg"
 //                   onMouseEnter={() => handleMouseEnter(index)}
 //                   onMouseLeave={() => handleMouseLeave(index)}
 //                   onClick={() => toggleIntroText(index)}
@@ -134,38 +137,38 @@
 //                   <img
 //                     src={imageUrlFor(event.images[0]).url()}
 //                     alt={event.title}
-//                     className="h-[150px] lg:h-[286px] w-[250px] lg:w-[456px] rounded-[28px] mt-[30px] lg:mt-[60px] object-cover mb-4"
+//                     className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover"
 //                   />
 
 //                   {/* Title and Description */}
-//                   <div className="flex flex-col lg:mt-[39px]">
+//                   <div className="flex flex-col mt-[30px] lg:mt-[20px]">
 //                     <div>
-//                       <h2 className="text-center lg:text-left font-poppins text-[20px] lg:text-[28px] font-bold">
-//                         {event.title.toUpperCase()}
+//                       <h2 className="font-poppins text-[17px] lg:text-[17.13px] font-bold">
+//                         {event.title}
 //                       </h2>
 //                     </div>
 //                     <div
-//                       className="text-[12px] lg:text-[19px] mt-[5px] w-[90%] lg:w-[456px] lg:mt-[25px] ml-[15px] lg:ml-[0px] leading-[20px] lg:leading-[34px] cursor-pointer"
+//                       className="text-[12px] lg:text-[13px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]"
 //                     >
 //                       {isIntroTextVisible[index] ? (
-//                         <p className="font-poppins font-bold lg:leading-[28.5px]">
-//                           {event.description || "Two lines about the project."}
+//                         <p className="introtext font-poppins lg:font-bold">
+//                           {event.description || "SIGMA event"}
 //                         </p>
 //                       ) : (
-//                         <div className="flex flex-col items-left lg:items-left mt-[23px] gap-[15px] lg:gap-[23px]">
-//                           <div className="hamburger-line w-[250px] h-[8px] md:w-[452px] md:h-[11px] rounded-[10px]"></div>
-//                           <div className="hamburger-line w-[250px] h-[8px] md:w-[452px] md:h-[11px] rounded-[10px]"></div>
-//                           <div className="hamburger-line w-[250px] h-[8px] md:w-[256px] md:h-[11px] rounded-[10px]"></div>
+//                         <div className="flex flex-col mt-[15px] gap-[15px] lg:gap-[14.07px]">
+//                           <div className="hamburger-line w-full h-[5px] lg:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
+//                           <div className="hamburger-line w-full h-[5px] lg:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
+//                           <div className="hamburger-line w-[50%] h-[5px] lg:w-[138.27px] md:h-[6.73px] rounded-[10px]"></div>
 //                         </div>
 //                       )}
 //                     </div>
 //                   </div>
 
 //                   {/* Button */}
-//                   <div className="absolute top-[40px] left-[135px] md:top-[84px] md:left-[332px]">
+//                   <div className="absolute top-[10%] left-[58%] lg:top-[10%] lg:left-[61%]">
 //                     <button
 //                       onClick={() => handleExpandClick(index)}
-//                       className="buttonBG font-poppins text-[15px] lg:text[20px] text-white md:py-2 md:px-4 rounded-[28px] h-[30px] w-[120px] lg:h-[47px] lg:w-[150px]"
+//                       className="buttonBG text-[12.24px] text-white rounded-[28px] h-[28.75px] w-[91.77px]"
 //                     >
 //                       {selectedEvent === index ? "Collapse" : "view gallery"}
 //                     </button>
@@ -173,15 +176,69 @@
 //                 </div>
 //               ))}
 //             </div>
+
+//             <div className="flex transition-transform duration-500 ease w-max mt-[35px] lg:mt-[67px] w-[95%]">
+//               {secondRowEvents.map((event, index) => (
+//                 <div
+//                   key={index}
+//                   className="relative  flex flex-col items-center mr-[20px] lg:mr-[80px] w-[290px] lg:w-[342px] h-[400px] lg:h-[398.9px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg"
+//                   onMouseEnter={() => handleMouseEnter(index)}
+//                   onMouseLeave={() => handleMouseLeave(index)}
+//                   onClick={() => toggleIntroText(index)}
+//                 >
+//                   {/* Image */}
+//                   <img
+//                     src={imageUrlFor(event.images[0]).url()}
+//                     alt={event.title}
+//                     className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover"
+//                   />
+
+//                   {/* Title and Description */}
+//                   <div className="flex flex-col mt-[30px] lg:mt-[20px]">
+//                     <div>
+//                       <h2 className="font-poppins text-[17px] lg:text-[17.13px] font-bold">
+//                         {event.title}
+//                       </h2>
+//                     </div>
+//                     <div
+//                       className="text-[12px] lg:text-[13px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]"
+//                     >
+//                       {isIntroTextVisible[index] ? (
+//                         <p className="introtext font-poppins lg:font-bold">
+//                           {event.description || "SIGMA event"}
+//                         </p>
+//                       ) : (
+//                         <div className="flex flex-col mt-[15px] gap-[15px] lg:gap-[14.07px]">
+//                           <div className="hamburger-line w-full h-[5px] lg:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
+//                           <div className="hamburger-line w-full h-[5px] lg:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
+//                           <div className="hamburger-line w-[50%] h-[5px] lg:w-[138.27px] md:h-[6.73px] rounded-[10px]"></div>
+//                         </div>
+//                       )}
+//                     </div>
+//                   </div>
+
+//                   {/* Button */}
+//                   <div className="absolute top-[10%] left-[58%] lg:top-[10%] lg:left-[61%]">
+//                     <button
+//                       onClick={() => handleExpandClick(index)}
+//                       className="buttonBG text-[12.24px] text-white rounded-[28px] h-[28.75px] w-[91.77px]"
+//                     >
+//                       {selectedEvent === index ? "Collapse" : "view gallery"}
+//                     </button>
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+
 //           </div>
 //         </div>
 //       </div>
 
 //       {/* Image Gallery Modal */}
 //       {selectedEvent !== null && (
-//         <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center z-50">
-//           <div className="bg-white p-4 lg:p-8 rounded-lg shadow-md w-[95%] lg:w-[90%] h-[95%] lg:h-[80%] overflow-y-auto">
-//             <h1 className="text-2xl font-bold text-blue-700 mb-4 text-center">
+//         <div className="fixed inset-0 backdrop-blur flex justify-center items-center z-50">
+//           <div className="bg-transparent p-4 lg:p-8 rounded-lg shadow-md w-[95%] lg:w-[90%] h-[95%] lg:h-[80%] overflow-y-auto no-scrollbar">
+//             <h1 className="text-[40px] lg:text-[50px] font-poppins font-bold text-white mb-10 text-center">
 //               GALLERY
 //             </h1>
 //             <div className="grid lg:grid-cols-3 gap-4">
@@ -218,7 +275,6 @@
 // };
 
 // export default EventsPage;
-
 
 
 
@@ -346,7 +402,7 @@ const EventsPage: React.FC = () => {
         <div className="ml-[20px] md:ml-[80px]">
           <div
             ref={sliderRef}
-            className="flex flex-col h-[973px] lg:h-[1013px] overflow-x-scroll no-scrollbar"
+            className="flex flex-col h-[482px] lg:h-[506px] overflow-x-scroll no-scrollbar"
           >
             <div className="flex transition-transform duration-500 ease w-max mt-[35px] lg:mt-[67px] w-[95%]">
               {firstRowEvents.map((event, index) => (
@@ -400,8 +456,13 @@ const EventsPage: React.FC = () => {
                 </div>
               ))}
             </div>
+          </div>
 
-            <div className="flex transition-transform duration-500 ease w-max mt-[35px] lg:mt-[67px] w-[95%]">
+          <div
+            ref={sliderRef}
+            className="flex flex-col h-[482px] lg:h-[476px] overflow-x-scroll no-scrollbar"
+          >
+            <div className="flex transition-transform duration-500 ease w-max w-[95%]">
               {secondRowEvents.map((event, index) => (
                 <div
                   key={index}
@@ -453,7 +514,6 @@ const EventsPage: React.FC = () => {
                 </div>
               ))}
             </div>
-
           </div>
         </div>
       </div>

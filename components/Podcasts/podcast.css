@@ -50,14 +50,6 @@ body {
   display: none;  /* Safari and Chrome */
 }
 
-/* Portrait styles */
-.flipbook-portrait {
-}
-
-/* Landscape styles */
-.flipbook-landscape {
-}
-
 .introtext {
   white-space: normal;
   word-wrap: break-word;
