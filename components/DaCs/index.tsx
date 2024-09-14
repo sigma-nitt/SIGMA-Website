@@ -17,29 +17,29 @@ const Features: FC<FeaturesProps> = () => {
   }, [inView]);
 
   return (
-    <div ref={inViewRef} className="bgBox flex flex-col md:h-[636px]">
+    <div ref={inViewRef} className="bgBox flex flex-col md:h-[636px] p-4">
       <div className="mt-8 mb-18">
           <h1 className="text-center pb-2 font-semibold md:text-center md:leading-none">
             <span className="gradient-text text-[25px] md:text-[40px] font-poppins">DATA ANALYTICS & MANAGEMENT</span>
           </h1>
       </div>
 
-      <div className="flex items-center justify-center md:flex-row flex-col">
-        <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-4">
+      <div className="flex w-full items-center justify-center md:flex-row flex-col">
+        <div className="mb-4 md:mb-0 md:mr-4">
           <img
             src="./images/earnings.png"
             alt="Earnings"
             loading="lazy"
-            className="img1 h-[251px] w-[100%] md:h-[411px] md:w-[396px]"
+            className="img1 h-[251px] w-[100%] md:h-auto md:w-[95%] xl:h-[411px] xl:w-[396px]"
           />
         </div>
 
-        <div className="flex-shrink-0 mb-4 md:mb-0">
+        <div className="mb-4 md:mb-0">
           <img
             src="./images/insights.png"
             alt="Insights"
             loading="lazy"
-            className="img2 h-[151px] w-[100%] md:h-[411px] md:w-[842px]"
+            className="img2 h-[151px] w-[100%] md:h-auto md:w-[95%] xl:h-[411px] xl:w-[842px]"
           />
         </div>
       </div>

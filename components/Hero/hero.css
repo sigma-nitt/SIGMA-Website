@@ -24,3 +24,7 @@
   filter: blur(20px);
   z-index: -1;
 }
+
+.buttonfont {
+  font-weight: 500;
+}
