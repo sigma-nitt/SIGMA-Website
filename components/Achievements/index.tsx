@@ -136,7 +136,7 @@ const EventsPage: React.FC = () => {
                       </h2>
                     </div>
                     <div
-                      className="text-[12px] lg:text-[19px] mt-[5px] w-[90%] lg:w-[456px] lg:mt-[25px] ml-[15px] lg:ml-[0px] leading-[20px] lg:leading-[34px] cursor-pointer"
+                      className="text-[12px] lg:text-[19px] mt-[5px] w-[90%] lg:w-[456px] lg:mt-[25px] lg:ml-[0px] leading-[20px] lg:leading-[34px] cursor-pointer"
                     >
                       {isIntroTextVisible[index] ? (
                         <p className="font-poppins font-bold lg:leading-[28.5px]">
