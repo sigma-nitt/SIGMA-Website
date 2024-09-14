@@ -50,3 +50,6 @@ body {
   display: none;  /* Safari and Chrome */
 }
 
+.textcat {
+  font-weight: 600;
+}

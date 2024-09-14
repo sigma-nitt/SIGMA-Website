@@ -178,14 +178,14 @@
 //         <div className="ml-[20px] md:ml-[80px]">
 //            <div
 //             ref={sliderRef}
-//             className="flex flex-col h-[973px] lg:h-[1013px] overflow-x-scroll no-scrollbar"
+//             className="flex flex-col h-[486px] lg:h-[506px] overflow-x-scroll no-scrollbar"
 //           >
 //             {/* First row */}
 //             <div className="flex transition-transform duration-500 ease w-max mt-[35px] lg:mt-[67px] w-[95%]">
 //               {firstRowDocs.map((pdf, index) => (
 //                 <div
 //                   key={index}
-//                   className="relative  flex flex-col items-center mr-[20px] lg:mr-[80px] w-[290px] lg:w-[342px] h-[400px] lg:h-[398.9px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg"
+//                   className="relative  flex flex-col items-center mr-[20px] lg:mr-[80px] w-[290px] lg:w-[342px] h-[400px] lg:h-[398.9px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] shadow-lg"
 //                   onMouseEnter={() => handleMouseEnter(index)}
 //                   onMouseLeave={() => handleMouseLeave(index)}
 //                   onClick={() => toggleIntroText(index)}
@@ -231,13 +231,23 @@
 //               </div>
 //               ))}
 //             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       <div className="backgroundGradientDA">
+//         <div className="ml-[20px] md:ml-[80px]">
+//            <div
+//             ref={sliderRef}
+//             className="flex flex-col h-[486px] lg:h-[506px] overflow-x-scroll no-scrollbar"
+//           >
 
 //             {/* Second row */}
-//             <div className="flex transition-transform duration-500 ease w-max mt-[35px] lg:mt-[67px] w-[95%]">
+//             <div className="flex transition-transform duration-500 ease w-max mt-[35px] lg:mt-[27px] w-[95%]">
 //               {secondRowDocs.map((pdf, index) => (
 //                 <div
 //                   key={index}
-//                   className="relative  flex flex-col items-center mr-[20px] lg:mr-[80px] w-[290px] lg:w-[342px] h-[400px] lg:h-[398.9px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg"
+//                   className="relative  flex flex-col items-center mr-[20px] lg:mr-[80px] w-[290px] lg:w-[342px] h-[400px] lg:h-[398.9px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] shadow-lg"
 //                   onMouseEnter={() => handleMouseEnter(index)}
 //                   onMouseLeave={() => handleMouseLeave(index)}
 //                   onClick={() => toggleIntroText(index)}
@@ -348,8 +358,10 @@ const PDFViewerComponent: React.FC = () => {
   const [currentPDF, setCurrentPDF] = useState<PDFDocument | null>(null);
   const [pdfPages, setPdfPages] = useState<string[]>([]);
   const sliderRef = useRef<HTMLDivElement>(null);
-  const [isIntroTextVisible, setIsIntroTextVisible] = useState<boolean[]>([]);
-  const [expandedProjectIndex, setExpandedProjectIndex] = useState<number | null>(null);
+
+  // Separate intro text visibility for each row
+  const [isIntroTextVisibleFirstRow, setIsIntroTextVisibleFirstRow] = useState<boolean[]>([]);
+  const [isIntroTextVisibleSecondRow, setIsIntroTextVisibleSecondRow] = useState<boolean[]>([]);
   const [isPortrait, setIsPortrait] = useState<boolean>(false);
 
   useEffect(() => {
@@ -368,6 +380,8 @@ const PDFViewerComponent: React.FC = () => {
         }
         const data = await response.json();
         setPDFDocuments(data);
+        setIsIntroTextVisibleFirstRow(new Array(Math.ceil(data.length / 2)).fill(false));
+        setIsIntroTextVisibleSecondRow(new Array(data.length - Math.ceil(data.length / 2)).fill(false));
         setLoading(false);
       } catch (error) {
         console.error("Error fetching PDF documents:", error);
@@ -379,24 +393,47 @@ const PDFViewerComponent: React.FC = () => {
     fetchPDFDocuments();
   }, []);
 
-  useEffect(() => {
-    const handleScroll = (event: WheelEvent) => {
-      if (sliderRef.current) {
-        sliderRef.current.scrollLeft += event.deltaY;
+  const handleMouseEnter = (index: number, isFirstRow: boolean) => {
+    if (window.innerWidth >= 768) {
+      if (isFirstRow) {
+        const updatedVisibility = [...isIntroTextVisibleFirstRow];
+        updatedVisibility[index] = true;
+        setIsIntroTextVisibleFirstRow(updatedVisibility);
+      } else {
+        const updatedVisibility = [...isIntroTextVisibleSecondRow];
+        updatedVisibility[index] = true;
+        setIsIntroTextVisibleSecondRow(updatedVisibility);
       }
-    };
-
-    const sliderElement = sliderRef.current;
-    if (sliderElement) {
-      sliderElement.addEventListener("wheel", handleScroll);
     }
+  };
 
-    return () => {
-      if (sliderElement) {
-        sliderElement.removeEventListener("wheel", handleScroll);
+  const handleMouseLeave = (index: number, isFirstRow: boolean) => {
+    if (window.innerWidth >= 768) {
+      if (isFirstRow) {
+        const updatedVisibility = [...isIntroTextVisibleFirstRow];
+        updatedVisibility[index] = false;
+        setIsIntroTextVisibleFirstRow(updatedVisibility);
+      } else {
+        const updatedVisibility = [...isIntroTextVisibleSecondRow];
+        updatedVisibility[index] = false;
+        setIsIntroTextVisibleSecondRow(updatedVisibility);
       }
-    };
-  }, []);
+    }
+  };
+
+  const toggleIntroText = (index: number, isFirstRow: boolean) => {
+    if (window.innerWidth < 768) {
+      if (isFirstRow) {
+        const updatedVisibility = [...isIntroTextVisibleFirstRow];
+        updatedVisibility[index] = !updatedVisibility[index];
+        setIsIntroTextVisibleFirstRow(updatedVisibility);
+      } else {
+        const updatedVisibility = [...isIntroTextVisibleSecondRow];
+        updatedVisibility[index] = !updatedVisibility[index];
+        setIsIntroTextVisibleSecondRow(updatedVisibility);
+      }
+    }
+  };
 
   const loadPdfPages = async (url: string) => {
     try {
@@ -440,35 +477,11 @@ const PDFViewerComponent: React.FC = () => {
     setIsFlipbookOpen(true);
     loadPdfPages(pdf.url);
   };
-
+    
   const closeFlipbook = () => {
     setIsFlipbookOpen(false);
     setCurrentPDF(null);
     setPdfPages([]);
-  };
-
-  const toggleIntroText = (index: number) => {
-    if (window.innerWidth < 768) {
-      const updatedVisibility = [...isIntroTextVisible];
-      updatedVisibility[index] = !updatedVisibility[index];
-      setIsIntroTextVisible(updatedVisibility);
-    }
-  };
-
-  const handleMouseEnter = (index: number) => {
-    if (window.innerWidth >= 768) {
-      const updatedVisibility = [...isIntroTextVisible];
-      updatedVisibility[index] = true;
-      setIsIntroTextVisible(updatedVisibility);
-    }
-  };
-
-  const handleMouseLeave = (index: number) => {
-    if (window.innerWidth >= 768) {
-      const updatedVisibility = [...isIntroTextVisible];
-      updatedVisibility[index] = false;
-      setIsIntroTextVisible(updatedVisibility);
-    }
   };
 
   if (loading) {
@@ -499,59 +512,46 @@ const PDFViewerComponent: React.FC = () => {
 
       <div className="backgroundGradientDA">
         <div className="ml-[20px] md:ml-[80px]">
-           <div
-            ref={sliderRef}
-            className="flex flex-col h-[486px] lg:h-[506px] overflow-x-scroll no-scrollbar"
-          >
-            {/* First row */}
+          {/* First row */}
+          <div ref={sliderRef} className="flex flex-col h-[486px] lg:h-[506px] overflow-x-scroll no-scrollbar">
             <div className="flex transition-transform duration-500 ease w-max mt-[35px] lg:mt-[67px] w-[95%]">
               {firstRowDocs.map((pdf, index) => (
                 <div
                   key={index}
-                  className="relative  flex flex-col items-center mr-[20px] lg:mr-[80px] w-[290px] lg:w-[342px] h-[400px] lg:h-[398.9px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] shadow-lg"
-                  onMouseEnter={() => handleMouseEnter(index)}
-                  onMouseLeave={() => handleMouseLeave(index)}
-                  onClick={() => toggleIntroText(index)}
+                  className="relative flex flex-col items-center mr-[20px] lg:mr-[80px] w-[290px] lg:w-[342px] h-[400px] lg:h-[398.9px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] shadow-lg"
+                  onMouseEnter={() => handleMouseEnter(index, true)}
+                  onMouseLeave={() => handleMouseLeave(index, true)}
+                  onClick={() => toggleIntroText(index, true)}
                 >
+                  <img
+                    src={pdf.coverPage ? imageUrlFor(pdf.coverPage).url() : ""}
+                    alt="Introductory Image"
+                    className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover"
+                  />
 
-                <img
-                  src={pdf.coverPage ? imageUrlFor(pdf.coverPage).url() : ""}
-                  alt="Introductory Image"
-                  className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover"
-                />
-
-                <div className="flex flex-col mt-[30px] lg:mt-[20px]">
-                  <div>
-                    <h2 className="font-poppins text-[17px] lg:text-[17.13px] font-bold">
-                      {pdf.title}
-                    </h2>
+                  <div className="flex flex-col mt-[30px] lg:mt-[20px]">
+                    <div>
+                      <h2 className="font-poppins text-[17px] lg:text-[17.13px] font-bold">{pdf.title}</h2>
+                    </div>
+                    <div className="text-[12px] lg:text-[13px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]">
+                      {isIntroTextVisibleFirstRow[index] ? (
+                        <p className="introtext font-poppins lg:font-bold">{pdf.description || "SIGMA event"}</p>
+                      ) : (
+                        <div className="flex flex-col mt-[15px] gap-[15px] lg:gap-[14.07px]">
+                          <div className="hamburger-line w-full h-[5px] lg:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
+                          <div className="hamburger-line w-full h-[5px] lg:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
+                          <div className="hamburger-line w-[50%] h-[5px] lg:w-[138.27px] md:h-[6.73px] rounded-[10px]"></div>
+                        </div>
+                      )}
+                    </div>
                   </div>
-                  <div
-                    className="text-[12px] lg:text-[13px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]"
-                  >
-                    {isIntroTextVisible[index] ? (
-                      <p className="introtext font-poppins lg:font-bold">
-                        {pdf.description || "SIGMA event"}
-                      </p>
-                    ) : (
-                      <div className="flex flex-col mt-[15px] gap-[15px] lg:gap-[14.07px]">
-                        <div className="hamburger-line w-full h-[5px] lg:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
-                        <div className="hamburger-line w-full h-[5px] lg:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
-                        <div className="hamburger-line w-[50%] h-[5px] lg:w-[138.27px] md:h-[6.73px] rounded-[10px]"></div>
-                      </div>
-                    )}
-                  </div>
-                </div>
 
                   <div className="absolute top-[10%] left-[58%] lg:top-[10%] lg:left-[61%]">
-                    <button
-                    onClick={() => openFlipbook(pdf)}
-                    className="buttonBG text-[12.24px] text-white rounded-[28px] h-[28.75px] w-[91.77px]"
-                  >
-                    View PDF
-                  </button>
+                    <button onClick={() => openFlipbook(pdf)} className="buttonBG text-[12.24px] text-white rounded-[28px] h-[28.75px] w-[91.77px]">
+                      View PDF
+                    </button>
+                  </div>
                 </div>
-              </div>
               ))}
             </div>
           </div>
@@ -560,53 +560,42 @@ const PDFViewerComponent: React.FC = () => {
 
       <div className="backgroundGradientDA">
         <div className="ml-[20px] md:ml-[80px]">
-           <div
-            ref={sliderRef}
-            className="flex flex-col h-[486px] lg:h-[506px] overflow-x-scroll no-scrollbar"
-          >
-
-            {/* Second row */}
+          {/* Second row */}
+          <div ref={sliderRef} className="flex flex-col h-[486px] lg:h-[506px] overflow-x-scroll no-scrollbar">
             <div className="flex transition-transform duration-500 ease w-max mt-[35px] lg:mt-[27px] w-[95%]">
               {secondRowDocs.map((pdf, index) => (
                 <div
                   key={index}
-                  className="relative  flex flex-col items-center mr-[20px] lg:mr-[80px] w-[290px] lg:w-[342px] h-[400px] lg:h-[398.9px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] shadow-lg"
-                  onMouseEnter={() => handleMouseEnter(index)}
-                  onMouseLeave={() => handleMouseLeave(index)}
-                  onClick={() => toggleIntroText(index)}
+                  className="relative flex flex-col items-center mr-[20px] lg:mr-[80px] w-[290px] lg:w-[342px] h-[400px] lg:h-[398.9px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] shadow-lg"
+                  onMouseEnter={() => handleMouseEnter(index, false)}
+                  onMouseLeave={() => handleMouseLeave(index, false)}
+                  onClick={() => toggleIntroText(index, false)}
                 >
+                  <img
+                    src={pdf.coverPage ? imageUrlFor(pdf.coverPage).url() : ""}
+                    alt="Introductory Image"
+                    className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover"
+                  />
 
-                <img
-                  src={pdf.coverPage ? imageUrlFor(pdf.coverPage).url() : ""}
-                  alt="Introductory Image"
-                  className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover"
-                />
-
-                <div className="flex flex-col mt-[30px] lg:mt-[20px]">
-                  <div>
-                    <h2 className="font-poppins text-[17px] lg:text-[17.13px] font-bold">
-                      {pdf.title}
-                    </h2>
+                  <div className="flex flex-col mt-[30px] lg:mt-[20px]">
+                    <div>
+                      <h2 className="font-poppins text-[17px] lg:text-[17.13px] font-bold">{pdf.title}</h2>
+                    </div>
+                    <div className="text-[12px] lg:text-[13px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]">
+                      {isIntroTextVisibleSecondRow[index] ? (
+                        <p className="introtext font-poppins lg:font-bold">{pdf.description || "SIGMA event"}</p>
+                      ) : (
+                        <div className="flex flex-col mt-[15px] gap-[15px] lg:gap-[14.07px]">
+                          <div className="hamburger-line w-full h-[5px] lg:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
+                          <div className="hamburger-line w-full h-[5px] lg:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
+                          <div className="hamburger-line w-[50%] h-[5px] lg:w-[138.27px] md:h-[6.73px] rounded-[10px]"></div>
+                        </div>
+                      )}
+                    </div>
                   </div>
-                  <div
-                    className="text-[12px] lg:text-[13px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]"
-                  >
-                    {isIntroTextVisible[index] ? (
-                      <p className="introtext font-poppins lg:font-bold">
-                        {pdf.description || "SIGMA event"}
-                      </p>
-                    ) : (
-                      <div className="flex flex-col mt-[15px] gap-[15px] lg:gap-[14.07px]">
-                        <div className="hamburger-line w-full h-[5px] lg:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
-                        <div className="hamburger-line w-full h-[5px] lg:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
-                        <div className="hamburger-line w-[50%] h-[5px] lg:w-[138.27px] md:h-[6.73px] rounded-[10px]"></div>
-                      </div>
-                    )}
-                  </div>
-                </div>
 
                   <div className="absolute top-[10%] left-[58%] lg:top-[10%] lg:left-[61%]">
-                    <button
+                  <button
                     onClick={() => openFlipbook(pdf)}
                     className="buttonBG text-[12.24px] text-white rounded-[28px] h-[28.75px] w-[91.77px]"
                   >
@@ -645,5 +634,6 @@ const PDFViewerComponent: React.FC = () => {
     </div>
   );
 };
+
 
 export default PDFViewerComponent;

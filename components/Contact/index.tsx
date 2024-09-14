@@ -329,7 +329,7 @@ const Contact = () => {
   return (
     <>
       <section id="support" className="contact-section">
-        <div className="contact-container flex flex-col lg:flex-row mx-auto w-full lg:h-[823px]" style={{ background: 'hsla(0, 0%, 100%, 0.9)', borderRadius:'30px' }}>
+        <div className="contact-container flex flex-col lg:flex-row mx-auto w-[90%] md:w-[1297px] lg:h-[823px]" style={{ background: 'hsla(0, 0%, 100%, 0.9)', borderRadius:'30px' }}>
           
           {/* Image Column */}
           <div className="mt-[50px] lg:mt-[0px] image-column lg:w-[40%] flex justify-center items-center">

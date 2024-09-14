@@ -225,14 +225,14 @@ const EventsPage: React.FC = () => {
                 >
                 <div className="w-[85%] flex flex-col">
                     {/* First row of images */}
-                    <div className="flex flex-col lg:flex-row justify-between mb-[20px] gap-4 lg:gap-8">
-                        <div className="flex items-center justify-center order-2 lg:order-1">
+                    <div className="flex flex-col lg:flex-row justify-between mb-[20px] gap-4 lg:gap-14">
+                        <div className="md:w-1/3 flex items-center justify-center order-2 lg:order-1">
                             <img src="./images/dainduc.png" alt="Image 1" className="w-[95%] md:w-full h-auto" />
                         </div>
-                        <div className="flex items-center justify-center mt-[-100px] lg:mt-[-180px] order-1 lg:order-2">
+                        <div className="md:w-1/3 flex items-center justify-center mt-[-100px] lg:mt-[-180px] order-1 lg:order-2">
                             <img src="./images/weareinducting.png" alt="Image 1" className="w-[95%] md:w-full h-auto" />
                         </div>
-                        <div className="flex items-center justify-center order-3 lg:order-3">
+                        <div className="md:w-1/3 flex items-center justify-center order-3 lg:order-3">
                             <img src="./images/csinduc.png" alt="Image 3" className="w-[95%] md:w-full h-auto" />
                         </div>
                     </div>
