@@ -212,11 +212,11 @@ const EventsPage: React.FC = () => {
     return (
         <div className="containerInd">
             <div className="lg:w-[784px] lg:h-[763px] lg:ml-[-392px] lg:mt-[656px] absolute opacity-20 bg-[hsla(203,72%,60%,1)] z-0 filter blur-[229.167px]"></div>
-            <div className="lg:w-[264px] lg:h-[763px] lg:ml-[1252px] lg:mt-[1256px] absolute opacity-20 bg-[hsla(203,72%,60%,1)] z-0 filter blur-[229.167px]"></div>
+            <div className="lg:w-[264px] lg:h-[663px] lg:ml-[1252px] lg:mt-[1256px] absolute opacity-20 bg-[hsla(203,72%,60%,1)] z-0 filter blur-[229.167px]"></div>
             <div className="lg:w-[784px] lg:h-[763px] lg:ml-[24%] lg:mt-[1106px] absolute opacity-20 bg-[hsla(203,72%,60%,1)] z-0 filter blur-[229.167px]"></div>
 
             <div
-                className="h-[1400px] md:h-[697px]"
+                className="h-auto p-4"
                 style={{
                     background: 'linear-gradient(90deg, #0F1017 0%, #0E113A 100%)',
                     display: 'flex',
@@ -226,8 +226,8 @@ const EventsPage: React.FC = () => {
                 >
                 <div className="w-[85%] flex flex-col">
                     {/* First row of images */}
-                    <div className="flex flex-col lg:flex-row justify-between mb-[20px] gap-4 lg:gap-14">
-                        <div className="md:w-1/3 flex items-center justify-center order-2 lg:order-1">
+                    <div className="flex flex-col md:flex-row justify-between mb-[20px] gap-4 lg:gap-14">
+                        <div className="md:w-1/3 flex items-center justify-center order-2 md:order-1">
                             <Image className="w-[95%] md:w-full h-auto"
                                 src="./images/dainduc.png"
                                 alt="Image"
@@ -237,7 +237,7 @@ const EventsPage: React.FC = () => {
                                 priority={false}
                             />
                         </div>
-                        <div className="md:w-1/3 flex items-center justify-center mt-[-100px] lg:mt-[-180px] order-1 lg:order-2">
+                        <div className="md:w-1/3 flex items-center justify-center mt-[-100px] xl:mt-[-15%] order-1 md:order-2">
                             <Image className="w-[95%] md:w-full h-auto"
                                 src="./images/weareinducting.png"
                                 alt="Image"
@@ -247,7 +247,7 @@ const EventsPage: React.FC = () => {
                                 priority={false}
                             />
                         </div>
-                        <div className="md:w-1/3 flex items-center justify-center order-3 lg:order-3">
+                        <div className="md:w-1/3 flex items-center justify-center order-3 md:order-3">
                             <Image className="w-[95%] md:w-full h-auto"
                                 src="./images/csinduc.png"
                                 alt="Image"
@@ -260,8 +260,8 @@ const EventsPage: React.FC = () => {
                     </div>
 
                     {/* Second row of images */}
-                    <div className="flex flex-col lg:flex-row  justify-between gap-4 lg:gap-14">
-                        <div className="flex items-center justify-center">
+                    <div className="flex flex-col md:flex-row  justify-between gap-4 lg:gap-14">
+                        <div className="md:w-1/3 flex items-center justify-center">
                             <Image className="w-[95%] md:w-full h-auto"
                                 src="./images/eventsinduc.png"
                                 alt="Image"
@@ -271,7 +271,7 @@ const EventsPage: React.FC = () => {
                                 priority={false}
                             />
                         </div>
-                        <div className="flex items-center justify-center">
+                        <div className="md:w-1/3 flex items-center justify-center">
                             <Image className="w-[95%] md:w-full h-auto"
                                 src="./images/enigmainduc.png"
                                 alt="Image"
@@ -281,7 +281,7 @@ const EventsPage: React.FC = () => {
                                 priority={false}
                             />
                         </div>
-                        <div className="flex items-center justify-center">
+                        <div className="md:w-1/3 flex items-center justify-center">
                             <Image className="w-[95%] md:w-full h-auto"
                                 src="./images/clientsinduc.png"
                                 alt="Image"
@@ -297,7 +297,7 @@ const EventsPage: React.FC = () => {
 
             <div className="faq-section mt-[34px] mb-[34px] h-auto pb-10 p-1 " style={{ backgroundColor: 'hsla(201, 68%, 5%, 1)' }}>
                 <div className="faq-header cursor-pointer" onClick={toggleFAQ}>
-                    <h2 className="font-poppins font-normal text-[30px] md:text-[50px] leading-[50px] md:leading-[72px] w-full md:w-[450px] ml-[20px] md:ml-[376px] mt-[92px] text-left">
+                    <h2 className="font-poppins font-normal text-[30px] md:text-[50px] leading-[50px] md:leading-[72px] w-full md:w-[450px] ml-[20px] lg:ml-[376px] mt-[92px] text-left">
                         FREQUENTLY ASKED 
                         <span className="textQuestions font-normal"> QUESTIONS</span>
                     </h2>

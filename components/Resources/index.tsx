@@ -98,7 +98,7 @@ const ResourcePage = () => {
         </h1>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-center md:justify-start lg:ml-22 md:space-x-5 mb-8">
+      <div className="flex flex-col md:flex-row items-center justify-center md:justify-start md:ml-22 md:space-x-5 mb-8">
         <button
           onClick={() => setSelectedCategory('Data Analytics')}
           className={`textcat w-[130px] md:w-[200px] py-2 text-white font-poppins text-[20px] md:text-[30px] rounded ${

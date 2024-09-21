@@ -130,23 +130,23 @@ const HeroSection: FC = () => {
       <div className="hero-section flex flex-col lg:flex-row justify-center items-center">
 
         <div className="w-full lg:w-[50%] flex flex-col items-start justify-center text-left order-1 lg:order-1">
-          <div className="m-auto lg:ml-[200px]">
-            <p className="font-poppins mt-[32px] text-[30px] md:text-[35px] lg:text-[48px] font-semibold leading-[50px] md:leading-[72px] lg:leading-[72px] lg:h-[72px]">
+          <div className="m-auto lg:ml-[22%] xl:ml-[25%]">
+            <p className="font-poppins mt-[32px] text-[30px] md:text-[35px] lg:text-[37px] xl:text-[43px] font-semibold leading-[50px] lg:leading-[72px] xl:leading-[72px] lg:h-[72px]">
               The Business Club to
             </p>
             <h1 className="font-poppins lg:h-[72px]">
-              <span className="gradient-textHero text-[30px] md:text-[35px] lg:text-[48px] leading-[50px] md:leading-[72px]">
+              <span className="gradient-textHero text-[30px] md:text-[35px] lg:text-[37px] xl:text-[43px] leading-[50px] lg:leading-[72px]">
                 Delight your Scrutiny
               </span>
             </h1>
-            <p className="font-poppins text-[30px] md:text-[35px] lg:text-[48px] font-semibold leading-[50px] md:leading-[72px] lg:h-[72px]">
+            <p className="font-poppins text-[30px] md:text-[35px] lg:text-[37px] xl:text-[43px] font-semibold leading-[50px] lg:leading-[72px] lg:h-[72px]">
               and Supercharge you
             </p>
 
 
-            <div className="relative">
+            {/* <div className="relative">
               <Image
-                className="absolute mt-7 md:mt-13 ml-[10%] md:ml-11 w-[70%] md:w-[75%]"
+                className="absolute md:mt-24 lg:mt-28 xl:mt-13 ml-[10%] md:ml-11 w-[70%] md:w-[75%]"
                 src="/images/buttonbg.png"
                 alt="button background"
                 width={450}
@@ -159,24 +159,49 @@ const HeroSection: FC = () => {
                 onClick={handleExploreProjects}
                 className={cn(
                   buttonVariants({ variant: "cta1" }),
-                  "mt-10 md:mt-18 ml-[15%] md:ml-18 flex items-center justify-center space-x-5 md:p-3 font-poppins relative"
+                  "mt-10 md:mt-28 xl:mt-18 ml-[15%] md:ml-[15%] xl:ml-18 flex items-center justify-center space-x-5 md:p-3 font-poppins relative"
                 )}
                 style={{
                   backgroundColor: 'hsla(0, 0%, 15%, 1)',
                 }}
               >
-                <span className="buttonfont font-poppins text-white text-[15px] md:text-[20px] lg:text-[27.74px]">
+                <span className="buttonfont font-poppins text-white text-[15px] md:text-[20px] xl:text-[27.74px]">
+                  Explore our Projects
+                </span>
+              </button>
+            </div> */}
+
+            <div
+              className="relative mx-auto lg:mt-[40px] h-[100px] flex items-center justify-center w-[62%] md:w-[70%] lg:w-[90%] xl:w-[100%]"
+              style={{
+                backgroundImage: 'url("/images/buttonbg.png")',
+                backgroundSize: 'contain',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+              }}
+            >
+              <button
+                id="transform-anim"
+                onClick={handleExploreProjects}
+                className={cn(
+                  buttonVariants({ variant: "cta1" }),
+                  "flex items-center justify-center space-x-5 p-4 font-poppins relative lg:h-[50%]"
+                )}
+                style={{
+                  backgroundColor: 'hsla(0, 0%, 15%, 1)',
+                }}
+              >
+                <span className="buttonfont font-poppins text-white text-[15px] md:text-[20px] lg:text-[24px] xl:text-[27.74px]">
                   Explore our Projects
                 </span>
               </button>
             </div>
-            
           </div>
         </div>
 
-        <div className="w-full lg:w-[40%] mb-[50px] lg:mb-[0px] m-auto lg:ml-0 mt-[250px] lg:mt-[30px] flex text-center justify-center items-center order-2 lg:order-2">
+        <div className="w-full lg:w-[40%] mb-[50px] md:mb-[75px] lg:mb-[0px] m-auto lg:ml-0 mt-[250px] lg:mt-[30px] flex text-center justify-center items-center order-2 lg:order-2">
           <Image
-            className={`lg:ml-[150px] absolute justify-center lg:mt-[32px] w-[300px] h-[350px] md:w-[450px] md:h-[578px] transition-opacity duration-[1200ms] ease-out ${
+            className={`lg:ml-[150px] absolute justify-center lg:mt-[32px] w-[300px] h-[350px] md:w-auto md:h-[400px] lg:w-[450px] lg:h-[578px] transition-opacity duration-[1200ms] ease-out ${
               isHovered ? 'opacity-0' : 'opacity-100'
             }`}
             src="/images/bulb.png"
@@ -189,7 +214,7 @@ const HeroSection: FC = () => {
             priority={false}
           />
           <Image
-            className={`lg:ml-[150px] absolute justify-center lg:mt-[32px] w-[300px] h-[350px] md:w-[450px] md:h-[578px] transition-opacity duration-[1200ms] ease-out ${
+            className={`lg:ml-[150px] absolute justify-center lg:mt-[32px] w-[300px] h-[350px] md:w-auto md:h-[400px] lg:w-[450px] lg:h-[578px] transition-opacity duration-[1200ms] ease-out ${
               isHovered ? 'opacity-100' : 'opacity-0'
             }`}
             src="/images/bulb1.png"

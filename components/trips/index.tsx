@@ -15,7 +15,7 @@ const Gallery: React.FC = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="pr-1 pl-1 pt-5 md:pr-40 md:pl-40 md:pt-1">
+    <div className="pt-10 md:pt-14 pr-[8%] pl-[8%]">
       <div>
         <div ref={sliderRef} className="flex overflow-x-scroll no-scrollbar">
           {images.map((src, i) => (

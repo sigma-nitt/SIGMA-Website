@@ -17,12 +17,12 @@ const Features: FC<FeaturesProps> = () => {
   }, [inView]);
 
   return (
-    <div ref={inViewRef} className="bg-[#141414] flex flex-col md:h-[407px]">
+    <div ref={inViewRef} className="bg-[#141414] flex flex-col h-auto p-4">
       <div className="relative top-[10px]">
         <div className="w-[85%] flex flex-col items-center justify-center m-auto">
-          <div className="flex flex-col lg:flex-row justify-between mb-[20px] gap-4 lg:gap-8">
+          <div className="flex flex-col md:flex-row justify-between mb-[20px] gap-4 lg:gap-8">
               <div className="flex items-center justify-center order-1">
-                <Image className="w-full lg:w-[90%] h-auto"
+                <Image className="w-[90%] lg:w-[90%] h-auto"
                   src="./images/whoweare.png"
                   alt="logo"
                   width={613}
@@ -32,7 +32,7 @@ const Features: FC<FeaturesProps> = () => {
                 />
               </div>
               <div className="flex items-center justify-center order-2">
-                <Image className="w-[100px] md:w-[180px] h-auto md:h-[130px]"
+                <Image className="w-[30%] md:w-[90%] lg:w-[90%] h-auto"
                   src="./images/extra.png"
                   alt="logo"
                   width={613}
@@ -42,7 +42,7 @@ const Features: FC<FeaturesProps> = () => {
                 />
               </div>
               <div className="flex items-center justify-center order-3">
-                <Image className="w-full lg:w-[90%] h-auto"
+                <Image className="w-[90%] lg:w-[90%] h-auto"
                   src="./images/whatwedo.png"
                   alt="logo"
                   width={613}

@@ -329,12 +329,12 @@ const Contact = () => {
   return (
     <>
       <section id="support" className="contact-section">
-        <div className="contact-container flex flex-col lg:flex-row mx-auto w-[90%] md:w-[1297px] lg:h-[823px]" style={{ background: 'hsla(0, 0%, 100%, 0.9)', borderRadius:'30px' }}>
+        <div className="contact-container flex flex-col md:flex-row mx-auto w-[90%] md:w-[90%] lg:h-[823px]" style={{ background: 'hsla(0, 0%, 100%, 0.9)', borderRadius:'30px' }}>
           
           {/* Image Column */}
           <div className="mt-[50px] lg:mt-[0px] image-column lg:w-[40%] flex justify-center items-center">
             <Image
-              className="h-[400px] w-[90%] lg:h-[617px] lg:w-[404px]"
+              className="h-[400px] w-[90%] lg:h-[617px] xl:w-[404px]"
               src="/images/contactus.png"
               alt="logo"
               width={404}
@@ -347,7 +347,7 @@ const Contact = () => {
           {/* Form Column */}
           <div className="form-column lg:w-[35%] mt-[50px] lg:mt-[200px] justify-center items-center text-center lg:text-left">
             <div className="text-[hsla(236,100%,15%,1)]">
-              <h2 className="font-poppins text-[40px] lg:text-[69px] text-[hsla(236, 100%, 15%, 1)] pb-20">
+              <h2 className="font-poppins text-[40px] md:text-[50px] xl:text-[69px] text-[hsla(236, 100%, 15%, 1)] pb-20">
                 Contact Us
               </h2>
             </div>
@@ -411,7 +411,7 @@ const Contact = () => {
               <button
                 type="submit"
                 aria-label="send message"
-                className="inline-flex w-[231px] h-[47.62px] text-center justify-center items-center gap-2.5 rounded-full font-medium text-white duration-300 ease-in-out  py-3" style={{ background: 'hsla(236, 100%, 15%, 1)' }}
+                className="inline-flex md:mb-[20px] lg:mb-0 w-[231px] md:h-[47.62px] text-center justify-center items-center gap-2.5 rounded-full font-medium text-white duration-300 ease-in-out  py-3" style={{ background: 'hsla(236, 100%, 15%, 1)' }}
               >
                 Contact Us
               </button>
@@ -419,7 +419,7 @@ const Contact = () => {
           </div>
 
           {/* Find Us Column */}
-          <div className="find-us-column items-center text-center justify-center lg:text-left lg:w-[25%] mt-[100px] lg:mt-[310px] text-[hsla(236,100%,15%,1)]"> {/* Added text color to the entire div */}
+          <div className="find-us-column items-center text-center justify-center lg:text-left lg:w-[25%] mt-[100px] md:mt-[20%] lg:mt-[27%] xl:lg:mt-[22.5%] text-[hsla(236,100%,15%,1)]"> {/* Added text color to the entire div */}
             <div className="mb-8 lg:mb-16">
               <h3 className="font-bold text-[19.74px]">
                 Contact

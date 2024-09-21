@@ -514,17 +514,17 @@ const PDFViewerComponent: React.FC = () => {
                         </p>
                       ) : (
                         <div className="flex flex-col items-left lg:items-left mt-[23px] gap-[15px] lg:gap-[23px]">
-                          <div className="hamburger-line w-[250px] h-[8px] md:w-[452px] md:h-[11px] rounded-[10px]"></div>
-                          <div className="hamburger-line w-[250px] h-[8px] md:w-[452px] md:h-[11px] rounded-[10px]"></div>
-                          <div className="hamburger-line w-[250px] h-[8px] md:w-[256px] md:h-[11px] rounded-[10px]"></div>
+                          <div className="hamburger-line w-[250px] h-[8px] lg:w-[452px] lg:h-[11px] rounded-[10px]"></div>
+                          <div className="hamburger-line w-[250px] h-[8px] lg:w-[452px] lg:h-[11px] rounded-[10px]"></div>
+                          <div className="hamburger-line w-[50%] h-[8px] lg:w-[256px] lg:h-[11px] rounded-[10px]"></div>
                         </div>
                       )}
                     </div>
                   </div>
-                  <div className="absolute top-[40px] left-[135px] md:top-[84px] md:left-[332px]">
+                  <div className="absolute top-[40px] left-[135px] lg:top-[84px] lg:left-[332px]">
                     <button
                       onClick={() => openFlipbook(pdf)}
-                      className="buttonBG text-sm md:text-lg text-white md:py-2 md:px-4 rounded-[28px] h-[30px] w-[120px] md:h-[47px] md:w-[150px]"
+                      className="buttonBG text-sm lg:text-lg text-white md:py-2 md:px-4 rounded-[28px] h-[30px] w-[120px] lg:h-[47px] lg:w-[150px]"
                     >
                       View PDF
                     </button>
