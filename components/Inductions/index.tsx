@@ -154,6 +154,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './induc.css';
 import { FaPlus, FaMinus } from 'react-icons/fa';
+import Image from 'next/image';
 
 const EventsPage: React.FC = () => {
     const [isOpen, setIsOpen] = useState(true);
@@ -227,26 +228,68 @@ const EventsPage: React.FC = () => {
                     {/* First row of images */}
                     <div className="flex flex-col lg:flex-row justify-between mb-[20px] gap-4 lg:gap-14">
                         <div className="md:w-1/3 flex items-center justify-center order-2 lg:order-1">
-                            <img src="./images/dainduc.png" alt="Image 1" className="w-[95%] md:w-full h-auto" />
+                            <Image className="w-[95%] md:w-full h-auto"
+                                src="./images/dainduc.png"
+                                alt="Image"
+                                width={613}
+                                height={496}
+                                unoptimized={true}
+                                priority={false}
+                            />
                         </div>
                         <div className="md:w-1/3 flex items-center justify-center mt-[-100px] lg:mt-[-180px] order-1 lg:order-2">
-                            <img src="./images/weareinducting.png" alt="Image 1" className="w-[95%] md:w-full h-auto" />
+                            <Image className="w-[95%] md:w-full h-auto"
+                                src="./images/weareinducting.png"
+                                alt="Image"
+                                width={613}
+                                height={496}
+                                unoptimized={true}
+                                priority={false}
+                            />
                         </div>
                         <div className="md:w-1/3 flex items-center justify-center order-3 lg:order-3">
-                            <img src="./images/csinduc.png" alt="Image 3" className="w-[95%] md:w-full h-auto" />
+                            <Image className="w-[95%] md:w-full h-auto"
+                                src="./images/csinduc.png"
+                                alt="Image"
+                                width={613}
+                                height={496}
+                                unoptimized={true}
+                                priority={false}
+                            />
                         </div>
                     </div>
 
                     {/* Second row of images */}
                     <div className="flex flex-col lg:flex-row  justify-between gap-4 lg:gap-14">
                         <div className="flex items-center justify-center">
-                            <img src="./images/eventsinduc.png" alt="Image 4" className="w-[95%] md:w-full h-auto" />
+                            <Image className="w-[95%] md:w-full h-auto"
+                                src="./images/eventsinduc.png"
+                                alt="Image"
+                                width={613}
+                                height={496}
+                                unoptimized={true}
+                                priority={false}
+                            />
                         </div>
                         <div className="flex items-center justify-center">
-                            <img src="./images/enigmainduc.png" alt="Image 5" className="w-[95%] md:w-full h-auto" />
+                            <Image className="w-[95%] md:w-full h-auto"
+                                src="./images/enigmainduc.png"
+                                alt="Image"
+                                width={613}
+                                height={496}
+                                unoptimized={true}
+                                priority={false}
+                            />
                         </div>
                         <div className="flex items-center justify-center">
-                            <img src="./images/clientsinduc.png" alt="Image 6" className="w-[95%] md:w-full h-auto" />
+                            <Image className="w-[95%] md:w-full h-auto"
+                                src="./images/clientsinduc.png"
+                                alt="Image"
+                                width={613}
+                                height={496}
+                                unoptimized={true}
+                                priority={false}
+                            />
                         </div>
                     </div>
                 </div>

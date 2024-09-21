@@ -490,10 +490,14 @@ const PDFViewerComponent: React.FC = () => {
                   onMouseLeave={() => handleMouseLeave(index)}
                   onClick={() => toggleIntroText(index)}
                 >
-                  <img
+                  
+                  <Image className="h-[150px] lg:h-[286px] w-[250px] lg:w-[456px] rounded-[28px] mt-[30px] lg:mt-[60px] object-cover mb-4"
                     src={pdf.coverPage ? imageUrlFor(pdf.coverPage).url() : ""}
-                    alt="Introductory Image"
-                    className="h-[150px] lg:h-[286px] w-[250px] lg:w-[456px] rounded-[28px] mt-[30px] lg:mt-[60px] object-cover mb-4"
+                    alt="Image"
+                    width={613}
+                    height={496}
+                    unoptimized={true}
+                    priority={false}
                   />
                   <div className="flex flex-col lg:mt-[39px]">
                     <div>
@@ -584,6 +588,8 @@ const PDFViewerComponent: React.FC = () => {
           alt="logo"
           width={167}
           height={182}
+          unoptimized={true}
+          priority={false}
         />
       </div>
     </div>

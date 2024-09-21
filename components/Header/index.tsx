@@ -182,7 +182,7 @@ const Header = () => {
     setStickyMenu(window.scrollY >= 80);
     const header = document.querySelector('.bg-custom-gradient') as HTMLElement | null;
     if (header) {
-      if (window.scrollY > 5) { 
+      if (window.scrollY > 1) { 
         header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
       } else {
         header.style.backgroundColor = 'rgba(0, 0, 0, 0)';
@@ -232,7 +232,7 @@ const Header = () => {
     // >
     <header
       // className="fixed left-0 top-0 z-50 w-full py-7 bg-custom-gradient shadow transition duration-100 dark:bg-custom-gradient">
-      className="fixed left-0 top-0 z-50 w-full py-7 bg-custom-gradient transition duration-100 dark:bg-custom-gradient">
+      className="fixed left-0 top-0 z-50 w-full py-7 bg-custom-gradient transition duration-100 dark:bg-custom-gradient font-poppins">
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
       {/* <div className="relative mx-auto max-w-c-1390 items-center justify-between md:px-8 xl:flex 2xl:px-0"> */}
         <div className="flex items-center justify-between mr-[80px]">

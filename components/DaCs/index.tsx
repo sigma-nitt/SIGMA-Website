@@ -3,6 +3,7 @@ import { FC, useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import { animateScroll as scroll } from "react-scroll";
 import './dacs.css';
+import Image from 'next/image';
 
 interface FeaturesProps {}
 
@@ -26,20 +27,24 @@ const Features: FC<FeaturesProps> = () => {
 
       <div className="flex w-full items-center justify-center md:flex-row flex-col">
         <div className="mb-4 md:mb-0 md:mr-4">
-          <img
+          <Image className="h-[251px] w-[100%] md:h-auto md:w-[95%] xl:h-[411px] xl:w-[396px]"
             src="./images/earnings.png"
-            alt="Earnings"
-            loading="lazy"
-            className="img1 h-[251px] w-[100%] md:h-auto md:w-[95%] xl:h-[411px] xl:w-[396px]"
+            alt="logo"
+            width={613}
+            height={496}
+            unoptimized={true}
+            priority={false}
           />
         </div>
 
         <div className="mb-4 md:mb-0">
-          <img
+          <Image className="h-[151px] w-[100%] md:h-auto md:w-[95%] xl:h-[411px] xl:w-[842px]"
             src="./images/insights.png"
-            alt="Insights"
-            loading="lazy"
-            className="img2 h-[151px] w-[100%] md:h-auto md:w-[95%] xl:h-[411px] xl:w-[842px]"
+            alt="logo"
+            width={613}
+            height={496}
+            unoptimized={true}
+            priority={false}
           />
         </div>
       </div>

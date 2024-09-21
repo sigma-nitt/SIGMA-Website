@@ -414,10 +414,14 @@ const EventsPage: React.FC = () => {
                   onClick={() => toggleIntroText(index)}
                 >
                   {/* Image */}
-                  <img
+                  
+                  <Image className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover"
                     src={imageUrlFor(event.images[0]).url()}
-                    alt={event.title}
-                    className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover"
+                    alt="Image"
+                    width={613}
+                    height={496}
+                    unoptimized={true}
+                    priority={false}
                   />
 
                   {/* Title and Description */}
@@ -472,10 +476,13 @@ const EventsPage: React.FC = () => {
                   onClick={() => toggleIntroText(index)}
                 >
                   {/* Image */}
-                  <img
+                  <Image className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover"
                     src={imageUrlFor(event.images[0]).url()}
-                    alt={event.title}
-                    className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover"
+                    alt="Image"
+                    width={613}
+                    height={496}
+                    unoptimized={true}
+                    priority={false}
                   />
 
                   {/* Title and Description */}
@@ -527,11 +534,15 @@ const EventsPage: React.FC = () => {
             </h1>
             <div className="grid lg:grid-cols-3 gap-4">
               {events[selectedEvent].images.map((image, idx) => (
-                <img
+                <Image
                   key={idx}
                   src={imageUrlFor(image).url()}
                   alt={`Gallery Image ${idx + 1}`}
                   className="w-full lg:h-[175px] object-cover rounded-lg shadow-md"
+                  width={500}
+                  height={175}
+                  unoptimized={true}
+                  priority={false}
                 />
               ))}
             </div>
@@ -552,6 +563,8 @@ const EventsPage: React.FC = () => {
           alt="logo"
           width={167}
           height={182}
+          unoptimized={true}
+          priority={false}
         />
       </div>
     </div>

@@ -847,10 +847,13 @@ const PDFViewerComponent: React.FC = () => {
                   onMouseLeave={() => handleMouseLeave(index, true)}
                   onClick={() => toggleIntroText(index, true)}
                 >
-                  <img
+                  <Image className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover"
                     src={pdf.coverPage ? imageUrlFor(pdf.coverPage).url() : ""}
-                    alt="Introductory Image"
-                    className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover"
+                    alt="Image"
+                    width={613}
+                    height={496}
+                    unoptimized={true}
+                    priority={false}
                   />
 
                   <div className="flex flex-col mt-[30px] lg:mt-[20px]">
@@ -895,10 +898,13 @@ const PDFViewerComponent: React.FC = () => {
                   onMouseLeave={() => handleMouseLeave(index, false)}
                   onClick={() => toggleIntroText(index, false)}
                 >
-                  <img
+                  <Image className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover"
                     src={pdf.coverPage ? imageUrlFor(pdf.coverPage).url() : ""}
-                    alt="Introductory Image"
-                    className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover"
+                    alt="Image"
+                    width={613}
+                    height={496}
+                    unoptimized={true}
+                    priority={false}
                   />
 
                   <div className="flex flex-col mt-[30px] lg:mt-[20px]">
@@ -953,6 +959,8 @@ const PDFViewerComponent: React.FC = () => {
           alt="logo"
           width={167}
           height={182}
+          unoptimized={true}
+          priority={false}
         />
       </div>
     </div>

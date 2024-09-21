@@ -122,10 +122,13 @@ const EventsPage: React.FC = () => {
                   onClick={() => toggleIntroText(index)}
                 >
                   {/* Image */}
-                  <img
+                  <Image className="h-[150px] lg:h-[286px] w-[250px] lg:w-[456px] rounded-[28px] mt-[30px] lg:mt-[60px] object-cover mb-4"
                     src={imageUrlFor(event.imageContest).url()}
-                    alt={event.title}
-                    className="h-[150px] lg:h-[286px] w-[250px] lg:w-[456px] rounded-[28px] mt-[30px] lg:mt-[60px] object-cover mb-4"
+                    alt="Image"
+                    width={613}
+                    height={496}
+                    unoptimized={true}
+                    priority={false}
                   />
 
                   {/* Title and Description */}
@@ -164,6 +167,8 @@ const EventsPage: React.FC = () => {
           alt="logo"
           width={167}
           height={182}
+          unoptimized={true}
+          priority={false}
         />
       </div>
     </div>

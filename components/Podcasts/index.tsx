@@ -92,14 +92,14 @@ const YouTubePodcasts: React.FC = () => {
         </h1>
       </div>
 
-      <div className="backgroundGradientDA">
+      <div className="backgroundGradientDA  overflow-x-scroll no-scrollbar">
         <div className="w-[95%] lg:w-[90%] ml-[20px] md:ml-[80px]">
           <div
             ref={sliderRef}
-            className="h-[1003px] md:h-[1003px] flex flex-col"
+            className="h-[1153px] md:h-[1323px] flex flex-col"
           >
             {/* First row */}
-            <div className="flex mt-[35px] lg:mt-[67px] w-[95%] overflow-x-scroll no-scrollbar">
+            <div className="da-wrapper flex w-[95%] h-[950px] mt-[40px] md:mt-[80px]">
               {firstRowDocs.map((video, index) => (
                 
               <div
@@ -134,8 +134,8 @@ const YouTubePodcasts: React.FC = () => {
                       </p>
                     ) : (
                       <div className="flex flex-col mt-[15px] gap-[15px] lg:gap-[14.07px]">
-                        <div className="hamburger-line w-full h-[5px] md:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
-                        <div className="hamburger-line w-full h-[5px] md:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
+                        <div className="hamburger-line w-[95%] h-[5px] md:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
+                        <div className="hamburger-line w-[95%] h-[5px] md:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
                         <div className="hamburger-line w-[50%] h-[5px] md:w-[138.27px] md:h-[6.73px] rounded-[10px]"></div>
                       </div>
                     )}
@@ -146,7 +146,7 @@ const YouTubePodcasts: React.FC = () => {
             </div>
 
             {/* Second row */}
-            <div className="da-wrapper flex mt-[35px] lg:mt-[67px] w-[95%] overflow-x-scroll no-scrollbar">
+            <div className="da-wrapper flex w-[95%] h-[1000px]">
               {secondRowDocs.map((video, index) => (
                 
               <div
@@ -181,8 +181,8 @@ const YouTubePodcasts: React.FC = () => {
                       </p>
                     ) : (
                       <div className="flex flex-col mt-[15px] gap-[15px] lg:gap-[14.07px]">
-                        <div className="hamburger-line w-full h-[5px] md:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
-                        <div className="hamburger-line w-full h-[5px] md:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
+                        <div className="hamburger-line w-[95%] h-[5px] md:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
+                        <div className="hamburger-line w-[95%] h-[5px] md:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
                         <div className="hamburger-line w-[50%] h-[5px] md:w-[138.27px] md:h-[6.73px] rounded-[10px]"></div>
                       </div>
                     )}
@@ -202,6 +202,8 @@ const YouTubePodcasts: React.FC = () => {
           alt="logo"
           width={167}
           height={182}
+          unoptimized={true}
+          priority={false}
         />
       </div>
     </div>

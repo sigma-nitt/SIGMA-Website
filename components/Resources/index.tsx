@@ -131,10 +131,13 @@ const ResourcePage = () => {
                     key={index}
                     className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[381px] h-[300px] lg:h-[377.13px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
                   >
-                    <img
+                    <Image className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover"
                       src={resource.thumbnail ? imageUrlFor(resource.thumbnail).url() : ""}
-                      alt="Introductory Image"
-                      className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover"
+                      alt="Thumbnail"
+                      width={613}
+                      height={496}
+                      unoptimized={true}
+                      priority={false}
                     />
                     <div className="flex flex-col mt-[30px] lg:mt-[22.46px]">
                       <div>
@@ -173,10 +176,13 @@ const ResourcePage = () => {
                     key={index}
                     className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[381px] h-[300px] lg:h-[377.13px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
                   >
-                    <img
+                    <Image className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover"
                       src={resource.thumbnail ? imageUrlFor(resource.thumbnail).url() : ""}
-                      alt="Introductory Image"
-                      className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover"
+                      alt="Thumbnail"
+                      width={613}
+                      height={496}
+                      unoptimized={true}
+                      priority={false}
                     />
                     <div className="flex flex-col mt-[30px] lg:mt-[22.46px]">
                       <div>
@@ -219,10 +225,13 @@ const ResourcePage = () => {
                     key={index}
                     className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[381px] h-[300px] lg:h-[377.13px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
                   >
-                    <img
+                    <Image className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover"
                       src={resource.thumbnail ? imageUrlFor(resource.thumbnail).url() : ""}
-                      alt="Introductory Image"
-                      className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover"
+                      alt="Thumbnail"
+                      width={613}
+                      height={496}
+                      unoptimized={true}
+                      priority={false}
                     />
                     <div className="flex flex-col mt-[30px] lg:mt-[22.46px]">
                       <div>
@@ -261,10 +270,13 @@ const ResourcePage = () => {
                     key={index}
                     className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[381px] h-[300px] lg:h-[377.13px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
                   >
-                    <img
+                    <Image className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover"
                       src={resource.thumbnail ? imageUrlFor(resource.thumbnail).url() : ""}
-                      alt="Introductory Image"
-                      className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover"
+                      alt="Thumbnail"
+                      width={613}
+                      height={496}
+                      unoptimized={true}
+                      priority={false}
                     />
                     <div className="flex flex-col mt-[30px] lg:mt-[22.46px]">
                       <div>
@@ -303,6 +315,8 @@ const ResourcePage = () => {
           alt="logo"
           width={167}
           height={182}
+          unoptimized={true}
+          priority={false}
         />
       </div>
 

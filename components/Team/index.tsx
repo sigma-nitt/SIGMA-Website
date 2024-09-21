@@ -5,6 +5,7 @@ import imageUrlBuilder from '@sanity/image-url';
 import client from '@/sanityClient';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import Image from 'next/image';
 
 interface TeamMember {
   name: string;
@@ -71,8 +72,6 @@ const MeetOurTeamPage = () => {
 
   return (
     <div className="text-center flipping-container">
-      {/* <div className="p-10 mb-8">
-      </div> */}
       {categories.map((category) => (
         <div key={category}>
           <h2 className="font-poppins text-[40px] lg:text-[48px] lg:text-left lg:mt-[30px]">
@@ -99,12 +98,13 @@ const MeetOurTeamPage = () => {
                   <div className="flex flex-col items-center justify-center h-[100%]">
                     <div>
                       {member.image && (
-                        <img
-                          // src={imageUrlFor(member.image).url()}
-                          src = '.\images\tanishq.png'
-                          alt={member.name}
-                          // className="rounded-full mx-auto transition-transform transform hover:scale-110 w-[60%] mt-4 md:mt-0 md:w-[176.17px] md:h-[184.88px]"
-                          className="rounded-full mx-auto transition-transform transform hover:scale-110 w-[60%] md:w-[70%] lg:w-[184.88px] lg:h-[184.88px]"
+                        <Image className="rounded-full mx-auto transition-transform transform hover:scale-110 w-[60%] md:w-[70%] lg:w-[184.88px] lg:h-[184.88px]"
+                          src={imageUrlFor(member.image).url()}
+                          alt="logo"
+                          width={613}
+                          height={496}
+                          unoptimized={true}
+                          priority={false}
                           style={{
                             background: 'linear-gradient(229.1deg, #313ED0 -35.29%, #232971 30.74%, #0E113A 56.42%)',
                           }}
