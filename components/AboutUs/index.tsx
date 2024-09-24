@@ -13,8 +13,9 @@ const EventsPage: React.FC = () => {
       <div className="flex flex-col lg:flex-row py-[30px] lg:py-[60px]">
         <div className="flex flex-col items-center lg:items-start lg:ml-[5%] xl:ml-[111px] mt-[120px] lg:mt-[169px] lg:w-[50%]">
           <div className="flex justify-center lg:justify-start items-center text-center w-[90%] xl:w-[70%]">
-            <div className="font-poppins font-semibold justify-center text-center lg:text-left text-[30px] md:text-[40px] lg:text-[43px] xl:text-[48px] leading-[45px] lg:leading-[55px]">
-              <span className="gradient-textABTUS">We Power</span> the mindset of business
+            <div className="font-poppins justify-center text-center lg:text-left text-[30px] md:text-[40px] lg:text-[43px] xl:text-[48px] leading-[45px] lg:leading-[55px]">
+              <span className="gradient-textABTUS">We Power</span> 
+              <span className="font-semibold"> the mindset of business</span>
             </div>
           </div>
           <div className="flex justify-center lg:justify-start items-center text-center font-acumin text-justify lg:text-left mt-[15px] lg:mt-[21px] md:text-[17px] lg:text-[18px] xl:text-[20px] lg:leading-[26px] w-[90%] md:w-[80%] lg:w-[95%] xl:w-[85%]">
@@ -49,7 +50,7 @@ const EventsPage: React.FC = () => {
             <div>
               <p className="font-acumin text-center lg:text-left text-[25px] lg:text-[36px] lg:leading-[43.2px] lg:ml-[58px] font-normal">Our Mission</p>
             </div>
-            <div className="ml-[30px] lg:ml-[0px] mt-[10px] lg:mt-[0px] font-acumin text-justify lg:text-left text-[15px] lg:text-[24px] lg:mt-[21px] w-[90%] lg:w-[649px] lg:ml-[60px] leading-[26px] font-normal">
+            <div className="mt-[10px] lg:mt-[0px] font-acumin text-justify lg:text-left text-[15px] lg:text-[20px] lg:mt-[21px] w-[90%] lg:w-[649px] lg:ml-[60px] leading-[26px] font-normal">
               At SIGMA, we are committed to providing our members with a wide range of services and activities to help them
               develop their skills and interests in business, data analytics, and machine learning. Our mission is to empower
               our members with the knowledge and resources they need to succeed in their careers and make a positive impact in
@@ -62,8 +63,8 @@ const EventsPage: React.FC = () => {
 
       <div className="flex flex-col lg:flex-row lg:mb-[80px]">
         <div className="flex flex-col items-center lg:items-start lg:ml-[5%] xl:ml-[111px] mt-[50px] lg:mt-[59px] lg:w-[50%]">
-          <div className="flex justify-center lg:justify-start items-center text-center w-[90%] xl:w-[70%]">
-            <div className="font-poppins font-semibold justify-center text-center lg:text-left text-[30px] md:text-[40px] lg:text-[43px] xl:text-[48px] leading-[45px] lg:leading-[55px]">
+          <div className="flex justify-center lg:justify-start items-center text-center w-[90%] xl:w-[75%]">
+            <div className="font-poppins justify-center text-center lg:text-left text-[30px] md:text-[40px] lg:text-[43px] xl:text-[48px] leading-[45px] lg:leading-[55px]">
               <span className="gradient-textABTUS font-poppins">Experienced Leadership</span>
             </div>
           </div>

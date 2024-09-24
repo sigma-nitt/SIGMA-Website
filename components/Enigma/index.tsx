@@ -470,7 +470,7 @@ const PDFViewerComponent: React.FC = () => {
       <div className="mb-8">
         <h1 className="h-[87px] text-center text-4xl pb-2 font-semibold lg:text-5xl md:text-4xl md:pr-10 md:leading-none">
           <span className="gradient-textEnigma font-poppins">
-            TAKE A LOOK AT OUR MAGAZINE!
+            Take a look at out Magazine!
           </span>
         </h1>
       </div>
