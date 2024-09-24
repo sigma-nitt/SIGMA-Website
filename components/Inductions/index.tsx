@@ -226,8 +226,8 @@ const EventsPage: React.FC = () => {
                 >
                 <div className="w-[85%] flex flex-col">
                     {/* First row of images */}
-                    <div className="flex flex-col md:flex-row justify-between mb-[20px] gap-4 lg:gap-14">
-                        <div className="md:w-1/3 flex items-center justify-center order-2 md:order-1">
+                    <div className="flex flex-col md:flex-row justify-between mb-[20px] gap-4 lg:gap-0">
+                        <div className="md:w-1/3 flex items-center justify-center order-2 md:order-1 lg:pr-4">
                             <Image className="w-[95%] md:w-full h-auto"
                                 src="./images/dainduc.png"
                                 alt="Image"
@@ -237,7 +237,7 @@ const EventsPage: React.FC = () => {
                                 priority={false}
                             />
                         </div>
-                        <div className="md:w-1/3 flex items-center justify-center mt-[-100px] xl:mt-[-15%] order-1 md:order-2">
+                        <div className="md:w-1/3 flex items-center justify-center mt-[-100px] xl:mt-[-15%] order-1 md:order-2 lg:mr-[-40px]">
                             <Image className="w-[95%] md:w-full h-auto"
                                 src="./images/weareinducting.png"
                                 alt="Image"

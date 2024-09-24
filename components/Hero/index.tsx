@@ -212,7 +212,7 @@ const HeroSection: FC = () => {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             unoptimized={true}
-            priority={false}
+            priority={true}
           />
           <Image
             className={`lg:ml-[150px] absolute justify-center lg:mt-[32px] w-[300px] h-[350px] md:w-auto md:h-[400px] lg:w-[450px] lg:h-[578px] transition-opacity duration-[1200ms] ease-out ${
@@ -225,7 +225,7 @@ const HeroSection: FC = () => {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             unoptimized={true}
-            priority={false}
+            priority={true}
           />
         </div>
       </div>

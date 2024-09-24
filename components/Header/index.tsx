@@ -342,7 +342,7 @@ const Header = () => {
               ))}
             </ul>
           </nav>
-          <div className="mt-7 flex items-center gap-6 xl:mt-0 text-black">
+          <div className="mt-7 flex items-center gap-6 xl:mt-0 text-black font-poppins">
             <Link
               href="/contactus"
               className={clsx("p-2 font-semibold", buttonVariants({ variant: "cta" }))}
