@@ -9,41 +9,93 @@
 
 
 
-export default function Background() {
-  return (
-    <div className="pointer-events-none fixed z-[-1] min-h-screen w-screen bg-[linear-gradient(229.1deg,#313ED0_-35.29%,#232971_30.74%,#0E113A_56.42%)]">
-    </div>
-  );
-}
+// export default function Background() {
+//   return (
+//     <div className="pointer-events-none fixed z-[-1] min-h-screen w-screen bg-[linear-gradient(229.1deg,#313ED0_-35.29%,#232971_30.74%,#0E113A_56.42%)]">
+//     </div>
+//   );
+// }
 
 
 
 
 
 
-// // components/BackgroundSwitcher.tsx
 // import React, { useEffect, useState } from 'react';
 // import BegBackground from './BegBackground';
 // import MidBackground from './MidBackground';
 // import EndBackground from './EndBackground';
 
 // const Background: React.FC = () => {
-//   const [currentBackground, setCurrentBackground] = useState<number>(0);
-
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setCurrentBackground((prev) => (prev + 1) % 3); // Cycle between 0, 1, 2
-//     }, 6000); // 6 seconds interval for each background
-//     return () => clearInterval(interval); // Cleanup on unmount
-//   }, []);
 
 //   return (
 //     <div className="background-container pointer-events-none fixed z-[-1] min-h-screen w-full bg-[linear-gradient(229.1deg,#313ED0_-35.29%,#232971_30.74%,#0E113A_56.42%)]">
-//       {currentBackground === 0 && <BegBackground />}
-//       {currentBackground === 1 && <MidBackground />}
-//       {currentBackground === 2 && <EndBackground />}
+//     {/* <div className="background-container pointer-events-none fixed z-[-1] min-h-screen w-full bg-white"> */}
+//       <BegBackground />
 //     </div>
 //   );
 // };
 
 // export default Background;
+
+
+
+
+
+
+import React, { useEffect, useState } from 'react';
+import BegBackground from './BegBackground';
+import MidBackground from './MidBackground';
+import EndBackground from './EndBackground';
+
+const Background: React.FC = () => {
+  const [currentBackground, setCurrentBackground] = useState<'Beg' | 'Mid' | 'End'>('Beg');
+
+  useEffect(() => {
+    const cycleBackgrounds = () => {
+      setCurrentBackground((prev) => {
+        if (prev === 'Beg') return 'Mid';
+        if (prev === 'Mid') return 'End';
+        return 'Beg';
+      });
+    };
+
+    // Start cycling immediately and then every 6 seconds
+    const transitionInterval = setInterval(cycleBackgrounds, 6000);
+
+    // Trigger the first transition instantly
+    cycleBackgrounds();
+
+    return () => {
+      clearInterval(transitionInterval);
+    };
+  }, []);
+
+  return (
+    <div className="background-container pointer-events-none fixed z-[-1] min-h-screen w-full bg-[linear-gradient(229.1deg,#313ED0_-35.29%,#232971_30.74%,#0E113A_56.42%)]">
+      <div
+        className={`absolute top-0 left-0 w-full h-full transition-opacity duration-[6000ms] ${
+          currentBackground === 'Beg' ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
+        <BegBackground />
+      </div>
+      <div
+        className={`absolute top-0 left-0 w-full h-full transition-opacity duration-[6000ms] ${
+          currentBackground === 'Mid' ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
+        <MidBackground />
+      </div>
+      <div
+        className={`absolute top-0 left-0 w-full h-full transition-opacity duration-[6000ms] ${
+          currentBackground === 'End' ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
+        <EndBackground />
+      </div>
+    </div>
+  );
+};
+
+export default Background;

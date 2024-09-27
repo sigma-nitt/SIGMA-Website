@@ -19,19 +19,11 @@
   margin-bottom: 100px;
 }
 
-@media (max-width: 768px) {
-  .testimonial {
-    position: relative;
-    width: 100%;
-    height: 709.1px;
-  }
-}
-
 @media (max-width: 498px) {
   .testimonial {
     position: relative;
     width: 100%;
-    height: 859.1px;
+    height: 459.1px;
   }
 }
 /* Group 1 */
@@ -164,7 +156,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 498px) {
   .ellipse-2 {
     position: absolute;
     left: 5.29%;
@@ -181,11 +173,11 @@
   }
 
   .name{
-    top: 75%;
+    top: 82%;
   }
 
   .president{
-    top: 80%;
+    top: 90%;
   }
 }
 
@@ -205,7 +197,8 @@
   display: none; /* Hide scrollbar for WebKit browsers */
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 498px) {
   .testimonial-item {
     width: 90%;
     margin-right: 10px;
@@ -216,7 +209,8 @@
   }
 
   .testimonial-content {
-    font-size: 0.875rem; /* Adjust font size */
+    font-size: 0.800rem; /* Adjust font size */
+    line-height: 20px;
   }
 }
 

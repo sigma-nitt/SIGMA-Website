@@ -40,3 +40,7 @@
 .image-container:hover .image-2 {
   opacity: 1; /* Fade in second image */
 }
+
+.imgchange:hover {
+  content: url('/images/bulb1.png');  /* Change to the hover image */
+}
