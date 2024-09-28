@@ -180,7 +180,7 @@ const Header = () => {
 
   const handleStickyMenu = () => {
     setStickyMenu(window.scrollY >= 80);
-    const header = document.querySelector('.bg-custom-gradient') as HTMLElement | null;
+    const header = document.querySelector('.bg-custom-gradientbig') as HTMLElement | null;
     if (header) {
       if (window.scrollY > 1) { 
         header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
@@ -225,16 +225,9 @@ const Header = () => {
   );
 
   return (
-    // <header
-    //   className={`fixed left-0 top-0 z-50 w-full py-7 ${
-    //     stickyMenu ? "bg-custom-gradient shadow transition duration-100 dark:bg-custom-gradient" : ""
-    //   }`}
-    // >
     <header
-      // className="fixed left-0 top-0 z-50 w-full py-7 bg-custom-gradient shadow transition duration-100 dark:bg-custom-gradient">
-      className="fixed left-0 top-0 z-50 w-full py-7 bg-custom-gradient transition duration-100 dark:bg-custom-gradient font-poppins">
+      className="fixed left-0 top-0 z-50 w-full py-7 bg-[rgba(0,0,0,0.8)] lg:bg-custom-gradientbig transition duration-100 dark:bg-custom-gradient font-poppins">
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
-      {/* <div className="relative mx-auto max-w-c-1390 items-center justify-between md:px-8 xl:flex 2xl:px-0"> */}
         <div className="flex items-center justify-between mr-[80px]">
           <a href="/" className="ml-5">
             <Image
@@ -243,7 +236,6 @@ const Header = () => {
               width={35}
               height={85}
               className="w-full"
-              // style={{ width: "35px" }}
             />
           </a>
 
@@ -319,7 +311,13 @@ const Header = () => {
                       >
                         {menuItem.submenu.map((subItem) => (
                           <li key={subItem.title} className="text-white text-[13px] font-semibold font-poppins">
-                            <Link href={subItem.path || "#"} onClick={() => setActiveSubmenu(null)}>
+                            <Link
+                              href={subItem.path || "#"}
+                              onClick={() => {
+                                setActiveSubmenu(null);
+                                toggleMobileMenu(); 
+                              }}
+                            >
                               {subItem.title}
                             </Link>
                           </li>
@@ -329,6 +327,9 @@ const Header = () => {
                   ) : (
                     <Link
                       href={menuItem.path || "#"}
+                      onClick={() => {
+                        toggleMobileMenu(); 
+                      }}
                       className={
                         pathUrl === menuItem.path
                           ? "text-primary hover:text-white"
@@ -345,6 +346,9 @@ const Header = () => {
           <div className="mt-7 flex items-center gap-6 xl:mt-0 text-black font-poppins">
             <Link
               href="/contactus"
+              onClick={() => {
+                toggleMobileMenu(); 
+              }}
               className={clsx("p-2 font-semibold", buttonVariants({ variant: "cta" }))}
             >
               CONTACT US

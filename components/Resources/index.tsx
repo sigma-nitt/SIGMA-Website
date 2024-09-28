@@ -99,28 +99,27 @@ const ResourcePage = () => {
       </div>
 
       <div className="flex flex-col md:flex-row items-center justify-center md:justify-start md:ml-22 md:space-x-5 mb-8 rounded-full">
-  <button
-    onClick={() => setSelectedCategory('Data Analytics')}
-    className={`textcat w-[130px] md:w-[200px] py-2 font-poppins text-[20px] md:text-[25px] rounded ${
-      selectedCategory === 'Data Analytics' 
-        ? 'text-black bg-[hsla(155,89%,51%,1)] rounded-tl-full rounded-tr-full rounded-bl-full rounded-br-full hover:shadow-[0px_4px_30px] hover:shadow-[rgb(247_176_253_/_50%)] transition-shadow duration-300' 
-        : 'text-white bg-transparent'
-    }`}
-  >
-    <span className={selectedCategory === 'Data Analytics' ? 'highlight' : ''}>ANALYTICS</span>
-  </button>
-  <button
-    onClick={() => setSelectedCategory('Management')}
-    className={`textcat w-[170px] md:w-[250px] py-2 font-poppins text-[20px] md:text-[25px] rounded ${
-      selectedCategory === 'Management' 
-        ? 'text-black bg-[hsla(155,89%,51%,1)] rounded-tl-full rounded-tr-full rounded-bl-full rounded-br-full hover:shadow-[0px_4px_30px] hover:shadow-[rgb(247_176_253_/_50%)] transition-shadow duration-300' 
-        : 'text-white bg-transparent'
-    }`}
-  >
-    <span className={selectedCategory === 'Management' ? 'highlight' : ''}>MANAGEMENT</span>
-  </button>
-</div>
-
+        <button
+          onClick={() => setSelectedCategory('Data Analytics')}
+          className={`textcat w-[130px] md:w-[200px] py-2 font-poppins text-[20px] md:text-[25px] rounded ${
+            selectedCategory === 'Data Analytics' 
+              ? 'text-black bg-[hsla(155,89%,51%,1)]' 
+              : 'text-white bg-transparent'
+          }`}
+        >
+          <span className={selectedCategory === 'Data Analytics' ? 'highlight' : ''}>ANALYTICS</span>
+        </button>
+        <button
+          onClick={() => setSelectedCategory('Management')}
+          className={`textcat w-[170px] md:w-[250px] py-2 font-poppins text-[20px] md:text-[25px] rounded ${
+            selectedCategory === 'Management' 
+              ? 'text-black bg-[hsla(155,89%,51%,1)]' 
+              : 'text-white bg-transparent'
+          }`}
+        >
+          <span className={selectedCategory === 'Management' ? 'highlight' : ''}>MANAGEMENT</span>
+        </button>
+      </div>
 
       <div className="backgroundGradientRes">
         {selectedCategory === 'Data Analytics' && (

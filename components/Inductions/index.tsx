@@ -316,7 +316,7 @@ const EventsPage: React.FC = () => {
                                             <span className="font-poppins text-[15px] md:text-[24px] mr-[30px] md:mr-[50px]">{index + 1}</span>
                                             <span className="text-center text-[15px] md:text-[24px]">{item.question}</span>
                                         </div>
-                                        <div className="flex items-center justify-center w-[80px] h-[80px] rounded-[8px] plus-button">
+                                        <div className="flex items-center justify-center w-[80px] h-[80px] rounded-tr-[8px] rounded-br-[8px] plus-button">
                                             {activeQuestion === item.id ? (
                                                 <FaMinus className="text-white w-[22px] h-[22px]" />
                                             ) : (

@@ -19,7 +19,7 @@ const Features: FC<FeaturesProps> = () => {
 
   return (
     <div ref={inViewRef} className="bgBox flex flex-col md:h-[636px] p-4">
-      <div className="mt-8 mb-18">
+      <div className="mt-8 mb-4 md:mb-18">
           <h1 className="text-center pb-2 font-semibold md:text-center md:leading-none">
             <span className="gradient-text text-[25px] md:text-[40px] font-poppins">DATA ANALYTICS & MANAGEMENT</span>
           </h1>

@@ -115,10 +115,10 @@ const MeetOurTeamPage = () => {
                           {member.name}
                         </span>
                       </div>
-                      <div className="memberPosition leading-[12px] md:[14px] text-[12px] md:text-[14px] lg:text-[16.81px] lg:leading-[25.21px] lg:mt-[7.41px] text-white">{member.position}</div>
+                      <div className="memberPosition leading-[12px] md:leading-[14px] text-[12px] md:text-[14px] lg:text-[16.81px] lg:leading-[25.21px] lg:mt-[7.41px] text-white">{member.position}</div>
                       {hoveredMember === member.name && (
                         <div className="absolute inset-0 flex items-center justify-center bg-green rounded-lg p-4 text-white backdrop-filter backdrop-blur-md text-overlay">
-                          <p className="text-[11px] leading-[12px] md:text-sm">{member.aboutyou}</p>
+                          <p className="text-[9px] leading-[12px] md:text-sm">{member.aboutyou}</p>
                         </div>
                       )}
                     </div>

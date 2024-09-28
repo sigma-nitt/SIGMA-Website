@@ -941,7 +941,7 @@ const PDFViewerComponent: React.FC = () => {
 
       {/* PDF Viewer */}
       {isFlipbookOpen && currentPDF && (
-        <div className="mx-auto fixed inset-0 z-50 flex flex-col items-center justify-center bg-white w-[50%] mt-5 h-[95%] overflow-y-auto">
+        <div className="mx-auto fixed inset-0 z-50 flex flex-col items-center justify-center bg-white w-[90%] lg:w-[50%] mt-5 h-[95%] overflow-y-auto">
           <button onClick={closeFlipbook} className="absolute top-5 right-5 p-2 bg-red-500 text-white rounded">
             Close
           </button>

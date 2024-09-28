@@ -129,7 +129,7 @@ const HeroSection: FC = () => {
     <div className="overflow-hidden pt-35 md:pt-40 xl:pt-[147px] pb-[125px]">
       <div className="hero-section flex flex-col lg:flex-row justify-center items-center">
 
-        <div className="w-full lg:w-[50%] flex flex-col items-start justify-center text-left order-1 lg:order-1">
+        <div className="w-full lg:w-[50%] flex flex-col items-center lg:items-start justify-center text-center lg:text-left order-1 lg:order-1">
           <div className="m-auto lg:ml-[22%] xl:ml-[25%]">
             <p className="font-poppins mt-[32px] text-[30px] md:text-[35px] lg:text-[37px] xl:text-[43px] font-semibold leading-[50px] lg:leading-[72px] xl:leading-[72px] lg:h-[72px]">
               The Business Club to
