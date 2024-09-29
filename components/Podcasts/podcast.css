@@ -34,7 +34,6 @@ body {
 .da-wrapper {
   display: flex;
   transition: transform 0.5s ease;
-  width: max-content; /* Ensure the wrapper width adjusts to fit all events */
 }
 
 .hamburger-line {

@@ -178,17 +178,42 @@ const Header = () => {
 
   const pathUrl = usePathname();
 
+  // const handleStickyMenu = () => {
+  //   setStickyMenu(window.scrollY >= 80);
+  //   const header = document.querySelector('.bgcustomgradient') as HTMLElement | null;
+  //   if (header) {
+  //     if (window.scrollY > 1) { 
+  //       header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+  //     } else {
+  //       header.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+  //     }
+  //   }
+  // };
+
   const handleStickyMenu = () => {
-    setStickyMenu(window.scrollY >= 80);
-    const header = document.querySelector('.bg-custom-gradientbig') as HTMLElement | null;
+    const screenWidth = window.innerWidth;
+    setStickyMenu(window.scrollY >= 80 && screenWidth >= 768);
+  
+    const header = document.querySelector('.bgcustomgradient') as HTMLElement | null;
     if (header) {
-      if (window.scrollY > 1) { 
-        header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-      } else {
-        header.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+      if (screenWidth < 768) { // For small screens
+        if (window.scrollY === 0) {
+          header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+        } else {
+          header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+        }
+      } else { // For larger screens
+        if (window.scrollY > 1) {
+          header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+        } else {
+          header.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+        }
       }
     }
   };
+  
+  window.addEventListener('resize', handleStickyMenu);
+  
 
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
@@ -226,7 +251,7 @@ const Header = () => {
 
   return (
     <header
-      className="fixed left-0 top-0 z-50 w-full py-7 bg-[rgba(0,0,0,0.8)] lg:bg-custom-gradientbig transition duration-100 dark:bg-custom-gradient font-poppins">
+      className="fixed left-0 top-0 z-50 w-full py-7  bgcustomgradient transition duration-100 dark:bg-custom-gradient font-poppins">
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
         <div className="flex items-center justify-between mr-[80px]">
           <a href="/" className="ml-5">
