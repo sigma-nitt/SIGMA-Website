@@ -885,7 +885,7 @@ const PDFViewerComponent: React.FC = () => {
         </div>
       </div>
 
-      <div className="backgroundGradientCS">
+      <div className="backgroundGradientDA">
         <div className="ml-[20px] md:ml-[80px]">
           {/* Second row */}
           <div ref={sliderRef} className="flex flex-col h-[486px] lg:h-[506px] overflow-x-scroll no-scrollbar">
