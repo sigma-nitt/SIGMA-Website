@@ -173,7 +173,7 @@ const HeroSection: FC = () => {
 
             <div
               // className="relative mx-auto lg:mt-[40px] flex items-center justify-center"
-              className={`relative mx-auto lg:mt-[40px] lg:w-[480px] flex items-center justify-center bg-[length:205px_55px] md:bg-[length:250px_60px] lg:bg-[length:440px_110px]`}
+              className={`relative mx-auto lg:mt-[40px] lg:w-[480px] flex items-center justify-center bg-[length:205px_55px] md:bg-[length:250px_60px] lg:bg-[length:400px_110px]`}
               style={{
                 backgroundImage: 'url("/images/buttonbg.png")',
                 backgroundRepeat: 'no-repeat',
@@ -186,13 +186,13 @@ const HeroSection: FC = () => {
                 onClick={handleExploreProjects}
                 className={cn(
                   buttonVariants({ variant: "cta1" }),
-                  "flex items-center justify-center space-x-5 p-4 font-poppins relative lg:h-[78px] lg:w-[393px]"
+                  "flex items-center justify-center space-x-5 p-4 font-poppins relative lg:h-[78px] lg:w-[353px]"
                 )}
                 style={{
                   backgroundColor: 'hsla(0, 0%, 15%, 1)',
                 }}
               >
-                <span className="buttonfont font-poppins text-white text-[15px] md:text-[20px] lg:text-[24px] xl:text-[31.82px]">
+                <span className="buttonfont font-poppins text-white text-[15px] md:text-[20px] lg:text-[24px] xl:text-[29px]">
                   Explore our Projects
                 </span>
               </button>
