@@ -32,8 +32,8 @@ const Features: FC<FeaturesProps> = () => {
                 />
               </div>
               <div className="flex items-center justify-center order-2">
-                <Image className="w-[30%] md:w-[90%] lg:w-[90%] h-auto"
-                  src="./images/extra.png"
+                <Image className="w-[30%] md:w-[90%] lg:w-full h-auto"
+                  src="/images/sigma symbol.png"
                   alt="logo"
                   width={613}
                   height={496}

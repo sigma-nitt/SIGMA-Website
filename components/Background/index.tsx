@@ -43,6 +43,7 @@
 
 
 
+
 import React, { useEffect, useState } from 'react';
 import BegBackground from './BegBackground';
 import MidBackground from './MidBackground';
