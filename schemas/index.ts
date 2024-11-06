@@ -6,5 +6,6 @@ import reportsData from './reportCS';
 import reportsDA from './reportDA';
 import resources from './resources';
 import achievements from './achievements';
+import testimonials from './testimonials';
 
-export const schemaTypes = [teamMemberSchema, youtubeVideoSchema, enigmaPDF, eventsData, reportsData, reportsDA, resources, achievements];
+export const schemaTypes = [teamMemberSchema, youtubeVideoSchema, enigmaPDF, eventsData, reportsData, reportsDA, resources, achievements, testimonials];

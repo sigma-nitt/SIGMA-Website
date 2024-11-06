@@ -1,6 +1,6 @@
 export default {
     name: 'Resources',
-    title: 'Resources',
+    title: 'RESOURCES',
     type: 'document',
     fields: [
       {

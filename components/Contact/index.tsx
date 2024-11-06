@@ -335,7 +335,7 @@ const Contact = () => {
           <div className="mt-[50px] lg:mt-[0px] image-column lg:w-[40%] flex justify-center items-center">
             <Image
               className="h-[400px] w-[90%] lg:h-[617px] xl:w-[404px]"
-              src="/images/contactus.png"
+              src="/images/contactus.jpg"
               alt="logo"
               width={404}
               height={617}

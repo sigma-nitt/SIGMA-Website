@@ -173,7 +173,7 @@ const HeroSection: FC = () => {
 
             <div
               // className="relative mx-auto lg:mt-[40px] flex items-center justify-center"
-              className={`relative mx-auto lg:mt-[40px] lg:w-[480px] flex items-center justify-center bg-[length:205px_55px] md:bg-[length:250px_60px] lg:bg-[length:400px_110px]`}
+              className={`relative mx-auto lg:mt-[40px] lg:w-[480px] flex items-center justify-center bg-[length:200px_55px] md:bg-[length:250px_60px] lg:bg-[length:400px_110px]`}
               style={{
                 backgroundImage: 'url("/images/buttonbg.png")',
                 backgroundRepeat: 'no-repeat',

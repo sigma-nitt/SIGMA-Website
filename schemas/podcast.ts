@@ -1,6 +1,6 @@
 export default {
     name: 'youtubeVideo',
-    title: 'Podcasts - YouTube Video',
+    title: 'PODCASTS',
     type: 'document',
     fields: [
       {

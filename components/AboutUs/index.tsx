@@ -19,8 +19,7 @@ const EventsPage: React.FC = () => {
             </div>
           </div>
           <div className="flex justify-center lg:justify-start items-center text-center font-acumin text-justify lg:text-left mt-[15px] lg:mt-[21px] md:text-[17px] lg:text-[18px] xl:text-[20px] lg:leading-[26px] w-[90%] md:w-[80%] lg:w-[95%] xl:w-[85%]">
-            SIGMA is a business club based in NIT Trichy, India. Our club was founded with the vision of providing learning resources for students from technical backgrounds who are interested in managerial and techno-managerial disciplines. Since then, we have grown to become a thriving community of students who are passionate about business, data analytics, and machine learning.
-            At SIGMA, we offer a wide range of services and activities to our members, including publishing articles on Medium, social media posts about business topics, case studies, and projects involving data analytics and machine learning. We also organize workshops, podcasts, events, and competitions for college students in NIT Trichy.
+            SIGMA is the Business Club of NIT Trichy, dedicated to empowering students from technical backgrounds with a strong foundation in business, data analytics, and machine learning. We offer members access to insightful articles, business-focused management and analytics hands-on projects and exposure to real life clients. Our activities include analysing and solving real life business challenges through various Management and Analytics projects, conducting workshops, organizing events, competitions, and hosting podcasts and case studies. Through these initiatives, we cultivate a thriving community of aspiring leaders in managerial and techno-managerial disciplines.
           </div>
         </div>
         <div className="flex justify-center items-center text-center mt-12 lg:mt-[12%] xl:mt-[8%] lg:w-[50%]">
@@ -51,10 +50,11 @@ const EventsPage: React.FC = () => {
               <p className="font-acumin text-center lg:text-left text-[25px] lg:text-[36px] lg:leading-[43.2px] lg:ml-[58px] font-normal">Our Mission</p>
             </div>
             <div className="mt-[10px] lg:mt-[0px] font-acumin m-auto text-justify lg:text-left text-[15px] lg:text-[20px] lg:mt-[21px] w-[90%] lg:w-[649px] lg:ml-[60px] leading-[26px] font-normal">
-              At SIGMA, we are committed to providing our members with a wide range of services and activities to help them
-              develop their skills and interests in business, data analytics, and machine learning. Our mission is to empower
-              our members with the knowledge and resources they need to succeed in their careers and make a positive impact in
-              their communities.
+              To empower future leaders in business by fostering
+              expertise in Analytics, Business intelligence, and acumen,
+              driving innovation and real-world impact through
+              collaboration, entrepreneurship, and sustainable
+              business development.
             </div>
           </div>
         </div>
@@ -69,15 +69,15 @@ const EventsPage: React.FC = () => {
             </div>
           </div>
           <div className="flex justify-center lg:justify-start items-center text-center font-acumin text-justify lg:text-left mt-[15px] lg:mt-[21px] md:text-[17px] lg:text-[18px] xl:text-[20px] lg:leading-[26px] w-[90%] md:w-[80%] lg:w-[95%] xl:w-[85%]">
-            At SIGMA, we are proud to have a team of experienced leaders who are dedicated to providing our members with the best possible resources and opportunities. Our team consists of students from a variety of backgrounds who are passionate about business, data analytics, and machine learning. Our leaders have a wealth of experience in their respective fields, and they are committed to helping our members develop their skills and interests. They work hard to organize events, workshops, and other activities that provide our members with valuable learning experiences. We are always looking for new members to join our team, so if you are interested in becoming a part of SIGMA, please don't hesitate to get in touch.
+            At SIGMA, our leadership team is a dynamic group of students with diverse backgrounds and expertise in business, data analytics, and machine learning. Committed to providing exceptional resources and opportunities, our leaders organize impactful events, workshops, and learning experiences to support members’ growth. If you're passionate about developing your skills in a collaborative environment, consider joining us at SIGMA.
           </div>
         </div>
-        <div className="flex justify-center items-center text-center mt-8 lg:mt-[8%] xl:mt-[5%] lg:w-[50%]">
-          <Image className="w-[35%] lg:w-[50%]"
+        <div className="flex justify-center items-center text-center mt-8 lg:mt-[8%] xl:mt-[4%] lg:w-[50%]">
+          <Image className="w-[35%] lg:w-[35%]"
             src="/images/sigma symbol.png"
             alt="logo"
-            width={813}
-            height={496}
+            width={413}
+            height={296}
             unoptimized={true}
             priority={false}
           />

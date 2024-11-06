@@ -1,7 +1,7 @@
 export default {
     name: 'reportCS',
     type: 'document',
-    title: 'Report - Case Studies',
+    title: 'MANAGEMENT PROJECTS',
     fields: [
       {
         name: 'heading',

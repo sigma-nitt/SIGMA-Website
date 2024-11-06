@@ -1,6 +1,6 @@
 export default {
   name: 'pdfReportDA',
-  title: 'DA Projects',
+  title: 'ANALYTICS PROJECTS',
   type: 'document',
   fields: [
     {

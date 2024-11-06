@@ -19,18 +19,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`dark:bg-background ${inter.className}`}>
         <CustomCursor />
-        {/* <ThemeProvider
-          enableSystem={false}
-          attribute="class"
-          defaultTheme="dark"
-        >  */}
           <Background />
           <Header />
           <ToasterContext />
           {children}
           <Footer />
           <ScrollToTop />
-          {/* </ThemeProvider> */}
       </body>
     </html>
   );

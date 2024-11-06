@@ -43,7 +43,6 @@
     "lightbox.js-react": "^1.0.2",
     "lucide-react": "^0.363.0",
     "next": "^14.1.0",
-    "next-sanity": "^7.1.4",
     "next-themes": "^0.2.1",
     "nodemailer": "^6.9.12",
     "pdf-lib": "^1.17.1",
@@ -52,8 +51,6 @@
     "postcss": "^8.4.31",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "react-embed": "^3.7.0",
     "react-flip-page": "^1.6.4",
     "react-hot-toast": "^2.4.1",
@@ -77,9 +74,13 @@
     "styled-components": "^6.1.8",
     "swiper": "^9.3.2",
     "tailwind-merge": "^2.2.2",
-    "tailwindcss": "^3.4.3",
+    "tailwindcss": "^3.4.14",
     "typescript": "^5.3.3",
-    "xlsx": "^0.18.5"
+    "xlsx": "^0.18.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "next-sanity": "^9.8.8",
+    "@sanity/icons": "^3.4.0"
   },
   "devDependencies": {
     "@types/follow-redirects": "^1.14.4",
