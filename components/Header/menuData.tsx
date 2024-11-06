@@ -52,28 +52,28 @@ const menuData: Menu[] = [
     submenu: [
       {
         id: 7.1,
-        title: "Podcasts",
-        newTab: false,
-        path: "/podcast",
-      },
-      {
-        id: 7.2,
         title: "Enigma",
         newTab: false,
         path: "/enigma",
       },
       {
+        id: 7.2,
+        title: "Podcasts",
+        newTab: false,
+        path: "/podcast",
+      },
+      {
         id: 7.3,
+        title: "Events",
+        newTab: false,
+        path: "/events",
+      },
+      {
+        id: 7.4,
         title: "Resources",
         newTab: false,
         path: "/resources",
       },
-      {
-        id: 7.4,
-        title: "Events",
-        newTab: false,
-        path: "/events",
-      }
     ],
   },
   {

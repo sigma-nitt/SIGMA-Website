@@ -27,6 +27,18 @@
 //   const sliderRef = useRef<HTMLDivElement>(null);
 //   const [isIntroTextVisible, setIsIntroTextVisible] = useState<boolean[]>([]);
 //   const [expandedProjectIndex, setExpandedProjectIndex] = useState<number | null>(null);
+//   const [isPortrait, setIsPortrait] = useState<boolean>(false);
+
+//   useEffect(() => {
+//     // Determine initial viewport size
+//     setIsPortrait(window.innerWidth < 768);
+    
+//     // Update viewport size on resize
+//     const handleResize = () => setIsPortrait(window.innerWidth < 768);
+
+//     window.addEventListener('resize', handleResize);
+//     return () => window.removeEventListener('resize', handleResize);
+//   }, []);
 
 //   useEffect(() => {
 //     const fetchPDFDocuments = async () => {
@@ -86,7 +98,7 @@
 
 //       for (let pageNum = 1; pageNum <= numPages; pageNum++) {
 //         const page = await pdf.getPage(pageNum);
-//         const viewport = page.getViewport({ scale: 1 });
+//         const viewport = page.getViewport({ scale: 2.0 });
 //         const canvas = document.createElement("canvas");
 //         const context = canvas.getContext("2d")!;
 //         canvas.height = viewport.height;
@@ -148,8 +160,6 @@
 //     }
 //   };
 
-//   const isPortrait = window.innerWidth < 768; // Determine if in portrait mode
-
 //   if (loading) {
 //     return (
 //       <div className="flex items-center justify-center h-screen">
@@ -167,7 +177,7 @@
 //       <div className="mb-8">
 //         <h1 className="h-[87px] text-center text-4xl pb-2 font-semibold lg:text-5xl md:text-4xl md:pr-10 md:leading-none">
 //           <span className="gradient-textEnigma font-poppins">
-//             TAKE A LOOK AT OUR MAGAZINE!
+//             Take a look at out Magazine!
 //           </span>
 //         </h1>
 //       </div>
@@ -187,10 +197,14 @@
 //                   onMouseLeave={() => handleMouseLeave(index)}
 //                   onClick={() => toggleIntroText(index)}
 //                 >
-//                   <img
+                  
+//                   <Image className="h-[150px] lg:h-[286px] w-[250px] lg:w-[456px] rounded-[28px] mt-[30px] lg:mt-[60px] object-cover mb-4"
 //                     src={pdf.coverPage ? imageUrlFor(pdf.coverPage).url() : ""}
-//                     alt="Introductory Image"
-//                     className="h-[150px] lg:h-[286px] w-[250px] lg:w-[456px] rounded-[28px] mt-[30px] lg:mt-[60px] object-cover mb-4"
+//                     alt="Image"
+//                     width={613}
+//                     height={496}
+//                     unoptimized={true}
+//                     priority={false}
 //                   />
 //                   <div className="flex flex-col lg:mt-[39px]">
 //                     <div>
@@ -206,18 +220,18 @@
 //                           {pdf.description || "Two lines about the project."}
 //                         </p>
 //                       ) : (
-//                         <div className="flex flex-col items-center lg:items-left mt-[23px] gap-[15px] lg:gap-[23px]">
-//                           <div className="hamburger-line w-[250px] h-[8px] md:w-[452px] md:h-[11px] rounded-[10px]"></div>
-//                           <div className="hamburger-line w-[250px] h-[8px] md:w-[452px] md:h-[11px] rounded-[10px]"></div>
-//                           <div className="hamburger-line w-[250px] h-[8px] md:w-[452px] md:h-[11px] rounded-[10px]"></div>
+//                         <div className="flex flex-col items-left lg:items-left mt-[23px] gap-[15px] lg:gap-[23px]">
+//                           <div className="hamburger-line w-[250px] h-[8px] lg:w-[452px] lg:h-[11px] rounded-[10px]"></div>
+//                           <div className="hamburger-line w-[250px] h-[8px] lg:w-[452px] lg:h-[11px] rounded-[10px]"></div>
+//                           <div className="hamburger-line w-[50%] h-[8px] lg:w-[256px] lg:h-[11px] rounded-[10px]"></div>
 //                         </div>
 //                       )}
 //                     </div>
 //                   </div>
-//                   <div className="absolute top-[40px] left-[135px] md:top-[84px] md:left-[332px]">
+//                   <div className="absolute top-[40px] left-[135px] lg:top-[84px] lg:left-[332px]">
 //                     <button
 //                       onClick={() => openFlipbook(pdf)}
-//                       className="buttonBG text-sm md:text-lg text-white md:py-2 md:px-4 rounded-[28px] h-[30px] w-[120px] md:h-[47px] md:w-[150px]"
+//                       className="buttonBG text-sm lg:text-lg text-white md:py-2 md:px-4 rounded-[28px] h-[30px] w-[120px] lg:h-[47px] lg:w-[150px]"
 //                     >
 //                       View PDF
 //                     </button>
@@ -281,6 +295,8 @@
 //           alt="logo"
 //           width={167}
 //           height={182}
+//           unoptimized={true}
+//           priority={false}
 //         />
 //       </div>
 //     </div>
@@ -288,6 +304,17 @@
 // };
 
 // export default PDFViewerComponent;
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -372,53 +399,52 @@ const PDFViewerComponent: React.FC = () => {
     };
   }, []);
 
-  const loadPdfPages = async (url: string) => {
+  const loadPdfPages = async (url: string, startPage: number = 1, pagesToLoad: number = 3) => {
     try {
-      // Fetch PDF as ArrayBuffer
       const response = await fetch(url);
       if (!response.ok) {
         throw new Error(`Failed to fetch PDF from ${url}`);
       }
       const pdfData = await response.arrayBuffer();
-
-      // Configure PDF.js
+  
+      // Set up PDF.js worker
       pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
-
-      // Load the PDF using pdfjs-dist
+  
       const pdf = await pdfjs.getDocument({ data: pdfData }).promise;
-      const numPages = pdf.numPages;
-      const pages: string[] = [];
-
-      for (let pageNum = 1; pageNum <= numPages; pageNum++) {
+      const totalNumPages = pdf.numPages;
+      const newPages: string[] = [];
+  
+      for (let pageNum = startPage; pageNum < startPage + pagesToLoad && pageNum <= totalNumPages; pageNum++) {
         const page = await pdf.getPage(pageNum);
         const viewport = page.getViewport({ scale: 2.0 });
         const canvas = document.createElement("canvas");
         const context = canvas.getContext("2d")!;
         canvas.height = viewport.height;
         canvas.width = viewport.width;
-
-        // Render page
-        await page.render({
-          canvasContext: context,
-          viewport,
-        }).promise;
-
-        // Convert canvas to image URL
-        pages.push(canvas.toDataURL("image/png"));
+  
+        await page.render({ canvasContext: context, viewport }).promise;
+        newPages.push(canvas.toDataURL("image/png"));
       }
-
-      setPdfPages(pages);
+  
+      setPdfPages((prevPages) => [...prevPages, ...newPages]);
+  
+      if (startPage + pagesToLoad <= totalNumPages) {
+        setTimeout(() => loadPdfPages(url, startPage + pagesToLoad, pagesToLoad), 1000);
+      }
     } catch (error) {
       console.error("Error loading PDF pages:", error);
       setError("Failed to load PDF pages");
     }
   };
+  
 
   const openFlipbook = (pdf: PDFDocument) => {
     setCurrentPDF(pdf);
     setIsFlipbookOpen(true);
-    loadPdfPages(pdf.url); // Load pages when opening the flipbook
+    setPdfPages([]);
+    loadPdfPages(pdf.url, 1, 4);
   };
+  
 
   const closeFlipbook = () => {
     setIsFlipbookOpen(false);
