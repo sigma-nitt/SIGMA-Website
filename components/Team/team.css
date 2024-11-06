@@ -1,0 +1,68 @@
+.catgry
+{
+  background: linear-gradient(90deg, #8062F0 1.49%, #697EE2 10.56%, #5D8CDB 19.39%, #4BA6CC 28.63%, #40BAC0 36.16%, #2BDDAD 46.66%);
+  -webkit-background-clip: text; /* For Chrome, Safari, and Opera */
+  -moz-background-clip: text; /* For Firefox */
+  background-clip: text; /* Standard property */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  color: transparent; /* For non-WebKit browsers */
+  font-weight: 400;
+}
+
+.gradientBackgrnd
+{
+  background: linear-gradient(85.14deg, #181C28 5.41%, #172C28 47%, #1E3432 62.02%, #111648 99.67%);
+}
+
+.memberName
+{
+  background: hsla(0, 0%, 73%, 1);
+  -webkit-background-clip: text; /* For Chrome, Safari, and Opera */
+  -moz-background-clip: text; /* For Firefox */
+  background-clip: text; /* Standard property */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  color: transparent; /* For non-WebKit browsers */
+  font-weight: 500;
+  font: "Poppins", "sans-serif";
+}
+
+.memberPosition
+{
+  font: "Poppins", "sans-serif";
+  font-weight: 400;
+}
+
+.flipping-card {
+  position: relative;
+}
+
+.text-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: opacity 0.3s;
+  opacity: 0;
+  z-index: 1;
+  height: 70%;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 25px;
+  border-radius: 0 0 10px 10px;
+}
+
+
+.flipping-card:hover .text-overlay {
+  opacity: 1;
+}
+
+.flipping-card:hover img {
+  filter: blur(4px);
+}
+
+
+.flipping-card .back-face {
+  transform: rotateY(180deg);
+}

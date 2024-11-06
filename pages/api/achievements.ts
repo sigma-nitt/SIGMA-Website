@@ -4,7 +4,7 @@ import { createClient } from '@sanity/client';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const client = createClient({
-        projectId: 'jnqvatdi',
+        projectId: 'vdzzonmk',
         dataset: 'production',
         apiVersion: '2024-02-11',
         useCdn: false
