@@ -86,7 +86,7 @@ const MeetOurTeamPage = () => {
                   key={index}
                   className={`items-center justify-center rounded-[15px] md:rounded-[31px] shadow-md mt-[24px] mb-[24px] lg:mt-[42.14px] lg:mb-[0px] w-[40%] md:w-[22%] lg:w-[238px] md:h-[280px] lg:h-[351.72px] transition-transform transform ${
                     hoveredMember === member.name ? 'hover:scale-105' : ''
-                  } flipping-card`}
+                  } flipping-card ${member.category === 'core' && hoveredMember === member.name ? 'core-hovered' : ''}`}
                   onMouseEnter={() => handleMouseEnter(member.name)}
                   onMouseLeave={handleMouseLeave}
                   style={{
@@ -99,7 +99,8 @@ const MeetOurTeamPage = () => {
                   <div className="flex flex-col items-center justify-center h-[100%]">
                     <div>
                       {member.image && (
-                        <Image className="rounded-full mx-auto transition-transform transform hover:scale-110 w-[60%] md:w-[70%] lg:w-[184.88px] lg:h-[184.88px]"
+                        <Image
+                          className="rounded-full mx-auto transition-transform transform hover:scale-110 w-[60%] md:w-[70%] lg:w-[184.88px] lg:h-[184.88px]"
                           src={imageUrlFor(member.image).url()}
                           alt="logo"
                           width={613}
@@ -107,17 +108,18 @@ const MeetOurTeamPage = () => {
                           unoptimized={true}
                           priority={false}
                           style={{
-                            background: 'linear-gradient(229.1deg, #313ED0 -35.29%, #232971 30.74%, #0E113A 56.42%)',
+                            background:
+                              'linear-gradient(229.1deg, #313ED0 -35.29%, #232971 30.74%, #0E113A 56.42%)',
                           }}
                         />
                       )}
                       <div className="text-sm mt-[4px] md:text-[15px] lg:text-[18.68px] md:mt-[8px] lg:leading:[28.01px]">
-                        <span className="memberName">
-                          {member.name}
-                        </span>
+                        <span className="memberName">{member.name}</span>
                       </div>
-                      <div className="memberPosition leading-[12px] md:leading-[14px] text-[12px] md:text-[14px] lg:text-[16.81px] lg:leading-[25.21px] lg:mt-[7.41px] text-white">{member.position}</div>
-                      {hoveredMember === member.name && member.category === "core" && member.aboutyou && (
+                      <div className="memberPosition leading-[12px] md:leading-[14px] text-[12px] md:text-[14px] lg:text-[16.81px] lg:leading-[25.21px] lg:mt-[7.41px] text-white">
+                        {member.position}
+                      </div>
+                      {hoveredMember === member.name && member.category === 'core' && member.aboutyou && (
                         <div className="absolute inset-0 flex items-center justify-center bg-green rounded-lg p-4 text-white backdrop-filter backdrop-blur-md text-overlay">
                           <p className="text-[9px] leading-[12px] md:text-sm">{member.aboutyou}</p>
                         </div>
@@ -125,15 +127,15 @@ const MeetOurTeamPage = () => {
                     </div>
                     <div className="mt-[8px] lg:mt-[8px] text-center">
                       {member.linkedinUrl && (
-                        <a href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" className="mr-8">
+                        <a href={member.linkedinUrl} target="_blank" rel="noopener noreferrer">
                           <FontAwesomeIcon icon={faLinkedin} size="2x" />
                         </a>
                       )}
-                      {member.instagramUrl && (
+                      {/* {member.instagramUrl && (
                         <a href={member.instagramUrl} target="_blank" rel="noopener noreferrer" className="text-pink-500">
                           <FontAwesomeIcon icon={faInstagram} size="2x" />
                         </a>
-                      )}
+                      )} */}
                     </div>
                   </div>
                 </div>

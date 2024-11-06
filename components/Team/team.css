@@ -58,11 +58,6 @@
   opacity: 1;
 }
 
-.flipping-card:hover img {
+.flipping-card.core-hovered:hover img {
   filter: blur(4px);
-}
-
-
-.flipping-card .back-face {
-  transform: rotateY(180deg);
 }

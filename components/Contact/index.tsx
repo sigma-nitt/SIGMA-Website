@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import Image from "next/image";
-import './contactus.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -62,7 +61,6 @@ const Contact = () => {
       <section id="support" className="contact-section">
         <div className="contact-container flex flex-col md:flex-row mx-auto w-[90%] md:w-[90%] lg:h-[823px]" style={{ background: 'hsla(0, 0%, 100%, 0.9)', borderRadius:'30px' }}>
           
-          {/* Image Column */}
           <div className="mt-[50px] lg:mt-[0px] image-column lg:w-[40%] flex justify-center items-center">
             <Image
               className="h-[400px] w-[90%] lg:h-[617px] xl:w-[404px] rounded-tl-[30px] rounded-bl-[30px]"
@@ -75,7 +73,6 @@ const Contact = () => {
             />
           </div>
 
-          {/* Form Column */}
           <div className="form-column lg:w-[35%] mt-[50px] lg:mt-[200px] justify-center items-center text-center lg:text-left">
             <div className="text-[hsla(236,100%,15%,1)]">
               <h2 className="font-poppins text-[40px] md:text-[50px] xl:text-[69px] text-[hsla(236, 100%, 15%, 1)] pb-20">
@@ -149,7 +146,6 @@ const Contact = () => {
             </form>
           </div>
 
-          {/* Find Us Column */}
           <div className="find-us-column items-center text-center justify-center lg:text-left lg:w-[25%] mt-[100px] md:mt-[20%] lg:mt-[27%] xl:lg:mt-[22.5%] text-[hsla(236,100%,15%,1)]"> {/* Added text color to the entire div */}
             <div className="mb-8 lg:mb-16">
               <h3 className="font-bold text-[19.74px]">

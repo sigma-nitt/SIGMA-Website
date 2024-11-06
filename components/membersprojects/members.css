@@ -1,15 +1,14 @@
 .hover-enlarge:hover {
-    transform: scale(1.1); /* Enlarge the element by 10% on hover */
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .members-projects {
+    flex-direction: column;
+    height: auto;
   }
-  
-  /* Media query for small screens */
-  @media (max-width: 768px) {
-    .members-projects {
-      flex-direction: column;
-      height: auto;
-    }
-  
-    .hover-enlarge {
-      margin-bottom: 15px;
-    }
+
+  .hover-enlarge {
+    margin-bottom: 15px;
   }
+}

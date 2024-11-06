@@ -6,7 +6,6 @@ import './footer.css';
 const Footer = () => {
   return (
     <>
-      {/* <footer className="border-t bg-background dark:border-strokedark dark:bg-blacksection"> */}
       <footer 
         className="border-t bg-gradient dark:border-strokedark dark:bg-blacksection"
         style={{

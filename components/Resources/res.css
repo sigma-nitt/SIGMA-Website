@@ -10,7 +10,7 @@
 }
 
 .containerRes {
-  padding-top: 150px; /* This creates the 500px gap */
+  padding-top: 150px;
 }
 
 .backgroundGradientRes {
@@ -34,7 +34,7 @@ body {
 .res-wrapper {
   display: flex;
   transition: transform 0.5s ease;
-  width: max-content; /* Ensure the wrapper width adjusts to fit all events */
+  width: max-content;
 }
 
 .hamburger-line {

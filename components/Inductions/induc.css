@@ -1,12 +1,10 @@
-/* induc.css */
-
 body {
   margin: 0;
   background: linear-gradient(90deg, #0F1017 0%, #0E113A 100%);
 }
 
 .containerInd {
-  padding-top: 203px; /* This creates the 500px gap */
+  padding-top: 203px;
 }
 
 .gradient-textABTUS {

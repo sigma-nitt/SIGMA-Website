@@ -17,33 +17,6 @@
 // }
 
 
-
-
-
-
-// import React, { useEffect, useState } from 'react';
-// import BegBackground from './BegBackground';
-// import MidBackground from './MidBackground';
-// import EndBackground from './EndBackground';
-
-// const Background: React.FC = () => {
-
-//   return (
-//     <div className="background-container pointer-events-none fixed z-[-1] min-h-screen w-full bg-[linear-gradient(229.1deg,#313ED0_-35.29%,#232971_30.74%,#0E113A_56.42%)]">
-//     {/* <div className="background-container pointer-events-none fixed z-[-1] min-h-screen w-full bg-white"> */}
-//       <BegBackground />
-//     </div>
-//   );
-// };
-
-// export default Background;
-
-
-
-
-
-
-
 import React, { useEffect, useState } from 'react';
 import BegBackground from './BegBackground';
 import MidBackground from './MidBackground';

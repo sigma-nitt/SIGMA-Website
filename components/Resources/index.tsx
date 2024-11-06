@@ -69,7 +69,6 @@ const ResourcePage = () => {
   const dataAnalyticsResources = resources.filter(resource => resource.type === 'Data Analytics');
   const caseStudiesResources = resources.filter(resource => resource.type === 'Case Studies');
 
-  // Split the documents into two arrays
   const firstRowDocsDA = dataAnalyticsResources.slice(0, Math.ceil(dataAnalyticsResources.length / 2));
   const secondRowDocsDA = dataAnalyticsResources.slice(Math.ceil(dataAnalyticsResources.length / 2));
   const firstRowDocsCS = caseStudiesResources.slice(0, Math.ceil(caseStudiesResources.length / 2));

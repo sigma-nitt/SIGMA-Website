@@ -6,16 +6,4 @@
 .no-scrollbar::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
 }
-  
-/* .image {
-    width: 200px;
-    height: auto;
-    margin-right: 10px;
-} */
 
-.image {
-    width: auto; /* Adjust as needed */
-    height: 266.66px;
-    margin-right: 10px; /* Adjust space between images */
-}
-  

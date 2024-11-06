@@ -6,7 +6,6 @@ export default async function handler(req, res) {
       const { email } = req.body;
   
       try {
-        // Send a thank you email here
         await sendThankYouEmail(email);
   
         res.status(200).json({ success: true, message: 'Subscription successful!' });
@@ -21,7 +20,6 @@ export default async function handler(req, res) {
   
 
 async function sendThankYouEmail(email) {
-  // Configure nodemailer with your email provider settings
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {

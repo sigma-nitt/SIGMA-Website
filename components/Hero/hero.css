@@ -8,9 +8,8 @@
   font-weight: 400;
 }
 
-/* Add CSS for transitions */
 .image-hover {
-  transition: opacity 1000ms ease-in-out 800ms; /* Smooth transition with 800ms delay */
+  transition: opacity 1000ms ease-in-out 800ms;
 }
 
 .bg-gradient-blur {
@@ -29,18 +28,6 @@
   font-weight: 500;
 }
 
-.image-2 {
-  opacity: 0;
-}
-
-.image-container:hover .image-1 {
-  opacity: 0; /* Fade out first image */
-}
-
-.image-container:hover .image-2 {
-  opacity: 1; /* Fade in second image */
-}
-
 .imgchange:hover {
-  content: url('/images/bulb1.png');  /* Change to the hover image */
+  content: url('/images/bulb1.png');
 }

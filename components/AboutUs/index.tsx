@@ -8,8 +8,6 @@ import Image from 'next/image';
 const EventsPage: React.FC = () => {
   return (
     <div className="relative">
-
-      {/* Our Story Section */}
       <div className="flex flex-col lg:flex-row py-[30px] lg:py-[60px]">
         <div className="flex flex-col items-center lg:items-start lg:ml-[5%] xl:ml-[111px] mt-[120px] lg:mt-[169px] lg:w-[50%]">
           <div className="flex justify-center lg:justify-start items-center text-center w-[90%] xl:w-[70%]">
@@ -59,7 +57,6 @@ const EventsPage: React.FC = () => {
           </div>
         </div>
       </div>
-
 
       <div className="flex flex-col lg:flex-row lg:mb-[80px]">
         <div className="flex flex-col items-center lg:items-start lg:ml-[5%] xl:ml-[111px] mt-[50px] lg:mt-[59px] lg:w-[50%]">
