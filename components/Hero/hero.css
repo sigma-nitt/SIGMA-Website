@@ -1,0 +1,46 @@
+.gradient-textHero {
+  background: linear-gradient(90deg, #8062F0 1.49%, #697EE2 10.56%, #5D8CDB 19.39%, #4BA6CC 28.63%, #40BAC0 36.16%, #2BDDAD 46.66%);
+  -webkit-background-clip: text; /* For Chrome, Safari, and Opera */
+  -moz-background-clip: text; /* For Firefox */
+  background-clip: text; /* Standard property */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  color: transparent; /* For non-WebKit browsers */
+  font-weight: 400;
+}
+
+/* Add CSS for transitions */
+.image-hover {
+  transition: opacity 1000ms ease-in-out 800ms; /* Smooth transition with 800ms delay */
+}
+
+.bg-gradient-blur {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  background: linear-gradient(90deg, #8062F0 1.49%, #697EE2 10.56%, #5D8CDB 19.39%, #4BA6CC 28.63%, #40BAC0 36.16%, #2BDDAD 46.66%);
+  filter: blur(20px);
+  z-index: -1;
+}
+
+.buttonfont {
+  font-weight: 500;
+}
+
+.image-2 {
+  opacity: 0;
+}
+
+.image-container:hover .image-1 {
+  opacity: 0; /* Fade out first image */
+}
+
+.image-container:hover .image-2 {
+  opacity: 1; /* Fade in second image */
+}
+
+.imgchange:hover {
+  content: url('/images/bulb1.png');  /* Change to the hover image */
+}
