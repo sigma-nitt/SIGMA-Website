@@ -30,7 +30,7 @@
 
 "use client"
 import {defineConfig} from 'sanity'
-import {structure} from 'sanity/structure'
+import { structureTool } from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
 
@@ -41,7 +41,7 @@ export default defineConfig({
   projectId: 'vdzzonmk',
   dataset: 'production',
   basePath: "/uploadData",
-  plugins: [structure(), visionTool()],
+  plugins: [structureTool(), visionTool()],
 
   schema: {
     types: schemaTypes,
