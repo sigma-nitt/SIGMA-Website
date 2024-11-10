@@ -6,9 +6,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { selectedCategory } = req.query;
 
   const client = createClient({
-    projectId: 'jnqvatdi',
+    // projectId: 'jnqvatdi',
+    // dataset: 'production',
+    // apiVersion: '2024-02-11',
+    projectId: 'vdzzonmk',
     dataset: 'production',
-    apiVersion: '2024-02-11',
+    apiVersion: '2024-11-06',
     useCdn: false
   });
 
