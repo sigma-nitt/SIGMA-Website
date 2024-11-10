@@ -28,11 +28,16 @@
 //   ],
 // })
 
+
+
+
 "use client"
-import {defineConfig} from 'sanity'
-import { structureTool } from 'sanity/structure'
-import {visionTool} from '@sanity/vision'
-import {schemaTypes} from './schemas'
+import { defineConfig } from 'sanity'
+import { structureTool } from './sanity/structure'
+import { visionTool } from '@sanity/vision'
+import { schemaTypes } from './schemas'
+import { apiVersion, dataset, projectId } from './sanity/env'
+import { deskTool } from 'sanity/desk'
 
 export default defineConfig({
   name: 'default',
@@ -41,7 +46,13 @@ export default defineConfig({
   projectId: 'vdzzonmk',
   dataset: 'production',
   basePath: "/uploadData",
-  plugins: [structureTool(), visionTool()],
+  
+  plugins: [
+    deskTool({
+      structure: (S) => structureTool(S),
+    }),
+    visionTool({ defaultApiVersion: apiVersion }),
+  ],
 
   schema: {
     types: schemaTypes,
