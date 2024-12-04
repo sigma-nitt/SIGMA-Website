@@ -14,18 +14,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       useCdn: false
     });
 
-    const query = `*[_type == "reportCS"] | order(_createdAt asc) | {
-      heading,
-      introductoryText,
-      introductoryImage,
-      content[] {
-        ...,
-        // Only include the fields that are relevant to your components
-        _type,
-        value,
-        image,
-        caption
-      }
+    const query = `*[_type == "pdfReportCS"] | {
+      title,
+      description,
+      "url": pdfReport.asset->url,
+      coverPage,
     }`;
 
     const reports = await client.fetch(query);

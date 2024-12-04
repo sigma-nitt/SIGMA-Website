@@ -26,7 +26,6 @@ const PDFViewerComponent: React.FC = () => {
   const [pdfPages, setPdfPages] = useState<string[]>([]);
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  // Separate intro text visibility for each row
   const [isIntroTextVisibleFirstRow, setIsIntroTextVisibleFirstRow] = useState<boolean[]>([]);
   const [isIntroTextVisibleSecondRow, setIsIntroTextVisibleSecondRow] = useState<boolean[]>([]);
   const [isPortrait, setIsPortrait] = useState<boolean>(false);
@@ -114,6 +113,7 @@ const PDFViewerComponent: React.FC = () => {
       const pdf = await pdfjs.getDocument({ data: pdfData }).promise;
       const numPages = pdf.numPages;
       const pages: string[] = [];
+      // const scale = 1.0;
 
       for (let pageNum = 1; pageNum <= numPages; pageNum++) {
         const page = await pdf.getPage(pageNum);
@@ -166,17 +166,18 @@ const PDFViewerComponent: React.FC = () => {
   const secondRowDocs = pdfDocuments.slice(Math.ceil(pdfDocuments.length / 2));
 
   return (
-    <div className="containerCS">
+    <div className="containerDA">
       <div className="mb-8">
         <h1 className="h-[87px] text-center pb-2 font-semibold text-[30px] md:text-[45px] lg:text-[58px]">
-          <span className="gradient-textCS font-poppins">
+          <span className="gradient-textDA font-poppins">
             Excavate the Insights!
           </span>
         </h1>
       </div>
 
-      <div className="backgroundGradientCS">
+      <div className="backgroundGradientDA">
         <div className="ml-[20px] md:ml-[80px]">
+          {/* First row */}
           <div ref={sliderRef} className="flex flex-col h-[486px] lg:h-[506px] overflow-x-scroll no-scrollbar">
             <div className="flex transition-transform duration-500 ease w-max mt-[35px] lg:mt-[67px] w-[95%]">
               {firstRowDocs.map((pdf, index) => (
@@ -227,6 +228,7 @@ const PDFViewerComponent: React.FC = () => {
 
       <div className="backgroundGradientDA">
         <div className="ml-[20px] md:ml-[80px]">
+          {/* Second row */}
           <div ref={sliderRef} className="flex flex-col h-[486px] lg:h-[506px] overflow-x-scroll no-scrollbar">
             <div className="flex transition-transform duration-500 ease w-max mt-[35px] lg:mt-[27px] w-[95%]">
               {secondRowDocs.map((pdf, index) => (
