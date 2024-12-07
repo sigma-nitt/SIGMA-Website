@@ -16,7 +16,10 @@ const imageUrlFor = (source: any) => builder.image(source);
 const SingleTestimonial = ({ review }: { review: TestimonialData }) => {
   const { name, description, imageTestimonial, designation } = review;
 
-  const imageUrl = imageUrlFor(imageTestimonial.asset._ref).url();
+  // const imageUrl = imageUrlFor(imageTestimonial.asset._ref).url();
+  const imageUrl = imageTestimonial && imageTestimonial.asset
+    ? imageUrlFor(imageTestimonial.asset._ref).url()
+    : '';
 
   return (
     <div className="testimonial">
