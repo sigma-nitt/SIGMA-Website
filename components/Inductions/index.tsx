@@ -66,7 +66,7 @@ const EventsPage: React.FC = () => {
             <div className="lg:w-[784px] lg:h-[763px] lg:ml-[24%] lg:mt-[1106px] absolute opacity-20 bg-[hsla(203,72%,60%,1)] z-0 filter blur-[229.167px]"></div>
 
             <div
-                className="h-auto p-4"
+                className="h-auto p-4 mt-10 md:mt-0"
                 style={{
                     background: 'linear-gradient(90deg, #0F1017 0%, #0E113A 100%)',
                     display: 'flex',
@@ -145,9 +145,9 @@ const EventsPage: React.FC = () => {
                 </div>
             </div>
 
-            <div className="faq-section mt-[34px] mb-[34px] h-auto pb-10 p-1 " style={{ backgroundColor: 'hsla(201, 68%, 5%, 1)' }}>
+            <div className="faq-section mt-[34px] mb-[34px] h-auto pb-10 p-1" style={{ backgroundColor: 'hsla(201, 68%, 5%, 1)' }}>
                 <div className="faq-header cursor-pointer" onClick={toggleFAQ}>
-                    <h2 className="font-poppins font-normal text-[30px] md:text-[50px] leading-[50px] md:leading-[72px] w-full md:w-[450px] ml-[20px] lg:ml-[376px] mt-[92px] text-left">
+                    <h2 className="font-poppins font-normal text-[30px] md:text-[50px] leading-[50px] md:leading-[72px] w-[95%] md:w-[450px] ml-[20px] lg:ml-[376px] mt-[92px] text-left">
                         FREQUENTLY ASKED 
                         <span className="textQuestions font-normal"> QUESTIONS</span>
                     </h2>
