@@ -496,7 +496,7 @@ const PDFViewerComponent: React.FC = () => {
       <div className="mb-8">
         <h1 className="h-[87px] text-center text-4xl pb-2 font-semibold lg:text-5xl md:text-4xl md:pr-10 md:leading-none">
           <span className="gradient-textEnigma font-poppins">
-            Take a look at out Magazine!
+            Dive further into business!
           </span>
         </h1>
       </div>
@@ -532,10 +532,10 @@ const PDFViewerComponent: React.FC = () => {
                       </h2>
                     </div>
                     <div
-                      className="text-[12px] lg:text-[19px] mt-[5px] w-[90%] lg:w-[456px] lg:mt-[25px] ml-[15px] lg:ml-[0px] leading-[20px] lg:leading-[34px] cursor-pointer"
+                      className="text-[12px] lg:text-[15px] mt-[5px] w-[90%] lg:w-[456px] lg:mt-[25px] ml-[15px] lg:ml-[0px] leading-[20px] lg:leading-[25px] cursor-pointer"
                     >
                       {isIntroTextVisible[index] ? (
-                        <p className="font-poppins lg:leading-[28.5px]">
+                        <p className="font-poppins lg:leading-[24.5px]">
                           {pdf.description || "Two lines about the project."}
                         </p>
                       ) : (
