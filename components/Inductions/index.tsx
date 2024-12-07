@@ -175,7 +175,7 @@ const EventsPage: React.FC = () => {
                                         </div>
                                     </div>
                                     {activeQuestion === item.id && (
-                                        <div className="font-poppins text-[20px] p-4">
+                                        <div className="font-poppins text-[12px] md:text-[20px] p-4">
                                             {item.answer}
                                         </div>
                                     )}
