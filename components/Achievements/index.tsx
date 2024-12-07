@@ -139,7 +139,7 @@ const EventsPage: React.FC = () => {
                       </h2>
                     </div>
                     <div
-                      className="text-[12px] lg:text-[19px] mt-[5px] w-[90%] lg:w-[456px] lg:mt-[25px] lg:ml-[0px] leading-[20px] lg:leading-[34px] cursor-pointer"
+                      className="text-[15px] lg:text-[20px] mt-[5px] w-[90%] lg:w-[456px] lg:mt-[25px] ml-[15px] lg:ml-[0px] leading-[20px] lg:leading-[25px] cursor-pointer"
                     >
                       {isIntroTextVisible[index] ? (
                         <p className="font-poppins font-bold lg:leading-[28.5px]">
@@ -147,9 +147,9 @@ const EventsPage: React.FC = () => {
                         </p>
                       ) : (
                         <div className="flex flex-col items-left lg:items-left mt-[23px] gap-[15px] lg:gap-[23px]">
-                          <div className="hamburger-line w-[250px] h-[8px] md:w-[452px] md:h-[11px] rounded-[10px]"></div>
-                          <div className="hamburger-line w-[250px] h-[8px] md:w-[452px] md:h-[11px] rounded-[10px]"></div>
-                          <div className="hamburger-line w-[250px] h-[8px] md:w-[226px] md:h-[11px] rounded-[10px]"></div>
+                          <div className="hamburger-line w-[250px] h-[8px] lg:w-[452px] lg:h-[11px] rounded-[10px]"></div>
+                          <div className="hamburger-line w-[250px] h-[8px] lg:w-[452px] lg:h-[11px] rounded-[10px]"></div>
+                          <div className="hamburger-line w-[50%] h-[8px] lg:w-[256px] lg:h-[11px] rounded-[10px]"></div>
                         </div>
                       )}
                     </div>
