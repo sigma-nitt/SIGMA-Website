@@ -45,5 +45,10 @@ export default {
       },
       validation: Rule => Rule.max(10),
     },
+    {
+      name: 'publishedAt',
+      type: 'datetime',
+      title: 'Publishing Date'
+    },
   ],
 };

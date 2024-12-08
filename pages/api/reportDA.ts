@@ -5,22 +5,27 @@ import { createClient } from '@sanity/client';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const client = createClient({
-      // projectId: 'jnqvatdi',
-      // dataset: 'production',
-      // apiVersion: '2024-02-11',
       projectId: 'vdzzonmk',
       dataset: 'production',
       apiVersion: '2024-11-06',
       useCdn: false
     });
 
-    const query = `*[_type == "pdfReportDA"] | {
+    // const query = `*[_type == "pdfReportDA"] | {
+    //   title,
+    //   description,
+    //   "url": pdfReport.asset->url,
+    //   coverPage,
+    // }`;
+
+    const query = `*[_type == "pdfReportDA"] | order(publishedAt desc) {
       title,
       description,
       "url": pdfReport.asset->url,
       coverPage,
+      publishedAt
     }`;
-
+    
     const reports = await client.fetch(query);
 
     if (!reports) {

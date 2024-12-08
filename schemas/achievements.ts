@@ -18,5 +18,10 @@ export default {
         title: 'An Image of contest/hackathon',
         type: 'image',
       },
+      {
+        name: 'publishedAt',
+        type: 'datetime',
+        title: 'Publishing Date'
+      }
     ],
   };

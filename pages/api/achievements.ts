@@ -13,10 +13,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         useCdn: false
     });
 
-    const query = `*[_type == "achievements"] | {
+    const query = `*[_type == "achievements"] | order(publishedAt desc){
       title,
       description,
       imageContest,
+      publishedAt,
     }`;
 
     const pdfDocuments = await client.fetch(query);

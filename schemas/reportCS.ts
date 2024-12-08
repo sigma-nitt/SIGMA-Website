@@ -23,6 +23,11 @@ export default {
       title: 'Cover Page',
       type: 'image',
     },
+    {
+      name: 'publishedAt',
+      type: 'datetime',
+      title: 'Publishing Date'
+    }
   ],
 };
   

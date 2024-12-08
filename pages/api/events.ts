@@ -14,10 +14,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         useCdn: false
     });
 
-    const query = `*[_type == "event"] | order(_createdAt asc) | {
+    const query = `*[_type == "event"] | order(publishedAt desc) {
       title,
       description,
-      images
+      images,
+      pushlidedAt,
     }`;
 
     const events = await client.fetch(query);

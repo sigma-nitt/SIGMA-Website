@@ -162,8 +162,10 @@ const PDFViewerComponent: React.FC = () => {
     return <p>{error}</p>;
   }
 
-  const firstRowDocs = pdfDocuments.slice(0, Math.ceil(pdfDocuments.length / 2));
-  const secondRowDocs = pdfDocuments.slice(Math.ceil(pdfDocuments.length / 2));
+  // const firstRowDocs = pdfDocuments.slice(0, Math.ceil(pdfDocuments.length / 2));
+  // const secondRowDocs = pdfDocuments.slice(Math.ceil(pdfDocuments.length / 2));
+  const firstRowDocs = pdfDocuments.filter((_, index) => index % 2 === 0);
+  const secondRowDocs = pdfDocuments.filter((_, index) => index % 2 !== 0);
 
   return (
     <div className="containerDA">
