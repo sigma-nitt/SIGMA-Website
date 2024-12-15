@@ -511,13 +511,13 @@ const PDFViewerComponent: React.FC = () => {
               {pdfDocuments.map((pdf, index) => (
                 <div
                   key={index}
-                  className="relative mr-[10px] lg:mr-[40px] w-[290px] lg:w-[559px] h-[400px] lg:h-[652px] rounded-[28px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
+                  className="relative mr-[10px] lg:mr-[40px] w-[290px] lg:w-[559px] h-[400px] lg:h-[582px] rounded-[28px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
                   onMouseEnter={() => handleMouseEnter(index)}
                   onMouseLeave={() => handleMouseLeave(index)}
                   onClick={() => toggleIntroText(index)}
                 >
                   
-                  <Image className="h-[150px] lg:h-[286px] w-[250px] lg:w-[456px] rounded-[28px] mt-[30px] lg:mt-[60px] object-cover mb-4"
+                  <Image className="h-[150px] lg:h-[236px] w-[250px] lg:w-[456px] rounded-[28px] mt-[30px] lg:mt-[60px] object-cover mb-4"
                     src={pdf.coverPage ? imageUrlFor(pdf.coverPage).url() : ""}
                     alt="Image"
                     width={613}
@@ -535,7 +535,8 @@ const PDFViewerComponent: React.FC = () => {
                       className="text-[12px] lg:text-[15px] mt-[5px] w-[90%] lg:w-[456px] lg:mt-[25px] ml-[15px] lg:ml-[0px] leading-[20px] lg:leading-[25px] cursor-pointer"
                     >
                       {isIntroTextVisible[index] ? (
-                        <p className="font-poppins lg:leading-[24.5px]">
+                        // <p className="font-poppins lg:leading-[24.5px]">
+                        <p className="font-acumin lg:leading-[24.5px]">
                           {pdf.description || "Two lines about the project."}
                         </p>
                       ) : (

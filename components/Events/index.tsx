@@ -153,7 +153,8 @@ const EventsPage: React.FC = () => {
                       className="text-[12px] lg:text-[13px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]"
                     >
                       {isIntroTextVisible[index] ? (
-                        <p className="introtext font-poppins lg:font-bold">
+                        // <p className="introtext font-poppins lg:font-bold">
+                        <p className="introtext font-acumin">
                           {event.description || "SIGMA event"}
                         </p>
                       ) : (
@@ -211,7 +212,8 @@ const EventsPage: React.FC = () => {
                       className="text-[12px] lg:text-[13px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]"
                     >
                       {isIntroTextVisible[index] ? (
-                        <p className="introtext font-poppins lg:font-bold">
+                        // <p className="introtext font-poppins lg:font-bold">
+                        <p className="introtext font-acumin">
                           {event.description || "SIGMA event"}
                         </p>
                       ) : (

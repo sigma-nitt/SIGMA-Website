@@ -33,7 +33,7 @@ const SingleTestimonial = ({ review }: { review: TestimonialData }) => {
           <div className="testimonial-content">{description}</div>
           <br />
           <br />
-          <div className="name">{name}</div>
+          <div className="name font-acumin">{name}</div>
           <div className="ellipse-2">
             <Image src={imageUrl} alt="Profile Image" layout="fill" />
           </div>

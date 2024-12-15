@@ -205,7 +205,10 @@ const PDFViewerComponent: React.FC = () => {
                     </div>
                     <div className="text-[12px] lg:text-[13px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]">
                       {isIntroTextVisibleFirstRow[index] ? (
-                        <p className="introtext font-poppins lg:font-bold">{pdf.description || "SIGMA event"}</p>
+                        // <p className="introtext font-poppins lg:font-bold">
+                        <p className="font-acumin">
+                          {pdf.description || "SIGMA event"}
+                        </p>
                       ) : (
                         <div className="flex flex-col mt-[15px] gap-[15px] lg:gap-[14.07px]">
                           <div className="hamburger-line w-full h-[5px] lg:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>
@@ -256,7 +259,10 @@ const PDFViewerComponent: React.FC = () => {
                     </div>
                     <div className="text-[12px] lg:text-[13px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]">
                       {isIntroTextVisibleSecondRow[index] ? (
-                        <p className="introtext font-poppins lg:font-bold">{pdf.description || "SIGMA event"}</p>
+                        // <p className="introtext font-poppins lg:font-bold">
+                        <p className="font-acumin">
+                          {pdf.description || "SIGMA event"}
+                        </p>
                       ) : (
                         <div className="flex flex-col mt-[15px] gap-[15px] lg:gap-[14.07px]">
                           <div className="hamburger-line w-full h-[5px] lg:w-[276.54px] md:h-[6.73px] rounded-[10px]"></div>

@@ -7,3 +7,6 @@
     display: none;  /* Safari and Chrome */
 }
 
+.image {
+    border-radius: 12px;
+}
