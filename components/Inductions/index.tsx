@@ -11,8 +11,8 @@ const EventsPage: React.FC = () => {
         { id: 1, question: "Pre-requisites for applying for inductions?", answer: "A genuine interest in business, finance, analytics, and related domains" },
         { id: 2, question: "How will it help us hone our skills?", answer: "Provides exposure to analytics and management, preparing you for real-world challenges" },
         { id: 3, question: "What is the selection process and criteria ?", answer: "It involves tasks and personal interviews. The structure may vary each year" },
-        { id: 4, question: "Can we join sigma with other tech club?", answer: "Yes, but we expect equal commitment to all the clubs you join" },
-        { id: 5, question: "Does joining sigma provide as a path for cat", answer: "Absolutely! SIGMA enhances your business acumen, a key asset for CAT interviews" },
+        { id: 4, question: "Can we join sigma with other tech club?", answer: "You can't join any other business club simultaneously. However, other clubs are allowed but we expect equal commitment to all the clubs you join" },
+        { id: 5, question: "Does joining sigma provide as a path for CAT", answer: "Absolutely! SIGMA enhances your business acumen, a key asset for CAT interviews" },
         { id: 6, question: "Will Sigma get client projects?", answer: "Yes, we engage with clients throughout the year" },
         { id: 7, question: "What can I apply for laterals?", answer: "The lateral induction process begins in the 5th semester" }
     ];
