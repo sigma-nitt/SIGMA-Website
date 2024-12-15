@@ -22,7 +22,7 @@ const Features: FC<FeaturesProps> = () => {
         <div className="w-[85%] flex flex-col items-center justify-center m-auto">
           <div className="flex flex-col md:flex-row justify-between mb-[20px] gap-4 lg:gap-8">
               <div className="flex items-center justify-center order-1">
-                <Image className="w-[90%] lg:w-[90%] h-auto"
+                <Image className="w-[90%] lg:w-[90%] h-auto pointer-events-none select-none"
                   src="./images/whoweare.png"
                   alt="logo"
                   width={613}
@@ -32,7 +32,7 @@ const Features: FC<FeaturesProps> = () => {
                 />
               </div>
               <div className="flex items-center justify-center order-2">
-                <Image className="w-[30%] md:w-[50%] lg:w-[200px] h-auto"
+                <Image className="w-[30%] md:w-[50%] lg:w-[200px] h-auto pointer-events-none select-none"
                   src="/images/sigma symbol.png"
                   alt="logo"
                   width={313}
@@ -42,7 +42,7 @@ const Features: FC<FeaturesProps> = () => {
                 />
               </div>
               <div className="flex items-center justify-center order-3">
-                <Image className="w-[90%] lg:w-[90%] h-auto"
+                <Image className="w-[90%] lg:w-[90%] h-auto pointer-events-none select-none"
                   src="./images/whatwedo.png"
                   alt="logo"
                   width={613}

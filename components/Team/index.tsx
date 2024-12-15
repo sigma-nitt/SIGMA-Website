@@ -100,7 +100,7 @@ const MeetOurTeamPage = () => {
                     <div>
                       {member.image && (
                         <Image
-                          className="rounded-full mx-auto transition-transform transform hover:scale-110 w-[60%] md:w-[70%] lg:w-[184.88px] lg:h-[184.88px]"
+                          className="rounded-full mx-auto transition-transform transform hover:scale-110 w-[60%] md:w-[70%] lg:w-[184.88px] lg:h-[184.88px] pointer-events-none select-none"
                           src={imageUrlFor(member.image).url()}
                           alt="logo"
                           width={613}

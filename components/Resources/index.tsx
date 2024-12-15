@@ -134,7 +134,7 @@ const ResourcePage = () => {
                     key={index}
                     className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[381px] h-[300px] lg:h-[377.13px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
                   >
-                    <Image className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover"
+                    <Image className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover pointer-events-none select-none"
                       src={resource.thumbnail ? imageUrlFor(resource.thumbnail).url() : ""}
                       alt="Thumbnail"
                       width={613}
@@ -179,7 +179,7 @@ const ResourcePage = () => {
                     key={index}
                     className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[381px] h-[300px] lg:h-[377.13px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
                   >
-                    <Image className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover"
+                    <Image className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover pointer-events-none select-none"
                       src={resource.thumbnail ? imageUrlFor(resource.thumbnail).url() : ""}
                       alt="Thumbnail"
                       width={613}
@@ -228,7 +228,7 @@ const ResourcePage = () => {
                     key={index}
                     className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[381px] h-[300px] lg:h-[377.13px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
                   >
-                    <Image className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover"
+                    <Image className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover pointer-events-none select-none"
                       src={resource.thumbnail ? imageUrlFor(resource.thumbnail).url() : ""}
                       alt="Thumbnail"
                       width={613}
@@ -273,7 +273,7 @@ const ResourcePage = () => {
                     key={index}
                     className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[381px] h-[300px] lg:h-[377.13px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
                   >
-                    <Image className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover"
+                    <Image className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover pointer-events-none select-none"
                       src={resource.thumbnail ? imageUrlFor(resource.thumbnail).url() : ""}
                       alt="Thumbnail"
                       width={613}
@@ -313,7 +313,7 @@ const ResourcePage = () => {
 
       <div className="flex items-center justify-center">
         <Image
-          className="mt-[32px] mb-[32px] w-[90px] h-[100px] md:w-[167px] md:h-[182px]"
+          className="mt-[32px] mb-[32px] w-[90px] h-[100px] md:w-[167px] md:h-[182px] pointer-events-none select-none"
           src="/images/sigma symbol.png"
           alt="logo"
           width={167}

@@ -21,7 +21,7 @@ const EventsPage: React.FC = () => {
           </div>
         </div>
         <div className="flex justify-center items-center text-center mt-12 lg:mt-[12%] xl:mt-[8%] lg:w-[50%]">
-          <Image className="w-[80%]"
+          <Image className="w-[80%] pointer-events-none select-none"
             src="/images/spiralpics.png"
             alt="logo"
             width={813}
@@ -35,7 +35,7 @@ const EventsPage: React.FC = () => {
       <div className="bg-gradient-to-r from-[#1B1F2D] via-[#172C28] to-[#111648] flex h-auto p-8">
         <div className="flex flex-col lg:flex-row items-center lg:items-left ">
           <div className="flex lg:ml-[0px] lg:ml-[88px]">
-            <Image className="flex items-center justify-center m-auto w-[80%] lg:w-[571px] lg:h-[278px] rounded-[13px]"
+            <Image className="flex items-center justify-center m-auto w-[80%] lg:w-[571px] lg:h-[278px] rounded-[13px] pointer-events-none select-none"
               src="./images/table.jpg"
               alt="logo"
               width={613}
@@ -70,7 +70,7 @@ const EventsPage: React.FC = () => {
           </div>
         </div>
         <div className="flex justify-center items-center text-center mt-8 lg:mt-[8%] xl:mt-[4%] lg:w-[50%]">
-          <Image className="w-[35%] lg:w-[35%]"
+          <Image className="w-[35%] lg:w-[35%] pointer-events-none select-none"
             src="/images/sigma symbol.png"
             alt="logo"
             width={413}

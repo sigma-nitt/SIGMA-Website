@@ -27,7 +27,7 @@ const Features: FC<FeaturesProps> = () => {
 
       <div className="flex w-full items-center justify-center md:flex-row flex-col">
         <div className="mb-4 md:mb-0 md:mr-4">
-          <Image className="h-[251px] w-[100%] md:h-auto md:w-[95%] xl:h-[411px] xl:w-[396px]"
+          <Image className="h-[251px] w-[100%] md:h-auto md:w-[95%] xl:h-[411px] xl:w-[396px] pointer-events-none select-none"
             src="./images/earnings.png"
             alt="logo"
             width={613}
@@ -38,7 +38,7 @@ const Features: FC<FeaturesProps> = () => {
         </div>
 
         <div className="mb-4 md:mb-0">
-          <Image className="h-[151px] w-[100%] md:h-auto md:w-[95%] xl:h-[411px] xl:w-[842px]"
+          <Image className="h-[151px] w-[100%] md:h-auto md:w-[95%] xl:h-[411px] xl:w-[842px] pointer-events-none select-none"
             src="./images/insights.png"
             alt="logo"
             width={613}

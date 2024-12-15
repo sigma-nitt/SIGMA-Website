@@ -190,7 +190,7 @@ const PDFViewerComponent: React.FC = () => {
                   onMouseLeave={() => handleMouseLeave(index, true)}
                   onClick={() => toggleIntroText(index, true)}
                 >
-                  <Image className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover"
+                  <Image className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover pointer-events-none select-none"
                     src={pdf.coverPage ? imageUrlFor(pdf.coverPage).url() : ""}
                     alt="Image"
                     width={613}
@@ -244,7 +244,7 @@ const PDFViewerComponent: React.FC = () => {
                   onMouseLeave={() => handleMouseLeave(index, false)}
                   onClick={() => toggleIntroText(index, false)}
                 >
-                  <Image className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover"
+                  <Image className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover pointer-events-none select-none"
                     src={pdf.coverPage ? imageUrlFor(pdf.coverPage).url() : ""}
                     alt="Image"
                     width={613}
@@ -289,9 +289,9 @@ const PDFViewerComponent: React.FC = () => {
       </div>
 
       {isFlipbookOpen && currentPDF && (
-        <div className="mx-auto fixed inset-0 z-50 flex flex-col items-center justify-center bg-white w-[90%] lg:w-[50%] mt-5 h-[95%] overflow-y-auto">
-          <button onClick={closeFlipbook} className="absolute top-5 right-5 p-2 bg-red-500 text-white rounded">
-            Close
+        <div className="mx-auto fixed inset-0 z-50 flex flex-col items-center justify-center backdrop-blur-md w-[90%] lg:w-[50%] mt-5 h-[95%] overflow-y-auto">
+          <button onClick={closeFlipbook} className="absolute top-13 right-5 p-2 text-black font-bold rounded">
+            X
           </button>
           <div className="w-full max-w-3xl mt-10 overflow-y-auto">
             {pdfPages.map((pageSrc, index) => (
@@ -302,7 +302,7 @@ const PDFViewerComponent: React.FC = () => {
       )}
       <div className="flex items-center justify-center">
         <Image
-          className="mt-[32px] mb-[32px] w-[90px] h-[100px] md:w-[167px] md:h-[182px]"
+          className="mt-[32px] mb-[32px] w-[90px] h-[100px] md:w-[167px] md:h-[182px] pointer-events-none select-none"
           src="/images/sigma symbol.png"
           alt="logo"
           width={167}

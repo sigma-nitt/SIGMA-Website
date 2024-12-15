@@ -202,7 +202,7 @@ const YouTubePodcasts: React.FC = () => {
       </div>
       <div className="flex items-center justify-center">
         <Image
-          className="mt-[32px] mb-[32px] w-[90px] h-[100px] md:w-[167px] md:h-[182px]"
+          className="mt-[32px] mb-[32px] w-[90px] h-[100px] md:w-[167px] md:h-[182px] pointer-events-none select-none"
           src="/images/sigma symbol.png"
           alt="logo"
           width={167}

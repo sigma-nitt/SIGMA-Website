@@ -134,7 +134,7 @@ const EventsPage: React.FC = () => {
                   onClick={() => toggleIntroText(index)}
                 >
                                   
-                  <Image className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover"
+                  <Image className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover pointer-events-none select-none"
                     src={imageUrlFor(event.images[0]).url()}
                     alt="Image"
                     width={613}
@@ -193,7 +193,7 @@ const EventsPage: React.FC = () => {
                   onMouseLeave={() => handleMouseLeave(index)}
                   onClick={() => toggleIntroText(index)}
                 >
-                  <Image className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover"
+                  <Image className="h-[150px] lg:h-[174.98px] w-[250px] lg:w-[278.98px] rounded-[17.13px] mt-[30px] lg:mt-[30px] object-cover pointer-events-none select-none"
                     src={imageUrlFor(event.images[0]).url()}
                     alt="Image"
                     width={613}
@@ -253,7 +253,7 @@ const EventsPage: React.FC = () => {
                   key={idx}
                   src={imageUrlFor(image).url()}
                   alt={`Gallery Image ${idx + 1}`}
-                  className="w-full lg:h-[175px] object-cover rounded-lg shadow-md"
+                  className="w-full lg:h-[175px] object-cover rounded-lg shadow-md pointer-events-none select-none"
                   width={500}
                   height={175}
                   unoptimized={true}
@@ -273,7 +273,7 @@ const EventsPage: React.FC = () => {
 
       <div className="flex items-center justify-center">
         <Image
-          className="mt-[32px] mb-[32px]"
+          className="mt-[32px] mb-[32px] pointer-events-none select-none"
           src="/images/sigma symbol.png"
           alt="logo"
           width={167}

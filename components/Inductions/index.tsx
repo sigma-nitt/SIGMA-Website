@@ -78,7 +78,7 @@ const EventsPage: React.FC = () => {
                     {/* First row of images */}
                     <div className="flex flex-col md:flex-row justify-between mb-[20px] gap-4 lg:gap-0">
                         <div className="md:w-1/3 flex items-center justify-center order-2 md:order-1 lg:pr-4">
-                            <Image className="w-[95%] md:w-full h-auto"
+                            <Image className="w-[95%] md:w-full h-auto pointer-events-none select-none"
                                 src="./images/dainduc.png"
                                 alt="Image"
                                 width={613}
@@ -88,7 +88,7 @@ const EventsPage: React.FC = () => {
                             />
                         </div>
                         <div className="md:w-1/3 flex items-center justify-center mt-[-100px] xl:mt-[-15%] order-1 md:order-2 lg:mr-[-40px]">
-                            <Image className="w-[95%] md:w-full h-auto"
+                            <Image className="w-[95%] md:w-full h-auto pointer-events-none select-none"
                                 src="./images/weareinducting.png"
                                 alt="Image"
                                 width={613}
@@ -98,7 +98,7 @@ const EventsPage: React.FC = () => {
                             />
                         </div>
                         <div className="md:w-1/3 flex items-center justify-center order-3 md:order-3">
-                            <Image className="w-[95%] md:w-full h-auto"
+                            <Image className="w-[95%] md:w-full h-auto pointer-events-none select-none"
                                 src="./images/csinduc.png"
                                 alt="Image"
                                 width={613}
@@ -112,7 +112,7 @@ const EventsPage: React.FC = () => {
                     {/* Second row of images */}
                     <div className="flex flex-col md:flex-row  justify-between gap-4 lg:gap-14">
                         <div className="md:w-1/3 flex items-center justify-center">
-                            <Image className="w-[95%] md:w-full h-auto"
+                            <Image className="w-[95%] md:w-full h-auto pointer-events-none select-none"
                                 src="./images/eventsinduc.png"
                                 alt="Image"
                                 width={613}
@@ -122,7 +122,7 @@ const EventsPage: React.FC = () => {
                             />
                         </div>
                         <div className="md:w-1/3 flex items-center justify-center">
-                            <Image className="w-[95%] md:w-full h-auto"
+                            <Image className="w-[95%] md:w-full h-auto pointer-events-none select-none"
                                 src="./images/enigmainduc.png"
                                 alt="Image"
                                 width={613}
@@ -132,7 +132,7 @@ const EventsPage: React.FC = () => {
                             />
                         </div>
                         <div className="md:w-1/3 flex items-center justify-center">
-                            <Image className="w-[95%] md:w-full h-auto"
+                            <Image className="w-[95%] md:w-full h-auto pointer-events-none select-none"
                                 src="./images/clientsinduc.png"
                                 alt="Image"
                                 width={613}

@@ -35,7 +35,7 @@ const SingleTestimonial = ({ review }: { review: TestimonialData }) => {
           <br />
           <div className="name font-acumin">{name}</div>
           <div className="ellipse-2">
-            <Image src={imageUrl} alt="Profile Image" layout="fill" />
+            <Image src={imageUrl} alt="Profile Image" layout="fill" className="pointer-events-none select-none" />
           </div>
         </div>
       </div>

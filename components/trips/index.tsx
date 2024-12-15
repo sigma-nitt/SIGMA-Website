@@ -34,7 +34,7 @@ const Gallery: React.FC = () => {
       <div>
         <div ref={sliderRef} className="flex overflow-x-scroll no-scrollbar">
           {images.map((src, i) => (
-            <img key={i} src={src} alt={`Image ${i}`} className="image h-[266.66px] w-auto mr-[10px]" />
+            <img key={i} src={src} alt={`Image ${i}`} className="image h-[266.66px] w-auto mr-[10px] pointer-events-none select-none" />
           ))}
         </div>
       </div>

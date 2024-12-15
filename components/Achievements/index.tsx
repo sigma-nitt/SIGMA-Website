@@ -122,7 +122,7 @@ const EventsPage: React.FC = () => {
                   onClick={() => toggleIntroText(index)}
                 >
                   {/* Image */}
-                  <Image className="h-[150px] lg:h-[226px] w-[250px] lg:w-[456px] rounded-[28px] mt-[30px] lg:mt-[60px] object-cover mb-4"
+                  <Image className="h-[150px] lg:h-[226px] w-[250px] lg:w-[456px] rounded-[28px] mt-[30px] lg:mt-[60px] object-cover mb-4 pointer-events-none select-none"
                     src={imageUrlFor(event.imageContest).url()}
                     alt="Image"
                     width={613}
@@ -166,7 +166,7 @@ const EventsPage: React.FC = () => {
       </div>
       <div className="flex items-center justify-center">
         <Image
-          className="mt-[32px] mb-[32px]"
+          className="mt-[32px] mb-[32px] pointer-events-none select-none"
           src="/images/sigma symbol.png"
           alt="logo"
           width={167}

@@ -73,7 +73,7 @@ const HeroSection: FC = () => {
 
         <div className="w-full lg:w-[40%] mb-[50px] md:mb-[75px] lg:mb-[0px] m-auto lg:ml-0 mt-[250px] lg:mt-[30px] flex text-center justify-center items-center order-2 lg:order-2">
           <Image
-            className="imgchange lg:ml-[150px] absolute justify-center lg:mt-[32px] w-[300px] h-[350px] md:w-auto md:h-[400px] lg:w-[450px] lg:h-[578px] transition-opacity duration-[1200ms] ease-out"
+            className="imgchange lg:ml-[150px] absolute justify-center lg:mt-[32px] w-[300px] h-[350px] md:w-auto md:h-[400px] lg:w-[450px] lg:h-[578px] transition-opacity duration-[1200ms] ease-out pointer-events-none select-none"
             src="/images/bulb.png"
             alt="logo"
             width={281}
