@@ -73,6 +73,7 @@
     "react-typed": "^2.0.12",
     "react-youtube": "^10.1.0",
     "sanity": "^3.63.0",
+    "sass": "^1.83.0",
     "slick-carousel": "^1.8.1",
     "solid-js": "^1.8.15",
     "styled-components": "^6.1.13",
