@@ -19,6 +19,23 @@ export default {
         type: 'image',
       },
       {
+        name: 'images',
+        title: 'Images',
+        type: 'array',
+        of: [
+          {
+            type: 'image',
+            options: {
+              hotspot: true,
+            },
+          },
+        ],
+        options: {
+          layout: 'grid',
+        },
+        validation: Rule => Rule.max(10),
+      },
+      {
         name: 'publishedAt',
         type: 'datetime',
         title: 'Publishing Date'

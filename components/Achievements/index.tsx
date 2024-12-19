@@ -9,6 +9,7 @@ interface Event {
   title: string;
   description: string;
   imageContest: string[];
+  images: string[];
 }
 
 const builder = imageUrlBuilder(client);
@@ -19,6 +20,7 @@ const EventsPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [isIntroTextVisible, setIsIntroTextVisible] = useState<boolean[]>([]);
+  const [selectedEvent, setSelectedEvent] = useState<number | null>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -59,6 +61,14 @@ const EventsPage: React.FC = () => {
       }
     };
   }, []);
+
+  const handleExpandClick = (index: number) => {
+    setSelectedEvent(index);
+  };
+
+  const handleCloseGallery = () => {
+    setSelectedEvent(null);
+  };
 
   const toggleIntroText = (index: number) => {
     if (window.innerWidth < 768) {
@@ -158,12 +168,51 @@ const EventsPage: React.FC = () => {
                       )}
                     </div>
                   </div>
+                  <div className="absolute top-[10%] left-[58%] lg:top-[14%] lg:left-[70%]">
+                    <button
+                      onClick={() => handleExpandClick(index)}
+                      className="buttonBG text-[12.24px] md:text-[15px] text-white rounded-[28px] h-[28.75px] w-[91.77px] md:h-[35px] md:w-[100px]"
+                    >
+                      {selectedEvent === index ? "Collapse" : "view gallery"}
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
       </div>
+
+      {selectedEvent !== null && (
+        <div className="fixed inset-0 backdrop-blur flex justify-center items-center z-50">
+          <div className="bg-transparent p-4 lg:p-8 rounded-lg shadow-md w-[95%] lg:w-[90%] h-[95%] lg:h-[80%] overflow-y-auto no-scrollbar">
+            <h1 className="text-[40px] lg:text-[50px] font-poppins font-bold text-white mb-10 text-center">
+              GALLERY
+            </h1>
+            <div className="grid lg:grid-cols-3 gap-4">
+              {events[selectedEvent].images.map((image, idx) => (
+                <Image
+                  key={idx}
+                  src={imageUrlFor(image).url()}
+                  alt={`Gallery Image ${idx + 1}`}
+                  className="w-full lg:h-full object-cover rounded-lg shadow-md pointer-events-none select-none"
+                  width={500}
+                  height={175}
+                  unoptimized={true}
+                  priority={false}
+                />
+              ))}
+            </div>
+            <button
+              onClick={handleCloseGallery}
+              className="mt-4 bg-red-500 text-white py-2 px-4 rounded block mx-auto"
+            >
+              Close Gallery
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="flex items-center justify-center">
         <Image
           className="mt-[32px] mb-[32px] pointer-events-none select-none"

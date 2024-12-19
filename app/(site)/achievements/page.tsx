@@ -3,7 +3,7 @@ import Event from "@/components/Achievements";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "SIGMA - Events",
+    title: "SIGMA - Achievements",
     description: "This is Home for Solid Pro",
 };
 
