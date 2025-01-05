@@ -339,10 +339,10 @@ const PDFViewerComponent: React.FC = () => {
       )} */}
       {isFlipbookOpen && currentPDF && (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-          <div className="relative backdrop-blur-md p-8 rounded-lg">
+          <div className="relative backdrop-blur-md p-2 rounded-lg">
             <button
               onClick={closeFlipbook}
-              className="absolute top-0 right-0 m-2 text-white text-bold"
+              className="absolute top-0 right-[-20px] m-2 text-white text-bold"
             >
               X
             </button>
@@ -356,8 +356,8 @@ const PDFViewerComponent: React.FC = () => {
             ) : (
               <HTMLFlipBook
                 className={isPortrait ? "flipbook-portrait" : "flipbook-landscape"}
-                width={isPortrait ? 250 : 400} // Adjust width for portrait and landscape
-                height={isPortrait ? 350 : 570} // Adjust height for portrait and landscape
+                width={isPortrait ? 250 : 500} // Adjust width for portrait and landscape
+                height={isPortrait ? 350 : 670} // Adjust height for portrait and landscape
                 size="fixed"
                 minWidth={815}
                 maxWidth={2000}
