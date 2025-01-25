@@ -141,7 +141,7 @@ const Contact = () => {
                 aria-label="send message"
                 className="inline-flex md:mb-[20px] lg:mb-0 w-[231px] md:h-[47.62px] text-center justify-center items-center gap-2.5 rounded-full font-medium text-white duration-300 ease-in-out  py-3" style={{ background: 'hsla(236, 100%, 15%, 1)' }}
               >
-                Contact Us
+                Send Message
               </button>
             </form>
           </div>
