@@ -161,7 +161,7 @@ const ResourcePage = () => {
                         onClick={() => openResource(resource.link)}
                         className="buttonBG text-sm md:text-[12.24px] text-white md:px-4 rounded-[28px] h-[30px] w-[120px] md:h-[28.75px] md:w-[91.77px]"
                       >
-                        LINK
+                        link
                       </button>
                     </div>
                   </div>
@@ -206,7 +206,7 @@ const ResourcePage = () => {
                         onClick={() => openResource(resource.link)}
                         className="buttonBG text-sm md:text-[12.24px] text-white md:px-4 rounded-[28px] h-[30px] w-[120px] md:h-[28.75px] md:w-[91.77px]"
                       >
-                        LINK
+                        link
                       </button>
                     </div>
                   </div>
@@ -255,7 +255,7 @@ const ResourcePage = () => {
                         onClick={() => openResource(resource.link)}
                         className="buttonBG text-sm md:text-[12.24px] text-white md:px-4 rounded-[28px] h-[30px] w-[120px] md:h-[28.75px] md:w-[91.77px]"
                       >
-                        LINK
+                        link
                       </button>
                     </div>
                   </div>
@@ -300,7 +300,7 @@ const ResourcePage = () => {
                         onClick={() => openResource(resource.link)}
                         className="buttonBG text-sm md:text-[12.24px] text-white md:px-4 rounded-[28px] h-[30px] w-[120px] md:h-[28.75px] md:w-[91.77px]"
                       >
-                        LINK
+                        link
                       </button>
                     </div>
                   </div>
