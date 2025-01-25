@@ -15,7 +15,7 @@ export default async function handler(req, res) {
 
     const mailOptions = {
       from: 'devilsden672@gmail.com',
-      to: 'devilsden672@gmail.com',
+      to: 'sigma.nitt@gmail.com',
       subject: `New Message: ${subject}`,
       html: `
         <p>Name: ${name}</p>
