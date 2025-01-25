@@ -157,12 +157,14 @@ const ResourcePage = () => {
                       </div>
                     </div>
                     <div className="absolute top-[40px] left-[145px] lg:top-[64px] lg:left-[254px]">
+                    {resource.link && (
                       <button
                         onClick={() => openResource(resource.link)}
                         className="buttonBG text-sm md:text-[12.24px] text-white md:px-4 rounded-[28px] h-[30px] w-[120px] md:h-[28.75px] md:w-[91.77px]"
                       >
                         link
                       </button>
+                    )}
                     </div>
                   </div>
                 ))}
@@ -202,12 +204,14 @@ const ResourcePage = () => {
                       </div>
                     </div>
                     <div className="absolute top-[40px] left-[145px] md:top-[64px] md:left-[254px]">
+                    {resource.link && (
                       <button
                         onClick={() => openResource(resource.link)}
                         className="buttonBG text-sm md:text-[12.24px] text-white md:px-4 rounded-[28px] h-[30px] w-[120px] md:h-[28.75px] md:w-[91.77px]"
                       >
                         link
                       </button>
+                    )}
                     </div>
                   </div>
                 ))}

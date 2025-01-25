@@ -610,9 +610,11 @@ const PDFViewerComponent: React.FC = () => {
                   </div>
 
                   <div className="absolute top-[10%] left-[58%] lg:top-[10%] lg:left-[61%]">
+                  {pdf.url && (
                     <button onClick={() => openFlipbook(pdf)} className="buttonBG text-[12.24px] text-white rounded-[28px] h-[28.75px] w-[91.77px]">
                       View PDF
                     </button>
+                  )}
                   </div>
                 </div>
               ))}
@@ -664,12 +666,14 @@ const PDFViewerComponent: React.FC = () => {
                   </div>
 
                   <div className="absolute top-[10%] left-[58%] lg:top-[10%] lg:left-[61%]">
-                  <button
-                    onClick={() => openFlipbook(pdf)}
-                    className="buttonBG text-[12.24px] text-white rounded-[28px] h-[28.75px] w-[91.77px]"
-                  >
-                    View PDF
-                  </button>
+                  {pdf.url && (
+                    <button
+                      onClick={() => openFlipbook(pdf)}
+                      className="buttonBG text-[12.24px] text-white rounded-[28px] h-[28.75px] w-[91.77px]"
+                    >
+                      View PDF
+                    </button>
+                  )}
                 </div>
               </div>
               ))}

@@ -169,12 +169,14 @@ const EventsPage: React.FC = () => {
                     </div>
                   </div>
                   <div className="absolute top-[10%] left-[58%] lg:top-[14%] lg:left-[70%]">
+                  {event.images && event.images.length > 0 && (
                     <button
                       onClick={() => handleExpandClick(index)}
                       className="buttonBG text-[12.24px] md:text-[15px] text-white rounded-[28px] h-[28.75px] w-[91.77px] md:h-[35px] md:w-[100px]"
                     >
                       {selectedEvent === index ? "Collapse" : "view gallery"}
                     </button>
+                  )}
                   </div>
                 </div>
               ))}

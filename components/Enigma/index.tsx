@@ -590,10 +590,10 @@ const EnigmaPage: React.FC = () => {
                       )}
                     </div>
                   </div>
-                  <div className="absolute top-[40px] left-[135px] lg:top-[84px] lg:left-[382px]">
+                  <div className="absolute top-[40px] left-[195px] lg:top-[84px] lg:left-[382px]">
                     <button
                       onClick={() => openResource(pdf.link)}
-                      className="buttonBG text-sm lg:text-lg text-white md:px-4 rounded-[28px] h-[30px] w-[120px] lg:h-[30px] lg:w-[100px]"
+                      className="buttonBG text-sm lg:text-lg text-white md:px-4 rounded-[28px] h-[25px] w-[60px] lg:h-[30px] lg:w-[100px]"
                     >
                       link
                     </button>
