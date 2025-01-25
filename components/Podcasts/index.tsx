@@ -140,7 +140,7 @@ const YouTubePodcasts: React.FC = () => {
                   </div>
                   <div className="text-[12px] lg:text-[13px] w-[99%] lg:w-[95%] leading-[12px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]">
                     {isIntroTextVisibleFirstRow[index] ? (
-                      <p className="introtext font-poppins">
+                      <p className="introtext font-acumin">
                         {video.description || "Two lines about the project."}
                       </p>
                     ) : (
@@ -183,7 +183,7 @@ const YouTubePodcasts: React.FC = () => {
                   </div>
                   <div className="text-[12px] lg:text-[13px] w-[98%] lg:w-[95%] leading-[12px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]">
                     {isIntroTextVisibleSecondRow[index] ? (
-                      <p className="introtext font-poppins">
+                      <p className="introtext font-acumin">
                         {video.description || "Two lines about the project."}
                       </p>
                     ) : (

@@ -145,18 +145,18 @@ const EventsPage: React.FC = () => {
                   <div className="flex flex-col lg:mt-[39px]">
                     <div>
                       <h2 className="text-center lg:text-left font-poppins text-[20px] lg:text-[28px] font-bold">
-                        {event.title.toUpperCase()}
+                        {event.title}
                       </h2>
                     </div>
                     {/* <div
                       className="text-[15px] lg:text-[20px] mt-[5px] w-[90%] lg:w-[456px] lg:mt-[25px] ml-[15px] lg:ml-[0px] leading-[20px] lg:leading-[25px] cursor-pointer"
                     > */}
                     <div
-                      className="text-[12px] lg:text-[15px] mt-[5px] w-[90%] lg:w-[456px] lg:mt-[25px] ml-[15px] lg:ml-[0px] leading-[20px] lg:leading-[25px] cursor-pointer"
+                      className="text-[12px] lg:text-[20px] mt-[5px] w-[90%] lg:w-[456px] lg:mt-[25px] ml-[15px] lg:ml-[0px] leading-[20px] lg:leading-[25px] cursor-pointer"
                     >
                       {isIntroTextVisible[index] ? (
                         // <p className="font-poppins font-bold lg:leading-[28.5px]">
-                        <p className="font-poppins lg:leading-[24.5px]">
+                        <p className="font-acumin lg:leading-[24.5px]">
                           {event.description || "Two lines about the project."}
                         </p>
                       ) : (

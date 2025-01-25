@@ -597,7 +597,7 @@ const PDFViewerComponent: React.FC = () => {
                       {isIntroTextVisibleFirstRow[index] ? (
                         // <p className="introtext font-poppins lg:font-bold">
                         <p className="font-acumin">
-                          {pdf.description || "SIGMA event"}
+                          {pdf.description || "Description"}
                         </p>
                       ) : (
                         <div className="flex flex-col mt-[15px] gap-[15px] lg:gap-[14.07px]">

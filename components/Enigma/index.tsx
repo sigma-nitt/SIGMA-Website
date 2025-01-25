@@ -257,7 +257,7 @@ const PDFViewerComponent: React.FC = () => {
                   <div className="flex flex-col lg:mt-[39px]">
                     <div>
                       <h2 className="text-center lg:text-left font-poppins text-[20px] lg:text-[28px] font-bold">
-                        {pdf.title.toUpperCase()}
+                        {pdf.title}
                       </h2>
                     </div>
                     <div
@@ -265,7 +265,7 @@ const PDFViewerComponent: React.FC = () => {
                     >
                       {isIntroTextVisible[index] ? (
                         // <p className="font-poppins lg:leading-[24.5px]">
-                        <p className="font-acumin lg:leading-[24.5px]">
+                        <p className="font-acumin">
                           {pdf.description || "Two lines about the project."}
                         </p>
                       ) : (
