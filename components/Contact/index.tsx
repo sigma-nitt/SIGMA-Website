@@ -169,8 +169,14 @@ const Contact = () => {
                 </li>
 
                 <li>
-                <a href="https://www.linkedin.com/company/sigma-nitt/mycompany/" aria-label="social icon" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/company/sigma-nitt/?originalSubdomain=in" aria-label="social icon" target="_blank" rel="noopener noreferrer">
                   <img src="./images/linkedin.png" alt="Image 3" className="bg-transparentt w-[30px] h-[30px]" />
+                </a>
+                </li>
+
+                <li>
+                <a href="https://www.facebook.com/sigma.nitt/" aria-label="social icon" target="_blank" rel="noopener noreferrer">
+                  <img src="./images/fb.png" alt="Image 3" className="bg-transparentt w-[30px] h-[30px]" />
                 </a>
                 </li>
               </ul>
