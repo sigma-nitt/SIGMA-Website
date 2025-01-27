@@ -131,11 +131,6 @@ const MeetOurTeamPage = () => {
                           <FontAwesomeIcon icon={faLinkedin} size="2x" />
                         </a>
                       )}
-                      {/* {member.instagramUrl && (
-                        <a href={member.instagramUrl} target="_blank" rel="noopener noreferrer" className="text-pink-500">
-                          <FontAwesomeIcon icon={faInstagram} size="2x" />
-                        </a>
-                      )} */}
                     </div>
                   </div>
                 </div>
