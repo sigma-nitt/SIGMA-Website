@@ -36,7 +36,7 @@
   position: relative;
 }
 
-.text-overlay {
+/* .text-overlay {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,13 +51,13 @@
   background: rgba(0, 0, 0, 0.75);
   padding: 25px;
   border-radius: 0 0 10px 10px;
-}
+} */
 
 
-.flipping-card:hover .text-overlay {
+/* .flipping-card:hover .text-overlay {
   opacity: 1;
 }
 
 .flipping-card.core-hovered:hover img {
   filter: blur(4px);
-}
+} */
