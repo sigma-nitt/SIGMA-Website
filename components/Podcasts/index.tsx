@@ -138,7 +138,10 @@ const YouTubePodcasts: React.FC = () => {
                       {video.title}
                     </h2>
                   </div>
-                  <div className="text-[12px] lg:text-[13px] w-[99%] lg:w-[95%] leading-[12px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]">
+                  {/* <div className="text-[12px] lg:text-[15px] w-[99%] lg:w-[95%] leading-[12px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]"> */}
+                  <div
+                      className="text-[12px] lg:text-[15px] mt-[5px] w-[98%] lg:w-[95%] lg:mt-[15px] ml-[15px] lg:ml-[0px] leading-[20px] lg:leading-[25px] cursor-pointer"
+                  >
                     {isIntroTextVisibleFirstRow[index] ? (
                       <p className="introtext font-acumin">
                         {video.description || "Two lines about the project."}
@@ -181,7 +184,10 @@ const YouTubePodcasts: React.FC = () => {
                       {video.title}
                     </h2>
                   </div>
-                  <div className="text-[12px] lg:text-[13px] w-[98%] lg:w-[95%] leading-[12px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]">
+                  <div
+                      className="text-[12px] lg:text-[15px] mt-[5px] w-[98%] lg:w-[95%] lg:mt-[15px] ml-[15px] lg:ml-[0px] leading-[20px] lg:leading-[25px] cursor-pointer"
+                  >
+                  {/* <div className="text-[12px] lg:text-[15px] w-[98%] lg:w-[95%] leading-[12px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]"> */}
                     {isIntroTextVisibleSecondRow[index] ? (
                       <p className="introtext font-acumin">
                         {video.description || "Two lines about the project."}

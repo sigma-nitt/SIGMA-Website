@@ -206,7 +206,10 @@ const PDFViewerComponent: React.FC = () => {
                     <div>
                       <h2 className="font-poppins text-[17px] lg:text-[17.13px] font-bold">{pdf.title}</h2>
                     </div>
-                    <div className="text-[12px] lg:text-[13px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]">
+                    <div
+                      className="text-[12px] lg:text-[15px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[25px] cursor-pointer mt-[15px] lg:mt-[10px]"
+                    >
+                    {/* <div className="text-[12px] lg:text-[13px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]"> */}
                       {isIntroTextVisibleFirstRow[index] ? (
                         // <p className="introtext font-poppins lg:font-bold">
                         <p className="font-acumin">
@@ -262,7 +265,10 @@ const PDFViewerComponent: React.FC = () => {
                     <div>
                       <h2 className="font-poppins text-[17px] lg:text-[17.13px] font-bold">{pdf.title}</h2>
                     </div>
-                    <div className="text-[12px] lg:text-[13px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]">
+                    <div
+                      className="text-[12px] lg:text-[15px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[25px] cursor-pointer mt-[15px] lg:mt-[10px]"
+                    >
+                    {/* <div className="text-[12px] lg:text-[13px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[10px]"> */}
                       {isIntroTextVisibleSecondRow[index] ? (
                         // <p className="introtext font-poppins lg:font-bold">
                         <p className="font-acumin">
