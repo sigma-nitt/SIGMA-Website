@@ -41,7 +41,7 @@ const menuData: Menu[] = [
         id: 4.2,
         title: "Management",
         newTab: false,
-        path: "/casestudies",
+        path: "/management",
       },
     ],
   },
