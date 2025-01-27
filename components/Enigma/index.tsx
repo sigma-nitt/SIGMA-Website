@@ -547,13 +547,13 @@ const EnigmaPage: React.FC = () => {
         <div className="w-[95%] lg:w-[90%] ml-[20px] md:ml-[80.5px]">
           <div
             ref={sliderRef}
-            className="h-[500px] md:h-[827px] flex overflow-x-scroll no-scrollbar"
+            className="h-[520px] md:h-[827px] flex overflow-x-scroll no-scrollbar"
           >
             <div className="pdf-wrapper flex mt-[35px] lg:mt-[87px] w-[95%]">
               {pdfDocuments.map((pdf, index) => (
                 <div
                   key={index}
-                  className="relative mr-[10px] lg:mr-[40px] w-[290px] lg:w-[559px] h-[400px] lg:h-[582px] rounded-[28px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
+                  className="relative mr-[10px] lg:mr-[40px] w-[290px] lg:w-[559px] h-[420px] lg:h-[582px] rounded-[28px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
                   onMouseEnter={() => handleMouseEnter(index)}
                   onMouseLeave={() => handleMouseLeave(index)}
                   onClick={() => toggleIntroText(index)}

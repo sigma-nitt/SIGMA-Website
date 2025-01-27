@@ -6,7 +6,8 @@ import DaCs from '@/components/DaCs';
 import TestimonialsSections from '@/components/Testimonial';
 
 export const metadata: Metadata = {
-  title: "SIGMA NITT",
+  title: "SIGMA - The Official Business Club of NITT",
+  icons: '/images/sigma symbol.png',
   description: "Sigma - The Official Business Club of NIT Trichy. Data Analytics, Case Studies, Business Analytics, Quantitative Finance, Forecasting, Predicting.",
 }; 
 
