@@ -78,7 +78,7 @@ const Header = () => {
 
   return (
     <header
-      className="fixed left-0 top-0 z-50 w-full py-7  bgcustomgradient transition duration-100 dark:bg-custom-gradient font-poppins">
+      className="fixed left-0 top-0 z-50 w-full py-4 md:py-7  bgcustomgradient transition duration-100 dark:bg-custom-gradient font-poppins">
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
         <div className="flex items-center justify-between mr-[60px]">
           <a href="/" className="ml-5">
@@ -87,7 +87,7 @@ const Header = () => {
               alt="logo"
               width={55}
               height={105}
-              className="w-full"
+              className="h-auto w-[50%] md:w-full"
             />
           </a>
 
@@ -133,7 +133,7 @@ const Header = () => {
         <div
           className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
             navigationOpen &&
-            "navbar !visible mt-4 h-auto max-h-[400px] rounded-md bg-background p-7.5 shadow-solid-5 dark:bg-background xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-background"
+            "navbar !visible mt-3 md:mt-4 h-[200px] max-h-[400px] xl:h-auto rounded-md bg-background p-7.5 shadow-solid-5 dark:bg-background xl:p-0 xl:shadow-none xl:dark:bg-background"
           }`}
         >
           <nav>
@@ -191,13 +191,13 @@ const Header = () => {
               ))}
             </ul>
           </nav>
-          <div className="mt-7 flex items-center gap-6 xl:mt-0 text-black font-poppins">
+          <div className="mt-2 md:mt-7 flex items-center gap-6 xl:mt-0 text-black font-poppins">
             <Link
               href="/contactus"
               onClick={() => {
                 toggleMobileMenu(); 
               }}
-              className={clsx("p-2 font-semibold", buttonVariants({ variant: "cta" }))}
+              className={clsx("md:p-2 font-semibold", buttonVariants({ variant: "cta" }))}
             >
               CONTACT US
             </Link>
