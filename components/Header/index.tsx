@@ -15,19 +15,38 @@ const Header = () => {
 
   const pathUrl = usePathname();
 
+  // const handleStickyMenu = () => {
+  //   if (typeof window !== 'undefined') {
+  //     const screenWidth = window.innerWidth;
+  //     setStickyMenu(window.scrollY >= 80 && screenWidth >= 768);
+
+  //     const header = document.querySelector('.bgcustomgradient') as HTMLElement | null;
+  //     if (header) {
+  //       if (screenWidth < 768 ) {
+  //         // For small screens
+  //         header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+  //       } else {
+  //         // For larger screens
+  //         if (window.scrollY >= 100) {
+  //           header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+  //         } else {
+  //           header.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+  //         }
+  //       }
+  //     }
+  //   }
+  // };
+
   const handleStickyMenu = () => {
     if (typeof window !== 'undefined') {
       const screenWidth = window.innerWidth;
-      setStickyMenu(window.scrollY >= 80 && screenWidth >= 768);
-
       const header = document.querySelector('.bgcustomgradient') as HTMLElement | null;
+  
       if (header) {
         if (screenWidth < 768) {
-          // For small screens
           header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
         } else {
-          // For larger screens
-          if (window.scrollY > 1) {
+          if (window.scrollY >= 1) {
             header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
           } else {
             header.style.backgroundColor = 'rgba(0, 0, 0, 0)';
@@ -36,9 +55,11 @@ const Header = () => {
       }
     }
   };
+  
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
+      handleStickyMenu();
       window.addEventListener('scroll', handleStickyMenu);
       window.addEventListener('resize', handleStickyMenu);
 

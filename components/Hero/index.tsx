@@ -122,7 +122,7 @@ const HeroSection: FC = () => {
   };
 
   return (
-    <div className="overflow-hidden pt-35 md:pt-40 xl:pt-[147px] pb-[125px]">
+    <div className="overflow-hidden pt-22 md:pt-40 xl:pt-[147px] pb-[125px]">
       <div className="hero-section flex flex-col lg:flex-row justify-center items-center">
         <div className="w-full lg:w-[50%] flex flex-col items-center lg:items-start justify-center text-center lg:text-left order-1 lg:order-1">
           <div className="m-auto lg:ml-[22%] xl:ml-[25%]">
@@ -151,7 +151,7 @@ const HeroSection: FC = () => {
                 id="transform-anim"
                 onClick={handleExploreProjects}
                 className={cn(
-                  buttonVariants({ variant: "cta1" }),
+                  buttonVariants({ variant: "cta1", size : "default1" }),
                   "flex items-center justify-center space-x-5 p-4 font-poppins relative lg:h-[78px] lg:w-[353px]"
                 )}
                 style={{
