@@ -325,7 +325,7 @@ const PDFViewerComponent: React.FC = () => {
       )}
       <div className="flex items-center justify-center">
         <Image
-          className="mt-[32px] mb-[32px] w-[90px] h-[100px] md:w-[167px] md:h-[182px] pointer-events-none select-none"
+          className="w-auto mt-[5vw] mb-[5vw] md:mt-[5vw] md:mb-[5vw] lg:mt-[4vw] lg:mb-[4vw] xl:mt-[4vw] xl:mb-[4vw] h-[20vw] md:h-[15vw] lg:h-[15vw] xl:h-[10vw] pointer-events-none select-none"
           src="/images/sigma symbol.png"
           alt="logo"
           width={167}

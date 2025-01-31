@@ -122,19 +122,13 @@ const ResourcePage = () => {
 
       <div className="backgroundGradientRes">
         {selectedCategory === 'Data Analytics' && (
-          <div className="ml-[20px] md:ml-[80px]">
-            <div
-              ref={sliderRef}
-              className="h-[381px] md:h-[500px] flex flex-col overflow-x-scroll no-scrollbar"
-            >
-              {/* First row */}
-              <div className="res-wrapper flex mt-[35px] lg:mt-[67px] w-[95%]">
-                {firstRowDocsDA.map((resource, index) => (
-                  <div
-                    key={index}
-                    className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[381px] h-[300px] lg:h-[377.13px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
-                  >
-                    <Image className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover pointer-events-none select-none"
+          <div className="ml-[4vw] md:ml-[4vw] lg:ml-[5vw] xl:ml-[5vw]">
+          <div ref={sliderRef} className="h-auto pt-[2vw] md:pt-[2vw] lg:pt-[4vw] xl:pt-[4vw] flex flex-col overflow-x-scroll no-scrollbar">
+            {/* First row */}
+            <div className="res-wrapper flex w-[95%] gap-[3vw] md:gap-[3vw] lg:gap-[3vw] xl:gap-[2vw]">
+              {firstRowDocsDA.map((resource, index) => (
+                <div key={index} className="relative p-[4vw] md:p-[3vw] lg:p-[3vw] xl:p-[3vw] w-[57vw] md:w-[35vw] lg:w-[33vw] xl:w-[25vw] h-[60vw] md:h-[38vw] lg:h-[35vw] xl:h-[26vw] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center">
+                    <Image className="rounded-[17.13px] h-[30vw] md:h-[18vw] lg:h-[16vw] xl:h-[12vw] object-cover pointer-events-none select-none"
                       src={resource.thumbnail ? imageUrlFor(resource.thumbnail).url() : ""}
                       alt="Thumbnail"
                       width={613}
@@ -142,46 +136,33 @@ const ResourcePage = () => {
                       unoptimized={true}
                       priority={false}
                     />
-                    <div className="flex flex-col mt-[30px] lg:mt-[22.46px]">
+                    <div className="flex flex-col mt-[3.5vw] md:mt-[2.5vw] lg:mt-[2.5vw] xl:mt-[2vw]">
                       <div>
-                        <h2 className="font-poppins text-center text-[20px] lg:text-[21.68px] font-bold">
-                          {resource.title.toUpperCase()}
+                        <h2 className="font-poppins text-center text-[4vw] md:text-[2.8vw] lg:text-[2.3vw] xl:text-[1.6vw] font-bold">
+                          {resource.title}
                         </h2>
                       </div>
-                      <div
-                        className="text-[16px] lg:text-[21.68px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[25px]"
-                      >
+                      <div className="pt-[1vw] md:pt-[1vw] lg:pt-[1.5vw] xl:pt-[1.5vw] text-[3.5vw] md:text-[2.3vw] lg:text-[1.8vw] xl:text-[1.2vw]">
                         <p className="text-center font-poppins">
                           {resource.resourceType || "Two lines about the project."}
                         </p>
                       </div>
                     </div>
-                    <div className="absolute top-[40px] left-[145px] lg:top-[64px] lg:left-[254px]">
-                    {resource.link && (
-                      <button
-                        onClick={() => openResource(resource.link)}
-                        className="buttonBG text-sm md:text-[12.24px] text-white md:px-4 rounded-[28px] h-[30px] w-[120px] md:h-[28.75px] md:w-[91.77px]"
-                      >
+                    <div className="absolute top-[7vw] md:top-[5vw] lg:top-[5vw] xl:top-[4vw] left-[37.5vw] md:left-[25.5vw] lg:left-[22vw] xl:left-[18vw]">
+                      <button onClick={() => openResource(resource.link)} className="buttonBG text-white rounded-[28px] text-[3.4vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1vw] h-[5.5vw] md:h-[3.5vw] lg:h-[2.8vw] xl:h-[2vw] w-[18vw] md:w-[8.5vw] lg:w-[10vw] xl:w-[6vw]">
                         link
                       </button>
-                    )}
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div
-              ref={sliderRef}
-              className="h-[381px] md:h-[460px] flex flex-col overflow-x-scroll no-scrollbar"
-            >
-              <div className="res-wrapper flex w-[95%]">
+            <div ref={sliderRef} className="h-auto md:pt-[2vw] lg:pt-[3vw] xl:pt-[3vw] pb-[6vw] md:pb-[4vw] lg:pb-[4vw] xl:pb-[4vw] flex flex-col overflow-x-scroll no-scrollbar">
+              <div className="res-wrapper flex w-[95%] gap-[3vw] md:gap-[3vw] lg:gap-[3vw] xl:gap-[2vw]">
                 {secondRowDocsDA.map((resource, index) => (
-                  <div
-                    key={index}
-                    className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[381px] h-[300px] lg:h-[377.13px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
-                  >
-                    <Image className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover pointer-events-none select-none"
+                  <div key={index} className="relative p-[4vw] md:p-[3vw] lg:p-[3vw] xl:p-[3vw] w-[57vw] md:w-[35vw] lg:w-[33vw] xl:w-[25vw] h-[60vw] md:h-[38vw] lg:h-[35vw] xl:h-[26vw] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center">
+                    <Image className="rounded-[17.13px] h-[30vw] md:h-[18vw] lg:h-[16vw] xl:h-[12vw] object-cover pointer-events-none select-none"
                       src={resource.thumbnail ? imageUrlFor(resource.thumbnail).url() : ""}
                       alt="Thumbnail"
                       width={613}
@@ -189,29 +170,22 @@ const ResourcePage = () => {
                       unoptimized={true}
                       priority={false}
                     />
-                    <div className="flex flex-col mt-[30px] lg:mt-[22.46px]">
+                    <div className="flex flex-col mt-[3.5vw] md:mt-[2.5vw] lg:mt-[2.5vw] xl:mt-[2vw]">
                       <div>
-                        <h2 className="font-poppins text-center text-[20px] lg:text-[21.68px] font-bold">
-                          {resource.title.toUpperCase()}
+                        <h2 className="font-poppins text-center text-[4vw] md:text-[2.8vw] lg:text-[2.3vw] xl:text-[1.6vw] font-bold">
+                          {resource.title}
                         </h2>
                       </div>
-                      <div
-                        className="text-[16px] lg:text-[21.68px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[25px]"
-                      >
-                        <p className="introtext text-center font-poppins">
+                      <div className="pt-[1vw] md:pt-[1vw] lg:pt-[1.5vw] xl:pt-[1.5vw] text-[3.5vw] md:text-[2.3vw] lg:text-[1.8vw] xl:text-[1.2vw]">
+                        <p className="text-center font-poppins">
                           {resource.resourceType || "Two lines about the project."}
                         </p>
                       </div>
                     </div>
-                    <div className="absolute top-[40px] left-[145px] md:top-[64px] md:left-[254px]">
-                    {resource.link && (
-                      <button
-                        onClick={() => openResource(resource.link)}
-                        className="buttonBG text-sm md:text-[12.24px] text-white md:px-4 rounded-[28px] h-[30px] w-[120px] md:h-[28.75px] md:w-[91.77px]"
-                      >
+                    <div className="absolute top-[7vw] md:top-[5vw] lg:top-[5vw] xl:top-[4vw] left-[37.5vw] md:left-[25.5vw] lg:left-[22vw] xl:left-[18vw]">
+                      <button onClick={() => openResource(resource.link)} className="buttonBG text-white rounded-[28px] text-[3.4vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1vw] h-[5.5vw] md:h-[3.5vw] lg:h-[2.8vw] xl:h-[2vw] w-[18vw] md:w-[8.5vw] lg:w-[10vw] xl:w-[6vw]">
                         link
                       </button>
-                    )}
                     </div>
                   </div>
                 ))}
@@ -220,19 +194,13 @@ const ResourcePage = () => {
           </div>
         )}
           {selectedCategory === 'Management' && (
-          <div className="ml-[20px] md:ml-[80px]">
-            <div
-              ref={sliderRef}
-              className="h-[381px] md:h-[500px] flex flex-col overflow-x-scroll no-scrollbar"
-            >
+          <div className="ml-[4vw] md:ml-[4vw] lg:ml-[5vw] xl:ml-[5vw]">
+            <div ref={sliderRef} className="h-auto pt-[2vw] md:pt-[2vw] lg:pt-[4vw] xl:pt-[4vw] flex flex-col overflow-x-scroll no-scrollbar">
               {/* First row */}
-              <div className="res-wrapper flex mt-[35px] lg:mt-[67px] w-[95%]">
+              <div className="res-wrapper flex w-[95%] gap-[3vw] md:gap-[3vw] lg:gap-[3vw] xl:gap-[2vw]">
                 {firstRowDocsCS.map((resource, index) => (
-                  <div
-                    key={index}
-                    className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[381px] h-[300px] lg:h-[377.13px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
-                  >
-                    <Image className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover pointer-events-none select-none"
+                  <div key={index} className="relative p-[4vw] md:p-[3vw] lg:p-[3vw] xl:p-[3vw] w-[57vw] md:w-[35vw] lg:w-[33vw] xl:w-[25vw] h-[60vw] md:h-[38vw] lg:h-[35vw] xl:h-[26vw] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center">
+                    <Image className="rounded-[17.13px] h-[30vw] md:h-[18vw] lg:h-[16vw] xl:h-[12vw] object-cover pointer-events-none select-none"
                       src={resource.thumbnail ? imageUrlFor(resource.thumbnail).url() : ""}
                       alt="Thumbnail"
                       width={613}
@@ -240,25 +208,20 @@ const ResourcePage = () => {
                       unoptimized={true}
                       priority={false}
                     />
-                    <div className="flex flex-col mt-[30px] lg:mt-[22.46px]">
+                    <div className="flex flex-col mt-[3.5vw] md:mt-[2.5vw] lg:mt-[2.5vw] xl:mt-[2vw]">
                       <div>
-                        <h2 className="font-poppins text-center text-[20px] lg:text-[21.68px] font-bold">
-                          {resource.title.toUpperCase()}
+                        <h2 className="font-poppins text-center text-[4vw] md:text-[2.8vw] lg:text-[2.3vw] xl:text-[1.6vw] font-bold">
+                          {resource.title}
                         </h2>
                       </div>
-                      <div
-                        className="text-[16px] lg:text-[21.68px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[25px]"
-                      >
+                      <div className="pt-[1vw] md:pt-[1vw] lg:pt-[1.5vw] xl:pt-[1.5vw] text-[3.5vw] md:text-[2.3vw] lg:text-[1.8vw] xl:text-[1.2vw]">
                         <p className="text-center font-poppins">
                           {resource.resourceType || "Two lines about the project."}
                         </p>
                       </div>
                     </div>
-                    <div className="absolute top-[40px] left-[145px] md:top-[64px] md:left-[254px]">
-                      <button
-                        onClick={() => openResource(resource.link)}
-                        className="buttonBG text-sm md:text-[12.24px] text-white md:px-4 rounded-[28px] h-[30px] w-[120px] md:h-[28.75px] md:w-[91.77px]"
-                      >
+                    <div className="absolute top-[7vw] md:top-[5vw] lg:top-[5vw] xl:top-[4vw] left-[37.5vw] md:left-[25.5vw] lg:left-[22vw] xl:left-[18vw]">
+                      <button onClick={() => openResource(resource.link)} className="buttonBG text-white rounded-[28px] text-[3.4vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1vw] h-[5.5vw] md:h-[3.5vw] lg:h-[2.8vw] xl:h-[2vw] w-[18vw] md:w-[8.5vw] lg:w-[10vw] xl:w-[6vw]">
                         link
                       </button>
                     </div>
@@ -267,17 +230,11 @@ const ResourcePage = () => {
               </div>
             </div>
 
-            <div
-              ref={sliderRef}
-              className="h-[381px] md:h-[500px] flex flex-col overflow-x-scroll no-scrollbar"
-            >
-              <div className="res-wrapper flex w-[95%]">
+            <div ref={sliderRef} className="h-auto md:pt-[2vw] lg:pt-[3vw] xl:pt-[3vw] pb-[6vw] md:pb-[4vw] lg:pb-[4vw] xl:pb-[4vw] flex flex-col overflow-x-scroll no-scrollbar">
+              <div className="res-wrapper flex w-[95%] gap-[3vw] md:gap-[3vw] lg:gap-[3vw] xl:gap-[2vw]">
                 {secondRowDocsCS.map((resource, index) => (
-                  <div
-                    key={index}
-                    className="relative mr-[20px] lg:mr-[80px] w-[290px] lg:w-[381px] h-[300px] lg:h-[377.13px] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center"
-                  >
-                    <Image className="h-[150px] lg:h-[190.98px] w-[250px] lg:w-[303px] rounded-[17.13px] mt-[30px] lg:mt-[46.6px] object-cover pointer-events-none select-none"
+                  <div key={index} className="relative p-[4vw] md:p-[3vw] lg:p-[3vw] xl:p-[3vw] w-[57vw] md:w-[35vw] lg:w-[33vw] xl:w-[25vw] h-[60vw] md:h-[38vw] lg:h-[35vw] xl:h-[26vw] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] mt-[20px] lg:mt-[7px] shadow-lg flex flex-col items-center">
+                    <Image className="rounded-[17.13px] h-[30vw] md:h-[18vw] lg:h-[16vw] xl:h-[12vw] object-cover pointer-events-none select-none"
                       src={resource.thumbnail ? imageUrlFor(resource.thumbnail).url() : ""}
                       alt="Thumbnail"
                       width={613}
@@ -285,25 +242,20 @@ const ResourcePage = () => {
                       unoptimized={true}
                       priority={false}
                     />
-                    <div className="flex flex-col mt-[30px] lg:mt-[22.46px]">
+                    <div className="flex flex-col mt-[3.5vw] md:mt-[2.5vw] lg:mt-[2.5vw] xl:mt-[2vw]">
                       <div>
-                        <h2 className="font-poppins text-center text-[20px] lg:text-[21.68px] font-bold">
-                          {resource.title.toUpperCase()}
+                        <h2 className="font-poppins text-center text-[4vw] md:text-[2.8vw] lg:text-[2.3vw] xl:text-[1.6vw] font-bold">
+                          {resource.title}
                         </h2>
                       </div>
-                      <div
-                        className="text-[16px] lg:text-[21.68px] w-[235px] lg:w-[276.54px] leading-[20px] lg:leading-[14px] cursor-pointer mt-[15px] lg:mt-[25px]"
-                      >
+                      <div className="pt-[1vw] md:pt-[1vw] lg:pt-[1.5vw] xl:pt-[1.5vw] text-[3.5vw] md:text-[2.3vw] lg:text-[1.8vw] xl:text-[1.2vw]">
                         <p className="text-center font-poppins">
                           {resource.resourceType || "Two lines about the project."}
                         </p>
                       </div>
                     </div>
-                    <div className="absolute top-[40px] left-[145px] md:top-[64px] md:left-[254px]">
-                      <button
-                        onClick={() => openResource(resource.link)}
-                        className="buttonBG text-sm md:text-[12.24px] text-white md:px-4 rounded-[28px] h-[30px] w-[120px] md:h-[28.75px] md:w-[91.77px]"
-                      >
+                    <div className="absolute top-[7vw] md:top-[5vw] lg:top-[5vw] xl:top-[4vw] left-[37.5vw] md:left-[25.5vw] lg:left-[22vw] xl:left-[18vw]">
+                      <button onClick={() => openResource(resource.link)} className="buttonBG text-white rounded-[28px] text-[3.4vw] md:text-[2vw] lg:text-[1.7vw] xl:text-[1vw] h-[5.5vw] md:h-[3.5vw] lg:h-[2.8vw] xl:h-[2vw] w-[18vw] md:w-[8.5vw] lg:w-[10vw] xl:w-[6vw]">
                         link
                       </button>
                     </div>
@@ -317,7 +269,7 @@ const ResourcePage = () => {
 
       <div className="flex items-center justify-center">
         <Image
-          className="mt-[32px] mb-[32px] w-[90px] h-[100px] md:w-[167px] md:h-[182px] pointer-events-none select-none"
+          className="w-auto mt-[5vw] mb-[5vw] md:mt-[5vw] md:mb-[5vw] lg:mt-[4vw] lg:mb-[4vw] xl:mt-[4vw] xl:mb-[4vw] h-[20vw] md:h-[15vw] lg:h-[15vw] xl:h-[10vw] pointer-events-none select-none"
           src="/images/sigma symbol.png"
           alt="logo"
           width={167}
@@ -326,7 +278,6 @@ const ResourcePage = () => {
           priority={false}
         />
       </div>
-
     </div>
   );
 };
