@@ -78,13 +78,15 @@ const MeetOurTeamPage = () => {
           <h2 className="font-poppins text-[40px] lg:text-[48px] lg:text-left lg:mt-[30px]">
             <span className="catgry md:ml-22 leading-[92px]">{toPascalCase(category)}</span>
           </h2>
-          <div className="gradientBackgrnd flex flex-wrap justify-center gap-[15px] lg:mt-[30px] lg:gap-[15px] lg:pb-[42.14px] lg:px-[5%]">
+          {/* <div className="gradientBackgrnd flex flex-wrap justify-center gap-[15px] lg:mt-[30px] lg:gap-[15px] lg:pb-[42.14px] lg:px-[5%]"> */}
+          <div className="gradientBackgrnd flex flex-wrap justify-center py-[8vw] md:py-[7vw] lg:py-[5vw] gap-[15px] md:gap-[5vw] lg:gap-[2vw] lg:px-[5%]">
             {teamMembers
               .filter((member) => member.category === category)
               .map((member, index) => (
                 <div
                   key={index}
-                  className={`items-center justify-center rounded-[15px] md:rounded-[31px] shadow-md mt-[24px] mb-[24px] lg:mt-[42.14px] lg:mb-[0px] w-[40%] md:w-[22%] lg:w-[238px] md:h-[280px] lg:h-[351.72px] transition-transform transform ${
+                  // className={`items-center justify-center rounded-[15px] md:rounded-[31px] shadow-md mt-[24px] mb-[24px] lg:mt-[42.14px] lg:mb-[0px] w-[40%] md:w-[22%] lg:w-[238px] md:h-[280px] lg:h-[351.72px] transition-transform transform ${
+                    className={`items-center justify-center rounded-[15px] md:rounded-[31px] shadow-md w-[40%] md:w-[25%] lg:w-[18%] xl:w-[238px] h-[55vw] md:h-[37vw] lg:h-[36vh] xl:h-[24vw] transition-transform transform ${
                     hoveredMember === member.name ? 'hover:scale-105' : ''
                   } flipping-card ${member.category === 'core' && hoveredMember === member.name ? 'core-hovered' : ''}`}
                   onMouseEnter={() => handleMouseEnter(member.name)}
@@ -100,7 +102,8 @@ const MeetOurTeamPage = () => {
                     <div>
                       {member.image && (
                         <Image
-                          className="rounded-full mx-auto transition-transform transform hover:scale-110 w-[60%] md:w-[70%] lg:w-[184.88px] lg:h-[184.88px] pointer-events-none select-none"
+                          // className="rounded-full mx-auto transition-transform transform hover:scale-110 w-[60%] md:w-[70%] lg:w-[184.88px] lg:h-[184.88px] pointer-events-none select-none"
+                          className="rounded-full mx-auto transition-transform transform hover:scale-110 w-[60%] md:w-[70%] xl:w-[184.88px] xl:h-[184.88px] pointer-events-none select-none"
                           src={imageUrlFor(member.image).url()}
                           alt="logo"
                           width={613}
@@ -113,10 +116,12 @@ const MeetOurTeamPage = () => {
                           }}
                         />
                       )}
-                      <div className="text-sm mt-[4px] md:text-[15px] lg:text-[18.68px] md:mt-[8px] lg:leading:[28.01px]">
+                      {/* <div className="text-sm mt-[4px] md:text-[15px] lg:text-[18.68px] md:mt-[8px] lg:leading:[28.01px]"> */}
+                      <div className="mt-[1vw] text-[3.5vw] md:text-[2.3vw] lg:text-[1.5vw] xl:text-[1.25vw] md:leading-[2.5vw] lg:leading-[1.6vw]">
                         <span className="memberName">{member.name}</span>
                       </div>
-                      <div className="memberPosition leading-[12px] md:leading-[14px] text-[12px] md:text-[14px] lg:text-[16.81px] lg:leading-[25.21px] lg:mt-[7.41px] text-white">
+                      {/* <div className="memberPosition leading-[12px] md:leading-[14px] text-[12px] md:text-[14px] lg:text-[16.81px] lg:leading-[25.21px] lg:mt-[7.41px] text-white"> */}
+                      <div className="memberPosition text-[3.2vw] md:text-[2vw] lg:text-[1.3vw] xl:text-[1.1vw] mt-[0vw] md:mt-[0.5vw] lg:mt-[7.41px] text-white">
                         {member.position}
                       </div>
                       {/* {hoveredMember === member.name && member.category === 'core' && member.aboutyou && (
