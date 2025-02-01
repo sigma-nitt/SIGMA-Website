@@ -154,7 +154,7 @@ const Header = () => {
         <div
           className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
             navigationOpen &&
-            "navbar !visible mt-3 md:mt-4 h-[200px] max-h-[400px] xl:h-auto rounded-md bg-background p-7.5 shadow-solid-5 dark:bg-background xl:p-0 xl:shadow-none xl:dark:bg-background"
+            "navbar !visible no-scrollbar mt-3 md:mt-4 h-[250px] max-h-[400px] xl:h-auto rounded-md bg-background p-5 md:p-7.5 shadow-solid-5 dark:bg-background xl:p-0 xl:shadow-none xl:dark:bg-background"
           }`}
         >
           <nav>

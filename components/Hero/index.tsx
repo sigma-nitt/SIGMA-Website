@@ -139,7 +139,7 @@ const HeroSection: FC = () => {
             </p>
 
             <div
-              className="relative mx-auto xl:mt-[40px] lg:w-[450px] xl:w-[480px] flex items-center justify-center bg-[length:200px_55px] md:bg-[length:250px_60px] lg:bg-[length:300px_80px] xl:bg-[length:400px_110px]"
+              className="relative mx-auto xl:mt-[40px] lg:w-[450px] xl:w-[480px] flex items-center justify-center bg-[length:210px_65px] md:bg-[length:250px_60px] lg:bg-[length:300px_80px] xl:bg-[length:400px_110px]"
               style={{
                 backgroundImage: 'url("/images/buttonbg.png")',
                 backgroundRepeat: "no-repeat",
