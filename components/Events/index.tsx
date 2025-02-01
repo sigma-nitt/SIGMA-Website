@@ -317,8 +317,10 @@ const EventsPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState<number | null>(null);
-  const [isIntroTextVisible, setIsIntroTextVisible] = useState<boolean[]>([]);
+  // const [isIntroTextVisible, setIsIntroTextVisible] = useState<boolean[]>([]);
   const sliderRef = useRef<HTMLDivElement>(null);
+  const [isIntroTextVisibleFirstRow, setIsIntroTextVisibleFirstRow] = useState<boolean[]>([]);
+  const [isIntroTextVisibleSecondRow, setIsIntroTextVisibleSecondRow] = useState<boolean[]>([]);
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -367,27 +369,45 @@ const EventsPage: React.FC = () => {
     setSelectedEvent(null);
   };
 
-  const toggleIntroText = (index: number) => {
+  const handleMouseEnter = (index: number, isFirstRow: boolean) => {
+    if (window.innerWidth >= 768) {
+      if (isFirstRow) {
+        const updatedVisibility = [...isIntroTextVisibleFirstRow];
+        updatedVisibility[index] = true;
+        setIsIntroTextVisibleFirstRow(updatedVisibility);
+      } else {
+        const updatedVisibility = [...isIntroTextVisibleSecondRow];
+        updatedVisibility[index] = true;
+        setIsIntroTextVisibleSecondRow(updatedVisibility);
+      }
+    }
+  };
+
+  const handleMouseLeave = (index: number, isFirstRow: boolean) => {
+    if (window.innerWidth >= 768) {
+      if (isFirstRow) {
+        const updatedVisibility = [...isIntroTextVisibleFirstRow];
+        updatedVisibility[index] = false;
+        setIsIntroTextVisibleFirstRow(updatedVisibility);
+      } else {
+        const updatedVisibility = [...isIntroTextVisibleSecondRow];
+        updatedVisibility[index] = false;
+        setIsIntroTextVisibleSecondRow(updatedVisibility);
+      }
+    }
+  };
+
+  const toggleIntroText = (index: number, isFirstRow: boolean) => {
     if (window.innerWidth < 768) {
-      const updatedVisibility = [...isIntroTextVisible];
-      updatedVisibility[index] = !updatedVisibility[index];
-      setIsIntroTextVisible(updatedVisibility);
-    }
-  };
-
-  const handleMouseEnter = (index: number) => {
-    if (window.innerWidth >= 768) {
-      const updatedVisibility = [...isIntroTextVisible];
-      updatedVisibility[index] = true;
-      setIsIntroTextVisible(updatedVisibility);
-    }
-  };
-
-  const handleMouseLeave = (index: number) => {
-    if (window.innerWidth >= 768) {
-      const updatedVisibility = [...isIntroTextVisible];
-      updatedVisibility[index] = false;
-      setIsIntroTextVisible(updatedVisibility);
+      if (isFirstRow) {
+        const updatedVisibility = [...isIntroTextVisibleFirstRow];
+        updatedVisibility[index] = !updatedVisibility[index];
+        setIsIntroTextVisibleFirstRow(updatedVisibility);
+      } else {
+        const updatedVisibility = [...isIntroTextVisibleSecondRow];
+        updatedVisibility[index] = !updatedVisibility[index];
+        setIsIntroTextVisibleSecondRow(updatedVisibility);
+      }
     }
   };
 
@@ -424,9 +444,9 @@ const EventsPage: React.FC = () => {
                 <div
                   key={index}
                   className="relative flex flex-col items-center w-[68vw] md:w-[37vw] lg:w-[33vw] xl:w-[22.3vw] p-[6vw] md:p-[3vw] lg:p-[3vw] xl:p-[2vw] h-[97vw] md:h-[51vw] lg:h-[40vw] xl:h-[26vw] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] shadow-lg"
-                  onMouseEnter={() => handleMouseEnter(index)}
-                  onMouseLeave={() => handleMouseLeave(index)}
-                  onClick={() => toggleIntroText(index)}
+                  onMouseEnter={() => handleMouseEnter(index, true)}
+                  onMouseLeave={() => handleMouseLeave(index, true)}
+                  onClick={() => toggleIntroText(index, true)}
                 >
                                   
                   <Image className="h-[40vw] md:h-[22vw] lg:h-[18vw] xl:h-[11.5vw] rounded-[17.13px] object-cover pointer-events-none select-none"
@@ -445,7 +465,7 @@ const EventsPage: React.FC = () => {
                       </h2>
                     </div>
                     <div className="cursor-pointer text-[3.3vw] md:text-[1.8vw] lg:text-[1.4vw] xl:text-[0.9vw] mt-[3vw] md:mt-[1.5vw] lg:mt-[1vw] xl:mt-[0.5vw]">
-                      {isIntroTextVisible[index] ? (
+                      {isIntroTextVisibleFirstRow[index] ? (
                         // <p className="introtext font-poppins lg:font-bold">
                         <p className="introtext font-acumin">
                           {event.description || "SIGMA event"}
@@ -476,11 +496,10 @@ const EventsPage: React.FC = () => {
                 <div
                   key={index}
                   className="relative flex flex-col items-center w-[68vw] md:w-[37vw] lg:w-[33vw] xl:w-[22.3vw] p-[6vw] md:p-[3vw] lg:p-[3vw] xl:p-[2vw] h-[97vw] md:h-[51vw] lg:h-[40vw] xl:h-[26vw] rounded-[17.13px] bg-[hsla(227,60%,17%,1)] shadow-lg"
-                  onMouseEnter={() => handleMouseEnter(index)}
-                  onMouseLeave={() => handleMouseLeave(index)}
-                  onClick={() => toggleIntroText(index)}
-                >
-                                  
+                  onMouseEnter={() => handleMouseEnter(index, false)}
+                  onMouseLeave={() => handleMouseLeave(index, false)}
+                  onClick={() => toggleIntroText(index, false)}
+                >       
                   <Image className="h-[40vw] md:h-[22vw] lg:h-[18vw] xl:h-[11.5vw] rounded-[17.13px] object-cover pointer-events-none select-none"
                     src={imageUrlFor(event.images[0]).url()}
                     alt="Image"
@@ -497,7 +516,7 @@ const EventsPage: React.FC = () => {
                       </h2>
                     </div>
                     <div className="cursor-pointer text-[3.3vw] md:text-[1.8vw] lg:text-[1.4vw] xl:text-[0.9vw] mt-[3vw] md:mt-[1.5vw] lg:mt-[1vw] xl:mt-[0.5vw]">
-                      {isIntroTextVisible[index] ? (
+                      {isIntroTextVisibleSecondRow[index] ? (
                         // <p className="introtext font-poppins lg:font-bold">
                         <p className="introtext font-acumin">
                           {event.description || "SIGMA event"}
