@@ -360,10 +360,7 @@ const EventsPage: React.FC = () => {
 
       <div className="backgroundGradient">
         <div className="ml-[5vw] md:ml-[5vw] lg:ml-[5vw] xl:ml-[5vw]">
-          <div
-            ref={sliderRef}
-            className="h-auto flex overflow-x-scroll no-scrollbar"
-          >
+          <div ref={sliderRef} className="h-auto flex overflow-x-scroll no-scrollbar">
             <div className="event-wrapper flex py-[8vw] md:py-[5vw] lg:py-[5vw] xl:py-[5vw] gap-[5vw] md:gap-[3vw] lg:gap-[3vw] xl:gap-[3vw]">
               {events.map((event, index) => (
                 <div
@@ -404,12 +401,9 @@ const EventsPage: React.FC = () => {
                       )}
                     </div>
                   </div>
-                  <div className="absolute top-[10%] left-[58%] lg:top-[14%] lg:left-[70%]">
+                  <div className="absolute top-[8vw] md:top-[5vw] lg:top-[5vw] xl:top-[5vw] left-[45vw] md:left-[24vw] lg:left-[30vw] xl:left-[25vw]">
                     {event.images && event.images.length > 0 && (
-                      <button
-                        onClick={() => handleExpandClick(index)}
-                        className="buttonBG text-[12.24px] md:text-[15px] text-white rounded-[28px] h-[28.75px] w-[91.77px] md:h-[35px] md:w-[100px]"
-                      >
+                      <button onClick={() => handleExpandClick(index)} className="buttonBG text-[12.24px] md:text-[15px] text-white rounded-[28px] h-[28.75px] w-[91.77px] md:h-[35px] md:w-[100px]">
                         {selectedEvent === index ? "Collapse" : "view gallery"}
                       </button>
                     )}
