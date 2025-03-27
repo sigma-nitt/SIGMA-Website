@@ -561,12 +561,18 @@ const PDFViewerComponent: React.FC = () => {
                           {pdf.title}
                         </h2>
                       </div>
-                      <div className="cursor-pointer text-[3.3vw] md:text-[1.8vw] lg:text-[1.4vw] xl:text-[0.9vw] mt-[3vw] md:mt-[1.5vw] lg:mt-[1vw] xl:mt-[0.5vw]">
+                      {/* <div className="cursor-pointer text-[3.3vw] md:text-[1.8vw] lg:text-[1.4vw] xl:text-[0.9vw] mt-[3vw] md:mt-[1.5vw] lg:mt-[1vw] xl:mt-[0.5vw]">
                         {isIntroTextVisibleFirstRow[index] ? (
                           // <p className="introtext font-poppins lg:font-bold">
                           <p className="introtext font-acumin">
                             {pdf.description || "SIGMA event"}
                           </p>
+                        ) : ( */}
+                      <div className="cursor-pointer text-[3.3vw] md:text-[1.8vw] lg:text-[1.4vw] xl:text-[0.9vw] mt-[3vw] md:mt-[1.5vw] lg:mt-[1vw] xl:mt-[0.5vw]">
+                        {isIntroTextVisibleFirstRow[index] ? (
+                          <div className="description-containerCS introtext font-acumin">
+                            {pdf.description || "SIGMA event"}
+                          </div>
                         ) : (
                           <div className="flex flex-col mt-[15px] gap-[15px] lg:gap-[14.07px]">
                             <div className="hamburger-line w-full h-[6.73px] rounded-[10px]"></div>
@@ -617,12 +623,18 @@ const PDFViewerComponent: React.FC = () => {
                           {pdf.title}
                         </h2>
                       </div>
-                      <div className="cursor-pointer text-[3.3vw] md:text-[1.8vw] lg:text-[1.4vw] xl:text-[0.9vw] mt-[3vw] md:mt-[1.5vw] lg:mt-[1vw] xl:mt-[0.5vw]">
+                      {/* <div className="cursor-pointer text-[3.3vw] md:text-[1.8vw] lg:text-[1.4vw] xl:text-[0.9vw] mt-[3vw] md:mt-[1.5vw] lg:mt-[1vw] xl:mt-[0.5vw]">
                         {isIntroTextVisibleSecondRow[index] ? (
                           // <p className="introtext font-poppins lg:font-bold">
                           <p className="introtext font-acumin">
                             {pdf.description || "SIGMA event"}
                           </p>
+                        ) : ( */}
+                      <div className="cursor-pointer text-[3.3vw] md:text-[1.8vw] lg:text-[1.4vw] xl:text-[0.9vw] mt-[3vw] md:mt-[1.5vw] lg:mt-[1vw] xl:mt-[0.5vw]">
+                        {isIntroTextVisibleSecondRow[index] ? (
+                          <div className="description-containerCS introtext font-acumin">
+                            {pdf.description || "SIGMA event"}
+                          </div>
                         ) : (
                           <div className="flex flex-col mt-[15px] gap-[15px] lg:gap-[14.07px]">
                             <div className="hamburger-line w-full h-[6.73px] rounded-[10px]"></div>

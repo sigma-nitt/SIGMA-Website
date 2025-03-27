@@ -63,3 +63,10 @@ body {
   word-wrap: break-word;
   word-break: break-word;
 }
+
+.description-containerDA {
+  max-height: 6.5rem; /* Adjust as needed */
+  overflow-y: auto;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+}
