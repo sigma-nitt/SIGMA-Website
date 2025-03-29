@@ -1,3 +1,7 @@
+export const config = {
+  runtime: 'nodejs',
+};
+
 import { NextApiRequest, NextApiResponse } from 'next';
 import { degrees, rgb, PDFDocument, StandardFonts } from 'pdf-lib';
 import fetch from 'node-fetch';
