@@ -39,6 +39,7 @@
     "eslint-config-next": "13.4.4",
     "exceljs": "^4.4.0",
     "framer-motion": "^11.0.6",
+    "fs": "^0.0.1-security",
     "graphql": "^16.8.1",
     "groq": "^3.28.0",
     "lightbox.js-react": "^1.0.2",
