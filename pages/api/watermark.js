@@ -121,9 +121,12 @@ export default async function handler(req, res) {
       });
     });
 
+    console.log('Watermark applied to all pages');
+
     // Save the modified PDF
     const watermarkedPdfBytes = await pdfDoc.save();
     const fileBuffer = Buffer.from(watermarkedPdfBytes);
+    console.log('Watermarked PDF size:', watermarkedPdfBytes.byteLength);
 
     // Upload watermarked PDF to Sanity
     const form = new FormData();
