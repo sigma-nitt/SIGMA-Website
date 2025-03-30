@@ -7,7 +7,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const client = createClient({
       projectId: 'vdzzonmk',
       dataset: 'production',
-      apiVersion: '2024-11-06',
+      // apiVersion: '2024-11-06',
+      apiVersion: '2021-03-25',
       useCdn: false
     });
 
