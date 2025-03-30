@@ -37,7 +37,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "components/loadingPage", "pages/watermark.js"  ],
+, "components/loadingPage", "pages/api/watermark.js"  ],
   "exclude": [
     "node_modules"
   ]

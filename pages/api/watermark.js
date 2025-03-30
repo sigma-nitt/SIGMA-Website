@@ -73,29 +73,38 @@
 
 
 
+// pages/api/watermark.js
 import { PDFDocument, rgb, degrees } from "pdf-lib";
+import { createClient } from "@sanity/client";
 import fetch from "node-fetch";
 import FormData from "form-data";
 
-const SANITY_PROJECT_ID = "vdzzonmk";  // Replace with your Sanity project ID
-const SANITY_DATASET = "production";  // Replace with your dataset
-const SANITY_API_TOKEN = "skPHlCv1D2rzDWhoyBHMRRC7CBOY9x3RpE2gZCoGK1Jk4EdUiEl3tY0bAlMEMwO2rvKz4EG2NTBWg780QxivTLtWqs9byGyoNtJkHXTb6nJodziutEm2yNQeR0hehInhNz7KbajlZa02yKeFJfnJTR6PpG5fCGLraHGSUxX52452xLAa7ent"; // Replace with your API token
+// Initialize Sanity client
+const client = createClient({
+  projectId: "vdzzonmk", // Replace with your Sanity project ID
+  dataset: "production",
+  apiVersion: "2024-11-06", // Ensure valid API version
+  token: process.env.SANITY_API_TOKEN, // Use environment variable
+  useCdn: false,
+});
 
 export default async function handler(req, res) {
-  if (req.method !== "POST") return res.status(405).end();
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
+  }
 
   try {
-    const { body } = req;
-    const pdfUrl = body?.document?.originalPdf?.asset?._ref;
-
-    if (!pdfUrl) {
-      return res.status(400).json({ error: "No PDF URL found in the webhook payload" });
+    const { pdfUrl, documentId } = req.body;
+    if (!pdfUrl || !documentId) {
+      return res.status(400).json({ error: "Missing PDF URL or document ID" });
     }
 
-    // Convert Sanity asset ref to a downloadable URL
-    const sanityAssetUrl = `https://cdn.sanity.io/files/${SANITY_PROJECT_ID}/${SANITY_DATASET}/${pdfUrl.replace("file-", "").replace("-", ".")}`;
-
-    const pdfBytes = await (await fetch(sanityAssetUrl)).arrayBuffer();
+    // Fetch the PDF
+    const response = await fetch(pdfUrl);
+    if (!response.ok) {
+      throw new Error("Failed to fetch PDF");
+    }
+    const pdfBytes = await response.arrayBuffer();
 
     // Load PDF and add watermark
     const pdfDoc = await PDFDocument.load(pdfBytes);
@@ -112,7 +121,7 @@ export default async function handler(req, res) {
       });
     });
 
-    // Save watermarked PDF
+    // Save the modified PDF
     const watermarkedPdfBytes = await pdfDoc.save();
     const fileBuffer = Buffer.from(watermarkedPdfBytes);
 
@@ -121,11 +130,11 @@ export default async function handler(req, res) {
     form.append("file", fileBuffer, { filename: "watermarked.pdf", contentType: "application/pdf" });
 
     const sanityResponse = await fetch(
-      `https://${SANITY_PROJECT_ID}.api.sanity.io/v2021-06-07/assets/files/${SANITY_DATASET}`,
+      `https://${client.config().projectId}.api.sanity.io/v2021-06-07/assets/files/${client.config().dataset}`,
       {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${SANITY_API_TOKEN}`,
+          Authorization: `Bearer ${process.env.SANITY_API_TOKEN}`,
         },
         body: form,
       }
@@ -136,36 +145,20 @@ export default async function handler(req, res) {
       throw new Error(`Sanity Upload Failed: ${sanityResult.error?.message || "Unknown Error"}`);
     }
 
-    // Update the Sanity document with the watermarked PDF URL
-    const mutation = [
-      {
-        patch: {
-          id: body.document._id,
-          set: {
-            watermarkedPdf: {
-              _type: "file",
-              asset: {
-                _type: "reference",
-                _ref: sanityResult.document._id,
-              },
-            },
-          },
+    // Update Sanity document with the new watermarked PDF
+    await client.patch(documentId).set({
+      watermarkedPdf: {
+        _type: "file",
+        asset: {
+          _type: "reference",
+          _ref: sanityResult.document?._id,
         },
       },
-    ];
+    }).commit();
 
-    await fetch(`https://${SANITY_PROJECT_ID}.api.sanity.io/v2021-06-07/data/mutate/${SANITY_DATASET}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${SANITY_API_TOKEN}`,
-      },
-      body: JSON.stringify({ mutations: mutation }),
-    });
-
-    return res.status(200).json({ success: true, url: sanityResult.url });
+    return res.status(200).json({ success: true, url: sanityResult?.document?.url || "" });
   } catch (error) {
-    console.error(error);
-    return res.status(500).json({ error: "Failed to watermark and upload PDF" });
+    console.error("Error processing watermark:", error);
+    return res.status(500).json({ error: "Failed to process watermarking" });
   }
 }
