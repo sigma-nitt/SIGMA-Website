@@ -83,7 +83,8 @@ import FormData from "form-data";
 const client = createClient({
   projectId: "vdzzonmk", // Replace with your Sanity project ID
   dataset: "production",
-  apiVersion: "2024-11-06", // Ensure valid API version
+  // apiVersion: "2024-11-06",
+  apiVersion: "2021-03-25",
   token: process.env.SANITY_API_TOKEN, // Use environment variable
   useCdn: false,
 });
