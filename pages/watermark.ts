@@ -235,9 +235,92 @@
 
 
 
+// import { PDFDocument, rgb, degrees } from 'pdf-lib';
+// import fetch from 'node-fetch';
+// import FormData from 'form-data';
+
+// export default async function handler(req, res) {
+//   if (req.method !== 'POST') {
+//     return res.status(405).json({ message: 'Method Not Allowed' });
+//   }
+
+//   try {
+//     const { documentId, fileUrl } = req.body; // Extract document ID & File URL
+
+//     // 1. Download the original PDF
+//     const response = await fetch(fileUrl);
+//     const arrayBuffer = await response.arrayBuffer();
+//     const pdfDoc = await PDFDocument.load(arrayBuffer);
+
+//     // 2. Add a Watermark
+//     const pages = pdfDoc.getPages();
+//     for (let page of pages) {
+//       const { width, height } = page.getSize();
+//       page.drawText('CONFIDENTIAL', {
+//         x: width / 4,
+//         y: height / 2,
+//         size: 50,
+//         color: rgb(1, 0, 0),
+//         opacity: 0.3,
+//         rotate: degrees(45),
+//       });
+//     }
+
+//     // 3. Save Modified PDF to Buffer
+//     const modifiedPdfBytes = await pdfDoc.save();
+
+//     // 4. Upload the Watermarked PDF to Sanity
+//     const formData = new FormData();
+//     formData.append("file", Buffer.from(modifiedPdfBytes), { filename: "watermarked.pdf", contentType: "application/pdf" });
+
+//     const uploadResponse = await fetch(`https://${process.env.SANITY_PROJECT_ID}.api.sanity.io/v1/assets/files/${process.env.SANITY_DATASET}`, {
+//       method: 'POST',
+//       headers: {
+//         Authorization: `Bearer ${process.env.SANITY_TOKEN}`,
+//       },
+//       body: formData,
+//     });
+
+//     const uploadData = await uploadResponse.json();
+//     const newAssetId = uploadData.document._id; // Get asset ID
+
+//     // 5. Update the Sanity Document with the new asset reference
+//     await fetch(`https://${process.env.SANITY_PROJECT_ID}.api.sanity.io/v1/data/mutate/${process.env.SANITY_DATASET}`, {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//         Authorization: `Bearer ${process.env.SANITY_TOKEN}`,
+//       },
+//       body: JSON.stringify({
+//         mutations: [
+//           {
+//             patch: {
+//               id: documentId,
+//               set: {
+//                 "pdfFile.asset._ref": newAssetId, // Reference new uploaded PDF
+//               },
+//             },
+//           },
+//         ],
+//       }),
+//     });
+
+//     return res.status(200).json({ message: 'Watermark added & PDF updated in Sanity' });
+//   } catch (error) {
+//     console.error(error);
+//     return res.status(500).json({ message: 'Internal Server Error' });
+//   }
+// }
+
+
+
+
+
+
+
+
 import { PDFDocument, rgb, degrees } from 'pdf-lib';
 import fetch from 'node-fetch';
-import FormData from 'form-data';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -245,9 +328,9 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { documentId, fileUrl } = req.body; // Extract document ID & File URL
+    const { documentId, fileUrl } = req.body; // Extract from webhook
 
-    // 1. Download the original PDF
+    // 1. Download the PDF
     const response = await fetch(fileUrl);
     const arrayBuffer = await response.arrayBuffer();
     const pdfDoc = await PDFDocument.load(arrayBuffer);
@@ -262,34 +345,20 @@ export default async function handler(req, res) {
         size: 50,
         color: rgb(1, 0, 0),
         opacity: 0.3,
-        rotate: degrees(45),
+        rotate: degrees(45), // ✅ Correct rotation function
       });
     }
 
-    // 3. Save Modified PDF to Buffer
+    // 3. Save PDF in Memory
     const modifiedPdfBytes = await pdfDoc.save();
+    const modifiedPdfBase64 = Buffer.from(modifiedPdfBytes).toString('base64');
 
-    // 4. Upload the Watermarked PDF to Sanity
-    const formData = new FormData();
-    formData.append("file", Buffer.from(modifiedPdfBytes), { filename: "watermarked.pdf", contentType: "application/pdf" });
-
-    const uploadResponse = await fetch(`https://${process.env.SANITY_PROJECT_ID}.api.sanity.io/v1/assets/files/${process.env.SANITY_DATASET}`, {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${process.env.SANITY_TOKEN}`,
-      },
-      body: formData,
-    });
-
-    const uploadData = await uploadResponse.json();
-    const newAssetId = uploadData.document._id; // Get asset ID
-
-    // 5. Update the Sanity Document with the new asset reference
-    await fetch(`https://${process.env.SANITY_PROJECT_ID}.api.sanity.io/v1/data/mutate/${process.env.SANITY_DATASET}`, {
+    // 4. Upload back to Sanity with API token
+    await fetch(`https://${process.env.SANITY_PROJECT_ID}.api.sanity.io/v2021-10-21/data/mutate/${process.env.SANITY_DATASET}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${process.env.SANITY_TOKEN}`,
+        'Authorization': `Bearer ${process.env.SANITY_API_TOKEN}`, // ✅ Added token
       },
       body: JSON.stringify({
         mutations: [
@@ -297,7 +366,7 @@ export default async function handler(req, res) {
             patch: {
               id: documentId,
               set: {
-                "pdfFile.asset._ref": newAssetId, // Reference new uploaded PDF
+                "pdfFile.asset._ref": `data:application/pdf;base64,${modifiedPdfBase64}`, // ✅ Update PDF in Sanity
               },
             },
           },
