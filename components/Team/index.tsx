@@ -81,7 +81,7 @@ const MeetOurTeamPage = () => {
           {/* <div className="gradientBackgrnd flex flex-wrap justify-center gap-[15px] lg:mt-[30px] lg:gap-[15px] lg:pb-[42.14px] lg:px-[5%]"> */}
           <div className="gradientBackgrnd flex flex-wrap justify-center py-[8vw] md:py-[7vw] lg:py-[5vw] gap-[15px] md:gap-[5vw] lg:gap-[2vw] lg:px-[5%]">
             {teamMembers
-              .filter((member) => member.category === category)
+              .filter((member) => member.category === category && member.name !== "Rohit Jalani")
               .map((member, index) => (
                 <div
                   key={index}
